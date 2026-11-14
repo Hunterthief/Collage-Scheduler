@@ -1,0 +1,12 @@
+{
+  "courses": [
+    { "id": "02-06-02-101", "code": "02-06-02-101", "title": { "en": "Medical Terminology", "ar": "المصطلحات الطبية" }, "color": "#7b1fa2" },
+    { "id": "02-06-09-101", "code": "02-06-09-101", "title": { "en": "Pharmacy Orientation", "ar": "التعريف بالصيدلة" }, "color": "#e37400" },
+    { "id": "02-06-05-101", "code": "02-06-05-101", "title": { "en": "Pharmaceutical Organic Chemistry-I", "ar": "الكيمياء العضوية الصيدلية-I" }, "color": "#188038" },
+    { "id": "02-06-00-102", "code": "02-06-00-102", "title": { "en": "Mathematics", "ar": "الرياضيات" }, "color": "#d93025" },
+    { "id": "02-06-06-101", "code": "02-06-06-101", "title": { "en": "Medicinal Plants", "ar": "النباتات الطبية" }, "color": "#795548" },
+    { "id": "02-06-00-101", "code": "02-06-00-101", "title": { "en": "Information Technology", "ar": "تكنولوجيا المعلومات" }, "color": "#009688" },
+    { "id": "02-06-07-101", "code": "02-06-07-101", "title": { "en": "Pharmaceutical Analytical Chemistry-I", "ar": "الكيمياء التحليلية الصيدلية-I" }, "color": "#c2185b" },
+    { "id": "community-issues", "code": "Community Issues", "title": { "en": "Community Issues", "ar": "القضايا المجتمعية" }, "color": "#607d8b" }
+  ]
+}
