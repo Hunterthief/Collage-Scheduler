@@ -290,7 +290,36 @@ async function main() {
       }
     }
   }
+    // ---- Per-elective static feeds (group-independent) ----------------------
+  const electiveCatalog = await loadElectiveCatalog({ loadJson: readJson }, manifest);
+  const electiveTemplate = manifest.calendarFeeds?.electivePathTemplate ?? "electives/{slug}.ics";
+  const electiveBaseUrl = baseUrlOf(manifest);
 
+  for (const elective of electiveCatalog) {
+    const occurrences = buildElectiveOccurrences(elective, {
+      timezone: manifest.timezone,
+      institutionId: settings.institutionId,
+      locale
+    });
+    if (!occurrences.length) continue;
+
+    const sorted = sortOccurrences(mergeOccurrences(occurrences, diagnostics), locale);
+    const slug = elective.slug ?? elective.id;
+    const rel = electiveTemplate.replace("{slug}", slug);
+    const title = elective.title?.[locale] ?? elective.title?.en ?? slug;
+
+    await writeIcs(
+      `${electiveBaseUrl}/${rel}`,
+      eventsToIcs(sorted, {
+        calendarName: { en: `Elective · ${title}`, ar: `مقرر اختياري · ${elective.title?.ar ?? title}` },
+        locale,
+        timezone: manifest.timezone,
+        institutionId: settings.institutionId,
+        locations,
+        generatedAt
+      })
+    );
+  }
   if (diagnostics.errors.length) {
     console.error("Generation errors:");
     for (const err of diagnostics.errors) console.error(" -", err);
