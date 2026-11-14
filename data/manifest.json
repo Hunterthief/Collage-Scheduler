@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "dataVersion": "2026-11-14T02:00:00Z",
+  "dataVersion": "2026-11-14T02:30:00Z",
   "timezone": "Africa/Cairo",
   "paths": {
     "programs": "data/programs/programs.json",
@@ -14,10 +14,12 @@
     { "programId": "pharmd", "academicYearId": "2026-2027", "yearLevel": 2, "path": "data/students/assignments/pharmd/2026-2027-year-2.json" },
     { "programId": "pharmd", "academicYearId": "2026-2027", "yearLevel": 3, "legacyAlias": true, "path": "data/students/assignments/pharmd/2026-2027.json" },
     { "programId": "pharmd", "academicYearId": "2026-2027", "yearLevel": 4, "path": "data/students/assignments/pharmd/2026-2027-year-4.json" },
+    { "programId": "pharmd", "academicYearId": "2026-2027", "yearLevel": 5, "path": "data/students/assignments/pharmd/2026-2027-year-5.json" },
     { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 1, "path": "data/students/assignments/clinical-pharmacy/2026-2027-year-1.json" },
     { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 2, "legacyAlias": true, "path": "data/students/assignments/clinical-pharmacy/2026-2027.json" },
     { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 3, "path": "data/students/assignments/clinical-pharmacy/2026-2027-year-3.json" },
-    { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 4, "path": "data/students/assignments/clinical-pharmacy/2026-2027-year-4.json" }
+    { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 4, "path": "data/students/assignments/clinical-pharmacy/2026-2027-year-4.json" },
+    { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 5, "path": "data/students/assignments/clinical-pharmacy/2026-2027-year-5.json" }
   ],
   "calendarFeeds": {
     "baseUrl": "calendar/feeds",
