@@ -21,22 +21,17 @@ function cohortsFor(assignment, manifest) {
   );
 }
 
-// The year level is part of the feed identity. Prefer the resolved assignment,
-// then fall back to the manifest cohort when it is unambiguous.
 export function resolveYearLevel(assignment, manifest) {
   if (!assignment) return null;
-
   if (assignment.yearLevel != null && assignment.yearLevel !== "") {
     const n = Number(assignment.yearLevel);
     return Number.isFinite(n) ? n : null;
   }
-
   const matches = cohortsFor(assignment, manifest).filter((a) => a.yearLevel != null);
   if (matches.length === 1) {
     const n = Number(matches[0].yearLevel);
     return Number.isFinite(n) ? n : null;
   }
-
   return null;
 }
 
@@ -52,28 +47,18 @@ function renderTemplate(template, values) {
 
 export function buildFeedUrl(assignment, manifest) {
   if (!assignment || assignment.practicalGroup == null) return null;
-
   const feeds = manifest?.calendarFeeds ?? {};
   const baseUrl = String(feeds.baseUrl ?? "calendar/feeds").replace(/\/$/, "");
-  const subdivision = assignment.subdivision
-    ? String(assignment.subdivision).toUpperCase()
-    : "";
+  const subdivision = assignment.subdivision ? String(assignment.subdivision).toUpperCase() : "";
   const level = resolveYearLevel(assignment, manifest);
-
-  // Year-scoped paths are always used when the level is known, so 1st / 2nd /
-  // 3rd / 4th year feeds never collide and never change when a year is added.
   const template =
     level != null
       ? subdivision
-        ? feeds.levelSubdivisionPathTemplate ??
-          "{programId}/{academicYearId}/year-{level}/group-{group}-{subdivisionLower}.ics"
-        : feeds.levelPathTemplate ??
-          "{programId}/{academicYearId}/year-{level}/group-{group}.ics"
+        ? feeds.levelSubdivisionPathTemplate ?? "{programId}/{academicYearId}/year-{level}/group-{group}-{subdivisionLower}.ics"
+        : feeds.levelPathTemplate ?? "{programId}/{academicYearId}/year-{level}/group-{group}.ics"
       : subdivision
-        ? feeds.subdivisionPathTemplate ??
-          "{programId}/{academicYearId}/group-{group}-{subdivisionLower}.ics"
+        ? feeds.subdivisionPathTemplate ?? "{programId}/{academicYearId}/group-{group}-{subdivisionLower}.ics"
         : feeds.pathTemplate ?? "{programId}/{academicYearId}/group-{group}.ics";
-
   const rel = renderTemplate(template, {
     programId: assignment.programId,
     academicYearId: assignment.academicYearId,
@@ -81,7 +66,17 @@ export function buildFeedUrl(assignment, manifest) {
     group: assignment.practicalGroup,
     subdivision
   });
+  return absoluteUrl(`${baseUrl}/${rel}`, getCurrentBase());
+}
 
+// One static feed per elective (group-independent); a student subscribes to the
+// electives they actually registered. Slug is the stable identity.
+export function buildElectiveFeedUrl(slug, manifest) {
+  if (!slug) return null;
+  const feeds = manifest?.calendarFeeds ?? {};
+  const baseUrl = String(feeds.baseUrl ?? "calendar/feeds").replace(/\/$/, "");
+  const template = feeds.electivePathTemplate ?? "electives/{slug}.ics";
+  const rel = template.replace("{slug}", String(slug));
   return absoluteUrl(`${baseUrl}/${rel}`, getCurrentBase());
 }
 
