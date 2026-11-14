@@ -1,0 +1,85 @@
+{
+  "events": [
+    {
+      "id": "clinical-s1-organic-chemistry-practical",
+      "courseId": "05-PC-101",
+      "type": "practical",
+      "day": "Sunday",
+      "sessions": [
+        { "group": 1, "start": "09:00", "end": "10:50" },
+        { "group": 2, "start": "11:00", "end": "12:50" }
+      ],
+      "location": { "building": "new", "floor": 4, "room": null },
+      "shorthand": "PN 4 Pharmaceutical Organic Chemistry-I",
+      "displayCode": "PN 4 Pharmaceutical Organic Chemistry-I",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-community-issues-practical",
+      "courseId": "community-issues",
+      "type": "practical",
+      "day": "Monday",
+      "sessions": [
+        { "group": 1, "start": "13:00", "end": "15:00" },
+        { "group": 2, "start": "13:00", "end": "15:00" }
+      ],
+      "location": { "building": "old", "floor": 6, "room": "Conference Hall" },
+      "shorthand": "PO 6 Community Issues",
+      "displayCode": "PO 6 Community Issues",
+      "validFrom": null,
+      "validUntil": null,
+      "sourceReview": [
+        {
+          "code": "COURSE_CODE_NOT_PRINTED",
+          "detail": "The practical sheet lists 'القضايا المجتمعية' with no course code, so a descriptive code is used instead of a fabricated numeric one. Single weekly session for both groups, 1:00-3:00 PM, Conference Hall (Old Building, floor 6)."
+        }
+      ]
+    },
+    {
+      "id": "clinical-s1-information-technology-practical",
+      "courseId": "00-NP-101",
+      "type": "practical",
+      "day": "Tuesday",
+      "sessions": [
+        { "group": 2, "start": "08:00", "end": "09:50" },
+        { "group": 1, "start": "10:00", "end": "11:50" }
+      ],
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
+      "shorthand": "PN 0 Information Technology",
+      "displayCode": "PN 0 Information Technology",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-analytical-chemistry-practical",
+      "courseId": "07-PA-101",
+      "type": "practical",
+      "day": "Tuesday",
+      "sessions": [
+        { "group": 1, "start": "08:00", "end": "09:50" },
+        { "group": 2, "start": "10:00", "end": "11:50" }
+      ],
+      "location": { "building": "new", "floor": 6, "room": null },
+      "shorthand": "PN 6 Pharmaceutical Analytical Chemistry-I",
+      "displayCode": "PN 6 Pharmaceutical Analytical Chemistry-I",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-medicinal-plants-practical",
+      "courseId": "06-PG-101",
+      "type": "practical",
+      "day": "Wednesday",
+      "sessions": [
+        { "group": 1, "start": "11:00", "end": "12:50" },
+        { "group": 2, "start": "13:00", "end": "14:50" }
+      ],
+      "location": { "building": "old", "floor": 3, "room": "Computer Lab" },
+      "shorthand": "PO 3 Medicinal Plants",
+      "displayCode": "PO 3 Medicinal Plants",
+      "validFrom": null,
+      "validUntil": null
+    }
+  ]
+}
