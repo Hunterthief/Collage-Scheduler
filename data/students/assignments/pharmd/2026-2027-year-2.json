@@ -1,0 +1,44 @@
+{
+  "programId": "pharmd",
+  "academicYearId": "2026-2027",
+  "yearLevel": 2,
+  "rules": [
+    {
+      "id": "pharmd-y2-2026-2027-group-1",
+      "practicalGroup": 1,
+      "from": "2515001",
+      "to": "2515064",
+      "subdivisions": [
+        { "id": "pharmd-y2-2026-2027-group-1-a", "name": "A", "from": "2515001", "to": "2515031" },
+        { "id": "pharmd-y2-2026-2027-group-1-b", "name": "B", "from": "2515032", "to": "2515064" }
+      ]
+    },
+    {
+      "id": "pharmd-y2-2026-2027-group-2",
+      "practicalGroup": 2,
+      "from": "2515065",
+      "to": "2515128",
+      "subdivisions": [
+        { "id": "pharmd-y2-2026-2027-group-2-a", "name": "A", "from": "2515065", "to": "2515098" },
+        { "id": "pharmd-y2-2026-2027-group-2-b", "name": "B", "from": "2515099", "to": "2515128" }
+      ]
+    },
+    {
+      "id": "pharmd-y2-2026-2027-group-3",
+      "practicalGroup": 3,
+      "from": "2515129",
+      "to": "2515999",
+      "subdivisions": [
+        { "id": "pharmd-y2-2026-2027-group-3-a", "name": "A", "from": "2515129", "to": "2515158" },
+        { "id": "pharmd-y2-2026-2027-group-3-b", "name": "B", "from": "2515159", "to": "2515999" }
+      ],
+      "sourceReview": [
+        {
+          "code": "OPEN_ENDED_BOUND_TO_PREFIX",
+          "detail": "Source prints group 3 and 3B as '2515129 – الأخر' / '2515159 – الأخر' (to the end). Upper bound set to the ceiling of this cohort's 4-digit seat prefix (2515xxx -> 2515999) so it cannot bleed into another cohort's namespace (PharmD Y1 2615xxx, Y3 2415xxx, Clinical 2610/2510/2410xxx)."
+        }
+      ]
+    }
+  ],
+  "overrides": []
+}
