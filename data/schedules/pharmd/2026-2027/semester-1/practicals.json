@@ -1,0 +1,90 @@
+{
+  "events": [
+    {
+      "id": "pharmd-s1-organic-chemistry-practical",
+      "courseId": "02-06-05-101",
+      "type": "practical",
+      "day": "Sunday",
+      "sessions": [
+        { "group": 1, "start": "13:00", "end": "14:50" },
+        { "group": 2, "start": "15:00", "end": "16:50" },
+        { "group": 3, "start": "17:00", "end": "18:50" }
+      ],
+      "location": { "building": "new", "floor": 4, "room": null },
+      "shorthand": "PN 4 Pharmaceutical Organic Chemistry-I",
+      "displayCode": "PN 4 Pharmaceutical Organic Chemistry-I",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "pharmd-s1-community-issues-practical",
+      "courseId": "community-issues",
+      "type": "practical",
+      "day": "Monday",
+      "sessions": [
+        { "group": 1, "start": "13:00", "end": "15:00" },
+        { "group": 2, "start": "13:00", "end": "15:00" },
+        { "group": 3, "start": "13:00", "end": "15:00" }
+      ],
+      "location": { "building": "old", "floor": 6, "room": "Conference Hall" },
+      "shorthand": "PO 6 Community Issues",
+      "displayCode": "PO 6 Community Issues",
+      "validFrom": null,
+      "validUntil": null,
+      "sourceReview": [
+        {
+          "code": "COURSE_CODE_NOT_PRINTED",
+          "detail": "The practical sheet lists 'القضايا المجتمعية' with no course code, so a descriptive code is used instead of a fabricated numeric one. Single weekly session for all groups, 1:00-3:00 PM, Conference Hall (Old Building, floor 6)."
+        }
+      ]
+    },
+    {
+      "id": "pharmd-s1-medicinal-plants-practical",
+      "courseId": "02-06-06-101",
+      "type": "practical",
+      "day": "Tuesday",
+      "sessions": [
+        { "group": 3, "start": "13:00", "end": "14:50" },
+        { "group": 1, "start": "15:00", "end": "16:50" },
+        { "group": 2, "start": "17:00", "end": "18:50" }
+      ],
+      "location": { "building": "new", "floor": 5, "room": null },
+      "shorthand": "PN 5 Medicinal Plants",
+      "displayCode": "PN 5 Medicinal Plants",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "pharmd-s1-information-technology-practical",
+      "courseId": "02-06-00-101",
+      "type": "practical",
+      "day": "Tuesday",
+      "sessions": [
+        { "group": 1, "start": "13:00", "end": "14:50" },
+        { "group": 2, "start": "13:00", "end": "14:50" },
+        { "group": 3, "start": "15:00", "end": "16:50" }
+      ],
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
+      "shorthand": "PN 0 Information Technology",
+      "displayCode": "PN 0 Information Technology",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "pharmd-s1-analytical-chemistry-practical",
+      "courseId": "02-06-07-101",
+      "type": "practical",
+      "day": "Wednesday",
+      "sessions": [
+        { "group": 2, "start": "13:00", "end": "14:50" },
+        { "group": 1, "start": "15:00", "end": "16:50" },
+        { "group": 3, "start": "17:00", "end": "18:50" }
+      ],
+      "location": { "building": "new", "floor": 6, "room": null },
+      "shorthand": "PN 6 Pharmaceutical Analytical Chemistry-I",
+      "displayCode": "PN 6 Pharmaceutical Analytical Chemistry-I",
+      "validFrom": null,
+      "validUntil": null
+    }
+  ]
+}
