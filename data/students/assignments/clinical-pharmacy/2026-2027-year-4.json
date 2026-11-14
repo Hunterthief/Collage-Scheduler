@@ -1,0 +1,31 @@
+{
+  "programId": "clinical-pharmacy",
+  "academicYearId": "2026-2027",
+  "yearLevel": 4,
+  "rules": [
+    {
+      "id": "clinical-y4-2026-2027-group-1",
+      "practicalGroup": 1,
+      "from": "2310001",
+      "to": "2310040",
+      "subdivisions": [
+        { "id": "clinical-y4-2026-2027-group-1-a", "name": "A", "from": "2310001", "to": "2310020" },
+        { "id": "clinical-y4-2026-2027-group-1-b", "name": "B", "from": "2310021", "to": "2310040" }
+      ]
+    },
+    {
+      "id": "clinical-y4-2026-2027-group-2",
+      "practicalGroup": 2,
+      "from": "2310041",
+      "to": "2310999",
+      "subdivisions": [
+        { "id": "clinical-y4-2026-2027-group-2-a", "name": "A", "from": "2310041", "to": "2310064" },
+        { "id": "clinical-y4-2026-2027-group-2-b", "name": "B", "from": "2310065", "to": "2310999" }
+      ],
+      "sourceReview": [
+        { "code": "OPEN_ENDED_BOUND_TO_PREFIX", "detail": "Source prints group 2 and 2B as '2310041 – الأخر' / '2310065 – الأخر' (to the end). Upper bound set to the ceiling of this cohort's 4-digit seat prefix (2310xxx -> 2310999) so it cannot bleed into another cohort's namespace." }
+      ]
+    }
+  ],
+  "overrides": []
+}
