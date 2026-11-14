@@ -1,0 +1,12 @@
+{
+  "courses": [
+    { "id": "02-06-06-203", "code": "02-06-06 203", "title": { "en": "Pharmacognosy-II", "ar": "العقاقير-II" }, "color": "#795548" },
+    { "id": "02-00-00204", "code": "02-00-00204", "title": { "en": "Critical Thinking", "ar": "التفكير النقدي" }, "color": "#7b1fa2" },
+    { "id": "02-06-08-202", "code": "02-06-08 202", "title": { "en": "Biochemistry-I", "ar": "الكيمياء الحيوية-I" }, "color": "#009688" },
+    { "id": "02-06-05-203", "code": "02-06-05 203", "title": { "en": "Pharmaceutical Organic Chemistry-III", "ar": "الكيمياء العضوية الصيدلية-III" }, "color": "#188038" },
+    { "id": "02-06-02-203", "code": "02-06-02 203", "title": { "en": "Physiology and Pathophysiology", "ar": "علم وظائف الأعضاء والأمراض" }, "color": "#d93025" },
+    { "id": "02-06-09-203", "code": "02-06-09 203", "title": { "en": "Biostatistics & Evidencebased Medicine", "ar": "الإحصاء الحيوي والطب المبني على البراهين" }, "color": "#e37400" },
+    { "id": "02-06-07-203", "code": "02-06-07 203", "title": { "en": "Pharmaceutical Analytical Chemistry-III", "ar": "الكيمياء التحليلية الصيدلية-III" }, "color": "#c2185b" },
+    { "id": "02-06-01-202", "code": "02-06-01 202", "title": { "en": "Pharmaceutics-I", "ar": "الصيدلانيات-I" }, "color": "#1a73e8" }
+  ]
+}
