@@ -1,0 +1,126 @@
+{
+  "events": [
+    {
+      "id": "pharmd-y2-midterm-pharmaceutics-i",
+      "courseId": "02-06-01-202",
+      "type": "examination",
+      "title": { "en": "Pharmaceutics-I (Mid-term)" },
+      "day": "Saturday",
+      "date": "2026-10-31",
+      "start": "10:00",
+      "end": "10:30",
+      "groups": [1, 2, 3],
+      "location": { "building": "new", "floor": null, "room": null },
+      "displayCode": "Pharmaceutics-I (Mid-term)",
+      "sourceReview": [
+        { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Semester 3 column of the college-wide PharmD mid-term table; New Building per the table footer." }
+      ]
+    },
+    {
+      "id": "pharmd-y2-midterm-organic-chemistry-iii",
+      "courseId": "02-06-05-203",
+      "type": "examination",
+      "title": { "en": "Pharmaceutical Organic Chemistry-III (Mid-term)" },
+      "day": "Sunday",
+      "date": "2026-11-01",
+      "start": "10:00",
+      "end": "10:30",
+      "groups": [1, 2, 3],
+      "location": { "building": "new", "floor": null, "room": null },
+      "displayCode": "Pharmaceutical Organic Chemistry-III (Mid-term)",
+      "sourceReview": [
+        { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Semester 3 column of the college-wide PharmD mid-term table; New Building per the table footer." }
+      ]
+    },
+    {
+      "id": "pharmd-y2-midterm-biostatistics",
+      "courseId": "02-06-09-203",
+      "type": "examination",
+      "title": { "en": "Biostatistics & Evidencebased Medicine (Mid-term)" },
+      "day": "Monday",
+      "date": "2026-11-02",
+      "start": "10:00",
+      "end": "10:30",
+      "groups": [1, 2, 3],
+      "location": { "building": "new", "floor": null, "room": null },
+      "displayCode": "Biostatistics & Evidencebased Medicine (Mid-term)",
+      "sourceReview": [
+        { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Semester 3 column of the college-wide PharmD mid-term table; New Building per the table footer." }
+      ]
+    },
+    {
+      "id": "pharmd-y2-midterm-critical-thinking",
+      "courseId": "02-00-00204",
+      "type": "examination",
+      "title": { "en": "Critical Thinking (Mid-term)" },
+      "day": "Monday",
+      "date": "2026-11-02",
+      "start": "11:00",
+      "end": "11:30",
+      "groups": [1, 2, 3],
+      "location": { "building": "new", "floor": null, "room": null },
+      "displayCode": "Critical Thinking (Mid-term)",
+      "sourceReview": [
+        { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Semester 3 column of the college-wide PharmD mid-term table; New Building per the table footer." }
+      ]
+    },
+    {
+      "id": "pharmd-y2-midterm-analytical-chemistry-iii",
+      "courseId": "02-06-07-203",
+      "type": "examination",
+      "title": { "en": "Pharmaceutical Analytical Chemistry-III (Mid-term)" },
+      "day": "Tuesday",
+      "date": "2026-11-03",
+      "start": "11:00",
+      "end": "11:30",
+      "groups": [1, 2, 3],
+      "location": { "building": "new", "floor": null, "room": null },
+      "displayCode": "Pharmaceutical Analytical Chemistry-III (Mid-term)",
+      "sourceReview": [
+        { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Semester 3 column of the college-wide PharmD mid-term table; New Building per the table footer." }
+      ]
+    },
+    {
+      "id": "pharmd-y2-midterm-biochemistry-i",
+      "courseId": "02-06-08-202",
+      "type": "examination",
+      "title": { "en": "Biochemistry-I (Mid-term)" },
+      "day": "Wednesday",
+      "date": "2026-11-04",
+      "start": "10:00",
+      "end": "10:30",
+      "groups": [1, 2, 3],
+      "location": { "building": "new", "floor": null, "room": null },
+      "displayCode": "Biochemistry-I (Mid-term)",
+      "sourceReview": [
+        { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Semester 3 column of the college-wide PharmD mid-term table; New Building per the table footer." }
+      ]
+    },
+    {
+      "id": "pharmd-y2-midterm-pharmacognosy-ii",
+      "courseId": "02-06-06-203",
+      "type": "examination",
+      "title": { "en": "Pharmacognosy-II (Mid-term)" },
+      "day": "Thursday",
+      "date": "2026-11-05",
+      "start": "10:00",
+      "end": "10:30",
+      "groups": [1, 2, 3],
+      "location": { "building": "new", "floor": null, "room": null },
+      "displayCode": "Pharmacognosy-II (Mid-term)",
+      "sourceReview": [
+        { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Semester 3 column of the college-wide PharmD mid-term table; New Building per the table footer." }
+      ]
+    }
+  ],
+  "sourceReview": [
+    {
+      "code": "PHYSIOLOGY_NO_MIDTERM",
+      "detail": "Physiology and Pathophysiology (02-06-02 203) has no entry in the Semester 3 mid-term column; it is presumably assessed by another method. Flagged rather than invented."
+    },
+    {
+      "code": "FINAL_EXAMS_PENDING",
+      "detail": "Only mid-term examinations were supplied for this semester. Final examinations are pending publication."
+    }
+  ]
+}
