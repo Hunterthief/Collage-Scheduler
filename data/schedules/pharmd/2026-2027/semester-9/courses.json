@@ -1,0 +1,10 @@
+{
+  "courses": [
+    { "id": "02-06-09509", "code": "02-06-09509", "title": { "en": "Hospital Pharmacy" }, "color": "#1a73e8" },
+    { "id": "02-06-04505", "code": "02-06-04505", "title": { "en": "Pharmaceutical Biotechnology" }, "color": "#188038" },
+    { "id": "02-06-03502", "code": "02-06-03502", "title": { "en": "Pharmaceutical Technology II" }, "color": "#009688" },
+    { "id": "02-06-04506", "code": "02-06-04506", "title": { "en": "Public Health" }, "color": "#e8710a" },
+    { "id": "02-06-09508", "code": "02-06-09508", "title": { "en": "Clinical pharmacy I" }, "color": "#7b1fa2" },
+    { "id": "02-06-09510", "code": "02-06-09510", "title": { "en": "Pharmaceutical Management, Marketing & Pharmacoeconomics" }, "color": "#c2185b" }
+  ]
+}
