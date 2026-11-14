@@ -11,17 +11,8 @@
             {
               "id": "pharmd-2026-2027-semester-1",
               "name": { "en": "Semester 1 (Year 1)", "ar": "الفصل الدراسي الأول (الفرقة الأولى)" },
-              "yearLevel": 1,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/pharmd/2026-2027/semester-1/courses.json",
-                "lectures": "data/schedules/pharmd/2026-2027/semester-1/lectures.json",
-                "practicals": "data/schedules/pharmd/2026-2027/semester-1/practicals.json",
-                "exams": "data/schedules/pharmd/2026-2027/semester-1/exams.json",
-                "exceptions": "data/schedules/pharmd/2026-2027/semester-1/exceptions.json"
-              },
+              "yearLevel": 1, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-1/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-1/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-1/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-1/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-1/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
@@ -32,17 +23,8 @@
             {
               "id": "pharmd-2026-2027-semester-3",
               "name": { "en": "Semester 3 (Year 2)", "ar": "الفصل الدراسي الثالث (الفرقة الثانية)" },
-              "yearLevel": 2,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/pharmd/2026-2027/semester-3/courses.json",
-                "lectures": "data/schedules/pharmd/2026-2027/semester-3/lectures.json",
-                "practicals": "data/schedules/pharmd/2026-2027/semester-3/practicals.json",
-                "exams": "data/schedules/pharmd/2026-2027/semester-3/exams.json",
-                "exceptions": "data/schedules/pharmd/2026-2027/semester-3/exceptions.json"
-              },
+              "yearLevel": 2, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-3/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-3/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-3/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-3/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-3/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
@@ -53,39 +35,34 @@
             {
               "id": "pharmd-2026-2027-semester-5",
               "name": { "en": "Semester 5", "ar": "الفصل الدراسي الخامس" },
-              "yearLevel": 3,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/pharmd/2026-2027/semester-5/courses.json",
-                "lectures": "data/schedules/pharmd/2026-2027/semester-5/lectures.json",
-                "practicals": "data/schedules/pharmd/2026-2027/semester-5/practicals.json",
-                "exams": "data/schedules/pharmd/2026-2027/semester-5/exams.json",
-                "exceptions": "data/schedules/pharmd/2026-2027/semester-5/exceptions.json"
-              },
+              "yearLevel": 3, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-5/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-5/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-5/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-5/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-5/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [ { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar, which states its dates are approximate." } ]
             },
             {
               "id": "pharmd-2026-2027-semester-7",
               "name": { "en": "Semester 7 (Year 4)", "ar": "الفصل الدراسي السابع (الفرقة الرابعة)" },
-              "yearLevel": 4,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/pharmd/2026-2027/semester-7/courses.json",
-                "lectures": "data/schedules/pharmd/2026-2027/semester-7/lectures.json",
-                "practicals": "data/schedules/pharmd/2026-2027/semester-7/practicals.json",
-                "exams": "data/schedules/pharmd/2026-2027/semester-7/exams.json",
-                "exceptions": "data/schedules/pharmd/2026-2027/semester-7/exceptions.json"
-              },
+              "yearLevel": 4, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-7/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-7/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-7/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-7/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-7/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
                 { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
                 { "code": "MIDTERM_EXAMS_PENDING_SEM7_COLUMN", "detail": "The Semester 7 column of the college-wide mid-term table has not been re-supplied with this batch; its stacked/merged cells are not transcribed from memory. exams.json is intentionally empty until the table (or a clean Semester 7 crop) is re-sent, at which point Y1(S1), Y4(S7) and Y5(S9) will be filled in one accurate pass. The college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            },
+            {
+              "id": "pharmd-2026-2027-semester-9",
+              "name": { "en": "Semester 9 (Year 5)", "ar": "الفصل الدراسي التاسع (الفرقة الخامسة)" },
+              "yearLevel": 5, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-9/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-9/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-9/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-9/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-9/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all four groups; no alternating A/B weeks in this semester." },
+                { "code": "HOSPITAL_PHARMACY_AND_BIOTECH_WINDOW_MOVES", "detail": "Two lecture relocations encoded as adjacent validity windows (no cancel exceptions): Hospital Pharmacy Sunday 17:00-17:55 until 2026-10-29 then Wednesday 17:00-17:55 from 2026-11-07; Pharmaceutical Biotechnology Tuesday 13:00-14:50 until 2026-10-29 then Sunday 17:00-18:50 from 2026-11-07. The intervening mid-term blackout week (31 Oct - 5 Nov) falls between the two windows, so the handoff is clean." },
+                { "code": "MIDTERM_EXAMS_PENDING_SEM9_COLUMN", "detail": "The Semester 9 column exists in the college-wide mid-term table sent earlier, but that scan stacks/merges cells (Cosmetic / Environmental / Pharmacogenomics sit in ambiguous column positions) and is not transcribed from memory. exams.json is intentionally empty until a clean crop of the Semester 9 column is re-sent; the mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
               ]
             }
           ]
@@ -103,17 +80,8 @@
             {
               "id": "clinical-pharmacy-2026-2027-semester-1",
               "name": { "en": "Semester 1 (Year 1)", "ar": "الفصل الدراسي الأول (الفرقة الأولى)" },
-              "yearLevel": 1,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-1/courses.json",
-                "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-1/lectures.json",
-                "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-1/practicals.json",
-                "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exams.json",
-                "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exceptions.json"
-              },
+              "yearLevel": 1, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-1/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-1/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-1/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
@@ -123,17 +91,8 @@
             {
               "id": "clinical-pharmacy-2026-2027-semester-3",
               "name": { "en": "Semester 3 (Year 2)", "ar": "الفصل الدراسي الثالث (الفرقة الثانية)" },
-              "yearLevel": 2,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-3/courses.json",
-                "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-3/lectures.json",
-                "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-3/practicals.json",
-                "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exams.json",
-                "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exceptions.json"
-              },
+              "yearLevel": 2, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-3/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-3/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-3/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)." },
@@ -143,17 +102,8 @@
             {
               "id": "clinical-pharmacy-2026-2027-semester-5",
               "name": { "en": "Semester 5 (Year 3)", "ar": "الفصل الدراسي الخامس (الفرقة الثالثة)" },
-              "yearLevel": 3,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-5/courses.json",
-                "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-5/lectures.json",
-                "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-5/practicals.json",
-                "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exams.json",
-                "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exceptions.json"
-              },
+              "yearLevel": 3, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-5/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-5/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-5/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)." },
@@ -166,23 +116,27 @@
             {
               "id": "clinical-pharmacy-2026-2027-semester-7",
               "name": { "en": "Semester 7 (Year 4)", "ar": "الفصل الدراسي السابع (الفرقة الرابعة)" },
-              "yearLevel": 4,
-              "validFrom": "2026-09-19",
-              "validUntil": "2026-12-17",
-              "status": "published",
-              "datasets": {
-                "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-7/courses.json",
-                "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-7/lectures.json",
-                "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-7/practicals.json",
-                "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exams.json",
-                "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exceptions.json"
-              },
+              "yearLevel": 4, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-7/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-7/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-7/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
                 { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for both groups; no alternating A/B weeks in this semester." },
                 { "code": "QC_PRACTICAL_MOVED_WEDNESDAY_TO_SATURDAY", "detail": "Quality Control of Pharmaceuticals is printed on Wednesday (6th floor) from start of study until 2026-11-19 and on Saturday (8th floor) from 2026-11-21 until end of study. Encoded as two adjacent validity windows, not a cancel exception, so no cancelled remnant remains." },
                 { "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED", "detail": "No Clinical Pharmacy Semester 7 exam timetable was supplied; the college-wide mid-term table covers the general PharmD ladder only and does not apply here. The college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            },
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-9",
+              "name": { "en": "Semester 9 (Year 5)", "ar": "الفصل الدراسي التاسع (الفرقة الخامسة)" },
+              "yearLevel": 5, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-9/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-9/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-9/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-9/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-9/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all four groups; no alternating A/B weeks in this semester. Practical sessions printed for group pairs (1,2) and (3,4) are expanded to per-group rows so single-group composition works." },
+                { "code": "INNOVATION_ENTREPRENEURSHIP_ONLINE", "detail": "Innovation and Entrepreneurship (00-NP 905) is a live online Saturday session with no physical room; location is null, shorthand is omitted (no building code exists), and displayCode carries the (Online) title." },
+                { "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED", "detail": "No Clinical Pharmacy Semester 9 exam timetable was supplied; the college-wide mid-term table covers the general PharmD ladder only. The mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
               ]
             }
           ]
