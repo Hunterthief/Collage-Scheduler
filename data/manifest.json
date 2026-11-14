@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "dataVersion": "2026-11-14T02:30:00Z",
+  "dataVersion": "2026-11-14T03:00:00Z",
   "timezone": "Africa/Cairo",
   "paths": {
     "programs": "data/programs/programs.json",
@@ -21,11 +21,17 @@
     { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 4, "path": "data/students/assignments/clinical-pharmacy/2026-2027-year-4.json" },
     { "programId": "clinical-pharmacy", "academicYearId": "2026-2027", "yearLevel": 5, "path": "data/students/assignments/clinical-pharmacy/2026-2027-year-5.json" }
   ],
+  "electives": [
+    { "path": "data/electives/university.json" },
+    { "path": "data/electives/faculty-pharmd.json" },
+    { "path": "data/electives/faculty-clinical.json" }
+  ],
   "calendarFeeds": {
     "baseUrl": "calendar/feeds",
     "pathTemplate": "{programId}/{academicYearId}/group-{group}.ics",
     "subdivisionPathTemplate": "{programId}/{academicYearId}/group-{group}-{subdivisionLower}.ics",
     "levelPathTemplate": "{programId}/{academicYearId}/year-{level}/group-{group}.ics",
-    "levelSubdivisionPathTemplate": "{programId}/{academicYearId}/year-{level}/group-{group}-{subdivisionLower}.ics"
+    "levelSubdivisionPathTemplate": "{programId}/{academicYearId}/year-{level}/group-{group}-{subdivisionLower}.ics",
+    "electivePathTemplate": "electives/{slug}.ics"
   }
 }
