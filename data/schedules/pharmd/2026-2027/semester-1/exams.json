@@ -1,0 +1,9 @@
+{
+  "events": [],
+  "sourceReview": [
+    {
+      "code": "EXAM_TIMETABLE_NOT_YET_MAPPED",
+      "detail": "The college-wide mid-term table (Semester 1/3/5/7/9 columns, non-clinical PharmD ladder) has a Semester 1 column that belongs to this cohort. It was not transcribed when only Semester 5 had a home, and exact per-date times are not reproduced from memory. Re-send or paste the Semester 1 column to populate this file; the college-wide mid-term blackout already suppresses lectures and practicals 2026-10-31 to 2026-11-05."
+    }
+  ]
+}
