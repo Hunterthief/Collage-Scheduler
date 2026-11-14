@@ -1,0 +1,52 @@
+{
+  "programId": "pharmd",
+  "academicYearId": "2026-2027",
+  "yearLevel": 5,
+  "rules": [
+    {
+      "id": "pharmd-y5-2026-2027-group-1",
+      "practicalGroup": 1,
+      "from": "2215001",
+      "to": "2215081",
+      "subdivisions": [
+        { "id": "pharmd-y5-2026-2027-group-1-a", "name": "A", "from": "2215001", "to": "2215037" },
+        { "id": "pharmd-y5-2026-2027-group-1-b", "name": "B", "from": "2215038", "to": "2215081" }
+      ]
+    },
+    {
+      "id": "pharmd-y5-2026-2027-group-2",
+      "practicalGroup": 2,
+      "from": "2215082",
+      "to": "2215157",
+      "subdivisions": [
+        { "id": "pharmd-y5-2026-2027-group-2-a", "name": "A", "from": "2215082", "to": "2215118" },
+        { "id": "pharmd-y5-2026-2027-group-2-b", "name": "B", "from": "2215119", "to": "2215157" }
+      ]
+    },
+    {
+      "id": "pharmd-y5-2026-2027-group-3",
+      "practicalGroup": 3,
+      "from": "2215158",
+      "to": "2215234",
+      "subdivisions": [
+        { "id": "pharmd-y5-2026-2027-group-3-a", "name": "A", "from": "2215158", "to": "2215196" },
+        { "id": "pharmd-y5-2026-2027-group-3-b", "name": "B", "from": "2215197", "to": "2215234" }
+      ]
+    },
+    {
+      "id": "pharmd-y5-2026-2027-group-4",
+      "practicalGroup": 4,
+      "from": "2215235",
+      "to": "2215999",
+      "subdivisions": [
+        { "id": "pharmd-y5-2026-2027-group-4-a", "name": "A", "from": "2215235", "to": "2215295" },
+        { "id": "pharmd-y5-2026-2027-group-4-b", "name": "B", "from": "2215297", "to": "2215999" }
+      ],
+      "sourceReview": [
+        { "code": "SUBDIVISION_GAP", "detail": "Subdivision A ends at 2215295 and B starts at 2215297; ID 2215296 is not covered by either. Verify against the official list." },
+        { "code": "OPEN_ENDED_BOUND_TO_PREFIX", "detail": "Source prints group 4 and 4B as '2215235 – الأخر' / '2215297 – الأخر' (to the end). Upper bound set to the ceiling of this cohort's 4-digit seat prefix (2215xxx -> 2215999) so it cannot bleed into another cohort's namespace." }
+      ]
+    }
+  ],
+  "overrides": []
+}
