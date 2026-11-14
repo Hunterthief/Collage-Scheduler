@@ -9,6 +9,8 @@ import { sortOccurrences } from "../assets/js/schedule/sorting.js";
 import { eventsToIcs } from "../assets/js/calendar/ics-generator.js";
 import { createShorthandParser } from "../assets/js/schedule/shorthand.js";
 import { buildEventIndex, eventShorthand } from "../assets/js/schedule/labels.js";
+import { buildElectiveOccurrences } from "../assets/js/schedule/electives.js";
+import { loadElectiveCatalog } from "../assets/js/schedule/electives.js";
 
 const ROOT = process.cwd();
 
