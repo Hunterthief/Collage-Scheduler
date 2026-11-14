@@ -1,0 +1,58 @@
+{
+  "programId": "clinical-pharmacy",
+  "academicYearId": "2026-2027",
+  "yearLevel": 5,
+  "rules": [
+    {
+      "id": "clinical-y5-2026-2027-group-1",
+      "practicalGroup": 1,
+      "from": "2210001",
+      "to": "2210028",
+      "subdivisions": [
+        { "id": "clinical-y5-2026-2027-group-1-a", "name": "A", "from": "2210001", "to": "2210015" },
+        { "id": "clinical-y5-2026-2027-group-1-b", "name": "B", "from": "2210016", "to": "2210028" }
+      ],
+      "sourceReview": [
+        { "code": "GROUP_RANGE_GAP", "detail": "Group 1 ends at 2210028 but group 2 starts at 2210030; ID 2210029 is covered by no rule and will report 'not found'. Verify against the official list." }
+      ]
+    },
+    {
+      "id": "clinical-y5-2026-2027-group-2",
+      "practicalGroup": 2,
+      "from": "2210030",
+      "to": "2210054",
+      "subdivisions": [
+        { "id": "clinical-y5-2026-2027-group-2-a", "name": "A", "from": "2210030", "to": "2210041" },
+        { "id": "clinical-y5-2026-2027-group-2-b", "name": "B", "from": "2210042", "to": "2210054" }
+      ]
+    },
+    {
+      "id": "clinical-y5-2026-2027-group-3",
+      "practicalGroup": 3,
+      "from": "2210055",
+      "to": "2210094",
+      "subdivisions": [
+        { "id": "clinical-y5-2026-2027-group-3-a", "name": "A", "from": "2210055", "to": "2210066" },
+        { "id": "clinical-y5-2026-2027-group-3-b", "name": "B", "from": "2210070", "to": "2210094" }
+      ],
+      "sourceReview": [
+        { "code": "SUBDIVISION_GAP", "detail": "Subdivision A ends at 2210066 and B starts at 2210070; IDs 2210067, 2210068, 2210069 are not covered by either. Verify against the official list." }
+      ]
+    },
+    {
+      "id": "clinical-y5-2026-2027-group-4",
+      "practicalGroup": 4,
+      "from": "2210095",
+      "to": "2210999",
+      "subdivisions": [
+        { "id": "clinical-y5-2026-2027-group-4-a", "name": "A", "from": "2210095", "to": "2210113" },
+        { "id": "clinical-y5-2026-2027-group-4-b", "name": "B", "from": "2210115", "to": "2210999" }
+      ],
+      "sourceReview": [
+        { "code": "SUBDIVISION_GAP", "detail": "Subdivision A ends at 2210113 and B starts at 2210115; ID 2210114 is not covered by either. Verify against the official list." },
+        { "code": "OPEN_ENDED_BOUND_TO_PREFIX", "detail": "Source prints group 4 and 4B as '2210095 – الأخر' / '2210115 – الأخر' (to the end). Upper bound set to the ceiling of this cohort's 4-digit seat prefix (2210xxx -> 2210999) so it cannot bleed into another cohort's namespace." }
+      ]
+    }
+  ],
+  "overrides": []
+}
