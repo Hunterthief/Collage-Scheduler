@@ -77,7 +77,22 @@ const WEEKDAYS_LONG = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Frida
 let currentState = null;
 let lookupOptions = null;
 let reminderScheduler = null;
+let electiveCatalogCache = null;
 
+function electiveStorageKey(state) {
+  const a = state.assignment;
+  const id = a.studentId
+    ? `id:${a.studentId}`
+    : `sel:${a.programId}|${a.academicYearId}|${a.yearLevel}|${a.practicalGroup}|${a.subdivision ?? ""}`;
+  return `college-schedule-electives:${id}`;
+}
+function loadSelection(state) {
+  try { return JSON.parse(localStorage.getItem(electiveStorageKey(state)) ?? "[]"); }
+  catch { return []; }
+}
+function saveSelection(state, slugs) {
+  try { localStorage.setItem(electiveStorageKey(state), JSON.stringify(slugs)); } catch {}
+}
 init();
 
 async function init() {
