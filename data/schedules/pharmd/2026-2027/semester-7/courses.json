@@ -1,0 +1,11 @@
+{
+  "courses": [
+    { "id": "02-06-01-406", "code": "02-06-01 406", "title": { "en": "Biopharmaceutics and Pharmacokinetics" }, "color": "#1a73e8" },
+    { "id": "02-06-05-407", "code": "02-06-05 407", "title": { "en": "Medicinal Chemistry-II" }, "color": "#188038" },
+    { "id": "02-06-04-404", "code": "02-06-04 404", "title": { "en": "Medical Microbiology" }, "color": "#e8710a" },
+    { "id": "02-06-08-404", "code": "02-06-08 404", "title": { "en": "Clinical Biochemistry" }, "color": "#009688" },
+    { "id": "02-06-09-407", "code": "02-06-09 407", "title": { "en": "Pharmacy Legislation and Professional Ethics" }, "color": "#c2185b" },
+    { "id": "02-06-02-407", "code": "02-06-02 407", "title": { "en": "First Aid" }, "color": "#7b1fa2" },
+    { "id": "02-06-02-408", "code": "02-06-02 408", "title": { "en": "Pharmacology & Pharmacotherapeutics II" }, "color": "#d93025" }
+  ]
+}
