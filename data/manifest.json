@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "dataVersion": "2026-11-14T01:00:00Z",
+  "dataVersion": "2026-11-14T01:30:00Z",
   "timezone": "Africa/Cairo",
   "paths": {
     "programs": "data/programs/programs.json",
@@ -15,6 +15,12 @@
       "academicYearId": "2026-2027",
       "yearLevel": 1,
       "path": "data/students/assignments/pharmd/2026-2027-year-1.json"
+    },
+    {
+      "programId": "pharmd",
+      "academicYearId": "2026-2027",
+      "yearLevel": 2,
+      "path": "data/students/assignments/pharmd/2026-2027-year-2.json"
     },
     {
       "programId": "pharmd",
