@@ -1,0 +1,693 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Molecular Biology
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20260919T090000Z
+DTEND:20260919T095500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20260919T100000Z
+DTEND:20260919T115000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-09-22:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20260922T140000Z
+DTEND:20260922T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20260926T090000Z
+DTEND:20260926T095500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20260926T100000Z
+DTEND:20260926T115000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-09-29:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20260929T140000Z
+DTEND:20260929T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261003T090000Z
+DTEND:20261003T095500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261003T100000Z
+DTEND:20261003T115000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-06:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261006T140000Z
+DTEND:20261006T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261010T090000Z
+DTEND:20261010T095500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261010T100000Z
+DTEND:20261010T115000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-13:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261013T140000Z
+DTEND:20261013T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261017T090000Z
+DTEND:20261017T095500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261017T100000Z
+DTEND:20261017T115000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-20:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261020T140000Z
+DTEND:20261020T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261024T090000Z
+DTEND:20261024T095500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261024T100000Z
+DTEND:20261024T115000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-10-27:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261027T140000Z
+DTEND:20261027T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261107T100000Z
+DTEND:20261107T105500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261107T110000Z
+DTEND:20261107T125000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-10:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261110T150000Z
+DTEND:20261110T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261114T100000Z
+DTEND:20261114T105500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261114T110000Z
+DTEND:20261114T125000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-17:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261117T150000Z
+DTEND:20261117T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261121T100000Z
+DTEND:20261121T105500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261121T110000Z
+DTEND:20261121T125000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-24:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261124T150000Z
+DTEND:20261124T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261128T100000Z
+DTEND:20261128T105500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261128T110000Z
+DTEND:20261128T125000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-12-01:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261201T150000Z
+DTEND:20261201T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261205T100000Z
+DTEND:20261205T105500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261205T110000Z
+DTEND:20261205T125000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-12-08:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261208T150000Z
+DTEND:20261208T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:56423741
+STATUS:CONFIRMED
+DTSTART:20261212T100000Z
+DTEND:20261212T105500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:36741367
+STATUS:CONFIRMED
+DTSTART:20261212T110000Z
+DTEND:20261212T125000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 08-PBE 02\nR
+ eview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty e
+ lectives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT
+ _MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environm
+ ental Sustainability and Pharmacogenomics each print two practical slots w
+ ith no group/seat column\; both materialized and flagged pending departmen
+ t clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-molecular-biology:2026-12-15:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261215T150000Z
+DTEND:20261215T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:08-PBE 02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 08-PBE 02\nRev
+ iew: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty ele
+ ctives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLOT_M
+ EANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Environmen
+ tal Sustainability and Pharmacogenomics each print two practical slots wit
+ h no group/seat column\; both materialized and flagged pending department 
+ clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+END:VCALENDAR

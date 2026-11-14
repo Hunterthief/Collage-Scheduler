@@ -1,0 +1,693 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Cosmetic Preparations
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20260919T060000Z
+DTEND:20260919T075000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20260919T080000Z
+DTEND:20260919T095000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-09-21:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20260921T130000Z
+DTEND:20260921T135500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20260926T060000Z
+DTEND:20260926T075000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20260926T080000Z
+DTEND:20260926T095000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-09-28:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20260928T130000Z
+DTEND:20260928T135500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261003T060000Z
+DTEND:20261003T075000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261003T080000Z
+DTEND:20261003T095000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-05:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261005T130000Z
+DTEND:20261005T135500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261010T060000Z
+DTEND:20261010T075000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261010T080000Z
+DTEND:20261010T095000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-12:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261012T130000Z
+DTEND:20261012T135500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261017T060000Z
+DTEND:20261017T075000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261017T080000Z
+DTEND:20261017T095000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-19:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261019T130000Z
+DTEND:20261019T135500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261024T060000Z
+DTEND:20261024T075000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261024T080000Z
+DTEND:20261024T095000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-10-26:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261026T130000Z
+DTEND:20261026T135500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261107T070000Z
+DTEND:20261107T085000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261107T090000Z
+DTEND:20261107T105000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-09:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261109T140000Z
+DTEND:20261109T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261114T070000Z
+DTEND:20261114T085000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261114T090000Z
+DTEND:20261114T105000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-16:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261116T140000Z
+DTEND:20261116T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261121T070000Z
+DTEND:20261121T085000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261121T090000Z
+DTEND:20261121T105000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-23:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261123T140000Z
+DTEND:20261123T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261128T070000Z
+DTEND:20261128T085000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261128T090000Z
+DTEND:20261128T105000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-11-30:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261130T140000Z
+DTEND:20261130T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261205T070000Z
+DTEND:20261205T085000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261205T090000Z
+DTEND:20261205T105000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-12-07:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261207T140000Z
+DTEND:20261207T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63654188
+STATUS:CONFIRMED
+DTSTART:20261212T070000Z
+DTEND:20261212T085000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:51549428
+STATUS:CONFIRMED
+DTSTART:20261212T090000Z
+DTEND:20261212T105000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 01-PTE 0
+ 1\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facul
+ ty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_
+ SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Envi
+ ronmental Sustainability and Pharmacogenomics each print two practical slo
+ ts with no group/seat column\; both materialized and flagged pending depar
+ tment clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-cosmetic-preparations:2026-12-14:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:70989854
+STATUS:CONFIRMED
+DTSTART:20261214T140000Z
+DTEND:20261214T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:01-PTE 01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 01-PTE 01\
+ nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty
+  electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SL
+ OT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\, Enviro
+ nmental Sustainability and Pharmacogenomics each print two practical slots
+  with no group/seat column\; both materialized and flagged pending departm
+ ent clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+END:VCALENDAR

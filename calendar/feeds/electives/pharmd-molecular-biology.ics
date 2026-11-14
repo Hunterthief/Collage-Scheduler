@@ -1,0 +1,909 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Molecular Biology
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20260919T060000Z
+DTEND:20260919T065500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20260919T070000Z
+DTEND:20260919T085000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-09-22:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20260922T140000Z
+DTEND:20260922T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20260926T060000Z
+DTEND:20260926T065500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20260926T070000Z
+DTEND:20260926T085000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-09-29:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20260929T140000Z
+DTEND:20260929T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261003T060000Z
+DTEND:20261003T065500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261003T070000Z
+DTEND:20261003T085000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-06:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261006T140000Z
+DTEND:20261006T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261010T060000Z
+DTEND:20261010T065500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261010T070000Z
+DTEND:20261010T085000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-13:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261013T140000Z
+DTEND:20261013T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261017T060000Z
+DTEND:20261017T065500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261017T070000Z
+DTEND:20261017T085000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-20:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261020T140000Z
+DTEND:20261020T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261024T060000Z
+DTEND:20261024T065500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261024T070000Z
+DTEND:20261024T085000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-10-27:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261027T140000Z
+DTEND:20261027T145500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261107T070000Z
+DTEND:20261107T075500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261107T080000Z
+DTEND:20261107T095000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-10:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261110T150000Z
+DTEND:20261110T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261114T070000Z
+DTEND:20261114T075500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261114T080000Z
+DTEND:20261114T095000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-17:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261117T150000Z
+DTEND:20261117T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261121T070000Z
+DTEND:20261121T075500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261121T080000Z
+DTEND:20261121T095000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-24:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261124T150000Z
+DTEND:20261124T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261128T070000Z
+DTEND:20261128T075500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261128T080000Z
+DTEND:20261128T095000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-12-01:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261201T150000Z
+DTEND:20261201T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261205T070000Z
+DTEND:20261205T075500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261205T080000Z
+DTEND:20261205T095000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-12-08:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261208T150000Z
+DTEND:20261208T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:20191989
+STATUS:CONFIRMED
+DTSTART:20261212T070000Z
+DTEND:20261212T075500Z
+SUMMARY:PN 0 Molecular Biology
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:39080925
+STATUS:CONFIRMED
+DTSTART:20261212T080000Z
+DTEND:20261212T095000Z
+SUMMARY:PN 0 Molecular Biology (Practical)
+LOCATION:New Building\, Floor 0\, Room Computer Hall
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: practical\nCourse: 02-06-08-E02
+ \nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facult
+ y electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_S
+ LOT_MEANING_UNCONFIRMED - Several electives print two practical slots with
+  no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This 
+ is either two parallel sections the department assigns a student to\, or a
+  sem7/sem9 split. No legend is printed\, so BOTH slots are materialized an
+ d flagged rather than fabricating a placement. Confirm with the department
+  and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE
+  - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 
+ on Tuesday (the latter is the Clinical program's code)\, and Pharmacogenom
+ ics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable 
+ slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-molecular-biology:2026-12-15:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:33807170
+STATUS:CONFIRMED
+DTSTART:20261215T150000Z
+DTEND:20261215T155500Z
+SUMMARY:LN 5 Molecular Biology
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-08-E02
+DESCRIPTION:Title: Molecular Biology\nType: lecture\nCourse: 02-06-08-E02\n
+ Review: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; faculty 
+ electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL_SLO
+ T_MEANING_UNCONFIRMED - Several electives print two practical slots with n
+ o group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). This is
+  either two parallel sections the department assigns a student to\, or a s
+ em7/sem9 split. No legend is printed\, so BOTH slots are materialized and 
+ flagged rather than fabricating a placement. Confirm with the department a
+ nd reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOURCE -
+  Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 02 on
+  Tuesday (the latter is the Clinical program's code)\, and Pharmacogenomic
+ s is printed as 02-06-08-E02 (colliding with Molecular Biology). Stable sl
+ ugs are used for identity\; printed codes are display-only.
+END:VEVENT
+END:VCALENDAR

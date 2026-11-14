@@ -1,0 +1,909 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Environmental Sustainability
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20260919T060000Z
+DTEND:20260919T075000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-09-19:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20260919T080000Z
+DTEND:20260919T105000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20260919T100000Z
+DTEND:20260919T105500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20260926T060000Z
+DTEND:20260926T075000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-09-26:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20260926T080000Z
+DTEND:20260926T105000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20260926T100000Z
+DTEND:20260926T105500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261003T060000Z
+DTEND:20261003T075000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-03:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261003T080000Z
+DTEND:20261003T105000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261003T100000Z
+DTEND:20261003T105500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261010T060000Z
+DTEND:20261010T075000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-10:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261010T080000Z
+DTEND:20261010T105000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261010T100000Z
+DTEND:20261010T105500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261017T060000Z
+DTEND:20261017T075000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-17:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261017T080000Z
+DTEND:20261017T105000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261017T100000Z
+DTEND:20261017T105500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261024T060000Z
+DTEND:20261024T075000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-24:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261024T080000Z
+DTEND:20261024T105000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261024T100000Z
+DTEND:20261024T105500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261107T070000Z
+DTEND:20261107T085000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-07:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261107T090000Z
+DTEND:20261107T115000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261107T110000Z
+DTEND:20261107T115500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261114T070000Z
+DTEND:20261114T085000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-14:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261114T090000Z
+DTEND:20261114T115000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261114T110000Z
+DTEND:20261114T115500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261121T070000Z
+DTEND:20261121T085000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-21:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261121T090000Z
+DTEND:20261121T115000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261121T110000Z
+DTEND:20261121T115500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261128T070000Z
+DTEND:20261128T085000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-28:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261128T090000Z
+DTEND:20261128T115000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261128T110000Z
+DTEND:20261128T115500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261205T070000Z
+DTEND:20261205T085000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-12-05:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261205T090000Z
+DTEND:20261205T115000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261205T110000Z
+DTEND:20261205T115500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:67329949
+STATUS:CONFIRMED
+DTSTART:20261212T070000Z
+DTEND:20261212T085000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 1)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-12-12:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:11759036
+STATUS:CONFIRMED
+DTSTART:20261212T090000Z
+DTEND:20261212T115000Z
+SUMMARY:LN 3 Environmental Sustainability (Practical 2)
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 2-06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semeste
+ r'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_
+ PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical
+  slots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5
+ :50). This is either two parallel sections the department assigns a studen
+ t to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are mate
+ rialized and flagged rather than fabricating a placement. Confirm with the
+  department and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLE
+ D_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and
+  08-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Ph
+ armacogenomics is printed as 02-06-08-E02 (colliding with Molecular Biolog
+ y). Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-environmental-sustainability:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:45142847
+STATUS:CONFIRMED
+DTSTART:20261212T110000Z
+DTEND:20261212T115500Z
+SUMMARY:LN 3 Environmental Sustainability
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-07-E04
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 02-
+ 06-07-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'
+ \; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PR
+ ACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical s
+ lots with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:5
+ 0). This is either two parallel sections the department assigns a student 
+ to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots are materi
+ alized and flagged rather than fabricating a placement. Confirm with the d
+ epartment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_
+ IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 0
+ 8-PBE 02 on Tuesday (the latter is the Clinical program's code)\, and Phar
+ macogenomics is printed as 02-06-08-E02 (colliding with Molecular Biology)
+ . Stable slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+END:VCALENDAR

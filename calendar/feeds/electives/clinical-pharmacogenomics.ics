@@ -1,0 +1,729 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Pharmacogenomics and Personalized Medicine
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-09-23:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20260923T070000Z
+DTEND:20260923T075500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-09-23:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20260923T100000Z
+DTEND:20260923T115000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-09-23:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20260923T120000Z
+DTEND:20260923T135000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-09-30:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20260930T070000Z
+DTEND:20260930T075500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-09-30:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20260930T100000Z
+DTEND:20260930T115000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-09-30:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20260930T120000Z
+DTEND:20260930T135000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261007T070000Z
+DTEND:20261007T075500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261007T100000Z
+DTEND:20261007T115000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-07:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261007T120000Z
+DTEND:20261007T135000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261014T070000Z
+DTEND:20261014T075500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261014T100000Z
+DTEND:20261014T115000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-14:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261014T120000Z
+DTEND:20261014T135000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261021T070000Z
+DTEND:20261021T075500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261021T100000Z
+DTEND:20261021T115000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-21:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261021T120000Z
+DTEND:20261021T135000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261028T070000Z
+DTEND:20261028T075500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261028T100000Z
+DTEND:20261028T115000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-10-28:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261028T120000Z
+DTEND:20261028T135000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-11:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261111T080000Z
+DTEND:20261111T085500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-11:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261111T110000Z
+DTEND:20261111T125000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-11:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261111T130000Z
+DTEND:20261111T145000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-18:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261118T080000Z
+DTEND:20261118T085500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-18:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261118T110000Z
+DTEND:20261118T125000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-18:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261118T130000Z
+DTEND:20261118T145000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-25:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261125T080000Z
+DTEND:20261125T085500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-25:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261125T110000Z
+DTEND:20261125T125000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-11-25:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261125T130000Z
+DTEND:20261125T145000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-02:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261202T080000Z
+DTEND:20261202T085500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-02:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261202T110000Z
+DTEND:20261202T125000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-02:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261202T130000Z
+DTEND:20261202T145000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-09:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261209T080000Z
+DTEND:20261209T085500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-09:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261209T110000Z
+DTEND:20261209T125000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-09:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261209T130000Z
+DTEND:20261209T145000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-16:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:91738025
+STATUS:CONFIRMED
+DTSTART:20261216T080000Z
+DTEND:20261216T085500Z
+SUMMARY:LN 3 Pharmacogenomics and Personalized Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: lectur
+ e\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-16:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:37105017
+STATUS:CONFIRMED
+DTSTART:20261216T110000Z
+DTEND:20261216T125000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 1)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-pharmacogenomics:2026-12-16:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:17668600
+STATUS:CONFIRMED
+DTSTART:20261216T130000Z
+DTEND:20261216T145000Z
+SUMMARY:LN 6 Pharmacogenomics and Personalized Medicine (Practical 2)
+LOCATION:New Building\, Floor 6\, Room Sixth Floor Hall
+CATEGORIES:08-PBE 01
+DESCRIPTION:Title: Pharmacogenomics and Personalized Medicine\nType: practi
+ cal\nCourse: 08-PBE 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmeti
+ c Preparations\, Environmental Sustainability and Pharmacogenomics each pr
+ int two practical slots with no group/seat column\; both materialized and 
+ flagged pending department clarification (parallel sections vs sem7/sem9 s
+ plit).
+END:VEVENT
+END:VCALENDAR

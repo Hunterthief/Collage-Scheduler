@@ -1,0 +1,237 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Fitness and Health Education
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-09-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20260921T040000Z
+DTEND:20260921T060000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-09-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20260928T040000Z
+DTEND:20260928T060000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-10-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261005T040000Z
+DTEND:20261005T060000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-10-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261012T040000Z
+DTEND:20261012T060000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-10-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261019T040000Z
+DTEND:20261019T060000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-10-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261026T040000Z
+DTEND:20261026T060000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-11-09:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261109T050000Z
+DTEND:20261109T070000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-11-16:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261116T050000Z
+DTEND:20261116T070000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-11-23:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261123T050000Z
+DTEND:20261123T070000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-11-30:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261130T050000Z
+DTEND:20261130T070000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-12-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261207T050000Z
+DTEND:20261207T070000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-fitness-health-education:2026-12-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:89913305
+STATUS:CONFIRMED
+DTSTART:20261214T050000Z
+DTEND:20261214T070000Z
+SUMMARY:Fitness and Health Education (Online)
+CATEGORIES:02-17-3001
+DESCRIPTION:Title: Fitness and Health Education\nType: lecture\nCourse: 02-
+ 17-3001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'لطل
+ اب Pharm D (العام)'. Modeled as open to both PharmD and Clinical pr
+ ograms\, all years\; if the college restricts it to the general program\, 
+ drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLINE_NO
+ _ROOM - All university electives are printed 'Courses (On Line)'\; locatio
+ n is null and shorthand omitted because the shorthand grammar requires a b
+ uilding letter that does not exist for an online session.
+END:VEVENT
+END:VCALENDAR

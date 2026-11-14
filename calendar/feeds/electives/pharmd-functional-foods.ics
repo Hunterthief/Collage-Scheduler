@@ -1,0 +1,945 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Functional Foods and Dietary Supplements
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20260919T090000Z
+DTEND:20260919T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20260919T110000Z
+DTEND:20260919T125000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-09-19:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20260919T130000Z
+DTEND:20260919T145000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20260926T090000Z
+DTEND:20260926T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20260926T110000Z
+DTEND:20260926T125000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-09-26:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20260926T130000Z
+DTEND:20260926T145000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261003T090000Z
+DTEND:20261003T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261003T110000Z
+DTEND:20261003T125000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-03:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261003T130000Z
+DTEND:20261003T145000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261010T090000Z
+DTEND:20261010T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261010T110000Z
+DTEND:20261010T125000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-10:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261010T130000Z
+DTEND:20261010T145000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261017T090000Z
+DTEND:20261017T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261017T110000Z
+DTEND:20261017T125000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-17:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261017T130000Z
+DTEND:20261017T145000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261024T090000Z
+DTEND:20261024T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261024T110000Z
+DTEND:20261024T125000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-10-24:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261024T130000Z
+DTEND:20261024T145000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261107T100000Z
+DTEND:20261107T105500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261107T120000Z
+DTEND:20261107T135000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-07:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261107T140000Z
+DTEND:20261107T155000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261114T100000Z
+DTEND:20261114T105500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261114T120000Z
+DTEND:20261114T135000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-14:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261114T140000Z
+DTEND:20261114T155000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261121T100000Z
+DTEND:20261121T105500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261121T120000Z
+DTEND:20261121T135000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-21:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261121T140000Z
+DTEND:20261121T155000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261128T100000Z
+DTEND:20261128T105500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261128T120000Z
+DTEND:20261128T135000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-11-28:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261128T140000Z
+DTEND:20261128T155000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261205T100000Z
+DTEND:20261205T105500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261205T120000Z
+DTEND:20261205T135000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-12-05:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261205T140000Z
+DTEND:20261205T155000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:16136786
+STATUS:CONFIRMED
+DTSTART:20261212T100000Z
+DTEND:20261212T105500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9
+ th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview:
+  ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two
+  practical slots with no group/seat column (e.g. Functional Foods 2:00-3:5
+ 0 | 4:00-5:50). This is either two parallel sections the department assign
+ s a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slot
+ s are materialized and flagged rather than fabricating a placement. Confir
+ m with the department and reduce to the assigned slot.\nReview: COURSE_COD
+ E_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sa
+ turday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code
+ )\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecu
+ lar Biology). Stable slugs are used for identity\; printed codes are displ
+ ay-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:5998869
+STATUS:CONFIRMED
+DTSTART:20261212T120000Z
+DTEND:20261212T135000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-functional-foods:2026-12-12:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:44658592
+STATUS:CONFIRMED
+DTSTART:20261212T140000Z
+DTEND:20261212T155000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:02-06-06-E06
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 02-06-06-E06\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th &
+  9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nRevie
+ w: ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print t
+ wo practical slots with no group/seat column (e.g. Functional Foods 2:00-3
+ :50 | 4:00-5:50). This is either two parallel sections the department assi
+ gns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH sl
+ ots are materialized and flagged rather than fabricating a placement. Conf
+ irm with the department and reduce to the assigned slot.\nReview: COURSE_C
+ ODE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on 
+ Saturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's co
+ de)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Mole
+ cular Biology). Stable slugs are used for identity\; printed codes are dis
+ play-only.
+END:VEVENT
+END:VCALENDAR

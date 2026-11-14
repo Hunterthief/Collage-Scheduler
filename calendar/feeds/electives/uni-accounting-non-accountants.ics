@@ -1,0 +1,237 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Accounting for Non accountants
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20260919T040000Z
+DTEND:20260919T060000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20260926T040000Z
+DTEND:20260926T060000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261003T040000Z
+DTEND:20261003T060000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261010T040000Z
+DTEND:20261010T060000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261017T040000Z
+DTEND:20261017T060000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261024T040000Z
+DTEND:20261024T060000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261107T050000Z
+DTEND:20261107T070000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261114T050000Z
+DTEND:20261114T070000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261121T050000Z
+DTEND:20261121T070000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261128T050000Z
+DTEND:20261128T070000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261205T050000Z
+DTEND:20261205T070000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:uni-accounting-non-accountants:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9918074
+STATUS:CONFIRMED
+DTSTART:20261212T050000Z
+DTEND:20261212T070000Z
+SUMMARY:Accounting for Non accountants (Online)
+CATEGORIES:02-03-02001
+DESCRIPTION:Title: Accounting for Non accountants\nType: lecture\nCourse: 0
+ 2-03-02001\nReview: AUDIENCE_PROGRAM_UNCONFIRMED - Sheet header reads 'ل
+ طلاب Pharm D (العام)'. Modeled as open to both PharmD and Clinica
+ l programs\, all years\; if the college restricts it to the general progra
+ m\, drop 'clinical-pharmacy' from each programIds.\nReview: DELIVERY_ONLIN
+ E_NO_ROOM - All university electives are printed 'Courses (On Line)'\; loc
+ ation is null and shorthand omitted because the shorthand grammar requires
+  a building letter that does not exist for an online session.
+END:VEVENT
+END:VCALENDAR

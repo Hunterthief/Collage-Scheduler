@@ -1,0 +1,681 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Radiopharmaceuticals & Nuclear Medicine
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20260919T110000Z
+DTEND:20260919T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20260919T120000Z
+DTEND:20260919T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20260926T110000Z
+DTEND:20260926T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20260926T120000Z
+DTEND:20260926T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261003T110000Z
+DTEND:20261003T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261003T120000Z
+DTEND:20261003T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261010T110000Z
+DTEND:20261010T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261010T120000Z
+DTEND:20261010T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261017T110000Z
+DTEND:20261017T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261017T120000Z
+DTEND:20261017T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261024T110000Z
+DTEND:20261024T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261024T120000Z
+DTEND:20261024T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261107T120000Z
+DTEND:20261107T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261107T130000Z
+DTEND:20261107T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261114T120000Z
+DTEND:20261114T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261114T130000Z
+DTEND:20261114T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261121T120000Z
+DTEND:20261121T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261121T130000Z
+DTEND:20261121T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261128T120000Z
+DTEND:20261128T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261128T130000Z
+DTEND:20261128T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261205T120000Z
+DTEND:20261205T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261205T130000Z
+DTEND:20261205T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261212T120000Z
+DTEND:20261212T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print two 
+ practical slots with no group/seat column (e.g. Functional Foods 2:00-3:50
+  | 4:00-5:50). This is either two parallel sections the department assigns
+  a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slots
+  are materialized and flagged rather than fabricating a placement. Confirm
+  with the department and reduce to the assigned slot.\nReview: COURSE_CODE
+ _SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on Sat
+ urday and 08-PBE 02 on Tuesday (the latter is the Clinical program's code)
+ \, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molecul
+ ar Biology). Stable slugs are used for identity\; printed codes are displa
+ y-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-radiopharmaceuticals:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261212T130000Z
+DTEND:20261212T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:02-06-01-E04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 02-06-01-E04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 
+ 9th Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview
+ : ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Several electives print tw
+ o practical slots with no group/seat column (e.g. Functional Foods 2:00-3:
+ 50 | 4:00-5:50). This is either two parallel sections the department assig
+ ns a student to\, or a sem7/sem9 split. No legend is printed\, so BOTH slo
+ ts are materialized and flagged rather than fabricating a placement. Confi
+ rm with the department and reduce to the assigned slot.\nReview: COURSE_CO
+ DE_SCRAMBLED_IN_SOURCE - Molecular Biology is printed as 02-06-08-E02 on S
+ aturday and 08-PBE 02 on Tuesday (the latter is the Clinical program's cod
+ e)\, and Pharmacogenomics is printed as 02-06-08-E02 (colliding with Molec
+ ular Biology). Stable slugs are used for identity\; printed codes are disp
+ lay-only.\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines 
+ the Medical Technology Center / Medical Research Institute with New Buildi
+ ng 3rd floor A\; stored as free text with building null pending clarificat
+ ion.
+END:VEVENT
+END:VCALENDAR

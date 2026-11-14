@@ -1,0 +1,693 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Environmental Sustainability
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20260919T060000Z
+DTEND:20260919T075000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-09-19:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20260919T080000Z
+DTEND:20260919T095000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20260919T100000Z
+DTEND:20260919T105500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20260926T060000Z
+DTEND:20260926T075000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-09-26:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20260926T080000Z
+DTEND:20260926T095000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20260926T100000Z
+DTEND:20260926T105500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261003T060000Z
+DTEND:20261003T075000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-03:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261003T080000Z
+DTEND:20261003T095000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261003T100000Z
+DTEND:20261003T105500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261010T060000Z
+DTEND:20261010T075000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-10:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261010T080000Z
+DTEND:20261010T095000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261010T100000Z
+DTEND:20261010T105500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261017T060000Z
+DTEND:20261017T075000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-17:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261017T080000Z
+DTEND:20261017T095000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261017T100000Z
+DTEND:20261017T105500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261024T060000Z
+DTEND:20261024T075000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-24:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261024T080000Z
+DTEND:20261024T095000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261024T100000Z
+DTEND:20261024T105500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261107T070000Z
+DTEND:20261107T085000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-07:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261107T090000Z
+DTEND:20261107T105000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261107T110000Z
+DTEND:20261107T115500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261114T070000Z
+DTEND:20261114T085000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-14:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261114T090000Z
+DTEND:20261114T105000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261114T110000Z
+DTEND:20261114T115500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261121T070000Z
+DTEND:20261121T085000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-21:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261121T090000Z
+DTEND:20261121T105000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261121T110000Z
+DTEND:20261121T115500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261128T070000Z
+DTEND:20261128T085000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-28:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261128T090000Z
+DTEND:20261128T105000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261128T110000Z
+DTEND:20261128T115500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261205T070000Z
+DTEND:20261205T085000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-12-05:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261205T090000Z
+DTEND:20261205T105000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261205T110000Z
+DTEND:20261205T115500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:6561022
+STATUS:CONFIRMED
+DTSTART:20261212T070000Z
+DTEND:20261212T085000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 1)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-12-12:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:93677176
+STATUS:CONFIRMED
+DTSTART:20261212T090000Z
+DTEND:20261212T105000Z
+SUMMARY:LO 5 Environmental Sustainability (Practical 2)
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: practical\nCourse: 0
+ 7-PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\
+ ; faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRA
+ CTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations
+ \, Environmental Sustainability and Pharmacogenomics each print two practi
+ cal slots with no group/seat column\; both materialized and flagged pendin
+ g department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-environmental-sustainability:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:22511886
+STATUS:CONFIRMED
+DTSTART:20261212T110000Z
+DTEND:20261212T115500Z
+SUMMARY:LN 5 Environmental Sustainability
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:07-PAE 03
+DESCRIPTION:Title: Environmental Sustainability\nType: lecture\nCourse: 07-
+ PAE 03\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; 
+ faculty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACT
+ ICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Preparations\,
+  Environmental Sustainability and Pharmacogenomics each print two practica
+ l slots with no group/seat column\; both materialized and flagged pending 
+ department clarification (parallel sections vs sem7/sem9 split).
+END:VEVENT
+END:VCALENDAR

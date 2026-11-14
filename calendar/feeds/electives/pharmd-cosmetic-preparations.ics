@@ -1,0 +1,909 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Cosmetic Preparations
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20260919T100000Z
+DTEND:20260919T115000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20260919T120000Z
+DTEND:20260919T135000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-09-21:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20260921T130000Z
+DTEND:20260921T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20260926T100000Z
+DTEND:20260926T115000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20260926T120000Z
+DTEND:20260926T135000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-09-28:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20260928T130000Z
+DTEND:20260928T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261003T100000Z
+DTEND:20261003T115000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261003T120000Z
+DTEND:20261003T135000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-05:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261005T130000Z
+DTEND:20261005T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261010T100000Z
+DTEND:20261010T115000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261010T120000Z
+DTEND:20261010T135000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-12:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261012T130000Z
+DTEND:20261012T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261017T100000Z
+DTEND:20261017T115000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261017T120000Z
+DTEND:20261017T135000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-19:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261019T130000Z
+DTEND:20261019T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261024T100000Z
+DTEND:20261024T115000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261024T120000Z
+DTEND:20261024T135000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-10-26:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261026T130000Z
+DTEND:20261026T145500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261107T110000Z
+DTEND:20261107T125000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261107T130000Z
+DTEND:20261107T145000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-09:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261109T140000Z
+DTEND:20261109T155500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261114T110000Z
+DTEND:20261114T125000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261114T130000Z
+DTEND:20261114T145000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-16:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261116T140000Z
+DTEND:20261116T155500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261121T110000Z
+DTEND:20261121T125000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261121T130000Z
+DTEND:20261121T145000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-23:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261123T140000Z
+DTEND:20261123T155500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261128T110000Z
+DTEND:20261128T125000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261128T130000Z
+DTEND:20261128T145000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-11-30:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261130T140000Z
+DTEND:20261130T155500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261205T110000Z
+DTEND:20261205T125000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261205T130000Z
+DTEND:20261205T145000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-12-07:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261207T140000Z
+DTEND:20261207T155500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:32815301
+STATUS:CONFIRMED
+DTSTART:20261212T110000Z
+DTEND:20261212T125000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 1)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:82442316
+STATUS:CONFIRMED
+DTSTART:20261212T130000Z
+DTEND:20261212T145000Z
+SUMMARY:PN 3 Cosmetic Preparations (Practical 2)
+LOCATION:New Building\, Floor 3
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: practical\nCourse: 02-06-01
+ -E01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; fa
+ culty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTIC
+ AL_SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots 
+ with no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). T
+ his is either two parallel sections the department assigns a student to\, 
+ or a sem7/sem9 split. No legend is printed\, so BOTH slots are materialize
+ d and flagged rather than fabricating a placement. Confirm with the depart
+ ment and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SO
+ URCE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE
+  02 on Tuesday (the latter is the Clinical program's code)\, and Pharmacog
+ enomics is printed as 02-06-08-E02 (colliding with Molecular Biology). Sta
+ ble slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:pharmd-cosmetic-preparations:2026-12-14:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:63725507
+STATUS:CONFIRMED
+DTSTART:20261214T140000Z
+DTEND:20261214T155500Z
+SUMMARY:LO 5 Cosmetic Preparations
+LOCATION:Old Building\, Floor 5\, Room Upper Lecture Hall
+CATEGORIES:02-06-01-E01
+DESCRIPTION:Title: Cosmetic Preparations\nType: lecture\nCourse: 02-06-01-E
+ 01\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th Semester'\; facu
+ lty electives restricted to Year 4 and Year 5.\nReview: ELECTIVE_PRACTICAL
+ _SLOT_MEANING_UNCONFIRMED - Several electives print two practical slots wi
+ th no group/seat column (e.g. Functional Foods 2:00-3:50 | 4:00-5:50). Thi
+ s is either two parallel sections the department assigns a student to\, or
+  a sem7/sem9 split. No legend is printed\, so BOTH slots are materialized 
+ and flagged rather than fabricating a placement. Confirm with the departme
+ nt and reduce to the assigned slot.\nReview: COURSE_CODE_SCRAMBLED_IN_SOUR
+ CE - Molecular Biology is printed as 02-06-08-E02 on Saturday and 08-PBE 0
+ 2 on Tuesday (the latter is the Clinical program's code)\, and Pharmacogen
+ omics is printed as 02-06-08-E02 (colliding with Molecular Biology). Stabl
+ e slugs are used for identity\; printed codes are display-only.
+END:VEVENT
+END:VCALENDAR

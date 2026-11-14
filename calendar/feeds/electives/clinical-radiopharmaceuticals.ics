@@ -1,0 +1,525 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Radiopharmaceuticals & Nuclear Medicine
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20260919T110000Z
+DTEND:20260919T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20260919T120000Z
+DTEND:20260919T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20260926T110000Z
+DTEND:20260926T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20260926T120000Z
+DTEND:20260926T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261003T110000Z
+DTEND:20261003T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261003T120000Z
+DTEND:20261003T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261010T110000Z
+DTEND:20261010T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261010T120000Z
+DTEND:20261010T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261017T110000Z
+DTEND:20261017T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261017T120000Z
+DTEND:20261017T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261024T110000Z
+DTEND:20261024T115500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261024T120000Z
+DTEND:20261024T135000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261107T120000Z
+DTEND:20261107T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261107T130000Z
+DTEND:20261107T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261114T120000Z
+DTEND:20261114T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261114T130000Z
+DTEND:20261114T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261121T120000Z
+DTEND:20261121T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261121T130000Z
+DTEND:20261121T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261128T120000Z
+DTEND:20261128T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261128T130000Z
+DTEND:20261128T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261205T120000Z
+DTEND:20261205T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261205T130000Z
+DTEND:20261205T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:9455069
+STATUS:CONFIRMED
+DTSTART:20261212T120000Z
+DTEND:20261212T125500Z
+SUMMARY:LN 3 Radiopharmaceuticals & Nuclear Medicine
+LOCATION:New Building\, Floor 3\, Room Lecture Hall A
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: lecture\n
+ Course: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th S
+ emester'\; faculty electives restricted to Year 4 and Year 5.\nReview: ELE
+ CTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pre
+ parations\, Environmental Sustainability and Pharmacogenomics each print t
+ wo practical slots with no group/seat column\; both materialized and flagg
+ ed pending department clarification (parallel sections vs sem7/sem9 split)
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-radiopharmaceuticals:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:40908007
+STATUS:CONFIRMED
+DTSTART:20261212T130000Z
+DTEND:20261212T145000Z
+SUMMARY:Radiopharmaceuticals & Nuclear Medicine (Practical)
+LOCATION:Room Medical Technology Center - Medical Research Institute - Alex
+ andria University
+CATEGORIES:01-PTE 04
+DESCRIPTION:Title: Radiopharmaceuticals & Nuclear Medicine\nType: practical
+ \nCourse: 01-PTE 04\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th
+  Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: E
+ LECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic P
+ reparations\, Environmental Sustainability and Pharmacogenomics each print
+  two practical slots with no group/seat column\; both materialized and fla
+ gged pending department clarification (parallel sections vs sem7/sem9 spli
+ t).\nReview: LOCATION_COMPOUND_UNCONFIRMED - Printed place combines the Me
+ dical Technology Center / Medical Research Institute with New Building 3rd
+  floor A\; stored as free text with building null pending clarification.
+END:VEVENT
+END:VCALENDAR

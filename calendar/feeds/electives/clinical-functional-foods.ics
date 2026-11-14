@@ -1,0 +1,729 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//college//College Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Elective · Functional Foods and Dietary Supplements
+X-WR-TIMEZONE:Africa/Cairo
+X-WR-CALDESC:Static college schedule feed.
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-09-19:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20260919T060000Z
+DTEND:20260919T075000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-09-19:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20260919T080000Z
+DTEND:20260919T085500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-09-19:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20260919T090000Z
+DTEND:20260919T105000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-09-26:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20260926T060000Z
+DTEND:20260926T075000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-09-26:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20260926T080000Z
+DTEND:20260926T085500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-09-26:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20260926T090000Z
+DTEND:20260926T105000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-03:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261003T060000Z
+DTEND:20261003T075000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-03:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261003T080000Z
+DTEND:20261003T085500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-03:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261003T090000Z
+DTEND:20261003T105000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-10:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261010T060000Z
+DTEND:20261010T075000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-10:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261010T080000Z
+DTEND:20261010T085500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-10:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261010T090000Z
+DTEND:20261010T105000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-17:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261017T060000Z
+DTEND:20261017T075000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-17:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261017T080000Z
+DTEND:20261017T085500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-17:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261017T090000Z
+DTEND:20261017T105000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-24:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261024T060000Z
+DTEND:20261024T075000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-24:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261024T080000Z
+DTEND:20261024T085500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-10-24:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261024T090000Z
+DTEND:20261024T105000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-07:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261107T070000Z
+DTEND:20261107T085000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-07:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261107T090000Z
+DTEND:20261107T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-07:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261107T100000Z
+DTEND:20261107T115000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-14:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261114T070000Z
+DTEND:20261114T085000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-14:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261114T090000Z
+DTEND:20261114T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-14:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261114T100000Z
+DTEND:20261114T115000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-21:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261121T070000Z
+DTEND:20261121T085000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-21:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261121T090000Z
+DTEND:20261121T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-21:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261121T100000Z
+DTEND:20261121T115000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-28:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261128T070000Z
+DTEND:20261128T085000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-28:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261128T090000Z
+DTEND:20261128T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-11-28:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261128T100000Z
+DTEND:20261128T115000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-12-05:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261205T070000Z
+DTEND:20261205T085000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-12-05:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261205T090000Z
+DTEND:20261205T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-12-05:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261205T100000Z
+DTEND:20261205T115000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-12-12:1
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:81503488
+STATUS:CONFIRMED
+DTSTART:20261212T070000Z
+DTEND:20261212T085000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 1)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-12-12:0
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:73374250
+STATUS:CONFIRMED
+DTSTART:20261212T090000Z
+DTEND:20261212T095500Z
+SUMMARY:LN 5 Functional Foods and Dietary Supplements
+LOCATION:New Building\, Floor 5\, Room Lecture Hall B
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: lecture\
+ nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9th 
+ Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: EL
+ ECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic Pr
+ eparations\, Environmental Sustainability and Pharmacogenomics each print 
+ two practical slots with no group/seat column\; both materialized and flag
+ ged pending department clarification (parallel sections vs sem7/sem9 split
+ ).
+END:VEVENT
+BEGIN:VEVENT
+UID:college:clinical-functional-foods:2026-12-12:2
+DTSTAMP:20261114T232109Z
+LAST-MODIFIED:20261114T232109Z
+SEQUENCE:24373912
+STATUS:CONFIRMED
+DTSTART:20261212T100000Z
+DTEND:20261212T115000Z
+SUMMARY:PN 5 Functional Foods and Dietary Supplements (Practical 2)
+LOCATION:New Building\, Floor 5
+CATEGORIES:06-PGE 05
+DESCRIPTION:Title: Functional Foods and Dietary Supplements\nType: practica
+ l\nCourse: 06-PGE 05\nReview: ELIGIBLE_Y4_Y5_ONLY - Sheet header '7th & 9t
+ h Semester'\; faculty electives restricted to Year 4 and Year 5.\nReview: 
+ ELECTIVE_PRACTICAL_SLOT_MEANING_UNCONFIRMED - Functional Foods\, Cosmetic 
+ Preparations\, Environmental Sustainability and Pharmacogenomics each prin
+ t two practical slots with no group/seat column\; both materialized and fl
+ agged pending department clarification (parallel sections vs sem7/sem9 spl
+ it).
+END:VEVENT
+END:VCALENDAR
