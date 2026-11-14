@@ -341,19 +341,45 @@ async function loadAndRenderSchedule(assignment, manifest) {
     locale
   });
 
+    // Electives: load catalog once, filter to eligibility, merge the student's
+  // locally-recorded registrations into the event list before sorting/reminders.
+  if (!electiveCatalogCache) {
+    try { electiveCatalogCache = await loadElectiveCatalog(loader, manifest); }
+    catch { electiveCatalogCache = []; }
+  }
+  const provisional = {
+    manifest, institution, program, year, semester,
+    assignment, schedule, today, locale,
+    courses: Array.isArray(datasets.courses) ? datasets.courses : datasets.courses?.courses ?? [],
+    labelIndex,
+    electiveCatalog: electiveCatalogCache,
+    anchorDate: today,
+    view: "weekly"
+  };
+  const eligible = eligibleElectives(electiveCatalogCache, { programId: assignment.programId, yearLevel: assignment.yearLevel });
+  const selected = loadSelection(provisional);
+  const mergedEvents = mergeSelectedElectives(schedule.events, electiveCatalogCache, selected, {
+    timezone: manifest.timezone,
+    institutionId: institution.settings.institutionId,
+    locale,
+    context: { programId: assignment.programId, yearLevel: assignment.yearLevel }
+  });
+  const sortedEvents = sortOccurrences(mergeOccurrences(mergedEvents, schedule.diagnostics), locale);
+  schedule.events = sortedEvents;
+
   const issues = [
     ...schedule.diagnostics.errors.map((message) => ({ level: "error", message })),
     ...schedule.diagnostics.warnings.map((message) => ({ level: "warning", message }))
   ];
 
   currentState = {
-    manifest, institution, program, year, semester,
-    assignment, schedule, today, locale, issues,
-    courses: Array.isArray(datasets.courses) ? datasets.courses : datasets.courses?.courses ?? [],
-    labelIndex,
-    reminderPlan: buildReminderPlan(schedule.events),
-    anchorDate: today,
-    view: "weekly"
+    ...provisional,
+    issues,
+    electiveCatalog: electiveCatalogCache,
+    eligibleElectives: eligible,
+    selectedElectives: selected,
+    electiveColorById: electiveColorMap(electiveCatalogCache),
+    reminderPlan: buildReminderPlan(sortedEvents)
   };
 
   renderAll(currentState);
@@ -384,6 +410,7 @@ function renderAll(state) {
   renderAssignmentSummary(state);
   renderView(state, state.view);
   renderCalendar(state);
+  renderElectivesCard(state);
   renderReminderCard(state);
 }
 
@@ -495,7 +522,7 @@ function evLabel(state, event) {
 }
 
 function evColor(state, event) {
-  return eventColor(event, state.labelIndex);
+  return eventColor(event, state.labelIndex) || state.electiveColorById?.[event.courseId] || event.color || null;
 }
 
 function colorStyle(color, kind) {
@@ -977,6 +1004,111 @@ function renderError(err) {
     return;
   }
   setStatus(`Unexpected error: ${err.message}`, "error");
+}
+function recomputeWithElectives(state) {
+  const selected = state.selectedElectives;
+  const merged = mergeSelectedElectives(
+    state.schedule.events.filter((e) => !e.elective),
+    state.electiveCatalog,
+    selected,
+    {
+      timezone: state.manifest.timezone,
+      institutionId: state.institution.settings.institutionId,
+      locale: state.locale,
+      context: { programId: state.assignment.programId, yearLevel: state.assignment.yearLevel }
+    }
+  );
+  state.schedule.events = sortOccurrences(mergeOccurrences(merged, state.schedule.diagnostics), state.locale);
+  state.reminderPlan = buildReminderPlan(state.schedule.events);
+  reminderScheduler?.setEvents(state.schedule.events, {
+    labelFor: (e) => evLabel(state, e),
+    timeFor: (e) => formatEventTime(e),
+    locationFor: (e) => formatLocation(e.location, state.institution.locations.buildings, state.locale)
+  });
+  renderView(state, state.view);
+  renderReminderCard(state);
+}
+
+function renderElectivesCard(state) {
+  let card = document.getElementById("electives-card");
+  if (!card) {
+    const anchor = document.getElementById("reminder-card");
+    card = document.createElement("section");
+    card.id = "electives-card";
+    card.className = "subscription-card";
+    card.setAttribute("aria-labelledby", "electives-heading");
+    anchor.parentNode.insertBefore(card, anchor);
+  }
+
+  const eligible = state.eligibleElectives ?? [];
+  if (!eligible.length) {
+    card.innerHTML = `
+      <h2 id="electives-heading">Electives</h2>
+      <p class="hint">No optional electives are offered for your program and year this semester.</p>`;
+    return;
+  }
+
+  const selected = new Set(state.selectedElectives ?? []);
+  let rows = "";
+  for (const el of eligible) {
+    const slug = el.slug ?? el.id;
+    const on = selected.has(slug);
+    const title = localize(el.title, state.locale) || el.title?.en || slug;
+    const when = (el.sessions ?? [])
+      .map((s) => `${s.day} ${formatTime12(s.start)}${s.end ? "–" + formatTime12(s.end) : ""}`)
+      .join(" · ");
+    rows += `
+      <label class="elective-row" style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);">
+        <input type="checkbox" data-elective="${escapeHtml(slug)}" ${on ? "checked" : ""} style="width:18px;height:18px;margin-top:2px;accent-color:${escapeHtml(el.color ?? "var(--accent)")};" />
+        <span style="flex:1;min-width:0;">
+          <strong style="color:${escapeHtml(el.color ?? "inherit")};">${escapeHtml(title)}</strong>
+          ${el.code ? `<span class="hint"> · ${escapeHtml(el.code)}</span>` : ""}
+          ${el.delivery === "online" ? '<span class="tag" style="background:var(--accent-soft);border-color:var(--accent);color:var(--accent);">Online</span>' : ""}
+          <div class="hint">${escapeHtml(when)}</div>
+        </span>
+      </label>`;
+  }
+
+  // Per-elective static feeds for the ones the student registered (Google route).
+  let feedRows = "";
+  for (const el of eligible) {
+    const slug = el.slug ?? el.id;
+    if (!selected.has(slug)) continue;
+    const feedUrl = buildElectiveFeedUrl(slug, state.manifest);
+    if (!feedUrl) continue;
+    const title = localize(el.title, state.locale) || el.title?.en || slug;
+    feedRows += `
+      <div class="feed-box" style="margin-top:8px;">
+        <div><span class="feed-label">${escapeHtml(title)} feed</span><code>${escapeHtml(feedUrl)}</code></div>
+        <div class="feed-actions">
+          <a class="btn primary" href="${escapeHtml(googleCalendarSubscribeUrl(feedUrl))}" target="_blank" rel="noopener noreferrer">Subscribe in Google Calendar</a>
+          <a class="btn quiet" href="${escapeHtml(googleCalendarAddByUrlUrl())}" target="_blank" rel="noopener noreferrer" data-copy-feed="${escapeHtml(feedUrl)}">Add manually (backup)</a>
+        </div>
+      </div>`;
+  }
+
+  card.innerHTML = `
+    <h2 id="electives-heading">Electives</h2>
+    <p class="hint">Tick the optional courses you registered this semester. Your choice is stored only in this browser and is never uploaded. Ticked courses appear in the timetable above and in the .ics preview download; to put them in Google Calendar, subscribe to each course's feed below.</p>
+    <div class="elective-list">${rows}</div>
+    ${feedRows ? `<h3 style="margin-top:14px;">Your elective calendar feeds</h3>${feedRows}` : ""}
+  `;
+
+  card.querySelectorAll("input[data-elective]").forEach((cb) => {
+    cb.addEventListener("change", () => {
+      const slug = cb.dataset.elective;
+      const set = new Set(state.selectedElectives ?? []);
+      if (cb.checked) set.add(slug); else set.delete(slug);
+      state.selectedElectives = Array.from(set);
+      saveSelection(state, state.selectedElectives);
+      recomputeWithElectives(state);
+      renderElectivesCard(state);
+    });
+  });
+
+  card.querySelectorAll("a[data-copy-feed]").forEach((a) => {
+    a.addEventListener("click", () => { copyToClipboard(a.dataset.copyFeed); });
+  });
 }
 
 function escapeHtml(value) {
