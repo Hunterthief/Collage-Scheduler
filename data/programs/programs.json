@@ -22,30 +22,11 @@
                 "exams": "data/schedules/pharmd/2026-2027/semester-1/exams.json",
                 "exceptions": "data/schedules/pharmd/2026-2027/semester-1/exceptions.json"
               },
-              "blackouts": [
-                {
-                  "id": "fall-2026-midterm-week",
-                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
-                  "from": "2026-10-31",
-                  "to": "2026-11-05",
-                  "blocksAcademicEvents": true,
-                  "blockTypes": ["lecture", "practical"],
-                  "excludedFromRotation": true
-                }
-              ],
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
-                {
-                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
-                  "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)."
-                },
-                {
-                  "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION",
-                  "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester."
-                },
-                {
-                  "code": "PRACTICAL_SHEET_YEAR_TYPO",
-                  "detail": "The printed practical header reads '2026/20267'; corrected to 2026/2027."
-                }
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
+                { "code": "PRACTICAL_SHEET_YEAR_TYPO", "detail": "The printed practical header reads '2026/20267'; corrected to 2026/2027." }
               ]
             },
             {
@@ -62,30 +43,11 @@
                 "exams": "data/schedules/pharmd/2026-2027/semester-3/exams.json",
                 "exceptions": "data/schedules/pharmd/2026-2027/semester-3/exceptions.json"
               },
-              "blackouts": [
-                {
-                  "id": "fall-2026-midterm-week",
-                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
-                  "from": "2026-10-31",
-                  "to": "2026-11-05",
-                  "blocksAcademicEvents": true,
-                  "blockTypes": ["lecture", "practical"],
-                  "excludedFromRotation": true
-                }
-              ],
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
-                {
-                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
-                  "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)."
-                },
-                {
-                  "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION",
-                  "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester."
-                },
-                {
-                  "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE",
-                  "detail": "Seven mid-term examinations transcribed from the Semester 3 column of the college-wide PharmD mid-term table (31 Oct - 5 Nov, New Building, 30-minute slots, all groups). Physiology and Pathophysiology has no listed mid-term; final examinations are pending publication."
-                }
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
+                { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Seven mid-term examinations transcribed from the Semester 3 column of the college-wide PharmD mid-term table (31 Oct - 5 Nov, New Building, 30-minute slots, all groups). Physiology and Pathophysiology has no listed mid-term; final examinations are pending publication." }
               ]
             },
             {
@@ -102,22 +64,28 @@
                 "exams": "data/schedules/pharmd/2026-2027/semester-5/exams.json",
                 "exceptions": "data/schedules/pharmd/2026-2027/semester-5/exceptions.json"
               },
-              "blackouts": [
-                {
-                  "id": "fall-2026-midterm-week",
-                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
-                  "from": "2026-10-31",
-                  "to": "2026-11-05",
-                  "blocksAcademicEvents": true,
-                  "blockTypes": ["lecture", "practical"],
-                  "excludedFromRotation": true
-                }
-              ],
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [ { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar, which states its dates are approximate." } ]
+            },
+            {
+              "id": "pharmd-2026-2027-semester-7",
+              "name": { "en": "Semester 7 (Year 4)", "ar": "الفصل الدراسي السابع (الفرقة الرابعة)" },
+              "yearLevel": 4,
+              "validFrom": "2026-09-19",
+              "validUntil": "2026-12-17",
+              "status": "published",
+              "datasets": {
+                "courses": "data/schedules/pharmd/2026-2027/semester-7/courses.json",
+                "lectures": "data/schedules/pharmd/2026-2027/semester-7/lectures.json",
+                "practicals": "data/schedules/pharmd/2026-2027/semester-7/practicals.json",
+                "exams": "data/schedules/pharmd/2026-2027/semester-7/exams.json",
+                "exceptions": "data/schedules/pharmd/2026-2027/semester-7/exceptions.json"
+              },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
-                {
-                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
-                  "detail": "Semester window taken from the Fall 2026/2027 academic calendar, which states its dates are approximate."
-                }
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
+                { "code": "MIDTERM_EXAMS_PENDING_SEM7_COLUMN", "detail": "The Semester 7 column of the college-wide mid-term table has not been re-supplied with this batch; its stacked/merged cells are not transcribed from memory. exams.json is intentionally empty until the table (or a clean Semester 7 crop) is re-sent, at which point Y1(S1), Y4(S7) and Y5(S9) will be filled in one accurate pass. The college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
               ]
             }
           ]
@@ -146,26 +114,10 @@
                 "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exams.json",
                 "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exceptions.json"
               },
-              "blackouts": [
-                {
-                  "id": "fall-2026-midterm-week",
-                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
-                  "from": "2026-10-31",
-                  "to": "2026-11-05",
-                  "blocksAcademicEvents": true,
-                  "blockTypes": ["lecture", "practical"],
-                  "excludedFromRotation": true
-                }
-              ],
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
-                {
-                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
-                  "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)."
-                },
-                {
-                  "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION",
-                  "detail": "Every lecture and practical section runs weekly for both groups; no alternating A/B weeks in this semester."
-                }
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for both groups; no alternating A/B weeks in this semester." }
               ]
             },
             {
@@ -182,26 +134,10 @@
                 "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exams.json",
                 "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exceptions.json"
               },
-              "blackouts": [
-                {
-                  "id": "fall-2026-midterm-week",
-                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
-                  "from": "2026-10-31",
-                  "to": "2026-11-05",
-                  "blocksAcademicEvents": true,
-                  "blockTypes": ["lecture", "practical"],
-                  "excludedFromRotation": true
-                }
-              ],
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
-                {
-                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
-                  "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)."
-                },
-                {
-                  "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED",
-                  "detail": "No Clinical Pharmacy Semester 3 exam timetable was supplied; exams.json is empty until published. The college-wide mid-term blackout still applies."
-                }
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED", "detail": "No Clinical Pharmacy Semester 3 exam timetable was supplied; exams.json is empty until published. The college-wide mid-term blackout still applies." }
               ]
             },
             {
@@ -218,38 +154,35 @@
                 "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exams.json",
                 "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exceptions.json"
               },
-              "blackouts": [
-                {
-                  "id": "fall-2026-midterm-week",
-                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
-                  "from": "2026-10-31",
-                  "to": "2026-11-05",
-                  "blocksAcademicEvents": true,
-                  "blockTypes": ["lecture", "practical"],
-                  "excludedFromRotation": true
-                }
-              ],
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
               "sourceReview": [
-                {
-                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
-                  "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)."
-                },
-                {
-                  "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION",
-                  "detail": "Department instruction: every lecture and practical section in this semester runs every week for both groups; there are no alternating A/B weeks. The only deviations are the two Phytochemistry-I examination Thursdays (2026-11-19 Group A, 2026-11-26 Group B), represented by dated examination events; the weekly practical's validity windows simply skip those two dates, so no cancel exceptions exist."
-                },
-                {
-                  "code": "MICROBIOLOGY_PRACTICAL_GROUPS_SWAPPED",
-                  "detail": "The printed practical sheet lists Wednesday Pharmaceutical Microbiology as 3:00-4:50 Group 2 / 5:00-6:50 Group 1. The department switched the two groups without reprinting the schedule, so the dataset stores the corrected order (Group 1 3:00-4:50, Group 2 5:00-6:50)."
-                },
-                {
-                  "code": "PHYTOCHEMISTRY_WINDOWED_AROUND_EXAMS",
-                  "detail": "Phytochemistry-I is a weekly Thursday practical for both groups, expressed as two validity windows that exclude the two examination Thursdays (ends 2026-11-18, resumes 2026-11-27). The mid-term blackout separately suppresses 2026-10-29 and 2026-11-05. No cancel exceptions are used, so nothing is left as a cancelled remnant."
-                },
-                {
-                  "code": "EXAM_TIMETABLE_PARTIAL",
-                  "detail": "Only the two Phytochemistry-I examinations were supplied for this semester. Other mid-term/final examinations are pending publication; the college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05."
-                }
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Department instruction: every lecture and practical section in this semester runs every week for both groups; there are no alternating A/B weeks. The only deviations are the two Phytochemistry-I examination Thursdays (2026-11-19 Group A, 2026-11-26 Group B), represented by dated examination events; the weekly practical's validity windows simply skip those two dates, so no cancel exceptions exist." },
+                { "code": "MICROBIOLOGY_PRACTICAL_GROUPS_SWAPPED", "detail": "The printed practical sheet lists Wednesday Pharmaceutical Microbiology as 3:00-4:50 Group 2 / 5:00-6:50 Group 1. The department switched the two groups without reprinting the schedule, so the dataset stores the corrected order (Group 1 3:00-4:50, Group 2 5:00-6:50)." },
+                { "code": "PHYTOCHEMISTRY_WINDOWED_AROUND_EXAMS", "detail": "Phytochemistry-I is a weekly Thursday practical for both groups, expressed as two validity windows that exclude the two examination Thursdays (ends 2026-11-18, resumes 2026-11-27). The mid-term blackout separately suppresses 2026-10-29 and 2026-11-05. No cancel exceptions are used, so nothing is left as a cancelled remnant." },
+                { "code": "EXAM_TIMETABLE_PARTIAL", "detail": "Only the two Phytochemistry-I examinations were supplied for this semester. Other mid-term/final examinations are pending publication; the college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            },
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-7",
+              "name": { "en": "Semester 7 (Year 4)", "ar": "الفصل الدراسي السابع (الفرقة الرابعة)" },
+              "yearLevel": 4,
+              "validFrom": "2026-09-19",
+              "validUntil": "2026-12-17",
+              "status": "published",
+              "datasets": {
+                "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-7/courses.json",
+                "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-7/lectures.json",
+                "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-7/practicals.json",
+                "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exams.json",
+                "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exceptions.json"
+              },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for both groups; no alternating A/B weeks in this semester." },
+                { "code": "QC_PRACTICAL_MOVED_WEDNESDAY_TO_SATURDAY", "detail": "Quality Control of Pharmaceuticals is printed on Wednesday (6th floor) from start of study until 2026-11-19 and on Saturday (8th floor) from 2026-11-21 until end of study. Encoded as two adjacent validity windows, not a cancel exception, so no cancelled remnant remains." },
+                { "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED", "detail": "No Clinical Pharmacy Semester 7 exam timetable was supplied; the college-wide mid-term table covers the general PharmD ladder only and does not apply here. The college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
               ]
             }
           ]
