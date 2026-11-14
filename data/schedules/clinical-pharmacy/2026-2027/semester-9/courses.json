@@ -1,0 +1,11 @@
+{
+  "courses": [
+    { "id": "04-PM-906", "code": "04-PM 906", "title": { "en": "Pharmaceutical Biotechnology" }, "color": "#1a73e8" },
+    { "id": "06-PG-906", "code": "06-PG 906", "title": { "en": "Phytotherapy" }, "color": "#188038" },
+    { "id": "08-PB-905", "code": "08-PB 905", "title": { "en": "Clinical Nutrition" }, "color": "#009688" },
+    { "id": "02-PO-913", "code": "02-PO 913", "title": { "en": "Basic & clinical Toxicology" }, "color": "#e8710a" },
+    { "id": "02-PO-912", "code": "02-PO 912", "title": { "en": "Pharmacotherapy of Neuropsychiatric Diseases" }, "color": "#7b1fa2" },
+    { "id": "09-PP-910", "code": "09-PP 910", "title": { "en": "Marketing & Pharmacoeconomics" }, "color": "#c2185b" },
+    { "id": "00-NP-905", "code": "00-NP 905", "title": { "en": "Innovation and Entrepreneurship" }, "color": "#d93025" }
+  ]
+}
