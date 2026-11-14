@@ -1,0 +1,102 @@
+{
+  "events": [
+    {
+      "id": "clinical-s1-medical-terminology-lecture",
+      "courseId": "02-PO-101",
+      "type": "lecture",
+      "day": "Sunday",
+      "start": "13:00",
+      "end": "13:55",
+      "groups": [1, 2],
+      "location": { "building": "new", "floor": 3, "room": "Lecture Hall A" },
+      "shorthand": "LN 3 Medical Terminology",
+      "displayCode": "LN 3 Medical Terminology",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-organic-chemistry-lecture",
+      "courseId": "05-PC-101",
+      "type": "lecture",
+      "day": "Monday",
+      "start": "09:00",
+      "end": "10:50",
+      "groups": [1, 2],
+      "location": { "building": "new", "floor": 8, "room": "Eighth Floor Hall" },
+      "shorthand": "LN 8 Pharmaceutical Organic Chemistry-I",
+      "displayCode": "LN 8 Pharmaceutical Organic Chemistry-I",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-pharmacy-orientation-lecture",
+      "courseId": "09-PP-101",
+      "type": "lecture",
+      "day": "Monday",
+      "start": "11:00",
+      "end": "11:55",
+      "groups": [1, 2],
+      "location": { "building": "new", "floor": 8, "room": "Eighth Floor Hall" },
+      "shorthand": "LN 8 Pharmacy Orientation",
+      "displayCode": "LN 8 Pharmacy Orientation",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-analytical-chemistry-lecture",
+      "courseId": "07-PA-101",
+      "type": "lecture",
+      "day": "Tuesday",
+      "start": "12:00",
+      "end": "13:50",
+      "groups": [1, 2],
+      "location": { "building": "new", "floor": 6, "room": "Sixth Floor Hall" },
+      "shorthand": "LN 6 Pharmaceutical Analytical Chemistry-I",
+      "displayCode": "LN 6 Pharmaceutical Analytical Chemistry-I",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-mathematics-lecture",
+      "courseId": "00-NP-102",
+      "type": "lecture",
+      "day": "Tuesday",
+      "start": "14:00",
+      "end": "16:50",
+      "groups": [1, 2],
+      "location": { "building": "new", "floor": 6, "room": "Sixth Floor Hall" },
+      "shorthand": "LN 6 Mathematics",
+      "displayCode": "LN 6 Mathematics",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-information-technology-lecture",
+      "courseId": "00-NP-101",
+      "type": "lecture",
+      "day": "Wednesday",
+      "start": "08:00",
+      "end": "08:55",
+      "groups": [1, 2],
+      "location": { "building": "new", "floor": 6, "room": "Sixth Floor Hall" },
+      "shorthand": "LN 6 Information Technology",
+      "displayCode": "LN 6 Information Technology",
+      "validFrom": null,
+      "validUntil": null
+    },
+    {
+      "id": "clinical-s1-medicinal-plants-lecture",
+      "courseId": "06-PG-101",
+      "type": "lecture",
+      "day": "Wednesday",
+      "start": "09:00",
+      "end": "10:50",
+      "groups": [1, 2],
+      "location": { "building": "new", "floor": 6, "room": "Sixth Floor Hall" },
+      "shorthand": "LN 6 Medicinal Plants",
+      "displayCode": "LN 6 Medicinal Plants",
+      "validFrom": null,
+      "validUntil": null
+    }
+  ]
+}
