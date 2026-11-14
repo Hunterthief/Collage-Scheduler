@@ -49,6 +49,46 @@
               ]
             },
             {
+              "id": "pharmd-2026-2027-semester-3",
+              "name": { "en": "Semester 3 (Year 2)", "ar": "الفصل الدراسي الثالث (الفرقة الثانية)" },
+              "yearLevel": 2,
+              "validFrom": "2026-09-19",
+              "validUntil": "2026-12-17",
+              "status": "published",
+              "datasets": {
+                "courses": "data/schedules/pharmd/2026-2027/semester-3/courses.json",
+                "lectures": "data/schedules/pharmd/2026-2027/semester-3/lectures.json",
+                "practicals": "data/schedules/pharmd/2026-2027/semester-3/practicals.json",
+                "exams": "data/schedules/pharmd/2026-2027/semester-3/exams.json",
+                "exceptions": "data/schedules/pharmd/2026-2027/semester-3/exceptions.json"
+              },
+              "blackouts": [
+                {
+                  "id": "fall-2026-midterm-week",
+                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
+                  "from": "2026-10-31",
+                  "to": "2026-11-05",
+                  "blocksAcademicEvents": true,
+                  "blockTypes": ["lecture", "practical"],
+                  "excludedFromRotation": true
+                }
+              ],
+              "sourceReview": [
+                {
+                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
+                  "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)."
+                },
+                {
+                  "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION",
+                  "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester."
+                },
+                {
+                  "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE",
+                  "detail": "Seven mid-term examinations transcribed from the Semester 3 column of the college-wide PharmD mid-term table (31 Oct - 5 Nov, New Building, 30-minute slots, all groups). Physiology and Pathophysiology has no listed mid-term; final examinations are pending publication."
+                }
+              ]
+            },
+            {
               "id": "pharmd-2026-2027-semester-5",
               "name": { "en": "Semester 5", "ar": "الفصل الدراسي الخامس" },
               "yearLevel": 3,
