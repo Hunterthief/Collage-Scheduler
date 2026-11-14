@@ -20,12 +20,19 @@ import {
   occursInRange,
   weekdayName
 } from "./schedule/recurrence.js";
-import { timeToMinutes } from "./schedule/sorting.js";
+import { timeToMinutes, sortOccurrences, mergeOccurrences } from "./schedule/sorting.js";
 import {
   buildFeedUrl,
+  buildElectiveFeedUrl,
   googleCalendarSubscribeUrl,
   googleCalendarAddByUrlUrl
 } from "./calendar/calendar-links.js";
+import {
+  loadElectiveCatalog,
+  eligibleElectives,
+  mergeSelectedElectives,
+  electiveColorMap
+} from "./schedule/electives.js";
 import { eventsToIcs, formatLocation } from "./calendar/ics-generator.js";
 import {
   buildEventIndex,
