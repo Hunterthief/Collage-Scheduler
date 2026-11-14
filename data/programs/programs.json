@@ -9,6 +9,46 @@
           "name": { "en": "2026/2027", "ar": "٢٠٢٦/٢٠٢٧" },
           "semesters": [
             {
+              "id": "pharmd-2026-2027-semester-1",
+              "name": { "en": "Semester 1 (Year 1)", "ar": "الفصل الدراسي الأول (الفرقة الأولى)" },
+              "yearLevel": 1,
+              "validFrom": "2026-09-19",
+              "validUntil": "2026-12-17",
+              "status": "published",
+              "datasets": {
+                "courses": "data/schedules/pharmd/2026-2027/semester-1/courses.json",
+                "lectures": "data/schedules/pharmd/2026-2027/semester-1/lectures.json",
+                "practicals": "data/schedules/pharmd/2026-2027/semester-1/practicals.json",
+                "exams": "data/schedules/pharmd/2026-2027/semester-1/exams.json",
+                "exceptions": "data/schedules/pharmd/2026-2027/semester-1/exceptions.json"
+              },
+              "blackouts": [
+                {
+                  "id": "fall-2026-midterm-week",
+                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
+                  "from": "2026-10-31",
+                  "to": "2026-11-05",
+                  "blocksAcademicEvents": true,
+                  "blockTypes": ["lecture", "practical"],
+                  "excludedFromRotation": true
+                }
+              ],
+              "sourceReview": [
+                {
+                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
+                  "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)."
+                },
+                {
+                  "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION",
+                  "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester."
+                },
+                {
+                  "code": "PRACTICAL_SHEET_YEAR_TYPO",
+                  "detail": "The printed practical header reads '2026/20267'; corrected to 2026/2027."
+                }
+              ]
+            },
+            {
               "id": "pharmd-2026-2027-semester-5",
               "name": { "en": "Semester 5", "ar": "الفصل الدراسي الخامس" },
               "yearLevel": 3,
@@ -52,6 +92,42 @@
           "id": "2026-2027",
           "name": { "en": "2026/2027", "ar": "٢٠٢٦/٢٠٢٧" },
           "semesters": [
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-1",
+              "name": { "en": "Semester 1 (Year 1)", "ar": "الفصل الدراسي الأول (الفرقة الأولى)" },
+              "yearLevel": 1,
+              "validFrom": "2026-09-19",
+              "validUntil": "2026-12-17",
+              "status": "published",
+              "datasets": {
+                "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-1/courses.json",
+                "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-1/lectures.json",
+                "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-1/practicals.json",
+                "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exams.json",
+                "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exceptions.json"
+              },
+              "blackouts": [
+                {
+                  "id": "fall-2026-midterm-week",
+                  "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" },
+                  "from": "2026-10-31",
+                  "to": "2026-11-05",
+                  "blocksAcademicEvents": true,
+                  "blockTypes": ["lecture", "practical"],
+                  "excludedFromRotation": true
+                }
+              ],
+              "sourceReview": [
+                {
+                  "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR",
+                  "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)."
+                },
+                {
+                  "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION",
+                  "detail": "Every lecture and practical section runs weekly for both groups; no alternating A/B weeks in this semester."
+                }
+              ]
+            },
             {
               "id": "clinical-pharmacy-2026-2027-semester-3",
               "name": { "en": "Semester 3 (Year 2)", "ar": "الفصل الدراسي الثالث (الفرقة الثانية)" },
