@@ -1,0 +1,9 @@
+{
+  "events": [],
+  "sourceReview": [
+    {
+      "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED",
+      "detail": "No Clinical Pharmacy Semester 1 exam timetable was supplied. The college-wide mid-term table covers the non-clinical PharmD ladder only, so it does not apply here. The college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05."
+    }
+  ]
+}
