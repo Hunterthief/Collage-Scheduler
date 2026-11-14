@@ -1,0 +1,9 @@
+{
+  "courses": [
+    { "id": "01-PT-706", "code": "01-PT 706", "title": { "en": "Biopharmaceutics and Pharmacokinetics" }, "color": "#1a73e8" },
+    { "id": "05-PC-704", "code": "05-PC 704", "title": { "en": "Medicinal Chemistry-I" }, "color": "#188038" },
+    { "id": "07-PA-704", "code": "07-PA 704", "title": { "en": "Quality Control of Pharmaceuticals" }, "color": "#e8710a" },
+    { "id": "04-PM-704", "code": "04-PM 704", "title": { "en": "Medical Microbiology" }, "color": "#009688" },
+    { "id": "01-PT-705", "code": "01-PT 705", "title": { "en": "Advanced Drug Delivery Systems" }, "color": "#7b1fa2" }
+  ]
+}
