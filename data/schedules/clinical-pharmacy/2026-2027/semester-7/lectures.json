@@ -1,0 +1,9 @@
+{
+  "events": [
+    { "id": "clinical-y4-biopharmaceutics-lecture", "courseId": "01-PT-706", "type": "lecture", "day": "Monday", "start": "09:00", "end": "10:50", "groups": [1, 2], "location": { "building": "old", "floor": 0, "room": "Ground Lecture Hall" }, "shorthand": "LO 0 Biopharmaceutics and Pharmacokinetics", "displayCode": "LO 0 Biopharmaceutics and Pharmacokinetics", "validFrom": null, "validUntil": null },
+    { "id": "clinical-y4-medicinal-chemistry-i-lecture", "courseId": "05-PC-704", "type": "lecture", "day": "Tuesday", "start": "13:00", "end": "14:50", "groups": [1, 2], "location": { "building": "new", "floor": 5, "room": "Lecture Hall B" }, "shorthand": "LN 5 Medicinal Chemistry-I", "displayCode": "LN 5 Medicinal Chemistry-I", "validFrom": null, "validUntil": null },
+    { "id": "clinical-y4-quality-control-lecture", "courseId": "07-PA-704", "type": "lecture", "day": "Tuesday", "start": "15:00", "end": "16:50", "groups": [1, 2], "location": { "building": "new", "floor": 5, "room": "Lecture Hall B" }, "shorthand": "LN 5 Quality Control of Pharmaceuticals", "displayCode": "LN 5 Quality Control of Pharmaceuticals", "validFrom": null, "validUntil": null },
+    { "id": "clinical-y4-medical-microbiology-lecture", "courseId": "04-PM-704", "type": "lecture", "day": "Thursday", "start": "13:00", "end": "14:50", "groups": [1, 2], "location": { "building": "old", "floor": 5, "room": "Upper Lecture Hall" }, "shorthand": "LO 5 Medical Microbiology", "displayCode": "LO 5 Medical Microbiology", "validFrom": null, "validUntil": null },
+    { "id": "clinical-y4-advanced-drug-delivery-lecture", "courseId": "01-PT-705", "type": "lecture", "day": "Thursday", "start": "15:00", "end": "16:50", "groups": [1, 2], "location": { "building": "old", "floor": 5, "room": "Upper Lecture Hall" }, "shorthand": "LO 5 Advanced Drug Delivery Systems", "displayCode": "LO 5 Advanced Drug Delivery Systems", "validFrom": null, "validUntil": null }
+  ]
+}
