@@ -3,9 +3,8 @@ import { occursOnDay, parseDate, formatDate, addDays, weekdayName, todayInTimeZo
 import { timeToMinutes } from "./sorting.js";
 import { findProgram, findAcademicYear } from "../data/programs.js";
 
-// ---- Cohort universe -------------------------------------------------------
-// A "cohort" is a resolved descriptor, not a student. Enumerated from the
-// assignment manifests so it can never drift from the seat data.
+// A "cohort" is a resolved class group descriptor, not a student. Enumerated
+// from the assignment manifests so it can never drift from the seat data.
 export function cohortKey(c) {
   return [c.programId, c.academicYearId, c.yearLevel ?? "", c.practicalGroup ?? "", c.subdivision ?? ""].join("|");
 }
@@ -46,7 +45,6 @@ export async function enumerateCohorts(loader, manifest, programs) {
   }
 }
 
-// ---- Per-semester resolution ----------------------------------------------
 function semesterFor(programs, cohort) {
   const program = findProgram(programs, cohort.programId);
   if (!program) return null;
@@ -59,12 +57,13 @@ function semesterFor(programs, cohort) {
   return list[0] ?? null;
 }
 
-// Compose one cohort's occurrences. Memoized by the caller via `cache`.
+// Compose one cohort's occurrences across the whole semester. Memoized by the
+// caller; events carry absolute dates so a single compose answers ANY date.
 export async function composeCohortEvents(loader, manifest, programs, institution, cohort, today, locale, cache) {
   const key = cohort.key ?? cohortKey(cohort);
   if (cache?.has(key)) return cache.get(key);
   const semester = semesterFor(programs, cohort);
-  if (!semester) { const empty = { events: [], semester: null }; cache?.set(key, empty); return empty; }
+  if (!semester) { const empty = { events: [], semester: null, loaded: false }; cache?.set(key, empty); return empty; }
   const datasets = await loader.loadSemesterDatasets(semester, manifest);
   const result = composeSchedule({
     institutionId: institution.settings.institutionId,
@@ -89,53 +88,48 @@ export async function composeCohortEvents(loader, manifest, programs, institutio
     },
     locale
   });
-  const packed = { events: result.events ?? [], semester, diagnostics: result.diagnostics };
+  const packed = { events: result.events ?? [], semester, loaded: (result.events ?? []).length > 0, diagnostics: result.diagnostics };
   cache?.set(key, packed);
   return packed;
 }
 
-// ---- Interval math ---------------------------------------------------------
 export function eventsOnDate(events, date) {
   return (events ?? []).filter((e) => occursOnDay(e, date));
 }
-
 export function timedEventsOnDate(events, date) {
   return eventsOnDate(events, date).filter((e) => !e.allDay && e.start && e.end);
 }
-
 export function allDayEventsOnDate(events, date) {
   return eventsOnDate(events, date).filter((e) => e.allDay);
 }
-
 export function overlaps(aStartMin, aEndMin, bStartMin, bEndMin) {
   return aStartMin < bEndMin && bStartMin < aEndMin;
 }
-
 export function busyEventsAt(events, date, startMin, endMin) {
   return timedEventsOnDate(events, date).filter((e) =>
     overlaps(timeToMinutes(e.start), Math.max(timeToMinutes(e.end), timeToMinutes(e.start) + 1), startMin, endMin)
   );
 }
 
-export function isFreeAt(events, date, startMin, endMin) {
-  return busyEventsAt(events, date, startMin, endMin).length === 0;
-}
-
-// ---- Slot finder (organizer) ----------------------------------------------
-// One concrete date + one window, evaluated across every cohort in scope.
+// status is 'free' | 'busy' | 'nodata'. 'nodata' means the cohort has NO
+// published schedule at all — it must never be shown as Free.
 export function slotRows(cohorts, composedByKey, date, startMin, endMin) {
   const rows = [];
   for (const c of cohorts) {
     const packed = composedByKey.get(c.key);
     const events = packed?.events ?? [];
+    if (!packed || !packed.loaded || events.length === 0) {
+      rows.push({ cohort: c, status: "nodata", free: false, blocking: [] });
+      continue;
+    }
     const blocking = busyEventsAt(events, date, startMin, endMin);
-    rows.push({ cohort: c, free: blocking.length === 0, blocking });
+    rows.push({ cohort: c, status: blocking.length ? "busy" : "free", free: blocking.length === 0, blocking });
   }
-  rows.sort((a, b) => (a.free === b.free ? a.cohort.label.localeCompare(b.cohort.label) : a.free ? -1 : 1));
+  const rank = { free: 0, busy: 1, nodata: 2 };
+  rows.sort((a, b) => (rank[a.status] - rank[b.status]) || a.cohort.label.localeCompare(b.cohort.label));
   return rows;
 }
 
-// ---- Side-by-side (comparison / switch) -----------------------------------
 export function dayBounds(eventsByCohort, date) {
   let lo = Infinity, hi = -Infinity;
   for (const events of eventsByCohort.values()) {
@@ -163,8 +157,6 @@ export function buildGridMarks(eventsByCohort, date, lo, hi) {
   return Array.from(marks).sort((a, b) => a - b);
 }
 
-// Matrix rows = consecutive grid slots; cells = the event(s) a cohort has then.
-// referenceKey enables the per-cell "is reference free?" swap check.
 export function sideMatrix(cohorts, eventsByCohort, date, referenceKey) {
   const { lo, hi } = dayBounds(eventsByCohort, date);
   const marks = buildGridMarks(eventsByCohort, date, lo, hi);
@@ -173,27 +165,33 @@ export function sideMatrix(cohorts, eventsByCohort, date, referenceKey) {
     const s = marks[i], e = marks[i + 1];
     if (e - s < 1) continue;
     const cells = cohorts.map((c) => {
-      const evs = busyEventsAt(eventsByCohort.get(c.key) ?? [], date, s, e);
-      const refEvents = referenceKey ? busyEventsAt(eventsByCohort.get(referenceKey) ?? [], date, s, e) : [];
+      const packed = eventsByCohort.get(c.key);
+      const evs = packed?.events ?? [];
+      const loaded = packed?.loaded ?? false;
+      const busy = busyEventsAt(evs, date, s, e);
+      const refEvents = referenceKey ? busyEventsAt(eventsByCohort.get(referenceKey)?.events ?? [], date, s, e) : [];
       return {
         cohort: c,
-        events: evs,
-        free: evs.length === 0,
+        loaded,
+        events: busy,
+        free: loaded && busy.length === 0,
+        nodata: !loaded,
         refFree: referenceKey ? refEvents.length === 0 : null
       };
     });
-    rows.push({ start: s, end: e, cells, busyCount: cells.filter((x) => !x.free).length });
+    rows.push({ start: s, end: e, cells, busyCount: cells.filter((x) => !x.free && !x.nodata).length });
   }
   return { lo, hi, rows };
 }
 
-// Windows where EVERY selected cohort is simultaneously free.
 export function commonFreeWindows(cohorts, eventsByCohort, date, lo, hi) {
   const span = hi - lo;
   if (span <= 0) return [];
   const busy = new Uint8Array(span);
   for (const c of cohorts) {
-    for (const e of timedEventsOnDate(eventsByCohort.get(c.key) ?? [], date)) {
+    const packed = eventsByCohort.get(c.key);
+    if (!packed?.loaded) continue;
+    for (const e of timedEventsOnDate(packed.events ?? [], date)) {
       const s = Math.max(0, timeToMinutes(e.start) - lo);
       const en = Math.min(span, Math.max(timeToMinutes(e.end), timeToMinutes(e.start) + 1) - lo);
       for (let m = s; m < en; m++) busy[m] = 1;
@@ -216,7 +214,6 @@ export function minutesToHHMM(min) {
   const h = Math.floor(min / 60), m = min % 60;
   return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
 }
-
 export function nextOccurringWeekday(fromDate, weekday) {
   let cursor = fromDate;
   for (let i = 0; i < 7; i++) {
@@ -225,5 +222,4 @@ export function nextOccurringWeekday(fromDate, weekday) {
   }
   return fromDate;
 }
-
 export { todayInTimeZone };
