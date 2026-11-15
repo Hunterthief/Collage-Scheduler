@@ -422,8 +422,13 @@ function renderAll(state) {
   renderAssignmentSummary(state);
   renderView(state, state.view);
   renderCalendar(state);
-  renderElectivesCard(state);
+  // Reminder card is created BEFORE the electives card on purpose: the reminder
+  // card anchors on the static .subscription-card (always present in index.html),
+  // and the electives card then anchors on #reminder-card. Creating them in the
+  // opposite order made the electives card look up a sibling that did not exist
+  // yet and throw "anchor is null".
   renderReminderCard(state);
+  renderElectivesCard(state);
 }
 
 function navigate(delta) {
@@ -876,12 +881,15 @@ function renderReminderCard(state) {
 
   let card = document.getElementById("reminder-card");
   if (!card) {
-    const anchor = document.querySelector(".subscription-card");
+    // Anchor on the STATIC subscription card (hard-coded in index.html), which is
+    // always present, so this can never throw on a null anchor.
+    const anchor = document.querySelector(".subscription-card") ?? els.calendarLinks?.closest("section") ?? null;
     card = document.createElement("section");
     card.id = "reminder-card";
     card.className = "subscription-card";
     card.setAttribute("aria-labelledby", "reminder-heading");
-    anchor.parentNode.insertBefore(card, anchor);
+    if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(card, anchor);
+    else (els.result ?? document.body).appendChild(card);
   }
 
   card.innerHTML = `
@@ -1052,12 +1060,19 @@ function recomputeWithElectives(state) {
 function renderElectivesCard(state) {
   let card = document.getElementById("electives-card");
   if (!card) {
-    const anchor = document.getElementById("reminder-card");
+    // Null-safe anchor chain: prefer #reminder-card (created first in renderAll),
+    // fall back to the static .subscription-card, then to appending into #result.
+    // This guarantees we never dereference a null parentNode regardless of order.
+    const anchor =
+      document.getElementById("reminder-card") ??
+      document.querySelector(".subscription-card") ??
+      null;
     card = document.createElement("section");
     card.id = "electives-card";
     card.className = "subscription-card";
     card.setAttribute("aria-labelledby", "electives-heading");
-    anchor.parentNode.insertBefore(card, anchor);
+    if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(card, anchor);
+    else (els.result ?? document.body).appendChild(card);
   }
 
   const eligible = state.eligibleElectives ?? [];
