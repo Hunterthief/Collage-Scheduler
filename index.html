@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light" />
     <meta
       name="description"
-      content="College timetable lookup with Google Calendar-style weekly and daily schedule views."
+      content="College timetable lookup with Google Calendar-style weekly and daily schedule views, plus a cross-cohort schedule comparison tool."
     />
     <title>College Scheduler</title>
 
@@ -21,6 +21,52 @@
       .field-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       @media (max-width: 980px) { .field-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
       @media (max-width: 560px) { .field-grid-4 { grid-template-columns: minmax(0, 1fr); } }
+
+      /* ---- Compare tab ---- */
+      .cmp-subseg { display: inline-flex; gap: 6px; margin: 4px 0 12px; }
+      .cmp-subseg button {
+        border: 1px solid var(--line); background: var(--surface); color: var(--text);
+        padding: 6px 12px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.85rem;
+      }
+      .cmp-subseg button.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+      .cmp-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: flex-end; }
+      .cmp-controls .field { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+      .cmp-controls label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+      .cmp-controls input, .cmp-controls select { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); min-width: 0; }
+      .cmp-controls input[type="time"] { width: 110px; }
+      .cmp-controls input[type="date"] { width: 150px; }
+      .cmp-radio { display: inline-flex; gap: 10px; align-items: center; font-size: 0.85rem; }
+      .cmp-quick { display: flex; flex-wrap: wrap; gap: 4px; }
+      .cmp-quick button { border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 3px 7px; font: inherit; font-size: 0.72rem; cursor: pointer; color: var(--text); }
+      .cmp-quick button:hover { border-color: var(--accent); color: var(--accent); }
+      .cmp-summary { font-size: 0.85rem; color: var(--muted); margin: 8px 0; }
+      .cmp-summary strong { color: var(--text); }
+
+      .cmp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; min-height: 28px; }
+      .cmp-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 3px 6px 3px 10px; font-size: 0.8rem; background: var(--surface); }
+      .cmp-chip.ref { border-color: var(--accent); background: var(--accent-soft); }
+      .cmp-chip .cmp-chip-star { border: none; background: none; cursor: pointer; font-size: 0.85rem; color: var(--muted); padding: 0 2px; }
+      .cmp-chip.ref .cmp-chip-star { color: var(--accent); }
+      .cmp-chip .cmp-chip-x { border: none; background: none; cursor: pointer; color: var(--muted); font-size: 0.9rem; line-height: 1; padding: 0 2px; }
+      .cmp-chip .cmp-chip-x:hover { color: #d93025; }
+
+      .cmp-scroll { overflow: auto; max-height: 70vh; border: 1px solid var(--line); border-radius: 10px; }
+      table.cmp-table { border-collapse: collapse; width: 100%; font-size: 0.82rem; }
+      table.cmp-table th, table.cmp-table td { padding: 6px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+      table.cmp-table thead th { position: sticky; top: 0; background: var(--surface); z-index: 2; font-size: 0.72rem; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
+      table.cmp-table td.cmp-time { white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+      table.cmp-table thead th.cmp-time { z-index: 3; }
+      .cmp-status-free { color: #188038; font-weight: 600; }
+      .cmp-status-busy { color: #b06000; font-weight: 600; }
+      .cmp-ev { display: block; padding: 1px 4px; border-radius: 5px; margin: 1px 0; border-left: 3px solid var(--line); }
+      .cmp-ev.free { color: var(--muted); border-left-color: transparent; }
+      .cmp-swok { color: #188038; font-weight: 700; }
+      .cmp-swbad { color: #d93025; font-weight: 700; }
+      .cmp-col-ref { background: var(--accent-soft); }
+      .cmp-common { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+      .cmp-common .win { border: 1px solid #188038; color: #188038; background: #e6f4ea; border-radius: 6px; padding: 2px 8px; font-size: 0.78rem; }
+      .cmp-empty { color: var(--muted); font-size: 0.85rem; padding: 8px 0; }
+      .cmp-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
     </style>
   </head>
   <body>
@@ -51,6 +97,9 @@
             </button>
             <button type="button" class="segment" data-mode="manual" aria-pressed="false">
               Year &amp; group
+            </button>
+            <button type="button" class="segment" data-mode="compare" aria-pressed="false">
+              Compare
             </button>
           </div>
 
@@ -103,6 +152,120 @@
               <p class="hint">
                 Pick your year (1st, 2nd, 3rd…), then the group printed on your official schedule.
               </p>
+            </div>
+          </form>
+
+          <form id="compare-form" class="lookup-form" hidden>
+            <div class="cmp-subseg" role="group" aria-label="Compare mode">
+              <button type="button" class="active" data-cmode="slot" aria-pressed="true">Slot finder</button>
+              <button type="button" data-cmode="side" aria-pressed="false">Side by side</button>
+            </div>
+
+            <!-- Slot finder (event organizers) -->
+            <div id="cmp-slot-panel">
+              <div class="cmp-controls">
+                <div class="field">
+                  <label for="cmp-scope">Scope</label>
+                  <select id="cmp-scope">
+                    <option value="all">All programs</option>
+                    <option value="pharmd">PharmD (general)</option>
+                    <option value="clinical-pharmacy">Clinical Pharmacy</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Granularity</label>
+                  <span class="cmp-radio">
+                    <label><input type="radio" name="cmp-gran" value="group" checked /> Group</label>
+                    <label><input type="radio" name="cmp-gran" value="subgroup" /> Subgroup</label>
+                  </span>
+                </div>
+                <div class="field">
+                  <label for="cmp-date">Date</label>
+                  <input type="date" id="cmp-date" required />
+                </div>
+                <div class="field">
+                  <label for="cmp-start">From</label>
+                  <input type="time" id="cmp-start" value="17:00" required />
+                </div>
+                <div class="field">
+                  <label for="cmp-end">To</label>
+                  <input type="time" id="cmp-end" value="18:00" required />
+                </div>
+                <div class="field">
+                  <label>Quick fill</label>
+                  <span class="cmp-quick" id="cmp-quick">
+                    <button type="button" data-wd="Sunday">Sun</button>
+                    <button type="button" data-wd="Monday">Mon</button>
+                    <button type="button" data-wd="Tuesday">Tue</button>
+                    <button type="button" data-wd="Wednesday">Wed</button>
+                    <button type="button" data-wd="Thursday">Thu</button>
+                    <button type="button" data-wd="Friday">Fri</button>
+                    <button type="button" data-wd="Saturday">Sat</button>
+                  </span>
+                </div>
+                <div class="field">
+                  <label>&nbsp;</label>
+                  <button class="btn primary" type="submit">Find free cohorts</button>
+                </div>
+              </div>
+              <p class="hint">Pick the actual date — rotation weeks, batch ranges, exams and the mid‑term blackout are honored, so “Monday 5pm” is answered for that specific Monday.</p>
+              <div id="cmp-slot-result"></div>
+            </div>
+
+            <!-- Side by side (class switching / comparison) -->
+            <div id="cmp-side-panel" hidden>
+              <div class="cmp-controls">
+                <div class="field">
+                  <label for="cmp-p-program">Program</label>
+                  <select id="cmp-p-program"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-year">Academic year</label>
+                  <select id="cmp-p-year"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-level">Year</label>
+                  <select id="cmp-p-level"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-group">Group</label>
+                  <select id="cmp-p-group"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-sub">Subgroup</label>
+                  <select id="cmp-p-sub">
+                    <option value="">Whole group</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>&nbsp;</label>
+                  <div class="cmp-actions">
+                    <button class="btn quiet" type="button" id="cmp-add">Add</button>
+                    <button class="btn quiet" type="button" id="cmp-add-all-year">Add all of this year</button>
+                    <button class="btn quiet" type="button" id="cmp-add-mine">＋ My schedule</button>
+                    <button class="btn quiet" type="button" id="cmp-clear">Clear</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cmp-chips" id="cmp-chips" aria-label="Selected cohorts to compare"></div>
+
+              <div class="cmp-controls" style="margin-top:6px;">
+                <div class="field">
+                  <label>Day</label>
+                  <div class="cmp-actions" style="margin:0;">
+                    <button class="icon-btn" type="button" id="cmp-prev-day" aria-label="Previous day">‹</button>
+                    <button class="btn quiet" type="button" id="cmp-today-day">Today</button>
+                    <button class="icon-btn" type="button" id="cmp-next-day" aria-label="Next day">›</button>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="cmp-side-date">Date</label>
+                  <input type="date" id="cmp-side-date" required />
+                </div>
+              </div>
+
+              <div id="cmp-side-result"></div>
             </div>
           </form>
 
