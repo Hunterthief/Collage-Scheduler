@@ -33,6 +33,18 @@ import {
   mergeSelectedElectives,
   electiveColorMap
 } from "./schedule/electives.js";
+import {
+  enumerateCohorts,
+  composeCohortEvents,
+  slotRows,
+  sideMatrix,
+  commonFreeWindows,
+  busyEventsAt,
+  timedEventsOnDate,
+  allDayEventsOnDate,
+  minutesToHHMM,
+  nextOccurringWeekday
+} from "./schedule/compare.js";
 import { eventsToIcs, formatLocation } from "./calendar/ics-generator.js";
 import {
   buildEventIndex,
@@ -50,6 +62,7 @@ const els = {
   modeButtons: document.querySelectorAll(".segment"),
   idForm: document.getElementById("id-form"),
   manualForm: document.getElementById("manual-form"),
+  compareForm: document.getElementById("compare-form"),
   studentId: document.getElementById("student-id"),
   programSelect: document.getElementById("program-select"),
   yearSelect: document.getElementById("year-select"),
@@ -78,6 +91,24 @@ let currentState = null;
 let lookupOptions = null;
 let reminderScheduler = null;
 let electiveCatalogCache = null;
+
+// ---- Compare state (ephemeral; not persisted, holds no personal data) ------
+const compareState = {
+  mode: "slot",
+  universe: null,          // enumerated cohorts
+  universePromise: null,
+  composedCache: new Map(),// cohortKey -> {events, semester}
+  programs: null,
+  institution: null,
+  manifest: null,
+  today: null,
+  locale: "en",
+  chips: [],               // cohort descriptors added for side-by-side
+  referenceKey: null,      // starred cohort for swap checks
+  slot: { scope: "all", gran: "group", date: null, start: "17:00", end: "18:00" },
+  sideDate: null,
+  picker: { programId: null, academicYearId: null, yearLevel: null, practicalGroup: null, subdivision: "" }
+};
 
 function electiveStorageKey(state) {
   const a = state.assignment;
@@ -111,6 +142,7 @@ function bindEvents() {
   els.modeButtons.forEach((btn) => btn.addEventListener("click", () => setMode(btn.dataset.mode)));
   els.idForm.addEventListener("submit", onIdSubmit);
   els.manualForm.addEventListener("submit", onManualSubmit);
+  els.compareForm.addEventListener("submit", onCompareSubmit);
   els.programSelect.addEventListener("change", () => { populateYears(); });
   els.yearSelect.addEventListener("change", () => { populateLevels(); });
   els.levelSelect.addEventListener("change", () => { populateGroups(); });
@@ -120,6 +152,7 @@ function bindEvents() {
   els.prevPeriod.addEventListener("click", () => navigate(-1));
   els.nextPeriod.addEventListener("click", () => navigate(1));
   els.todayBtn.addEventListener("click", goToday);
+  bindCompareEvents();
 }
 
 function setMode(mode) {
@@ -130,8 +163,11 @@ function setMode(mode) {
   });
   els.idForm.hidden = mode !== "id";
   els.manualForm.hidden = mode !== "manual";
+  els.compareForm.hidden = mode !== "compare";
   if (mode === "manual") {
     ensureOptions().catch((err) => setStatus(`Could not load year/group options: ${err.message}`, "error"));
+  } else if (mode === "compare") {
+    ensureCompare().catch((err) => setStatus(`Could not load comparison data: ${err.message}`, "error"));
   } else {
     els.studentId?.focus({ preventScroll: true });
   }
@@ -407,6 +443,9 @@ function checkForUpdate(dataVersion) {
   if (previous && previous !== dataVersion) {
     loader.cache?.clear();
     lookupOptions = null;
+    compareState.universe = null;       // seat universe may have changed
+    compareState.universePromise = null;
+    compareState.composedCache = new Map();
     setStatus("Published data changed. Cached files were cleared. Reload if anything looks stale.", "info");
   }
   try { localStorage.setItem(key, dataVersion); } catch {}
@@ -1144,6 +1183,386 @@ function renderElectivesCard(state) {
   card.querySelectorAll("a[data-copy-feed]").forEach((a) => {
     a.addEventListener("click", () => { copyToClipboard(a.dataset.copyFeed); });
   });
+}
+
+// ============================================================================
+//  COMPARE TAB
+// ============================================================================
+
+function q(id) { return document.getElementById(id); }
+
+async function ensureCompare() {
+  if (compareState.universe) return;
+  if (compareState.universePromise) { await compareState.universePromise; return; }
+  compareState.universePromise = (async () => {
+    const manifest = await loader.loadManifest();
+    const programs = await loader.loadPrograms(manifest);
+    const institution = await loader.loadInstitutionData(manifest);
+    const locale = institution.settings.defaultLocale ?? CONFIG.ui.defaultLocale ?? "en";
+    const today = todayInTimeZone(manifest.timezone);
+    compareState.manifest = manifest;
+    compareState.programs = programs;
+    compareState.institution = institution;
+    compareState.locale = locale;
+    compareState.today = today;
+    compareState.universe = await enumerateCohorts(loader, manifest, programs);
+    if (!compareState.slot.date) compareState.slot.date = today;
+    if (!compareState.sideDate) compareState.sideDate = today;
+    hydrateComparePickerCascade();
+    renderCompareChips();
+    // Auto-run whichever mode is active so the panel is never blank on entry.
+    if (compareState.mode === "slot") await runSlotFinder();
+    else await runSideBySide();
+  })();
+  try { await compareState.universePromise; }
+  finally { compareState.universePromise = null; }
+}
+
+function bindCompareEvents() {
+  document.querySelectorAll(".cmp-subseg button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      compareState.mode = btn.dataset.cmode;
+      document.querySelectorAll(".cmp-subseg button").forEach((b) => {
+        const active = b.dataset.cmode === compareState.mode;
+        b.classList.toggle("active", active);
+        b.setAttribute("aria-pressed", String(active));
+      });
+      q("cmp-slot-panel").hidden = compareState.mode !== "slot";
+      q("cmp-side-panel").hidden = compareState.mode !== "side";
+      ensureCompare().then(() => compareState.mode === "slot" ? runSlotFinder() : runSideBySide())
+        .catch((err) => setStatus(`Compare failed: ${err.message}`, "error"));
+    });
+  });
+
+  q("cmp-scope")?.addEventListener("change", (e) => { compareState.slot.scope = e.target.value; runSlotFinder().catch((err)=>setStatus(err.message,"error")); });
+  document.querySelectorAll('input[name="cmp-gran"]').forEach((r) => r.addEventListener("change", (e) => { compareState.slot.gran = e.target.value; runSlotFinder().catch((err)=>setStatus(err.message,"error")); }));
+  q("cmp-date")?.addEventListener("change", (e) => { compareState.slot.date = e.target.value; });
+  q("cmp-start")?.addEventListener("change", (e) => { compareState.slot.start = e.target.value; });
+  q("cmp-end")?.addEventListener("change", (e) => { compareState.slot.end = e.target.value; });
+  q("cmp-quick")?.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+    const base = compareState.slot.date || compareState.today || todayInTimeZone("Africa/Cairo");
+    const d = nextOccurringWeekday(base, b.dataset.wd);
+    compareState.slot.date = d;
+    const di = q("cmp-date"); if (di) di.value = d;
+    runSlotFinder().catch((err)=>setStatus(err.message,"error"));
+  }));
+
+  // Side-by-side picker cascade
+  q("cmp-p-program")?.addEventListener("change", () => { compareState.picker.programId = q("cmp-p-program").value; hydrateComparePickerYears(); });
+  q("cmp-p-year")?.addEventListener("change", () => { compareState.picker.academicYearId = q("cmp-p-year").value; hydrateComparePickerLevels(); });
+  q("cmp-p-level")?.addEventListener("change", () => { compareState.picker.yearLevel = q("cmp-p-level").value === "" ? null : Number(q("cmp-p-level").value); hydrateComparePickerGroups(); });
+  q("cmp-p-group")?.addEventListener("change", () => { compareState.picker.practicalGroup = q("cmp-p-group").value === "" ? null : Number(q("cmp-p-group").value); hydrateComparePickerSubs(); });
+  q("cmp-p-sub")?.addEventListener("change", () => { compareState.picker.subdivision = q("cmp-p-sub").value; });
+
+  q("cmp-add")?.addEventListener("click", () => addCohortFromPicker());
+  q("cmp-add-all-year")?.addEventListener("click", () => addAllOfCurrentYear());
+  q("cmp-add-mine")?.addEventListener("click", () => addMySchedule());
+  q("cmp-clear")?.addEventListener("click", () => { compareState.chips = []; compareState.referenceKey = null; renderCompareChips(); runSideBySide().catch((e)=>setStatus(e.message,"error")); });
+
+  q("cmp-prev-day")?.addEventListener("click", () => shiftSideDate(-1));
+  q("cmp-next-day")?.addEventListener("click", () => shiftSideDate(1));
+  q("cmp-today-day")?.addEventListener("click", () => { compareState.sideDate = compareState.today; const d=q("cmp-side-date"); if(d) d.value=compareState.sideDate; runSideBySide().catch((e)=>setStatus(e.message,"error")); });
+  q("cmp-side-date")?.addEventListener("change", (e) => { compareState.sideDate = e.target.value; runSideBySide().catch((err)=>setStatus(err.message,"error")); });
+}
+
+async function onCompareSubmit(event) {
+  event.preventDefault();
+  try {
+    await ensureCompare();
+    if (compareState.mode === "slot") await runSlotFinder();
+    else await runSideBySide();
+  } catch (err) { setStatus(`Compare failed: ${err.message}`, "error"); }
+}
+
+// ---- Picker cascade (mirrors the manual tab but standalone) ----------------
+function hydrateComparePickerCascade() {
+  const progSel = q("cmp-p-program"); if (!progSel) return;
+  progSel.innerHTML = "";
+  const programs = compareState.programs?.programs ?? [];
+  for (const p of programs) addOption(progSel, p.id, p.name?.en ?? p.id);
+  if (programs.length) { progSel.value = programs[0].id; compareState.picker.programId = programs[0].id; }
+  hydrateComparePickerYears();
+}
+
+function compareProgram() { return (compareState.programs?.programs ?? []).find((p) => p.id === compareState.picker.programId) ?? null; }
+function compareYear() { return compareProgram()?.academicYears?.find((y) => y.id === compareState.picker.academicYearId) ?? null; }
+
+function hydrateComparePickerYears() {
+  const sel = q("cmp-p-year"); if (!sel) return;
+  const program = compareProgram();
+  sel.innerHTML = "";
+  const years = program?.academicYears ?? [];
+  for (const y of years) addOption(sel, y.id, y.name?.en ?? y.id);
+  if (years.length) { sel.value = years[0].id; compareState.picker.academicYearId = years[0].id; }
+  hydrateComparePickerLevels();
+}
+
+function hydrateComparePickerLevels() {
+  const sel = q("cmp-p-level"); if (!sel) return;
+  const year = compareYear();
+  sel.innerHTML = "";
+  addOption(sel, "", "Whole year (all levels)");
+  const levels = [...new Set((year?.semesters ?? []).map((s) => s.yearLevel).filter((l) => l != null))].sort((a,b)=>a-b);
+  for (const l of levels) addOption(sel, String(l), yearLevelLabel(l));
+  compareState.picker.yearLevel = null;
+  hydrateComparePickerGroups();
+}
+
+function compareSemestersForPicker() {
+  const year = compareYear();
+  if (!year) return [];
+  return (year.semesters ?? []).filter(
+    (s) => s.status !== "draft" &&
+      (compareState.picker.yearLevel == null || s.yearLevel == null || Number(s.yearLevel) === Number(compareState.picker.yearLevel))
+  );
+}
+
+function hydrateComparePickerGroups() {
+  const sel = q("cmp-p-group"); if (!sel) return;
+  sel.innerHTML = "";
+  addOption(sel, "", "Select group");
+  const groups = [...new Set(compareSemestersForPicker().flatMap((s) => collectGroupsFromSemesterDoc(s)))].sort((a,b)=>a-b);
+  for (const g of groups) addOption(sel, String(g), `Group ${g}`);
+  compareState.picker.practicalGroup = null;
+  hydrateComparePickerSubs();
+}
+
+// Groups present in the universe for the current picker selection.
+function collectGroupsFromSemesterDoc() {
+  const out = new Set();
+  for (const c of compareState.universe ?? []) {
+    if (c.programId !== compareState.picker.programId) continue;
+    if (c.academicYearId !== compareState.picker.academicYearId) continue;
+    if (compareState.picker.yearLevel != null && Number(c.yearLevel) !== Number(compareState.picker.yearLevel)) continue;
+    if (c.practicalGroup != null) out.add(c.practicalGroup);
+  }
+  return Array.from(out);
+}
+
+function hydrateComparePickerSubs() {
+  const sel = q("cmp-p-sub"); if (!sel) return;
+  sel.innerHTML = "";
+  addOption(sel, "", "Whole group");
+  const subs = [...new Set((compareState.universe ?? [])
+    .filter((c) => c.programId === compareState.picker.programId
+      && c.academicYearId === compareState.picker.academicYearId
+      && (compareState.picker.yearLevel == null || Number(c.yearLevel) === Number(compareState.picker.yearLevel))
+      && (compareState.picker.practicalGroup == null || c.practicalGroup === compareState.picker.practicalGroup)
+      && c.subdivision)
+    .map((c) => c.subdivision))].sort();
+  for (const s of subs) addOption(sel, s, `Subgroup ${s}`);
+  compareState.picker.subdivision = "";
+}
+
+function cohortFromPicker() {
+  const program = compareProgram();
+  const programLabel = program?.name?.en ?? compareState.picker.programId;
+  const c = {
+    programId: compareState.picker.programId,
+    academicYearId: compareState.picker.academicYearId,
+    yearLevel: compareState.picker.yearLevel,
+    practicalGroup: compareState.picker.practicalGroup,
+    subdivision: compareState.picker.subdivision || null,
+    programLabel
+  };
+  if (!c.programId || !c.academicYearId || c.practicalGroup == null) return null;
+  // Resolve against the universe so key/label are canonical and dedupe works.
+  const match = (compareState.universe ?? []).find((u) =>
+    u.programId === c.programId && u.academicYearId === c.academicYearId &&
+    Number(u.yearLevel ?? "") === Number(c.yearLevel ?? "") &&
+    u.practicalGroup === c.practicalGroup &&
+    (u.subdivision ?? "") === (c.subdivision ?? "")
+  );
+  return match ?? (() => { const k = cohortKeyLocal(c); c.key = k; c.label = labelLocal(c); return c; })();
+}
+
+function cohortKeyLocal(c) { return [c.programId, c.academicYearId, c.yearLevel ?? "", c.practicalGroup ?? "", c.subdivision ?? ""].join("|"); }
+function labelLocal(c) {
+  const lvl = c.yearLevel == null ? "" : ` · Yr ${c.yearLevel}`;
+  const grp = c.practicalGroup == null ? "" : ` · G${c.practicalGroup}${c.subdivision ? c.subdivision : ""}`;
+  return `${c.programLabel ?? c.programId}${lvl}${grp}`;
+}
+
+function addCohortFromPicker() {
+  const c = cohortFromPicker();
+  if (!c) { setStatus("Choose a program, year and group first.", "error"); return; }
+  if (compareState.chips.some((x) => x.key === c.key)) { showToast("Already added."); return; }
+  compareState.chips.push(c);
+  if (!compareState.referenceKey) compareState.referenceKey = c.key;
+  renderCompareChips();
+  runSideBySide().catch((e)=>setStatus(e.message,"error"));
+}
+
+function addAllOfCurrentYear() {
+  const added = [];
+  for (const c of compareState.universe ?? []) {
+    if (c.programId !== compareState.picker.programId) continue;
+    if (c.academicYearId !== compareState.picker.academicYearId) continue;
+    if (compareState.picker.yearLevel != null && Number(c.yearLevel) !== Number(compareState.picker.yearLevel)) continue;
+    if (compareState.chips.some((x) => x.key === c.key)) continue;
+    compareState.chips.push(c); added.push(c.key);
+  }
+  if (!compareState.referenceKey && added.length) compareState.referenceKey = added[0];
+  renderCompareChips();
+  runSideBySide().catch((e)=>setStatus(e.message,"error"));
+  showToast(added.length ? `Added ${added.length} cohorts.` : "Nothing new to add.");
+}
+
+function addMySchedule() {
+  if (!currentState) { setStatus("Look up your schedule first (Student ID or Year & group tab).", "error"); return; }
+  const a = currentState.assignment;
+  const c = {
+    programId: a.programId, academicYearId: a.academicYearId, yearLevel: a.yearLevel ?? null,
+    practicalGroup: a.practicalGroup, subdivision: a.subdivision ?? null,
+    programLabel: localize(currentState.program.name, compareState.locale) || a.programId
+  };
+  c.key = cohortKeyLocal(c); c.label = labelLocal(c) + " (mine)";
+  if (compareState.chips.some((x) => x.key === c.key)) { showToast("Your schedule is already in the comparison."); return; }
+  compareState.chips.unshift(c);
+  compareState.referenceKey = c.key;   // "mine" becomes the swap reference
+  renderCompareChips();
+  runSideBySide().catch((e)=>setStatus(e.message,"error"));
+}
+
+function renderCompareChips() {
+  const box = q("cmp-chips"); if (!box) return;
+  if (!compareState.chips.length) { box.innerHTML = `<span class="cmp-empty">No cohorts selected. Use the pickers above, “Add all of this year”, or “＋ My schedule”.</span>`; return; }
+  box.innerHTML = compareState.chips.map((c) => {
+    const ref = c.key === compareState.referenceKey;
+    return `<span class="cmp-chip ${ref ? "ref" : ""}" data-key="${escapeHtml(c.key)}">
+      <button type="button" class="cmp-chip-star" title="${ref ? "Reference cohort" : "Set as reference (for swap checks)"}" data-act="ref">${ref ? "★" : "☆"}</button>
+      <span>${escapeHtml(c.label)}</span>
+      <button type="button" class="cmp-chip-x" title="Remove" data-act="rm">×</button>
+    </span>`;
+  }).join("");
+  box.querySelectorAll(".cmp-chip").forEach((chip) => {
+    const key = chip.dataset.key;
+    chip.querySelector('[data-act="ref"]').addEventListener("click", () => { compareState.referenceKey = key; renderCompareChips(); runSideBySide().catch((e)=>setStatus(e.message,"error")); });
+    chip.querySelector('[data-act="rm"]').addEventListener("click", () => {
+      compareState.chips = compareState.chips.filter((x) => x.key !== key);
+      if (compareState.referenceKey === key) compareState.referenceKey = compareState.chips[0]?.key ?? null;
+      renderCompareChips(); runSideBySide().catch((e)=>setStatus(e.message,"error"));
+    });
+  });
+}
+
+function shiftSideDate(delta) {
+  compareState.sideDate = formatDate(addDays(parseDate(compareState.sideDate || compareState.today), delta));
+  const d = q("cmp-side-date"); if (d) d.value = compareState.sideDate;
+  runSideBySide().catch((e)=>setStatus(e.message,"error"));
+}
+
+// Compose every cohort in a list (memoized), return Map key -> events[].
+async function composeMany(cohorts) {
+  const map = new Map();
+  for (const c of cohorts) {
+    const packed = await composeCohortEvents(loader, compareState.manifest, compareState.programs, compareState.institution, c, compareState.today, compareState.locale, compareState.composedCache);
+    map.set(c.key, packed.events ?? []);
+  }
+  return map;
+}
+
+// ---- Slot finder render ----------------------------------------------------
+async function runSlotFinder() {
+  const out = q("cmp-slot-result"); if (!out) return;
+  if (!compareState.universe) { out.innerHTML = `<p class="cmp-empty">Loading cohorts…</p>`; return; }
+  const date = compareState.slot.date || compareState.today;
+  const startMin = timeToMinutes(compareState.slot.start || "17:00");
+  const endMin = Math.max(timeToMinutes(compareState.slot.end || "18:00"), startMin + 1);
+  const scope = compareState.slot.scope;
+  const gran = compareState.slot.gran;
+
+  let cohorts = compareState.universe.filter((c) => scope === "all" || c.programId === scope);
+  if (gran === "group") cohorts = cohorts.filter((c) => !c.subdivision);
+  else cohorts = cohorts.filter((c) => c.subdivision);
+
+  out.innerHTML = `<p class="cmp-empty">Computing ${cohorts.length} cohorts for ${formatLongDate(date)} ${formatTime12(minutesToHHMM(startMin))}–${formatTime12(minutesToHHMM(endMin))}…</p>`;
+  const composed = await composeMany(cohorts);
+  const rows = slotRows(cohorts, composed, date, startMin, endMin);
+  const freeCount = rows.filter((r) => r.free).length;
+
+  const d = parseDate(date);
+  let html = `<p class="cmp-summary"><strong>${freeCount}</strong> of ${rows.length} cohorts are <span class="cmp-status-free">free</span> on <strong>${escapeHtml(WEEKDAYS_LONG[d.getUTCDay()])} ${escapeHtml(formatShortDate(date))}</strong>, ${escapeHtml(formatTime12(minutesToHHMM(startMin)))}–${escapeHtml(formatTime12(minutesToHHMM(endMin)))}. Rotation weeks, batch ranges, exams and the mid‑term blackout are honored.</p>`;
+  html += `<div class="cmp-actions"><button class="btn quiet" type="button" id="cmp-copy-free">Copy free cohort names</button></div>`;
+  html += `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><th>Cohort</th><th>Status</th><th>Occupying that slot</th></tr></thead><tbody>`;
+  for (const r of rows) {
+    const detail = r.free
+      ? `<span class="cmp-status-free">Free</span>`
+      : r.blocking.map((e) => `<span class="cmp-ev" style="${cmpEvStyle(e)}">${escapeHtml(cmpEvText(e))}</span>`).join("");
+    html += `<tr><td>${escapeHtml(r.cohort.label)}</td><td>${r.free ? '<span class="cmp-status-free">Free</span>' : '<span class="cmp-status-busy">Busy</span>'}</td><td>${detail}</td></tr>`;
+  }
+  html += `</tbody></table></div>`;
+  out.innerHTML = html;
+
+  q("cmp-copy-free")?.addEventListener("click", () => {
+    const names = rows.filter((r) => r.free).map((r) => r.cohort.label).join("\n");
+    copyToClipboard(names).then((ok) => showToast(ok ? `Copied ${rows.filter((r)=>r.free).length} free cohort names.` : "Copy failed."));
+  });
+}
+
+// ---- Side-by-side render ---------------------------------------------------
+async function runSideBySide() {
+  const out = q("cmp-side-result"); if (!out) return;
+  if (!compareState.chips.length) { out.innerHTML = `<p class="cmp-empty">Add at least two cohorts to compare. The first chip (★) is the reference for swap checks.</p>`; return; }
+  const date = compareState.sideDate || compareState.today;
+  const composed = await composeMany(compareState.chips);
+  const { lo, hi, rows } = sideMatrix(compareState.chips, composed, date, compareState.referenceKey);
+  const windows = commonFreeWindows(compareState.chips, composed, date, lo, hi);
+  const refLabel = compareState.chips.find((c) => c.key === compareState.referenceKey)?.label ?? null;
+
+  const d = parseDate(date);
+  let html = `<p class="cmp-summary"><strong>${escapeHtml(WEEKDAYS_LONG[d.getUTCDay()])} ${escapeHtml(formatShortDate(date))}</strong> · ${compareState.chips.length} cohorts${refLabel ? ` · reference: <strong>${escapeHtml(refLabel)}</strong>` : ""}. ✓ = reference is free then (you could sit this session); ✗ = reference is busy.</p>`;
+
+  html += `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><th class="cmp-time">Time</th>`;
+  for (const c of compareState.chips) html += `<th class="${c.key === compareState.referenceKey ? "cmp-col-ref" : ""}">${escapeHtml(c.label)}</th>`;
+  html += `<th>Free</th></tr></thead><tbody>`;
+
+  for (const row of rows) {
+    const freeN = row.cells.filter((x) => x.free).length;
+    html += `<tr><td class="cmp-time">${escapeHtml(formatTime12(minutesToHHMM(row.start)))}–${escapeHtml(formatTime12(minutesToHHMM(row.end)))}</td>`;
+    for (const cell of row.cells) {
+      const isRef = cell.cohort.key === compareState.referenceKey;
+      let inner;
+      if (cell.free) inner = `<span class="cmp-ev free">—</span>`;
+      else {
+        inner = cell.events.map((e) => {
+          const swap = (compareState.referenceKey && !isRef)
+            ? (cell.refFree ? ' <span class="cmp-swok">✓</span>' : ' <span class="cmp-swbad">✗</span>')
+            : "";
+          return `<span class="cmp-ev" style="${cmpEvStyle(e)}">${escapeHtml(cmpEvText(e))}${swap}</span>`;
+        }).join("");
+      }
+      html += `<td class="${isRef ? "cmp-col-ref" : ""}">${inner}</td>`;
+    }
+    html += `<td>${freeN}/${row.cells.length}</td></tr>`;
+  }
+  html += `</tbody></table></div>`;
+
+  // All-day strip per cohort (exams, college events).
+  const allDayLines = compareState.chips.map((c) => {
+    const evs = allDayEventsOnDate(composed.get(c.key) ?? [], date);
+    if (!evs.length) return "";
+    return `<div><strong>${escapeHtml(c.label)}:</strong> ${evs.map((e)=>escapeHtml(cmpEvText(e))).join(", ")}</div>`;
+  }).filter(Boolean);
+  if (allDayLines.length) html += `<p class="cmp-summary" style="margin-top:8px;"><strong>All‑day:</strong> ${allDayLines.join(" ")}</p>`;
+
+  html += `<div class="cmp-summary" style="margin-top:10px;"><strong>Everyone free simultaneously:</strong></div><div class="cmp-common">`;
+  html += windows.length
+    ? windows.map((w) => `<span class="win">${escapeHtml(formatTime12(minutesToHHMM(w.start)))}–${escapeHtml(formatTime12(minutesToHHMM(w.end)))}</span>`).join("")
+    : `<span class="cmp-empty">None in the visible range.</span>`;
+  html += `</div>`;
+
+  out.innerHTML = html;
+}
+
+function cmpEvText(e) {
+  const title = e.displayCode || e.title?.[compareState.locale] || e.title?.en || e.courseId || e.type || "event";
+  const loc = formatLocation(e.location, compareState.institution.locations.buildings, compareState.locale);
+  return loc ? `${title} · ${loc}` : title;
+}
+function cmpEvStyle(e) {
+  const color = eventColor(e, null) || e.color || null;
+  return color ? `border-left-color:${color};background:${color}14;` : "";
 }
 
 function escapeHtml(value) {
