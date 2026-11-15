@@ -923,7 +923,7 @@ function renderElectivesCard(state) {
 }
 
 // ============================================================================
-//  COMPARE GROUPS  (plain-language, labelled, with a no-data guard)
+//  COMPARE GROUPS
 // ============================================================================
 function q(id) { return document.getElementById(id); }
 function humanLabel(c) {
@@ -1135,6 +1135,7 @@ function shiftSideDate(delta) {
   compareState.sideDate = formatDate(addDays(parseDate(compareState.sideDate || compareState.today), delta));
   syncDateInputs(); runSideBySide().catch((e)=>setStatus(e.message,"error"));
 }
+// Returns Map<key, packed> where packed = { events, semester, loaded }.
 async function composeMany(cohorts) {
   const map = new Map();
   for (const c of cohorts) {
@@ -1165,9 +1166,7 @@ async function runSlotFinder() {
 
   out.innerHTML = `<p class="cmp-empty">Checking ${cohorts.length} groups…</p>`;
   const composed = await composeMany(cohorts);
-  let rows = slotRows(cohorts, new Map(Array.from(composed).map(([k,v]) => [k, v])), date, startMin, endMin);
-  // slotRows expects a key->packed map; rebuild accordingly below.
-  rows = slotRows(cohorts, composed, date, startMin, endMin);
+  const rows = slotRows(cohorts, composed, date, startMin, endMin);
 
   const freeN = rows.filter((r) => r.status === "free").length;
   const busyN = rows.filter((r) => r.status === "busy").length;
@@ -1210,11 +1209,11 @@ async function runSideBySide() {
   const out = q("cmp-side-result"); if (!out) return;
   if (!compareState.chips.length) { out.innerHTML = `<p class="cmp-empty">Add at least two groups to compare. The ★ group is the one you’re fitting around.</p>`; return; }
   const date = compareState.sideDate || compareState.today;
-  const composed = await composeMany(compareState.chips);
-  const eventsByCohort = composed; // sideMatrix/commonFree read packed.events/.loaded
-  const { lo, hi, rows } = sideMatrix(compareState.chips, eventsByCohort, date, compareState.referenceKey);
-  const windows = commonFreeWindows(compareState.chips, eventsByCohort, date, lo, hi);
-  const refLabel = compareState.chips.find((c) => c.key === compareState.referenceKey) ? humanLabel(compareState.chips.find((c) => c.key === compareState.referenceKey)) : null;
+  const composed = await composeMany(compareState.chips); // Map<key, packed>
+  const { lo, hi, rows } = sideMatrix(compareState.chips, composed, date, compareState.referenceKey);
+  const windows = commonFreeWindows(compareState.chips, composed, date, lo, hi);
+  const refCohort = compareState.chips.find((c) => c.key === compareState.referenceKey);
+  const refLabel = refCohort ? humanLabel(refCohort) : null;
   const d = parseDate(date);
 
   let html = `<p class="cmp-summary"><span class="big">${escapeHtml(WEEKDAYS_LONG[d.getUTCDay()])} ${escapeHtml(formatShortDate(date))}</span> · ${compareState.chips.length} groups${refLabel ? ` · reference (★): <strong>${escapeHtml(refLabel)}</strong>` : ""}.</p>`;
@@ -1244,7 +1243,7 @@ async function runSideBySide() {
   html += `</tbody></table></div>`;
 
   const allDayLines = compareState.chips.map((c) => {
-    const packed = eventsByCohort.get(c.key);
+    const packed = composed.get(c.key);
     const evs = allDayEventsOnDate(packed?.events ?? [], date);
     if (!evs.length) return "";
     return `<div><strong>${escapeHtml(humanLabel(c))}:</strong> ${evs.map((e)=>escapeHtml(cmpEvText(e))).join(", ")}</div>`;
