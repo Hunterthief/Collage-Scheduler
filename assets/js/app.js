@@ -8,7 +8,7 @@ import {
   StudentNotFoundError,
   DataIntegrityError
 } from "./student/resolver.js";
-import { composeSchedule, selectActiveSemester } from "./schedule/engine.js";
+import { composeSchedule, selectActiveSemester, mergeOccurrences } from "./schedule/engine.js";
 import {
   todayInTimeZone,
   startOfWeek,
@@ -20,7 +20,7 @@ import {
   occursInRange,
   weekdayName
 } from "./schedule/recurrence.js";
-import { timeToMinutes, sortOccurrences, mergeOccurrences } from "./schedule/sorting.js";
+import { timeToMinutes, sortOccurrences } from "./schedule/sorting.js";
 import {
   buildFeedUrl,
   buildElectiveFeedUrl,
@@ -152,7 +152,7 @@ async function ensureOptions() {
 
 function applyBranding(settings) {
   const locale = settings.defaultLocale ?? CONFIG.ui.defaultLocale ?? "en";
-  const title = localize(settings.calendarName, locale) || "College Schedule";
+  const title = localize(settings.calendarName, locale) || "College Scheduler";
   const privacy = localize(settings.privacy?.notice, locale);
   if (els.siteTitle) els.siteTitle.textContent = title;
   document.title = title;
@@ -341,7 +341,7 @@ async function loadAndRenderSchedule(assignment, manifest) {
     locale
   });
 
-    // Electives: load catalog once, filter to eligibility, merge the student's
+  // Electives: load catalog once, filter to eligibility, merge the student's
   // locally-recorded registrations into the event list before sorting/reminders.
   if (!electiveCatalogCache) {
     try { electiveCatalogCache = await loadElectiveCatalog(loader, manifest); }
@@ -364,8 +364,13 @@ async function loadAndRenderSchedule(assignment, manifest) {
     locale,
     context: { programId: assignment.programId, yearLevel: assignment.yearLevel }
   });
-  const sortedEvents = sortOccurrences(mergeOccurrences(mergedEvents, schedule.diagnostics), locale);
+  // Reconcile + sort the combined list with a throwaway diagnostics bag so base
+  // conflicts (already recorded by composeSchedule) are not pushed twice; only
+  // genuinely-new messages (overlaps involving an elective) are folded in.
+  const electiveDiag = { errors: [], warnings: [] };
+  const sortedEvents = sortOccurrences(mergeOccurrences(mergedEvents, electiveDiag), locale);
   schedule.events = sortedEvents;
+  foldNewDiagnostics(schedule.diagnostics, electiveDiag);
 
   const issues = [
     ...schedule.diagnostics.errors.map((message) => ({ level: "error", message })),
@@ -386,6 +391,13 @@ async function loadAndRenderSchedule(assignment, manifest) {
   const hasErrors = issues.some((i) => i.level === "error");
   setStatus(hasErrors ? "Schedule loaded, but data issues were detected." : "Schedule loaded.",
     hasErrors ? "error" : "success");
+}
+
+function foldNewDiagnostics(target, incoming) {
+  const seenErrors = new Set(target.errors ?? []);
+  const seenWarnings = new Set(target.warnings ?? []);
+  for (const m of incoming.errors ?? []) if (!seenErrors.has(m)) target.errors.push(m);
+  for (const m of incoming.warnings ?? []) if (!seenWarnings.has(m)) target.warnings.push(m);
 }
 
 function checkForUpdate(dataVersion) {
@@ -1005,6 +1017,7 @@ function renderError(err) {
   }
   setStatus(`Unexpected error: ${err.message}`, "error");
 }
+
 function recomputeWithElectives(state) {
   const selected = state.selectedElectives;
   const merged = mergeSelectedElectives(
@@ -1018,13 +1031,20 @@ function recomputeWithElectives(state) {
       context: { programId: state.assignment.programId, yearLevel: state.assignment.yearLevel }
     }
   );
-  state.schedule.events = sortOccurrences(mergeOccurrences(merged, state.schedule.diagnostics), state.locale);
+  const electiveDiag = { errors: [], warnings: [] };
+  state.schedule.events = sortOccurrences(mergeOccurrences(merged, electiveDiag), state.locale);
+  foldNewDiagnostics(state.schedule.diagnostics, electiveDiag);
+  state.issues = [
+    ...state.schedule.diagnostics.errors.map((message) => ({ level: "error", message })),
+    ...state.schedule.diagnostics.warnings.map((message) => ({ level: "warning", message }))
+  ];
   state.reminderPlan = buildReminderPlan(state.schedule.events);
   reminderScheduler?.setEvents(state.schedule.events, {
     labelFor: (e) => evLabel(state, e),
     timeFor: (e) => formatEventTime(e),
     locationFor: (e) => formatLocation(e.location, state.institution.locations.buildings, state.locale)
   });
+  renderAssignmentSummary(state);
   renderView(state, state.view);
   renderReminderCard(state);
 }
