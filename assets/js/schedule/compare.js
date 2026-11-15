@@ -59,6 +59,8 @@ function semesterFor(programs, cohort) {
 
 // Compose one cohort's occurrences across the whole semester. Memoized by the
 // caller; events carry absolute dates so a single compose answers ANY date.
+// Returns a PACKED wrapper { events, semester, loaded } — consumers must read
+// `.events` (and `.loaded`), never treat the map value as a bare array.
 export async function composeCohortEvents(loader, manifest, programs, institution, cohort, today, locale, cache) {
   const key = cohort.key ?? cohortKey(cohort);
   if (cache?.has(key)) return cache.get(key);
@@ -93,6 +95,17 @@ export async function composeCohortEvents(loader, manifest, programs, institutio
   return packed;
 }
 
+// Pull the raw event array out of a packed wrapper (tolerates a bare array too,
+// so a caller that already unwrapped can't crash).
+function eventsOf(packed) {
+  if (Array.isArray(packed)) return packed;
+  return packed?.events ?? [];
+}
+function loadedOf(packed) {
+  if (Array.isArray(packed)) return packed.length > 0;
+  return packed?.loaded ?? false;
+}
+
 export function eventsOnDate(events, date) {
   return (events ?? []).filter((e) => occursOnDay(e, date));
 }
@@ -117,8 +130,8 @@ export function slotRows(cohorts, composedByKey, date, startMin, endMin) {
   const rows = [];
   for (const c of cohorts) {
     const packed = composedByKey.get(c.key);
-    const events = packed?.events ?? [];
-    if (!packed || !packed.loaded || events.length === 0) {
+    const events = eventsOf(packed);
+    if (!loadedOf(packed) || events.length === 0) {
       rows.push({ cohort: c, status: "nodata", free: false, blocking: [] });
       continue;
     }
@@ -130,10 +143,11 @@ export function slotRows(cohorts, composedByKey, date, startMin, endMin) {
   return rows;
 }
 
-export function dayBounds(eventsByCohort, date) {
+// NOTE: composedByKey is a Map<key, packed>. Values are unwrapped via eventsOf.
+export function dayBounds(composedByKey, date) {
   let lo = Infinity, hi = -Infinity;
-  for (const events of eventsByCohort.values()) {
-    for (const e of timedEventsOnDate(events, date)) {
+  for (const packed of composedByKey.values()) {
+    for (const e of timedEventsOnDate(eventsOf(packed), date)) {
       lo = Math.min(lo, timeToMinutes(e.start));
       hi = Math.max(hi, Math.max(timeToMinutes(e.end), timeToMinutes(e.start) + 1));
     }
@@ -145,10 +159,10 @@ export function dayBounds(eventsByCohort, date) {
   return { lo, hi };
 }
 
-export function buildGridMarks(eventsByCohort, date, lo, hi) {
+export function buildGridMarks(composedByKey, date, lo, hi) {
   const marks = new Set([lo, hi]);
-  for (const events of eventsByCohort.values()) {
-    for (const e of timedEventsOnDate(events, date)) {
+  for (const packed of composedByKey.values()) {
+    for (const e of timedEventsOnDate(eventsOf(packed), date)) {
       const s = timeToMinutes(e.start), en = Math.max(timeToMinutes(e.end), s + 1);
       if (s >= lo && s <= hi) marks.add(s);
       if (en >= lo && en <= hi) marks.add(en);
@@ -157,19 +171,19 @@ export function buildGridMarks(eventsByCohort, date, lo, hi) {
   return Array.from(marks).sort((a, b) => a - b);
 }
 
-export function sideMatrix(cohorts, eventsByCohort, date, referenceKey) {
-  const { lo, hi } = dayBounds(eventsByCohort, date);
-  const marks = buildGridMarks(eventsByCohort, date, lo, hi);
+export function sideMatrix(cohorts, composedByKey, date, referenceKey) {
+  const { lo, hi } = dayBounds(composedByKey, date);
+  const marks = buildGridMarks(composedByKey, date, lo, hi);
   const rows = [];
   for (let i = 0; i < marks.length - 1; i++) {
     const s = marks[i], e = marks[i + 1];
     if (e - s < 1) continue;
     const cells = cohorts.map((c) => {
-      const packed = eventsByCohort.get(c.key);
-      const evs = packed?.events ?? [];
-      const loaded = packed?.loaded ?? false;
+      const packed = composedByKey.get(c.key);
+      const evs = eventsOf(packed);
+      const loaded = loadedOf(packed);
       const busy = busyEventsAt(evs, date, s, e);
-      const refEvents = referenceKey ? busyEventsAt(eventsByCohort.get(referenceKey)?.events ?? [], date, s, e) : [];
+      const refEvents = referenceKey ? busyEventsAt(eventsOf(composedByKey.get(referenceKey)), date, s, e) : [];
       return {
         cohort: c,
         loaded,
@@ -184,14 +198,14 @@ export function sideMatrix(cohorts, eventsByCohort, date, referenceKey) {
   return { lo, hi, rows };
 }
 
-export function commonFreeWindows(cohorts, eventsByCohort, date, lo, hi) {
+export function commonFreeWindows(cohorts, composedByKey, date, lo, hi) {
   const span = hi - lo;
   if (span <= 0) return [];
   const busy = new Uint8Array(span);
   for (const c of cohorts) {
-    const packed = eventsByCohort.get(c.key);
-    if (!packed?.loaded) continue;
-    for (const e of timedEventsOnDate(packed.events ?? [], date)) {
+    const packed = composedByKey.get(c.key);
+    if (!loadedOf(packed)) continue;
+    for (const e of timedEventsOnDate(eventsOf(packed), date)) {
       const s = Math.max(0, timeToMinutes(e.start) - lo);
       const en = Math.min(span, Math.max(timeToMinutes(e.end), timeToMinutes(e.start) + 1) - lo);
       for (let m = s; m < en; m++) busy[m] = 1;
