@@ -39,8 +39,6 @@ import {
   slotRows,
   sideMatrix,
   commonFreeWindows,
-  busyEventsAt,
-  timedEventsOnDate,
   allDayEventsOnDate,
   minutesToHHMM,
   nextOccurringWeekday
@@ -92,20 +90,20 @@ let lookupOptions = null;
 let reminderScheduler = null;
 let electiveCatalogCache = null;
 
-// ---- Compare state (ephemeral; not persisted, holds no personal data) ------
+// Compare state (ephemeral, in-memory only; holds no personal data).
 const compareState = {
   mode: "slot",
-  universe: null,          // enumerated cohorts
+  universe: null,
   universePromise: null,
-  composedCache: new Map(),// cohortKey -> {events, semester}
+  composedCache: new Map(),
   programs: null,
   institution: null,
   manifest: null,
   today: null,
   locale: "en",
-  chips: [],               // cohort descriptors added for side-by-side
-  referenceKey: null,      // starred cohort for swap checks
-  slot: { scope: "all", gran: "group", date: null, start: "17:00", end: "18:00" },
+  chips: [],
+  referenceKey: null,
+  slot: { scope: "all", gran: "group", date: null, start: "09:00", end: "10:00", onlyFree: false },
   sideDate: null,
   picker: { programId: null, academicYearId: null, yearLevel: null, practicalGroup: null, subdivision: "" }
 };
@@ -212,11 +210,9 @@ function populatePrograms(programs) {
 function selectedProgram() {
   return lookupOptions?.programs.find((p) => p.id === els.programSelect.value) ?? null;
 }
-
 function selectedYear() {
   return selectedProgram()?.years.find((y) => y.id === els.yearSelect.value) ?? null;
 }
-
 function selectedLevel() {
   return selectedYear()?.levels.find((l) => String(l.level ?? "") === els.levelSelect.value) ?? null;
 }
@@ -229,18 +225,14 @@ function populateYears() {
   if (program.years.length === 1) els.yearSelect.value = program.years[0].id;
   populateLevels();
 }
-
 function populateLevels() {
   const year = selectedYear();
   clearSelect(els.levelSelect, year?.levels?.length ? "Select year" : "No years");
   if (!year) return;
-  for (const level of year.levels) {
-    addOption(els.levelSelect, String(level.level ?? ""), level.label);
-  }
+  for (const level of year.levels) addOption(els.levelSelect, String(level.level ?? ""), level.label);
   if (year.levels.length === 1) els.levelSelect.value = String(year.levels[0].level ?? "");
   populateGroups();
 }
-
 function populateGroups() {
   const level = selectedLevel();
   clearSelect(els.groupSelect, level?.groups?.length ? "Select practical group" : "No groups available");
@@ -252,17 +244,13 @@ function populateGroups() {
 function clearSelect(select, placeholder) {
   select.innerHTML = "";
   const option = document.createElement("option");
-  option.value = "";
-  option.textContent = placeholder;
-  option.disabled = true;
-  option.selected = true;
+  option.value = ""; option.textContent = placeholder;
+  option.disabled = true; option.selected = true;
   select.appendChild(option);
 }
-
 function addOption(select, value, label) {
   const option = document.createElement("option");
-  option.value = value;
-  option.textContent = label;
+  option.value = value; option.textContent = label;
   select.appendChild(option);
 }
 
@@ -290,31 +278,20 @@ async function onManualSubmit(event) {
     const academicYearId = els.yearSelect.value;
     const levelValue = els.levelSelect.value;
     const groupValue = els.groupSelect.value;
-
     if (!programId || !academicYearId || levelValue === "" || !groupValue) {
       setStatus("Select a program, academic year, year, and practical group.", "error");
       return;
     }
-
     const level = selectedLevel();
     const groupOption = level?.groups.find((g) => g.value === groupValue);
     if (!groupOption) throw new Error("Selected group is no longer available. Reload the page.");
-
     const assignment = {
-      studentId: null,
-      displayId: null,
-      programId,
-      academicYearId,
-      yearLevel: level?.level ?? null,
-      practicalGroup: groupOption.practicalGroup,
+      studentId: null, displayId: null, programId, academicYearId,
+      yearLevel: level?.level ?? null, practicalGroup: groupOption.practicalGroup,
       subdivision: groupOption.subdivision ?? null,
       subdivisionStatus: groupOption.subdivision ? "resolved" : "not-applicable",
-      groupLabel: groupOption.label,
-      source: "manual",
-      lookupMethod: "Year & group",
-      warnings: []
+      groupLabel: groupOption.label, source: "manual", lookupMethod: "Year & group", warnings: []
     };
-
     const manifest = await loader.loadManifest();
     checkForUpdate(manifest.dataVersion);
     await loadAndRenderSchedule(assignment, manifest);
@@ -326,7 +303,6 @@ function maskStudentId(id) {
   if (id.length <= 4) return id;
   return "•".repeat(id.length - 4) + id.slice(-4);
 }
-
 function formatGroupLabel(assignment) {
   if (assignment.practicalGroup == null) return "Unresolved";
   if (assignment.subdivision) return `${assignment.practicalGroup}${assignment.subdivision}`;
@@ -377,8 +353,6 @@ async function loadAndRenderSchedule(assignment, manifest) {
     locale
   });
 
-  // Electives: load catalog once, filter to eligibility, merge the student's
-  // locally-recorded registrations into the event list before sorting/reminders.
   if (!electiveCatalogCache) {
     try { electiveCatalogCache = await loadElectiveCatalog(loader, manifest); }
     catch { electiveCatalogCache = []; }
@@ -387,10 +361,7 @@ async function loadAndRenderSchedule(assignment, manifest) {
     manifest, institution, program, year, semester,
     assignment, schedule, today, locale,
     courses: Array.isArray(datasets.courses) ? datasets.courses : datasets.courses?.courses ?? [],
-    labelIndex,
-    electiveCatalog: electiveCatalogCache,
-    anchorDate: today,
-    view: "weekly"
+    labelIndex, electiveCatalog: electiveCatalogCache, anchorDate: today, view: "weekly"
   };
   const eligible = eligibleElectives(electiveCatalogCache, { programId: assignment.programId, yearLevel: assignment.yearLevel });
   const selected = loadSelection(provisional);
@@ -400,9 +371,6 @@ async function loadAndRenderSchedule(assignment, manifest) {
     locale,
     context: { programId: assignment.programId, yearLevel: assignment.yearLevel }
   });
-  // Reconcile + sort the combined list with a throwaway diagnostics bag so base
-  // conflicts (already recorded by composeSchedule) are not pushed twice; only
-  // genuinely-new messages (overlaps involving an elective) are folded in.
   const electiveDiag = { errors: [], warnings: [] };
   const sortedEvents = sortOccurrences(mergeOccurrences(mergedEvents, electiveDiag), locale);
   schedule.events = sortedEvents;
@@ -414,11 +382,9 @@ async function loadAndRenderSchedule(assignment, manifest) {
   ];
 
   currentState = {
-    ...provisional,
-    issues,
+    ...provisional, issues,
     electiveCatalog: electiveCatalogCache,
-    eligibleElectives: eligible,
-    selectedElectives: selected,
+    eligibleElectives: eligible, selectedElectives: selected,
     electiveColorById: electiveColorMap(electiveCatalogCache),
     reminderPlan: buildReminderPlan(sortedEvents)
   };
@@ -443,7 +409,7 @@ function checkForUpdate(dataVersion) {
   if (previous && previous !== dataVersion) {
     loader.cache?.clear();
     lookupOptions = null;
-    compareState.universe = null;       // seat universe may have changed
+    compareState.universe = null;
     compareState.universePromise = null;
     compareState.composedCache = new Map();
     setStatus("Published data changed. Cached files were cleared. Reload if anything looks stale.", "info");
@@ -461,11 +427,7 @@ function renderAll(state) {
   renderAssignmentSummary(state);
   renderView(state, state.view);
   renderCalendar(state);
-  // Reminder card is created BEFORE the electives card on purpose: the reminder
-  // card anchors on the static .subscription-card (always present in index.html),
-  // and the electives card then anchors on #reminder-card. Creating them in the
-  // opposite order made the electives card look up a sibling that did not exist
-  // yet and throw "anchor is null".
+  // Reminder card BEFORE electives card on purpose (see renderElectivesCard note).
   renderReminderCard(state);
   renderElectivesCard(state);
 }
@@ -476,7 +438,6 @@ function navigate(delta) {
   currentState.anchorDate = formatDate(addDays(parseDate(currentState.anchorDate), delta * days));
   renderView(currentState, currentState.view);
 }
-
 function goToday() {
   if (!currentState) return;
   currentState.anchorDate = currentState.today;
@@ -513,27 +474,22 @@ function formatPeriodHeading(view, start, end) {
   if (view === "upcoming") return `Upcoming · ${formatShortDate(start)} – ${formatShortDate(end)}`;
   return formatRangeHeading(start, end);
 }
-
 function formatRangeHeading(start, end) {
-  const s = parseDate(start);
-  const e = parseDate(end);
+  const s = parseDate(start), e = parseDate(end);
   const sameYear = s.getUTCFullYear() === e.getUTCFullYear();
   const sameMonth = sameYear && s.getUTCMonth() === e.getUTCMonth();
   if (sameMonth) return `${MONTHS_LONG[s.getUTCMonth()]} ${s.getUTCDate()}–${e.getUTCDate()}, ${s.getUTCFullYear()}`;
   if (sameYear) return `${MONTHS_SHORT[s.getUTCMonth()]} ${s.getUTCDate()} – ${MONTHS_SHORT[e.getUTCMonth()]} ${e.getUTCDate()}, ${s.getUTCFullYear()}`;
   return `${MONTHS_SHORT[s.getUTCMonth()]} ${s.getUTCDate()}, ${s.getUTCFullYear()} – ${MONTHS_SHORT[e.getUTCMonth()]} ${e.getUTCDate()}, ${e.getUTCFullYear()}`;
 }
-
 function formatLongDate(dateStr) {
   const d = parseDate(dateStr);
   return `${WEEKDAYS_LONG[d.getUTCDay()]}, ${MONTHS_LONG[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
 }
-
 function formatShortDate(dateStr) {
   const d = parseDate(dateStr);
   return `${MONTHS_SHORT[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
 }
-
 function formatTime12(time) {
   if (!time) return "";
   const [h, m] = time.split(":").map(Number);
@@ -541,22 +497,18 @@ function formatTime12(time) {
   const hour = h % 12 || 12;
   return `${hour}:${String(m).padStart(2, "0")} ${period}`;
 }
-
 function formatTimeRange(start, end) {
   if (!start && !end) return "All day";
   if (!end) return formatTime12(start);
   return `${formatTime12(start)} – ${formatTime12(end)}`;
 }
-
 function formatHourLabel(minutes) {
-  const h = Math.floor(minutes / 60);
-  const m = minutes % 60;
+  const h = Math.floor(minutes / 60), m = minutes % 60;
   const period = h >= 12 ? "PM" : "AM";
   const hour = h % 12 || 12;
   if (m === 0) return `${hour} ${period}`;
   return `${hour}:${String(m).padStart(2, "0")} ${period}`;
 }
-
 function formatEventTime(event) {
   if (event.allDay) {
     if (event.endDate && event.endDate !== event.date) return `${formatShortDate(event.date)} – ${formatShortDate(event.endDate)}`;
@@ -564,40 +516,26 @@ function formatEventTime(event) {
   }
   return formatTimeRange(event.start, event.end);
 }
-
 function nowMinutesInTimeZone(timeZone) {
   const parts = new Intl.DateTimeFormat("en-GB", { timeZone, hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(new Date());
   const get = (type) => Number(parts.find((p) => p.type === type)?.value ?? 0);
-  let hour = get("hour");
-  if (hour === 24) hour = 0;
+  let hour = get("hour"); if (hour === 24) hour = 0;
   return hour * 60 + get("minute");
 }
 
-function evLabel(state, event) {
-  return eventLabel(event, state.labelIndex, state.locale);
-}
-
+function evLabel(state, event) { return eventLabel(event, state.labelIndex, state.locale); }
 function evColor(state, event) {
   return eventColor(event, state.labelIndex) || state.electiveColorById?.[event.courseId] || event.color || null;
 }
-
 function colorStyle(color, kind) {
   if (!color) return "";
-  if (kind === "block") {
-    return `background:${color}1a;border-color:${color}59;border-left-color:${color};color:${color};`;
-  }
+  if (kind === "block") return `background:${color}1a;border-color:${color}59;border-left-color:${color};color:${color};`;
   return `background:${color}1a;border-color:${color}59;color:${color};`;
 }
-
-function reminderLabel(minutes) {
-  return minutes === 60 ? "1 hour before" : `${minutes} min before`;
-}
+function reminderLabel(minutes) { return minutes === 60 ? "1 hour before" : `${minutes} min before`; }
 
 function renderAssignmentSummary(state) {
-  const a = state.assignment;
-  const locale = state.locale;
-  const pills = [];
-
+  const a = state.assignment, locale = state.locale, pills = [];
   if (a.displayId) pills.push({ label: "ID", value: a.displayId });
   pills.push({ label: "Lookup", value: a.lookupMethod ?? "Student ID" });
   pills.push({ label: "Program", value: localize(state.program.name, locale) || state.program.id });
@@ -608,17 +546,13 @@ function renderAssignmentSummary(state) {
   if (a.subdivision) pills.push({ label: "Subdivision", value: a.subdivision });
 
   let html = `<div class="summary-pills">`;
-  for (const pill of pills) {
-    html += `<span class="pill ${escapeHtml(pill.className ?? "")}"><span>${escapeHtml(pill.label)}</span> ${escapeHtml(String(pill.value))}</span>`;
-  }
+  for (const pill of pills) html += `<span class="pill ${escapeHtml(pill.className ?? "")}"><span>${escapeHtml(pill.label)}</span> ${escapeHtml(String(pill.value))}</span>`;
   html += `</div>`;
 
   const legend = (state.courses ?? []).filter((c) => c?.color);
   if (legend.length) {
     html += `<div class="summary-pills" style="margin-top:8px;">`;
-    for (const course of legend) {
-      html += `<span class="pill"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${escapeHtml(course.color)};margin-right:6px;"></span>${escapeHtml(localize(course.title, locale))}</span>`;
-    }
+    for (const course of legend) html += `<span class="pill"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${escapeHtml(course.color)};margin-right:6px;"></span>${escapeHtml(localize(course.title, locale))}</span>`;
     html += `</div>`;
   }
 
@@ -628,37 +562,20 @@ function renderAssignmentSummary(state) {
     const extra = notes.length > 4 ? " …" : "";
     html += `<div class="summary-notes"><strong>Data notes:</strong> ${escapeHtml(visible + extra)}</div>`;
   }
-
   els.assignmentSummary.innerHTML = html;
 }
 
 function renderGoogleStyleCalendar(state, days) {
-  const today = state.today;
-  const timezone = state.manifest.timezone;
-  const hourHeight = 56;
-
+  const today = state.today, timezone = state.manifest.timezone, hourHeight = 56;
   const visibleEvents = state.schedule.events.filter((event) => occursInRange(event, days[0], days[days.length - 1]));
-
   const allDayByDay = days.map((day) =>
-    visibleEvents
-      .filter((event) => event.allDay && occursOnDay(event, day))
-      .sort((a, b) => evLabel(state, a).localeCompare(evLabel(state, b)))
-  );
-
+    visibleEvents.filter((event) => event.allDay && occursOnDay(event, day))
+      .sort((a, b) => evLabel(state, a).localeCompare(evLabel(state, b))));
   const timedByDay = days.map((day) =>
-    visibleEvents
-      .filter((event) => !event.allDay && occursOnDay(event, day) && event.start && event.end)
-      .map((event) => ({
-        ...event,
-        _start: timeToMinutes(event.start),
-        _end: Math.max(timeToMinutes(event.end), timeToMinutes(event.start) + 15)
-      }))
-  );
-
+    visibleEvents.filter((event) => !event.allDay && occursOnDay(event, day) && event.start && event.end)
+      .map((event) => ({ ...event, _start: timeToMinutes(event.start), _end: Math.max(timeToMinutes(event.end), timeToMinutes(event.start) + 1) })));
   const allTimed = timedByDay.flat();
-  let rangeStart = 7 * 60;
-  let rangeEnd = 20 * 60;
-
+  let rangeStart = 7 * 60, rangeEnd = 20 * 60;
   if (allTimed.length) {
     const minStart = Math.min(...allTimed.map((e) => e._start));
     const maxEnd = Math.max(...allTimed.map((e) => e._end));
@@ -666,138 +583,91 @@ function renderGoogleStyleCalendar(state, days) {
     rangeEnd = Math.min(24 * 60, Math.ceil((maxEnd + 60) / 60) * 60);
     if (rangeEnd <= rangeStart) { rangeStart = 7 * 60; rangeEnd = 20 * 60; }
   }
-
   const laidOutDays = timedByDay.map(layoutTimedEvents);
   const nowMinutes = nowMinutesInTimeZone(timezone);
   const showNowLine = days.includes(today) && nowMinutes >= rangeStart && nowMinutes <= rangeEnd;
   const nowTop = ((nowMinutes - rangeStart) / 60) * hourHeight;
 
   let html = `<div class="gc-calendar" style="--day-count:${days.length}; --hour-height:${hourHeight}px; --range-start:${rangeStart}; --range-end:${rangeEnd};">`;
-
   html += `<div class="gc-row gc-header-row"><div class="gc-corner"></div><div class="gc-day-heads">`;
   for (const day of days) {
-    const d = parseDate(day);
-    const isToday = day === today;
+    const d = parseDate(day), isToday = day === today;
     html += `<div class="gc-day-head ${isToday ? "today" : ""}"><span class="gc-weekday">${escapeHtml(WEEKDAYS_SHORT[d.getUTCDay()])}</span><span class="gc-daynum">${d.getUTCDate()}</span></div>`;
   }
   html += `</div></div>`;
-
   html += `<div class="gc-row gc-allday-row"><div class="gc-allday-label">All day</div><div class="gc-allday-cells">`;
   for (const dayEvents of allDayByDay) {
     html += `<div class="gc-allday-cell">`;
     for (const event of dayEvents) {
-      const label = evLabel(state, event);
-      const color = evColor(state, event);
-      const type = event.type ?? "college-event";
+      const label = evLabel(state, event), color = evColor(state, event), type = event.type ?? "college-event";
       html += `<div class="gc-allday-chip type-${escapeHtml(type)}" style="${colorStyle(color, "chip")}" title="${escapeHtml(`${label} · All day`)}">${escapeHtml(label)}</div>`;
     }
     html += `</div>`;
   }
   html += `</div></div>`;
-
   html += `<div class="gc-row gc-body-row"><div class="gc-time-gutter">`;
   for (let m = rangeStart; m < rangeEnd; m += 60) {
     const top = ((m - rangeStart) / 60) * hourHeight;
     html += `<div class="gc-hour-label" style="top:${top}px;">${escapeHtml(formatHourLabel(m))}</div>`;
   }
   html += `</div><div class="gc-columns">`;
-
   for (let i = 0; i < days.length; i++) {
-    const day = days[i];
-    const isToday = day === today;
+    const day = days[i], isToday = day === today;
     html += `<div class="gc-day-column ${isToday ? "today" : ""}">`;
-
     for (const event of laidOutDays[i]) {
       const top = ((event._start - rangeStart) / 60) * hourHeight;
       const height = Math.max(22, ((event._end - event._start) / 60) * hourHeight - 2);
       const widthPercent = 100 / (event._total || 1);
       const leftPercent = (event._col || 0) * widthPercent;
-
-      const label = evLabel(state, event);
-      const full = eventFullTitle(event, state.locale);
+      const label = evLabel(state, event), full = eventFullTitle(event, state.locale);
       const time = formatTimeRange(event.start, event.end);
       const location = formatLocation(event.location, state.institution.locations.buildings, state.locale);
-      const color = evColor(state, event);
-      const mins = state.reminderPlan.get(event.uid);
+      const color = evColor(state, event), mins = state.reminderPlan.get(event.uid);
       const tooltip = [label, full !== label ? full : null, time, location, mins ? `Reminder ${reminderLabel(mins)}` : null].filter(Boolean).join(" · ");
-
       html += `<div class="gc-event type-${escapeHtml(event.type)} status-${escapeHtml(event.status)}" style="top:${top}px; height:${height}px; left:calc(${leftPercent}% + 2px); width:calc(${widthPercent}% - 4px); ${colorStyle(color, "block")}" title="${escapeHtml(tooltip)}"><div class="gc-event-title">${escapeHtml(label)}</div><div class="gc-event-time">${escapeHtml(time)}${mins ? ` · 🔔 ${mins === 60 ? "1h" : "15m"}` : ""}</div></div>`;
     }
-
     html += `</div>`;
   }
-
   if (showNowLine) html += `<div class="gc-now-line" style="top:${nowTop}px;"></div>`;
-
   html += `</div></div></div>`;
   els.timetable.innerHTML = html;
 }
 
 function layoutTimedEvents(events) {
   const items = [...events].sort((a, b) => {
-    const startDiff = a._start - b._start;
-    if (startDiff !== 0) return startDiff;
-    const durationDiff = (b._end - b._start) - (a._end - a._start);
-    if (durationDiff !== 0) return durationDiff;
+    const startDiff = a._start - b._start; if (startDiff !== 0) return startDiff;
+    const durationDiff = (b._end - b._start) - (a._end - a._start); if (durationDiff !== 0) return durationDiff;
     return String(a.eventId).localeCompare(String(b.eventId));
   });
-
-  const clusters = [];
-  let currentCluster = [];
-  let clusterEnd = -1;
-
+  const clusters = []; let currentCluster = [], clusterEnd = -1;
   for (const item of items) {
-    if (currentCluster.length && item._start >= clusterEnd) {
-      clusters.push(currentCluster);
-      currentCluster = [];
-      clusterEnd = -1;
-    }
-    currentCluster.push(item);
-    clusterEnd = Math.max(clusterEnd, item._end);
+    if (currentCluster.length && item._start >= clusterEnd) { clusters.push(currentCluster); currentCluster = []; clusterEnd = -1; }
+    currentCluster.push(item); clusterEnd = Math.max(clusterEnd, item._end);
   }
   if (currentCluster.length) clusters.push(currentCluster);
-
   for (const cluster of clusters) {
     const columnEnds = [];
     for (const item of cluster) {
       let placed = false;
       for (let i = 0; i < columnEnds.length; i++) {
-        if (columnEnds[i] <= item._start) {
-          item._col = i;
-          columnEnds[i] = item._end;
-          placed = true;
-          break;
-        }
+        if (columnEnds[i] <= item._start) { item._col = i; columnEnds[i] = item._end; placed = true; break; }
       }
-      if (!placed) {
-        item._col = columnEnds.length;
-        columnEnds.push(item._end);
-      }
+      if (!placed) { item._col = columnEnds.length; columnEnds.push(item._end); }
     }
     const total = columnEnds.length || 1;
     for (const item of cluster) item._total = total;
   }
-
   return items;
 }
 
 function renderUpcomingList(state, start, end) {
-  const events = state.schedule.events
-    .filter((event) => occursInRange(event, start, end))
-    .sort((a, b) => {
-      const dateCmp = a.date.localeCompare(b.date);
-      if (dateCmp !== 0) return dateCmp;
-      if (!!a.allDay !== !!b.allDay) return a.allDay ? -1 : 1;
-      const startCmp = timeToMinutes(a.start) - timeToMinutes(b.start);
-      if (startCmp !== 0) return startCmp;
-      return evLabel(state, a).localeCompare(evLabel(state, b));
-    });
-
-  if (!events.length) {
-    els.timetable.innerHTML = `<div class="empty-state">Nothing scheduled in this range.</div>`;
-    return;
-  }
-
+  const events = state.schedule.events.filter((event) => occursInRange(event, start, end)).sort((a, b) => {
+    const dateCmp = a.date.localeCompare(b.date); if (dateCmp !== 0) return dateCmp;
+    if (!!a.allDay !== !!b.allDay) return a.allDay ? -1 : 1;
+    const startCmp = timeToMinutes(a.start) - timeToMinutes(b.start); if (startCmp !== 0) return startCmp;
+    return evLabel(state, a).localeCompare(evLabel(state, b));
+  });
+  if (!events.length) { els.timetable.innerHTML = `<div class="empty-state">Nothing scheduled in this range.</div>`; return; }
   const grouped = new Map();
   for (const event of events) {
     if (event.allDay && event.endDate && event.endDate !== event.date) {
@@ -814,31 +684,22 @@ function renderUpcomingList(state, start, end) {
     if (!grouped.has(day)) grouped.set(day, []);
     grouped.get(day).push({ ...event, displayDate: day, displayWhen: formatEventTime(event) });
   }
-
   const buildings = state.institution.locations.buildings;
   const sortedDays = Array.from(grouped.entries()).sort((a, b) => a[0].localeCompare(b[0]));
-
   let html = `<div class="agenda">`;
   for (const [date, dayEvents] of sortedDays) {
     html += `<section class="agenda-day"><div class="agenda-day-header"><h3>${escapeHtml(formatLongDate(date))}</h3><span class="agenda-count">${dayEvents.length} event${dayEvents.length === 1 ? "" : "s"}</span></div>`;
-
     for (const event of dayEvents) {
-      const label = evLabel(state, event);
-      const full = eventFullTitle(event, state.locale);
+      const label = evLabel(state, event), full = eventFullTitle(event, state.locale);
       const location = formatLocation(event.location, buildings, state.locale);
-      const color = evColor(state, event);
-      const type = event.type ?? "event";
-      const mins = state.reminderPlan.get(event.uid);
-
+      const color = evColor(state, event), type = event.type ?? "event", mins = state.reminderPlan.get(event.uid);
       const tags = [];
       tags.push(`<span class="tag ${escapeHtml(type)}" style="${colorStyle(color, "tag")}">${escapeHtml(type.replace(/-/g, " "))}</span>`);
       if (mins) tags.push(`<span class="tag" style="background:var(--accent-soft);border-color:var(--accent);color:var(--accent);">🔔 ${escapeHtml(reminderLabel(mins))}</span>`);
       if (event.status === "cancelled") tags.push(`<span class="tag cancelled">Cancelled</span>`);
       if ((event.sourceReview ?? []).length) tags.push(`<span class="tag unverified">Needs review</span>`);
-
       html += `<article class="agenda-event"><div class="agenda-time">${escapeHtml(event.displayWhen ?? formatEventTime(event))}</div><div class="agenda-main"><div class="agenda-title">${escapeHtml(label)}</div><div class="agenda-meta">${full !== label ? `<span>${escapeHtml(full)}</span>` : ""}${location ? `<span>${escapeHtml(location)}</span>` : ""}${event.courseId ? `<span>${escapeHtml(event.courseId)}</span>` : ""}</div></div><div class="agenda-tags">${tags.join(" ")}</div></article>`;
     }
-
     html += `</section>`;
   }
   html += `</div>`;
@@ -846,100 +707,63 @@ function renderUpcomingList(state, start, end) {
 }
 
 async function copyToClipboard(text) {
-  try {
-    if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(text); return true; }
-  } catch {}
+  try { if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(text); return true; } } catch {}
   try {
     const ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly", "");
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    const ok = document.execCommand("copy");
-    document.body.removeChild(ta);
-    return ok;
+    ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    const ok = document.execCommand("copy"); document.body.removeChild(ta); return ok;
   } catch { return false; }
 }
-
 function showToast(message) {
   let stack = document.getElementById("toast-stack");
   if (!stack) {
-    stack = document.createElement("div");
-    stack.id = "toast-stack";
+    stack = document.createElement("div"); stack.id = "toast-stack";
     stack.style.cssText = "position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;flex-direction:column;gap:8px;max-width:min(360px,calc(100vw - 32px));";
     document.body.appendChild(stack);
   }
   const toast = document.createElement("div");
   toast.style.cssText = "background:var(--surface);color:var(--text);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;box-shadow:var(--shadow);padding:10px 12px;font-size:0.85rem;line-height:1.4;";
-  toast.textContent = message;
-  stack.appendChild(toast);
-  setTimeout(() => {
-    toast.style.opacity = "0";
-    toast.style.transition = "opacity 0.4s";
-    setTimeout(() => toast.remove(), 450);
-  }, 9000);
+  toast.textContent = message; stack.appendChild(toast);
+  setTimeout(() => { toast.style.opacity = "0"; toast.style.transition = "opacity 0.4s"; setTimeout(() => toast.remove(), 450); }, 9000);
 }
-
 function ensureScheduler(state) {
   if (reminderScheduler) return reminderScheduler;
   reminderScheduler = new ReminderScheduler({
-    timeZone: state.manifest.timezone,
-    onToast: showToast,
+    timeZone: state.manifest.timezone, onToast: showToast,
     onStateChange: () => { if (currentState) updateReminderStatus(currentState); }
   });
   return reminderScheduler;
 }
-
 function updateReminderStatus(state) {
-  const el = document.getElementById("reminder-status");
-  const toggle = document.getElementById("reminders-toggle");
+  const el = document.getElementById("reminder-status"), toggle = document.getElementById("reminders-toggle");
   if (!el || !reminderScheduler) return;
   if (toggle) toggle.checked = reminderScheduler.enabled;
-
   const perm = reminderScheduler.permission;
   const permText =
     perm === "granted" ? "Browser notifications are allowed." :
     perm === "denied" ? "Browser notifications are blocked — reminders appear as in-page popups only." :
     perm === "unsupported" ? "This browser does not support notifications — reminders appear as in-page popups only." :
     "Enable reminders to allow browser notifications.";
-
-  el.textContent = reminderScheduler.enabled
-    ? `Reminders are on. ${permText} They fire while this page is open.`
-    : `Reminders are off. ${permText}`;
+  el.textContent = reminderScheduler.enabled ? `Reminders are on. ${permText} They fire while this page is open.` : `Reminders are off. ${permText}`;
 }
-
 function renderReminderCard(state) {
   const scheduler = ensureScheduler(state);
   scheduler.setEvents(state.schedule.events, {
-    labelFor: (e) => evLabel(state, e),
-    timeFor: (e) => formatEventTime(e),
+    labelFor: (e) => evLabel(state, e), timeFor: (e) => formatEventTime(e),
     locationFor: (e) => formatLocation(e.location, state.institution.locations.buildings, state.locale)
   });
-
   let card = document.getElementById("reminder-card");
   if (!card) {
-    // Anchor on the STATIC subscription card (hard-coded in index.html), which is
-    // always present, so this can never throw on a null anchor.
     const anchor = document.querySelector(".subscription-card") ?? els.calendarLinks?.closest("section") ?? null;
-    card = document.createElement("section");
-    card.id = "reminder-card";
-    card.className = "subscription-card";
+    card = document.createElement("section"); card.id = "reminder-card"; card.className = "subscription-card";
     card.setAttribute("aria-labelledby", "reminder-heading");
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(card, anchor);
     else (els.result ?? document.body).appendChild(card);
   }
-
   card.innerHTML = `
     <h2 id="reminder-heading">Reminders</h2>
-    <p class="hint">
-      First event of each day: reminder <strong>1 hour before</strong>.
-      Every later event that day: reminder <strong>15 minutes before</strong>.
-      All-day events get no reminder. The same rule is written into the .ics feeds
-      (Apple Calendar, Outlook and Thunderbird honor it). Google ignores alarms on
-      subscribed calendars, so keep this page open with reminders on for the exact rule.
-    </p>
+    <p class="hint">First event of each day: reminder <strong>1 hour before</strong>. Every later event that day: reminder <strong>15 minutes before</strong>. All-day events get no reminder. The same rule is written into the .ics feeds (Apple Calendar, Outlook and Thunderbird honor it). Google ignores alarms on subscribed calendars, so keep this page open with reminders on for the exact rule.</p>
     <div class="feed-actions" style="align-items:center;">
       <label style="display:inline-flex;align-items:center;gap:8px;cursor:pointer;margin:0;">
         <input type="checkbox" id="reminders-toggle" style="width:18px;height:18px;accent-color:var(--accent);" />
@@ -947,33 +771,22 @@ function renderReminderCard(state) {
       </label>
       <button class="btn quiet" type="button" id="reminder-test">Send test reminder</button>
     </div>
-    <p class="hint" id="reminder-status" style="margin-top:8px;"></p>
-  `;
-
+    <p class="hint" id="reminder-status" style="margin-top:8px;"></p>`;
   document.getElementById("reminders-toggle").addEventListener("change", async (e) => {
-    if (e.target.checked) await scheduler.enable();
-    else scheduler.disable();
+    if (e.target.checked) await scheduler.enable(); else scheduler.disable();
     updateReminderStatus(state);
   });
-
   document.getElementById("reminder-test").addEventListener("click", () => scheduler.test());
   updateReminderStatus(state);
 }
-
 function renderCalendar(state) {
   const feedUrl = buildFeedUrl(state.assignment, state.manifest);
-
-  if (!feedUrl) {
-    els.calendarLinks.innerHTML = `<div class="summary-notes">Calendar subscription is unavailable because your practical group could not be resolved.</div>`;
-    return;
-  }
-
+  if (!feedUrl) { els.calendarLinks.innerHTML = `<div class="summary-notes">Calendar subscription is unavailable because your practical group could not be resolved.</div>`; return; }
   const oneClickUrl = googleCalendarSubscribeUrl(feedUrl);
   const addByUrlPage = googleCalendarAddByUrlUrl();
   const subNote = state.assignment.subdivision
     ? `This feed contains only subgroup ${state.assignment.groupLabel} sessions (alternating weeks and batch times included).`
     : `This feed contains the whole group ${state.assignment.practicalGroup} schedule.`;
-
   els.calendarLinks.innerHTML = `
     <ol class="steps">
       <li>Click <strong>Subscribe in Google Calendar</strong> and confirm the prompt.</li>
@@ -991,93 +804,51 @@ function renderCalendar(state) {
       <p class="hint" id="copy-hint">${escapeHtml(subNote)} The subscription stays live and updates itself.</p>
       <p class="hint">If Google says the calendar already exists, remove the old entry from your calendar list first.</p>
     </div>
-    <p class="hint">Subject colors appear on this website. Google assigns one color per subscribed calendar, so in Google the subject is identified by its shorthand name (e.g. PN 7 Basic Pharmacology). Reminders in the feed follow the 1h / 15m rule; Google subscription ignores them, so use the Reminders panel above for Google-equivalent alerts.</p>
-  `;
-
+    <p class="hint">Subject colors appear on this website. Google assigns one color per subscribed calendar, so in Google the subject is identified by its shorthand name (e.g. PN 7 Basic Pharmacology). Reminders in the feed follow the 1h / 15m rule; Google subscription ignores them, so use the Reminders panel above for Google-equivalent alerts.</p>`;
   const hint = document.getElementById("copy-hint");
-
   document.getElementById("one-click-subscribe").addEventListener("click", () => {
-    if (hint) {
-      hint.textContent = "Google should ask you to confirm the subscription. If no prompt appears, use Add manually (backup) — it copies the feed URL for you.";
-    }
+    if (hint) hint.textContent = "Google should ask you to confirm the subscription. If no prompt appears, use Add manually (backup) — it copies the feed URL for you.";
   });
-
   document.getElementById("open-gcal").addEventListener("click", () => {
     copyToClipboard(feedUrl).then((ok) => {
-      if (hint) {
-        hint.textContent = ok
-          ? "Feed URL copied. Paste it into the URL of calendar box, then click Add calendar."
-          : "Could not copy automatically. Select the feed URL above and copy it manually.";
-      }
+      if (hint) hint.textContent = ok ? "Feed URL copied. Paste it into the URL of calendar box, then click Add calendar." : "Could not copy automatically. Select the feed URL above and copy it manually.";
     });
   });
-
   document.getElementById("copy-feed").addEventListener("click", (e) => {
     const btn = e.currentTarget;
-    copyToClipboard(feedUrl).then((ok) => {
-      btn.textContent = ok ? "Copied ✓" : "Copy failed";
-      setTimeout(() => { btn.textContent = "Copy feed URL"; }, 1600);
-    });
+    copyToClipboard(feedUrl).then((ok) => { btn.textContent = ok ? "Copied ✓" : "Copy failed"; setTimeout(() => { btn.textContent = "Copy feed URL"; }, 1600); });
   });
-
   document.getElementById("download-ics").addEventListener("click", () => {
-    const enriched = state.schedule.events.map((e) => {
-      const code = eventShorthand(e, state.labelIndex);
-      return code ? { ...e, calendarTitle: code } : e;
-    });
-
+    const enriched = state.schedule.events.map((e) => { const code = eventShorthand(e, state.labelIndex); return code ? { ...e, calendarTitle: code } : e; });
     const ics = eventsToIcs(enriched, {
-      calendarName: state.institution.settings.calendarName,
-      locale: state.locale,
-      timezone: state.manifest.timezone,
-      institutionId: state.institution.settings.institutionId,
-      locations: state.institution.locations,
-      generatedAt: new Date()
+      calendarName: state.institution.settings.calendarName, locale: state.locale,
+      timezone: state.manifest.timezone, institutionId: state.institution.settings.institutionId,
+      locations: state.institution.locations, generatedAt: new Date()
     });
-
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = calendarFileName(state.assignment);
-    a.click();
+    const a = document.createElement("a"); a.href = url; a.download = calendarFileName(state.assignment); a.click();
     URL.revokeObjectURL(url);
   });
 }
-
 function calendarFileName(assignment) {
   const group = assignment.practicalGroup ?? "unresolved";
   const sub = assignment.subdivision ? `-${String(assignment.subdivision).toLowerCase()}` : "";
   const level = assignment.yearLevel != null ? `-year-${assignment.yearLevel}` : "";
   return `group-${group}${sub}${level}.ics`;
 }
-
 function renderError(err) {
   els.result.hidden = true;
-  if (err instanceof StudentNotFoundError) {
-    setStatus("Student ID not found. Check the ID, or contact the college office if you believe this is wrong.", "error");
-    return;
-  }
-  if (err instanceof DataIntegrityError) {
-    setStatus(`Data integrity problem: ${err.message}. This is a repository data issue, not an authentication issue.`, "error");
-    return;
-  }
+  if (err instanceof StudentNotFoundError) { setStatus("Student ID not found. Check the ID, or contact the college office if you believe this is wrong.", "error"); return; }
+  if (err instanceof DataIntegrityError) { setStatus(`Data integrity problem: ${err.message}. This is a repository data issue, not an authentication issue.`, "error"); return; }
   setStatus(`Unexpected error: ${err.message}`, "error");
 }
-
 function recomputeWithElectives(state) {
   const selected = state.selectedElectives;
-  const merged = mergeSelectedElectives(
-    state.schedule.events.filter((e) => !e.elective),
-    state.electiveCatalog,
-    selected,
-    {
-      timezone: state.manifest.timezone,
-      institutionId: state.institution.settings.institutionId,
-      locale: state.locale,
-      context: { programId: state.assignment.programId, yearLevel: state.assignment.yearLevel }
-    }
-  );
+  const merged = mergeSelectedElectives(state.schedule.events.filter((e) => !e.elective), state.electiveCatalog, selected, {
+    timezone: state.manifest.timezone, institutionId: state.institution.settings.institutionId, locale: state.locale,
+    context: { programId: state.assignment.programId, yearLevel: state.assignment.yearLevel }
+  });
   const electiveDiag = { errors: [], warnings: [] };
   state.schedule.events = sortOccurrences(mergeOccurrences(merged, electiveDiag), state.locale);
   foldNewDiagnostics(state.schedule.diagnostics, electiveDiag);
@@ -1087,50 +858,28 @@ function recomputeWithElectives(state) {
   ];
   state.reminderPlan = buildReminderPlan(state.schedule.events);
   reminderScheduler?.setEvents(state.schedule.events, {
-    labelFor: (e) => evLabel(state, e),
-    timeFor: (e) => formatEventTime(e),
+    labelFor: (e) => evLabel(state, e), timeFor: (e) => formatEventTime(e),
     locationFor: (e) => formatLocation(e.location, state.institution.locations.buildings, state.locale)
   });
-  renderAssignmentSummary(state);
-  renderView(state, state.view);
-  renderReminderCard(state);
+  renderAssignmentSummary(state); renderView(state, state.view); renderReminderCard(state);
 }
-
 function renderElectivesCard(state) {
   let card = document.getElementById("electives-card");
   if (!card) {
-    // Null-safe anchor chain: prefer #reminder-card (created first in renderAll),
-    // fall back to the static .subscription-card, then to appending into #result.
-    // This guarantees we never dereference a null parentNode regardless of order.
-    const anchor =
-      document.getElementById("reminder-card") ??
-      document.querySelector(".subscription-card") ??
-      null;
-    card = document.createElement("section");
-    card.id = "electives-card";
-    card.className = "subscription-card";
+    const anchor = document.getElementById("reminder-card") ?? document.querySelector(".subscription-card") ?? null;
+    card = document.createElement("section"); card.id = "electives-card"; card.className = "subscription-card";
     card.setAttribute("aria-labelledby", "electives-heading");
     if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(card, anchor);
     else (els.result ?? document.body).appendChild(card);
   }
-
   const eligible = state.eligibleElectives ?? [];
-  if (!eligible.length) {
-    card.innerHTML = `
-      <h2 id="electives-heading">Electives</h2>
-      <p class="hint">No optional electives are offered for your program and year this semester.</p>`;
-    return;
-  }
-
+  if (!eligible.length) { card.innerHTML = `<h2 id="electives-heading">Electives</h2><p class="hint">No optional electives are offered for your program and year this semester.</p>`; return; }
   const selected = new Set(state.selectedElectives ?? []);
   let rows = "";
   for (const el of eligible) {
-    const slug = el.slug ?? el.id;
-    const on = selected.has(slug);
+    const slug = el.slug ?? el.id, on = selected.has(slug);
     const title = localize(el.title, state.locale) || el.title?.en || slug;
-    const when = (el.sessions ?? [])
-      .map((s) => `${s.day} ${formatTime12(s.start)}${s.end ? "–" + formatTime12(s.end) : ""}`)
-      .join(" · ");
+    const when = (el.sessions ?? []).map((s) => `${s.day} ${formatTime12(s.start)}${s.end ? "–" + formatTime12(s.end) : ""}`).join(" · ");
     rows += `
       <label class="elective-row" style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);">
         <input type="checkbox" data-elective="${escapeHtml(slug)}" ${on ? "checked" : ""} style="width:18px;height:18px;margin-top:2px;accent-color:${escapeHtml(el.color ?? "var(--accent)")};" />
@@ -1142,14 +891,10 @@ function renderElectivesCard(state) {
         </span>
       </label>`;
   }
-
-  // Per-elective static feeds for the ones the student registered (Google route).
   let feedRows = "";
   for (const el of eligible) {
-    const slug = el.slug ?? el.id;
-    if (!selected.has(slug)) continue;
-    const feedUrl = buildElectiveFeedUrl(slug, state.manifest);
-    if (!feedUrl) continue;
+    const slug = el.slug ?? el.id; if (!selected.has(slug)) continue;
+    const feedUrl = buildElectiveFeedUrl(slug, state.manifest); if (!feedUrl) continue;
     const title = localize(el.title, state.locale) || el.title?.en || slug;
     feedRows += `
       <div class="feed-box" style="margin-top:8px;">
@@ -1160,72 +905,69 @@ function renderElectivesCard(state) {
         </div>
       </div>`;
   }
-
   card.innerHTML = `
     <h2 id="electives-heading">Electives</h2>
     <p class="hint">Tick the optional courses you registered this semester. Your choice is stored only in this browser and is never uploaded. Ticked courses appear in the timetable above and in the .ics preview download; to put them in Google Calendar, subscribe to each course's feed below.</p>
     <div class="elective-list">${rows}</div>
-    ${feedRows ? `<h3 style="margin-top:14px;">Your elective calendar feeds</h3>${feedRows}` : ""}
-  `;
-
+    ${feedRows ? `<h3 style="margin-top:14px;">Your elective calendar feeds</h3>${feedRows}` : ""}`;
   card.querySelectorAll("input[data-elective]").forEach((cb) => {
     cb.addEventListener("change", () => {
-      const slug = cb.dataset.elective;
-      const set = new Set(state.selectedElectives ?? []);
+      const slug = cb.dataset.elective, set = new Set(state.selectedElectives ?? []);
       if (cb.checked) set.add(slug); else set.delete(slug);
       state.selectedElectives = Array.from(set);
       saveSelection(state, state.selectedElectives);
-      recomputeWithElectives(state);
-      renderElectivesCard(state);
+      recomputeWithElectives(state); renderElectivesCard(state);
     });
   });
-
-  card.querySelectorAll("a[data-copy-feed]").forEach((a) => {
-    a.addEventListener("click", () => { copyToClipboard(a.dataset.copyFeed); });
-  });
+  card.querySelectorAll("a[data-copy-feed]").forEach((a) => { a.addEventListener("click", () => { copyToClipboard(a.dataset.copyFeed); }); });
 }
 
 // ============================================================================
-//  COMPARE TAB
+//  COMPARE GROUPS  (plain-language, labelled, with a no-data guard)
 // ============================================================================
-
 function q(id) { return document.getElementById(id); }
+function humanLabel(c) {
+  const prog = c.programLabel ?? c.programId;
+  const yr = c.yearLevel == null ? "" : ` · Year ${c.yearLevel}`;
+  const grp = c.practicalGroup == null ? "" : (c.subdivision ? ` · Group ${c.practicalGroup}${c.subdivision}` : ` · Group ${c.practicalGroup}`);
+  return `${prog}${yr}${grp}`;
+}
 
 async function ensureCompare() {
-  if (compareState.universe) return;
-  if (compareState.universePromise) { await compareState.universePromise; return; }
+  if (compareState.universe) { syncDateInputs(); return; }
+  if (compareState.universePromise) { await compareState.universePromise; syncDateInputs(); return; }
   compareState.universePromise = (async () => {
     const manifest = await loader.loadManifest();
     const programs = await loader.loadPrograms(manifest);
     const institution = await loader.loadInstitutionData(manifest);
     const locale = institution.settings.defaultLocale ?? CONFIG.ui.defaultLocale ?? "en";
     const today = todayInTimeZone(manifest.timezone);
-    compareState.manifest = manifest;
-    compareState.programs = programs;
-    compareState.institution = institution;
-    compareState.locale = locale;
-    compareState.today = today;
+    compareState.manifest = manifest; compareState.programs = programs;
+    compareState.institution = institution; compareState.locale = locale; compareState.today = today;
     compareState.universe = await enumerateCohorts(loader, manifest, programs);
     if (!compareState.slot.date) compareState.slot.date = today;
     if (!compareState.sideDate) compareState.sideDate = today;
     hydrateComparePickerCascade();
     renderCompareChips();
-    // Auto-run whichever mode is active so the panel is never blank on entry.
+    syncDateInputs();
     if (compareState.mode === "slot") await runSlotFinder();
     else await runSideBySide();
   })();
-  try { await compareState.universePromise; }
-  finally { compareState.universePromise = null; }
+  try { await compareState.universePromise; } finally { compareState.universePromise = null; }
+}
+
+function syncDateInputs() {
+  const sd = q("cmp-date"); if (sd && compareState.slot.date) sd.value = compareState.slot.date;
+  const ad = q("cmp-side-date"); if (ad && compareState.sideDate) ad.value = compareState.sideDate;
 }
 
 function bindCompareEvents() {
-  document.querySelectorAll(".cmp-subseg button").forEach((btn) => {
+  document.querySelectorAll(".cmp-mode-card").forEach((btn) => {
     btn.addEventListener("click", () => {
       compareState.mode = btn.dataset.cmode;
-      document.querySelectorAll(".cmp-subseg button").forEach((b) => {
+      document.querySelectorAll(".cmp-mode-card").forEach((b) => {
         const active = b.dataset.cmode === compareState.mode;
-        b.classList.toggle("active", active);
-        b.setAttribute("aria-pressed", String(active));
+        b.classList.toggle("active", active); b.setAttribute("aria-pressed", String(active));
       });
       q("cmp-slot-panel").hidden = compareState.mode !== "slot";
       q("cmp-side-panel").hidden = compareState.mode !== "side";
@@ -1242,12 +984,10 @@ function bindCompareEvents() {
   q("cmp-quick")?.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
     const base = compareState.slot.date || compareState.today || todayInTimeZone("Africa/Cairo");
     const d = nextOccurringWeekday(base, b.dataset.wd);
-    compareState.slot.date = d;
-    const di = q("cmp-date"); if (di) di.value = d;
+    compareState.slot.date = d; const di = q("cmp-date"); if (di) di.value = d;
     runSlotFinder().catch((err)=>setStatus(err.message,"error"));
   }));
 
-  // Side-by-side picker cascade
   q("cmp-p-program")?.addEventListener("change", () => { compareState.picker.programId = q("cmp-p-program").value; hydrateComparePickerYears(); });
   q("cmp-p-year")?.addEventListener("change", () => { compareState.picker.academicYearId = q("cmp-p-year").value; hydrateComparePickerLevels(); });
   q("cmp-p-level")?.addEventListener("change", () => { compareState.picker.yearLevel = q("cmp-p-level").value === "" ? null : Number(q("cmp-p-level").value); hydrateComparePickerGroups(); });
@@ -1258,23 +998,18 @@ function bindCompareEvents() {
   q("cmp-add-all-year")?.addEventListener("click", () => addAllOfCurrentYear());
   q("cmp-add-mine")?.addEventListener("click", () => addMySchedule());
   q("cmp-clear")?.addEventListener("click", () => { compareState.chips = []; compareState.referenceKey = null; renderCompareChips(); runSideBySide().catch((e)=>setStatus(e.message,"error")); });
-
   q("cmp-prev-day")?.addEventListener("click", () => shiftSideDate(-1));
   q("cmp-next-day")?.addEventListener("click", () => shiftSideDate(1));
-  q("cmp-today-day")?.addEventListener("click", () => { compareState.sideDate = compareState.today; const d=q("cmp-side-date"); if(d) d.value=compareState.sideDate; runSideBySide().catch((e)=>setStatus(e.message,"error")); });
+  q("cmp-today-day")?.addEventListener("click", () => { compareState.sideDate = compareState.today; syncDateInputs(); runSideBySide().catch((e)=>setStatus(e.message,"error")); });
   q("cmp-side-date")?.addEventListener("change", (e) => { compareState.sideDate = e.target.value; runSideBySide().catch((err)=>setStatus(err.message,"error")); });
 }
 
 async function onCompareSubmit(event) {
   event.preventDefault();
-  try {
-    await ensureCompare();
-    if (compareState.mode === "slot") await runSlotFinder();
-    else await runSideBySide();
-  } catch (err) { setStatus(`Compare failed: ${err.message}`, "error"); }
+  try { await ensureCompare(); if (compareState.mode === "slot") await runSlotFinder(); else await runSideBySide(); }
+  catch (err) { setStatus(`Compare failed: ${err.message}`, "error"); }
 }
 
-// ---- Picker cascade (mirrors the manual tab but standalone) ----------------
 function hydrateComparePickerCascade() {
   const progSel = q("cmp-p-program"); if (!progSel) return;
   progSel.innerHTML = "";
@@ -1283,52 +1018,23 @@ function hydrateComparePickerCascade() {
   if (programs.length) { progSel.value = programs[0].id; compareState.picker.programId = programs[0].id; }
   hydrateComparePickerYears();
 }
-
 function compareProgram() { return (compareState.programs?.programs ?? []).find((p) => p.id === compareState.picker.programId) ?? null; }
 function compareYear() { return compareProgram()?.academicYears?.find((y) => y.id === compareState.picker.academicYearId) ?? null; }
-
 function hydrateComparePickerYears() {
-  const sel = q("cmp-p-year"); if (!sel) return;
-  const program = compareProgram();
-  sel.innerHTML = "";
-  const years = program?.academicYears ?? [];
+  const sel = q("cmp-p-year"); if (!sel) return; sel.innerHTML = "";
+  const years = compareProgram()?.academicYears ?? [];
   for (const y of years) addOption(sel, y.id, y.name?.en ?? y.id);
   if (years.length) { sel.value = years[0].id; compareState.picker.academicYearId = years[0].id; }
   hydrateComparePickerLevels();
 }
-
 function hydrateComparePickerLevels() {
-  const sel = q("cmp-p-level"); if (!sel) return;
-  const year = compareYear();
-  sel.innerHTML = "";
+  const sel = q("cmp-p-level"); if (!sel) return; sel.innerHTML = "";
   addOption(sel, "", "Whole year (all levels)");
-  const levels = [...new Set((year?.semesters ?? []).map((s) => s.yearLevel).filter((l) => l != null))].sort((a,b)=>a-b);
+  const levels = [...new Set((compareYear()?.semesters ?? []).map((s) => s.yearLevel).filter((l) => l != null))].sort((a,b)=>a-b);
   for (const l of levels) addOption(sel, String(l), yearLevelLabel(l));
-  compareState.picker.yearLevel = null;
-  hydrateComparePickerGroups();
+  compareState.picker.yearLevel = null; hydrateComparePickerGroups();
 }
-
-function compareSemestersForPicker() {
-  const year = compareYear();
-  if (!year) return [];
-  return (year.semesters ?? []).filter(
-    (s) => s.status !== "draft" &&
-      (compareState.picker.yearLevel == null || s.yearLevel == null || Number(s.yearLevel) === Number(compareState.picker.yearLevel))
-  );
-}
-
-function hydrateComparePickerGroups() {
-  const sel = q("cmp-p-group"); if (!sel) return;
-  sel.innerHTML = "";
-  addOption(sel, "", "Select group");
-  const groups = [...new Set(compareSemestersForPicker().flatMap((s) => collectGroupsFromSemesterDoc(s)))].sort((a,b)=>a-b);
-  for (const g of groups) addOption(sel, String(g), `Group ${g}`);
-  compareState.picker.practicalGroup = null;
-  hydrateComparePickerSubs();
-}
-
-// Groups present in the universe for the current picker selection.
-function collectGroupsFromSemesterDoc() {
+function collectGroupsFromUniverse() {
   const out = new Set();
   for (const c of compareState.universe ?? []) {
     if (c.programId !== compareState.picker.programId) continue;
@@ -1338,10 +1044,14 @@ function collectGroupsFromSemesterDoc() {
   }
   return Array.from(out);
 }
-
+function hydrateComparePickerGroups() {
+  const sel = q("cmp-p-group"); if (!sel) return; sel.innerHTML = "";
+  addOption(sel, "", "Select group");
+  for (const g of collectGroupsFromUniverse().sort((a,b)=>a-b)) addOption(sel, String(g), `Group ${g}`);
+  compareState.picker.practicalGroup = null; hydrateComparePickerSubs();
+}
 function hydrateComparePickerSubs() {
-  const sel = q("cmp-p-sub"); if (!sel) return;
-  sel.innerHTML = "";
+  const sel = q("cmp-p-sub"); if (!sel) return; sel.innerHTML = "";
   addOption(sel, "", "Whole group");
   const subs = [...new Set((compareState.universe ?? [])
     .filter((c) => c.programId === compareState.picker.programId
@@ -1350,49 +1060,32 @@ function hydrateComparePickerSubs() {
       && (compareState.picker.practicalGroup == null || c.practicalGroup === compareState.picker.practicalGroup)
       && c.subdivision)
     .map((c) => c.subdivision))].sort();
-  for (const s of subs) addOption(sel, s, `Subgroup ${s}`);
+  for (const s of subs) addOption(sel, s, `Sub‑group ${s}`);
   compareState.picker.subdivision = "";
 }
-
+function cohortKeyLocal(c) { return [c.programId, c.academicYearId, c.yearLevel ?? "", c.practicalGroup ?? "", c.subdivision ?? ""].join("|"); }
 function cohortFromPicker() {
   const program = compareProgram();
   const programLabel = program?.name?.en ?? compareState.picker.programId;
-  const c = {
-    programId: compareState.picker.programId,
-    academicYearId: compareState.picker.academicYearId,
-    yearLevel: compareState.picker.yearLevel,
-    practicalGroup: compareState.picker.practicalGroup,
-    subdivision: compareState.picker.subdivision || null,
-    programLabel
-  };
+  const c = { programId: compareState.picker.programId, academicYearId: compareState.picker.academicYearId,
+    yearLevel: compareState.picker.yearLevel, practicalGroup: compareState.picker.practicalGroup,
+    subdivision: compareState.picker.subdivision || null, programLabel };
   if (!c.programId || !c.academicYearId || c.practicalGroup == null) return null;
-  // Resolve against the universe so key/label are canonical and dedupe works.
   const match = (compareState.universe ?? []).find((u) =>
     u.programId === c.programId && u.academicYearId === c.academicYearId &&
     Number(u.yearLevel ?? "") === Number(c.yearLevel ?? "") &&
-    u.practicalGroup === c.practicalGroup &&
-    (u.subdivision ?? "") === (c.subdivision ?? "")
-  );
-  return match ?? (() => { const k = cohortKeyLocal(c); c.key = k; c.label = labelLocal(c); return c; })();
+    u.practicalGroup === c.practicalGroup && (u.subdivision ?? "") === (c.subdivision ?? ""));
+  if (match) return match;
+  c.key = cohortKeyLocal(c); return c;
 }
-
-function cohortKeyLocal(c) { return [c.programId, c.academicYearId, c.yearLevel ?? "", c.practicalGroup ?? "", c.subdivision ?? ""].join("|"); }
-function labelLocal(c) {
-  const lvl = c.yearLevel == null ? "" : ` · Yr ${c.yearLevel}`;
-  const grp = c.practicalGroup == null ? "" : ` · G${c.practicalGroup}${c.subdivision ? c.subdivision : ""}`;
-  return `${c.programLabel ?? c.programId}${lvl}${grp}`;
-}
-
 function addCohortFromPicker() {
   const c = cohortFromPicker();
   if (!c) { setStatus("Choose a program, year and group first.", "error"); return; }
   if (compareState.chips.some((x) => x.key === c.key)) { showToast("Already added."); return; }
   compareState.chips.push(c);
   if (!compareState.referenceKey) compareState.referenceKey = c.key;
-  renderCompareChips();
-  runSideBySide().catch((e)=>setStatus(e.message,"error"));
+  renderCompareChips(); runSideBySide().catch((e)=>setStatus(e.message,"error"));
 }
-
 function addAllOfCurrentYear() {
   const added = [];
   for (const c of compareState.universe ?? []) {
@@ -1403,35 +1096,28 @@ function addAllOfCurrentYear() {
     compareState.chips.push(c); added.push(c.key);
   }
   if (!compareState.referenceKey && added.length) compareState.referenceKey = added[0];
-  renderCompareChips();
-  runSideBySide().catch((e)=>setStatus(e.message,"error"));
-  showToast(added.length ? `Added ${added.length} cohorts.` : "Nothing new to add.");
+  renderCompareChips(); runSideBySide().catch((e)=>setStatus(e.message,"error"));
+  showToast(added.length ? `Added ${added.length} groups.` : "Nothing new to add.");
 }
-
 function addMySchedule() {
-  if (!currentState) { setStatus("Look up your schedule first (Student ID or Year & group tab).", "error"); return; }
+  if (!currentState) { setStatus("Look up your own schedule first (Student ID or Year & group tab), then come back.", "error"); return; }
   const a = currentState.assignment;
-  const c = {
-    programId: a.programId, academicYearId: a.academicYearId, yearLevel: a.yearLevel ?? null,
+  const c = { programId: a.programId, academicYearId: a.academicYearId, yearLevel: a.yearLevel ?? null,
     practicalGroup: a.practicalGroup, subdivision: a.subdivision ?? null,
-    programLabel: localize(currentState.program.name, compareState.locale) || a.programId
-  };
-  c.key = cohortKeyLocal(c); c.label = labelLocal(c) + " (mine)";
+    programLabel: localize(currentState.program.name, compareState.locale) || a.programId };
+  c.key = cohortKeyLocal(c);
   if (compareState.chips.some((x) => x.key === c.key)) { showToast("Your schedule is already in the comparison."); return; }
-  compareState.chips.unshift(c);
-  compareState.referenceKey = c.key;   // "mine" becomes the swap reference
-  renderCompareChips();
-  runSideBySide().catch((e)=>setStatus(e.message,"error"));
+  compareState.chips.unshift(c); compareState.referenceKey = c.key;
+  renderCompareChips(); runSideBySide().catch((e)=>setStatus(e.message,"error"));
 }
-
 function renderCompareChips() {
   const box = q("cmp-chips"); if (!box) return;
-  if (!compareState.chips.length) { box.innerHTML = `<span class="cmp-empty">No cohorts selected. Use the pickers above, “Add all of this year”, or “＋ My schedule”.</span>`; return; }
+  if (!compareState.chips.length) { box.innerHTML = `<span class="cmp-empty">No groups added yet. Use the pickers above, “Add all of this year”, or “＋ My schedule”.</span>`; return; }
   box.innerHTML = compareState.chips.map((c) => {
     const ref = c.key === compareState.referenceKey;
     return `<span class="cmp-chip ${ref ? "ref" : ""}" data-key="${escapeHtml(c.key)}">
-      <button type="button" class="cmp-chip-star" title="${ref ? "Reference cohort" : "Set as reference (for swap checks)"}" data-act="ref">${ref ? "★" : "☆"}</button>
-      <span>${escapeHtml(c.label)}</span>
+      <button type="button" class="cmp-chip-star" title="${ref ? "This is your reference group" : "Make this the reference group (for the ✓/✗ swap check)"}" data-act="ref">${ref ? "★" : "☆"}</button>
+      <span>${escapeHtml(humanLabel(c))}</span>
       <button type="button" class="cmp-chip-x" title="Remove" data-act="rm">×</button>
     </span>`;
   }).join("");
@@ -1445,90 +1131,109 @@ function renderCompareChips() {
     });
   });
 }
-
 function shiftSideDate(delta) {
   compareState.sideDate = formatDate(addDays(parseDate(compareState.sideDate || compareState.today), delta));
-  const d = q("cmp-side-date"); if (d) d.value = compareState.sideDate;
-  runSideBySide().catch((e)=>setStatus(e.message,"error"));
+  syncDateInputs(); runSideBySide().catch((e)=>setStatus(e.message,"error"));
 }
-
-// Compose every cohort in a list (memoized), return Map key -> events[].
 async function composeMany(cohorts) {
   const map = new Map();
   for (const c of cohorts) {
     const packed = await composeCohortEvents(loader, compareState.manifest, compareState.programs, compareState.institution, c, compareState.today, compareState.locale, compareState.composedCache);
-    map.set(c.key, packed.events ?? []);
+    map.set(c.key, packed);
   }
   return map;
 }
 
-// ---- Slot finder render ----------------------------------------------------
+function cmpEvText(e) {
+  const title = e.displayCode || e.title?.[compareState.locale] || e.title?.en || e.courseId || e.type || "session";
+  const loc = formatLocation(e.location, compareState.institution.locations.buildings, compareState.locale);
+  return loc ? `${title} — ${loc}` : title;
+}
+function cmpEvStyle(e) {
+  const color = eventColor(e, null) || e.color || null;
+  return color ? `border-left-color:${color};background:${color}14;` : "";
+}
+
 async function runSlotFinder() {
   const out = q("cmp-slot-result"); if (!out) return;
-  if (!compareState.universe) { out.innerHTML = `<p class="cmp-empty">Loading cohorts…</p>`; return; }
+  if (!compareState.universe) { out.innerHTML = `<p class="cmp-empty">Loading groups…</p>`; return; }
   const date = compareState.slot.date || compareState.today;
-  const startMin = timeToMinutes(compareState.slot.start || "17:00");
-  const endMin = Math.max(timeToMinutes(compareState.slot.end || "18:00"), startMin + 1);
-  const scope = compareState.slot.scope;
-  const gran = compareState.slot.gran;
+  const startMin = timeToMinutes(compareState.slot.start || "09:00");
+  const endMin = Math.max(timeToMinutes(compareState.slot.end || "10:00"), startMin + 1);
+  let cohorts = compareState.universe.filter((c) => compareState.slot.scope === "all" || c.programId === compareState.slot.scope);
+  cohorts = compareState.slot.gran === "group" ? cohorts.filter((c) => !c.subdivision) : cohorts.filter((c) => c.subdivision);
 
-  let cohorts = compareState.universe.filter((c) => scope === "all" || c.programId === scope);
-  if (gran === "group") cohorts = cohorts.filter((c) => !c.subdivision);
-  else cohorts = cohorts.filter((c) => c.subdivision);
-
-  out.innerHTML = `<p class="cmp-empty">Computing ${cohorts.length} cohorts for ${formatLongDate(date)} ${formatTime12(minutesToHHMM(startMin))}–${formatTime12(minutesToHHMM(endMin))}…</p>`;
+  out.innerHTML = `<p class="cmp-empty">Checking ${cohorts.length} groups…</p>`;
   const composed = await composeMany(cohorts);
-  const rows = slotRows(cohorts, composed, date, startMin, endMin);
-  const freeCount = rows.filter((r) => r.free).length;
+  let rows = slotRows(cohorts, new Map(Array.from(composed).map(([k,v]) => [k, v])), date, startMin, endMin);
+  // slotRows expects a key->packed map; rebuild accordingly below.
+  rows = slotRows(cohorts, composed, date, startMin, endMin);
 
+  const freeN = rows.filter((r) => r.status === "free").length;
+  const busyN = rows.filter((r) => r.status === "busy").length;
+  const noDataN = rows.filter((r) => r.status === "nodata").length;
   const d = parseDate(date);
-  let html = `<p class="cmp-summary"><strong>${freeCount}</strong> of ${rows.length} cohorts are <span class="cmp-status-free">free</span> on <strong>${escapeHtml(WEEKDAYS_LONG[d.getUTCDay()])} ${escapeHtml(formatShortDate(date))}</strong>, ${escapeHtml(formatTime12(minutesToHHMM(startMin)))}–${escapeHtml(formatTime12(minutesToHHMM(endMin)))}. Rotation weeks, batch ranges, exams and the mid‑term blackout are honored.</p>`;
-  html += `<div class="cmp-actions"><button class="btn quiet" type="button" id="cmp-copy-free">Copy free cohort names</button></div>`;
-  html += `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><th>Cohort</th><th>Status</th><th>Occupying that slot</th></tr></thead><tbody>`;
-  for (const r of rows) {
-    const detail = r.free
-      ? `<span class="cmp-status-free">Free</span>`
+  const when = `${WEEKDAYS_LONG[d.getUTCDay()]} ${formatShortDate(date)}, ${formatTime12(minutesToHHMM(startMin))}–${formatTime12(minutesToHHMM(endMin))}`;
+
+  let html = `<p class="cmp-summary"><span class="big">${freeN} of ${rows.length} groups are FREE</span> at <strong>${escapeHtml(when)}</strong>. `
+    + `<span class="busy-n">${busyN} busy</span>${noDataN ? ` · <span class="nodata-n">${noDataN} with no published schedule</span>` : ""}.</p>`;
+  html += `<div class="cmp-legend"><span><span class="dot dot-free"></span>Free</span><span><span class="dot dot-busy"></span>Busy (shows the session + room)</span><span><span class="dot dot-nodata"></span>No schedule published</span></div>`;
+  html += `<div class="cmp-actions">
+      <label class="cmp-toggle"><input type="checkbox" id="cmp-only-free" ${compareState.slot.onlyFree ? "checked" : ""} /> Show only free groups</label>
+      <button class="btn quiet" type="button" id="cmp-copy-free">Copy the free group names</button>
+    </div>`;
+
+  const visible = compareState.slot.onlyFree ? rows.filter((r) => r.status === "free") : rows;
+  html += `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><th>Group</th><th>At this time</th><th>What’s happening</th></tr></thead><tbody>`;
+  for (const r of visible) {
+    const statusCell = r.status === "free" ? `<span class="cmp-status-free">✔ Free</span>`
+      : r.status === "busy" ? `<span class="cmp-status-busy">● Busy</span>`
+      : `<span class="cmp-status-nodata">— No schedule</span>`;
+    const detail = r.status === "free" ? `<span class="cmp-ev free">nothing scheduled</span>`
+      : r.status === "nodata" ? `<span class="cmp-ev free">no published timetable for this group</span>`
       : r.blocking.map((e) => `<span class="cmp-ev" style="${cmpEvStyle(e)}">${escapeHtml(cmpEvText(e))}</span>`).join("");
-    html += `<tr><td>${escapeHtml(r.cohort.label)}</td><td>${r.free ? '<span class="cmp-status-free">Free</span>' : '<span class="cmp-status-busy">Busy</span>'}</td><td>${detail}</td></tr>`;
+    html += `<tr><td>${escapeHtml(humanLabel(r.cohort))}</td><td>${statusCell}</td><td>${detail}</td></tr>`;
   }
+  if (!visible.length) html += `<tr><td colspan="3" class="cmp-empty">No groups match “only free” at this time.</td></tr>`;
   html += `</tbody></table></div>`;
+  html += `<p class="hint" style="margin-top:8px;">Tip: try a <strong>Wednesday 9:00–10:00</strong> to see the Drug Design (ChemSketch) groups busy, or a date inside the mid‑term break (31 Oct–5 Nov) to see exam weeks.</p>`;
   out.innerHTML = html;
 
+  q("cmp-only-free")?.addEventListener("change", (e) => { compareState.slot.onlyFree = e.target.checked; runSlotFinder().catch((err)=>setStatus(err.message,"error")); });
   q("cmp-copy-free")?.addEventListener("click", () => {
-    const names = rows.filter((r) => r.free).map((r) => r.cohort.label).join("\n");
-    copyToClipboard(names).then((ok) => showToast(ok ? `Copied ${rows.filter((r)=>r.free).length} free cohort names.` : "Copy failed."));
+    const names = rows.filter((r) => r.status === "free").map((r) => humanLabel(r.cohort)).join("\n");
+    copyToClipboard(names).then((ok) => showToast(ok ? `Copied ${freeN} free group name${freeN === 1 ? "" : "s"}.` : "Copy failed."));
   });
 }
 
-// ---- Side-by-side render ---------------------------------------------------
 async function runSideBySide() {
   const out = q("cmp-side-result"); if (!out) return;
-  if (!compareState.chips.length) { out.innerHTML = `<p class="cmp-empty">Add at least two cohorts to compare. The first chip (★) is the reference for swap checks.</p>`; return; }
+  if (!compareState.chips.length) { out.innerHTML = `<p class="cmp-empty">Add at least two groups to compare. The ★ group is the one you’re fitting around.</p>`; return; }
   const date = compareState.sideDate || compareState.today;
   const composed = await composeMany(compareState.chips);
-  const { lo, hi, rows } = sideMatrix(compareState.chips, composed, date, compareState.referenceKey);
-  const windows = commonFreeWindows(compareState.chips, composed, date, lo, hi);
-  const refLabel = compareState.chips.find((c) => c.key === compareState.referenceKey)?.label ?? null;
-
+  const eventsByCohort = composed; // sideMatrix/commonFree read packed.events/.loaded
+  const { lo, hi, rows } = sideMatrix(compareState.chips, eventsByCohort, date, compareState.referenceKey);
+  const windows = commonFreeWindows(compareState.chips, eventsByCohort, date, lo, hi);
+  const refLabel = compareState.chips.find((c) => c.key === compareState.referenceKey) ? humanLabel(compareState.chips.find((c) => c.key === compareState.referenceKey)) : null;
   const d = parseDate(date);
-  let html = `<p class="cmp-summary"><strong>${escapeHtml(WEEKDAYS_LONG[d.getUTCDay()])} ${escapeHtml(formatShortDate(date))}</strong> · ${compareState.chips.length} cohorts${refLabel ? ` · reference: <strong>${escapeHtml(refLabel)}</strong>` : ""}. ✓ = reference is free then (you could sit this session); ✗ = reference is busy.</p>`;
+
+  let html = `<p class="cmp-summary"><span class="big">${escapeHtml(WEEKDAYS_LONG[d.getUTCDay()])} ${escapeHtml(formatShortDate(date))}</span> · ${compareState.chips.length} groups${refLabel ? ` · reference (★): <strong>${escapeHtml(refLabel)}</strong>` : ""}.</p>`;
+  html += `<div class="cmp-legend"><span><span class="dot dot-free"></span>Free (—)</span><span><span class="dot dot-busy"></span>Busy (session + room)</span><span><span class="dot dot-nodata"></span>No schedule</span><span>✓ = the ★ group is free then (you could sit this) · ✗ = ★ group busy</span></div>`;
 
   html += `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><th class="cmp-time">Time</th>`;
-  for (const c of compareState.chips) html += `<th class="${c.key === compareState.referenceKey ? "cmp-col-ref" : ""}">${escapeHtml(c.label)}</th>`;
-  html += `<th>Free</th></tr></thead><tbody>`;
-
+  for (const c of compareState.chips) html += `<th class="${c.key === compareState.referenceKey ? "cmp-col-ref" : ""}">${escapeHtml(humanLabel(c))}${c.key === compareState.referenceKey ? " ★" : ""}</th>`;
+  html += `<th>Free?</th></tr></thead><tbody>`;
   for (const row of rows) {
     const freeN = row.cells.filter((x) => x.free).length;
     html += `<tr><td class="cmp-time">${escapeHtml(formatTime12(minutesToHHMM(row.start)))}–${escapeHtml(formatTime12(minutesToHHMM(row.end)))}</td>`;
     for (const cell of row.cells) {
       const isRef = cell.cohort.key === compareState.referenceKey;
       let inner;
-      if (cell.free) inner = `<span class="cmp-ev free">—</span>`;
+      if (cell.nodata) inner = `<span class="cmp-status-nodata">— no schedule</span>`;
+      else if (cell.free) inner = `<span class="cmp-ev free">— free</span>`;
       else {
         inner = cell.events.map((e) => {
-          const swap = (compareState.referenceKey && !isRef)
-            ? (cell.refFree ? ' <span class="cmp-swok">✓</span>' : ' <span class="cmp-swbad">✗</span>')
-            : "";
+          const swap = (compareState.referenceKey && !isRef) ? (cell.refFree ? ' <span class="cmp-swok">✓</span>' : ' <span class="cmp-swbad">✗</span>') : "";
           return `<span class="cmp-ev" style="${cmpEvStyle(e)}">${escapeHtml(cmpEvText(e))}${swap}</span>`;
         }).join("");
       }
@@ -1538,31 +1243,18 @@ async function runSideBySide() {
   }
   html += `</tbody></table></div>`;
 
-  // All-day strip per cohort (exams, college events).
   const allDayLines = compareState.chips.map((c) => {
-    const evs = allDayEventsOnDate(composed.get(c.key) ?? [], date);
+    const packed = eventsByCohort.get(c.key);
+    const evs = allDayEventsOnDate(packed?.events ?? [], date);
     if (!evs.length) return "";
-    return `<div><strong>${escapeHtml(c.label)}:</strong> ${evs.map((e)=>escapeHtml(cmpEvText(e))).join(", ")}</div>`;
+    return `<div><strong>${escapeHtml(humanLabel(c))}:</strong> ${evs.map((e)=>escapeHtml(cmpEvText(e))).join(", ")}</div>`;
   }).filter(Boolean);
-  if (allDayLines.length) html += `<p class="cmp-summary" style="margin-top:8px;"><strong>All‑day:</strong> ${allDayLines.join(" ")}</p>`;
+  if (allDayLines.length) html += `<p class="cmp-summary" style="margin-top:8px;"><strong>All‑day today:</strong> ${allDayLines.join(" ")}</p>`;
 
-  html += `<div class="cmp-summary" style="margin-top:10px;"><strong>Everyone free simultaneously:</strong></div><div class="cmp-common">`;
-  html += windows.length
-    ? windows.map((w) => `<span class="win">${escapeHtml(formatTime12(minutesToHHMM(w.start)))}–${escapeHtml(formatTime12(minutesToHHMM(w.end)))}</span>`).join("")
-    : `<span class="cmp-empty">None in the visible range.</span>`;
+  html += `<p class="cmp-summary" style="margin-top:10px;"><strong>Times when every selected group is free together:</strong></p><div class="cmp-common">`;
+  html += windows.length ? windows.map((w) => `<span class="win">${escapeHtml(formatTime12(minutesToHHMM(w.start)))}–${escapeHtml(formatTime12(minutesToHHMM(w.end)))}</span>`).join("") : `<span class="cmp-empty">None in the visible range.</span>`;
   html += `</div>`;
-
   out.innerHTML = html;
-}
-
-function cmpEvText(e) {
-  const title = e.displayCode || e.title?.[compareState.locale] || e.title?.en || e.courseId || e.type || "event";
-  const loc = formatLocation(e.location, compareState.institution.locations.buildings, compareState.locale);
-  return loc ? `${title} · ${loc}` : title;
-}
-function cmpEvStyle(e) {
-  const color = eventColor(e, null) || e.color || null;
-  return color ? `border-left-color:${color};background:${color}14;` : "";
 }
 
 function escapeHtml(value) {
