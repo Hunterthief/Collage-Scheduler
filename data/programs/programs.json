@@ -17,7 +17,8 @@
               "sourceReview": [
                 { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
                 { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
-                { "code": "PRACTICAL_SHEET_YEAR_TYPO", "detail": "The printed practical header reads '2026/20267'; corrected to 2026/2027." }
+                { "code": "PRACTICAL_SHEET_YEAR_TYPO", "detail": "The printed practical header reads '2026/20267'; corrected to 2026/2027." },
+                { "code": "ORGANIC_I_ATTENDANCE_DIVISION_DATED", "detail": "Organic Chemistry I sections are governed by a NEW departmental attendance division (issued ~Nov 2026) with strict 'attend only in your slot' enforcement. Five fixed dated Sunday sessions encoded in practicals.json: 8/11 → 1A(1–3), 2A(3–5), 3A(5–7); 15/11 → 1B(1–3), 2B(3–5). Room/building reused from the prior Organic I sheet (Organic Chemistry Lab, New Building 4th floor) per the update note. Anomalies flagged not normalized: 2A includes outlier seat 2615177; 2B includes cross-prefix seat 2635001 plus an open 'external/unnumbered students' clause." }
               ]
             },
             {
@@ -38,7 +39,13 @@
               "yearLevel": 3, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
               "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-5/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-5/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-5/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-5/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-5/exceptions.json" },
               "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
-              "sourceReview": [ { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar, which states its dates are approximate." } ]
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar, which states its dates are approximate." },
+                { "code": "DRUG_DESIGN_DATED_BATCHES", "detail": "Drug Design (02-06-05305) ChemSketch cycle is encoded as four dated Wednesday practical events (2026-09-30, 10-07, 10-14, 10-21), each with six time slots tagged by group + A/B subdivision (New Building, 4th floor Drug Design / Simulation Lab). Quiz-1 is a dated Wednesday examination (2026-11-18, Old Building 2nd floor Pharmaceutical Chemistry Lab) with six 30-minute batch slots. These replace the previous 'referenced but not materialized' state so the Compare tool reports these groups BUSY at the printed times instead of Free." },
+                { "code": "DRUG_DESIGN_BATCH_SEATS_ADVISORY", "detail": "The source prints seat-range batches inside each subdivision (e.g. 1A 2415001-2415010 then 2415011-2415020). At group/subdivision granularity the whole sub-group is busy whenever any of its batches meets, so the dated events are tagged by subdivision only; the exact seat ranges are recorded in each event's sourceReview for a future per-student view. The 2026-10-21 12:00-13:00 3B slot also lists two non-2415 seats (2435001, 2435002) noted but not encoded as a 2415 session." },
+                { "code": "DRUG_DESIGN_WETLAB_UNDATED", "detail": "The Wet Lab timetable prints only 'Week 1 = Group A / Week 2 = Group B' per section (9-11, 11-1, 1-3) with no calendar dates and two rooms (Pharmaceutical Chemistry Lab Old 2nd floor + Organic Chemistry Lab New 4th floor). With no anchor date it cannot be placed on the grid, so it is intentionally NOT materialized (DATE_UNCONFIRMED); a ChemSketch Wednesday already covers the same 9-11 window for the tested subdivision, so the slot finder is not silently wrong there." },
+                { "code": "DRUG_INFORMATION_TUTORIALS_UNTIMED", "detail": "The Drug Information (02-06-09305) tutorial sheet gives dated weeks and A/B alternation and a mid-term (1/11) plus final practical exams (6/12 A, 13/12 B) but NO clock times. Untimed sessions cannot occupy a time grid, so they are not materialized as timed events (TIME_UNCONFIRMED); the 1/11 mid-term falls inside the college blackout week regardless. Flagged rather than invented." }
+              ]
             },
             {
               "id": "pharmd-2026-2027-semester-7",
