@@ -1,90 +1,111 @@
 {
   "events": [
+    { "id": "pharmd-y1-analytical-chemistry-practical", "courseId": "analytical-chem", "type": "practical", "day": "Monday", "sessions": [ { "group": 1, "start": "09:00", "end": "10:50" }, { "group": 2, "start": "11:00", "end": "12:50" }, { "group": 3, "start": "13:00", "end": "14:50" } ], "location": { "building": "new", "floor": 1, "room": null }, "shorthand": "PN 1 Analytical Chemistry", "displayCode": "PN 1 Analytical Chemistry", "validFrom": null, "validUntil": null },
+    { "id": "pharmd-y1-botany-practical", "courseId": "botany", "type": "practical", "day": "Tuesday", "sessions": [ { "group": 1, "start": "09:00", "end": "10:50" }, { "group": 2, "start": "11:00", "end": "12:50" }, { "group": 3, "start": "13:00", "end": "14:50" } ], "location": { "building": "old", "floor": 0, "room": null }, "shorthand": "PO 0 Botany", "displayCode": "PO 0 Botany", "validFrom": null, "validUntil": null },
+    { "id": "pharmd-y1-medicinal-chem-intro-practical", "courseId": "medicinal-chem-intro", "type": "practical", "day": "Wednesday", "sessions": [ { "group": 1, "start": "09:00", "end": "10:50" }, { "group": 2, "start": "11:00", "end": "12:50" }, { "group": 3, "start": "13:00", "end": "14:50" } ], "location": { "building": "new", "floor": 2, "room": null }, "shorthand": "PN 2 Medicinal Chemistry Intro", "displayCode": "PN 2 Medicinal Chemistry Intro", "validFrom": null, "validUntil": null },
+
     {
-      "id": "pharmd-s1-organic-chemistry-practical",
-      "courseId": "02-06-05-101",
+      "id": "pharmd-y1-organic-i-section-1a-2026-11-08",
+      "courseId": "organic-chem-i",
       "type": "practical",
+      "title": { "en": "Organic Chemistry I — Section (Group 1A)" },
       "day": "Sunday",
-      "sessions": [
-        { "group": 1, "start": "13:00", "end": "14:50" },
-        { "group": 2, "start": "15:00", "end": "16:50" },
-        { "group": 3, "start": "17:00", "end": "18:50" }
-      ],
-      "location": { "building": "new", "floor": 4, "room": null },
-      "shorthand": "PN 4 Pharmaceutical Organic Chemistry-I",
-      "displayCode": "PN 4 Pharmaceutical Organic Chemistry-I",
-      "validFrom": null,
-      "validUntil": null
-    },
-    {
-      "id": "pharmd-s1-community-issues-practical",
-      "courseId": "community-issues",
-      "type": "practical",
-      "day": "Monday",
-      "sessions": [
-        { "group": 1, "start": "13:00", "end": "15:00" },
-        { "group": 2, "start": "13:00", "end": "15:00" },
-        { "group": 3, "start": "13:00", "end": "15:00" }
-      ],
-      "location": { "building": "old", "floor": 6, "room": "Conference Hall" },
-      "shorthand": "PO 6 Community Issues",
-      "displayCode": "PO 6 Community Issues",
+      "date": "2026-11-08",
+      "sessions": [ { "group": 1, "subdivision": "A", "start": "13:00", "end": "15:00" } ],
+      "location": { "building": "new", "floor": 4, "room": "Organic Chemistry Lab" },
+      "shorthand": "ORGANIC-I 1A Sun 8/11",
+      "displayCode": "Organic Chemistry I — Group 1A (1–3 PM)",
       "validFrom": null,
       "validUntil": null,
+      "attachments": [ { "label": "Section materials (Drive)", "url": "https://drive.google.com/file/d/1RMs7Af-EHJz4YgC2t1gOQT0YdoxRfZus/view?usp=sharing" } ],
       "sourceReview": [
-        {
-          "code": "COURSE_CODE_NOT_PRINTED",
-          "detail": "The practical sheet lists 'القضايا المجتمعية' with no course code, so a descriptive code is used instead of a fabricated numeric one. Single weekly session for all groups, 1:00-3:00 PM, Conference Hall (Old Building, floor 6)."
-        }
+        { "code": "ATTENDANCE_DIVISION_AUTHORITATIVE", "detail": "New departmental attendance division ('تقسيمة جديدة لحضور السكاشن'); strict — 'no student may attend outside their scheduled time.' Encoded as a fixed dated session, not a weekly recurrence." },
+        { "code": "SEAT_RANGE_1A", "detail": "Seats 2615002–2615055." },
+        { "code": "LOCATION_REUSED_FROM_SKELETON", "detail": "Room/building unchanged from the prior Organic I sheet (per the update note): Organic Chemistry Lab, New Building 4th floor." }
       ]
     },
     {
-      "id": "pharmd-s1-medicinal-plants-practical",
-      "courseId": "02-06-06-101",
+      "id": "pharmd-y1-organic-i-section-2a-2026-11-08",
+      "courseId": "organic-chem-i",
       "type": "practical",
-      "day": "Tuesday",
-      "sessions": [
-        { "group": 3, "start": "13:00", "end": "14:50" },
-        { "group": 1, "start": "15:00", "end": "16:50" },
-        { "group": 2, "start": "17:00", "end": "18:50" }
-      ],
-      "location": { "building": "new", "floor": 5, "room": null },
-      "shorthand": "PN 5 Medicinal Plants",
-      "displayCode": "PN 5 Medicinal Plants",
+      "title": { "en": "Organic Chemistry I — Section (Group 2A)" },
+      "day": "Sunday",
+      "date": "2026-11-08",
+      "sessions": [ { "group": 2, "subdivision": "A", "start": "15:00", "end": "17:00" } ],
+      "location": { "building": "new", "floor": 4, "room": "Organic Chemistry Lab" },
+      "shorthand": "ORGANIC-I 2A Sun 8/11",
+      "displayCode": "Organic Chemistry I — Group 2A (3–5 PM)",
       "validFrom": null,
-      "validUntil": null
+      "validUntil": null,
+      "attachments": [ { "label": "Section materials (Drive)", "url": "https://drive.google.com/file/d/1GWLAxVJBOOK9lZCWmxA5i01oJ11AZcgG/view?usp=sharing" } ],
+      "sourceReview": [
+        { "code": "ATTENDANCE_DIVISION_AUTHORITATIVE", "detail": "Strict attendance division; fixed dated session." },
+        { "code": "SEAT_RANGE_2A", "detail": "Seats 2615056–2615113 PLUS outlier 2615177." },
+        { "code": "OUTLIER_SEAT_ADVISORY", "detail": "2615177 falls outside the contiguous 2A block (it borders the 3A range 2615114–2615171). Recorded as printed; confirm whether transfer-in or typo rather than reassigned." },
+        { "code": "LOCATION_REUSED_FROM_SKELETON", "detail": "Room/building unchanged: Organic Chemistry Lab, New Building 4th floor." }
+      ]
     },
     {
-      "id": "pharmd-s1-information-technology-practical",
-      "courseId": "02-06-00-101",
+      "id": "pharmd-y1-organic-i-section-3a-2026-11-08",
+      "courseId": "organic-chem-i",
       "type": "practical",
-      "day": "Tuesday",
-      "sessions": [
-        { "group": 1, "start": "13:00", "end": "14:50" },
-        { "group": 2, "start": "13:00", "end": "14:50" },
-        { "group": 3, "start": "15:00", "end": "16:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Information Technology",
-      "displayCode": "PN 0 Information Technology",
+      "title": { "en": "Organic Chemistry I — Section (Group 3A)" },
+      "day": "Sunday",
+      "date": "2026-11-08",
+      "sessions": [ { "group": 3, "subdivision": "A", "start": "17:00", "end": "19:00" } ],
+      "location": { "building": "new", "floor": 4, "room": "Organic Chemistry Lab" },
+      "shorthand": "ORGANIC-I 3A Sun 8/11",
+      "displayCode": "Organic Chemistry I — Group 3A (5–7 PM)",
       "validFrom": null,
-      "validUntil": null
+      "validUntil": null,
+      "attachments": [ { "label": "Section materials (Drive)", "url": "https://drive.google.com/file/d/160-dGd02gVv5fKlY0c8QL_meNYYUflK-/view?usp=sharing" } ],
+      "sourceReview": [
+        { "code": "ATTENDANCE_DIVISION_AUTHORITATIVE", "detail": "Strict attendance division; fixed dated session." },
+        { "code": "SEAT_RANGE_3A", "detail": "Seats 2615114–2615171." },
+        { "code": "LOCATION_REUSED_FROM_SKELETON", "detail": "Room/building unchanged: Organic Chemistry Lab, New Building 4th floor." }
+      ]
     },
     {
-      "id": "pharmd-s1-analytical-chemistry-practical",
-      "courseId": "02-06-07-101",
+      "id": "pharmd-y1-organic-i-section-1b-2026-11-15",
+      "courseId": "organic-chem-i",
       "type": "practical",
-      "day": "Wednesday",
-      "sessions": [
-        { "group": 2, "start": "13:00", "end": "14:50" },
-        { "group": 1, "start": "15:00", "end": "16:50" },
-        { "group": 3, "start": "17:00", "end": "18:50" }
-      ],
-      "location": { "building": "new", "floor": 6, "room": null },
-      "shorthand": "PN 6 Pharmaceutical Analytical Chemistry-I",
-      "displayCode": "PN 6 Pharmaceutical Analytical Chemistry-I",
+      "title": { "en": "Organic Chemistry I — Section (Group 1B)" },
+      "day": "Sunday",
+      "date": "2026-11-15",
+      "sessions": [ { "group": 1, "subdivision": "B", "start": "13:00", "end": "15:00" } ],
+      "location": { "building": "new", "floor": 4, "room": "Organic Chemistry Lab" },
+      "shorthand": "ORGANIC-I 1B Sun 15/11",
+      "displayCode": "Organic Chemistry I — Group 1B (1–3 PM)",
       "validFrom": null,
-      "validUntil": null
+      "validUntil": null,
+      "attachments": [ { "label": "Section materials (Drive)", "url": "https://drive.google.com/file/d/1suWQEn70SmM3zEfVFYlp99S3Io6ncI9r/view?usp=drive_link" } ],
+      "sourceReview": [
+        { "code": "ATTENDANCE_DIVISION_AUTHORITATIVE", "detail": "Strict attendance division; fixed dated session." },
+        { "code": "SEAT_RANGE_1B", "detail": "Seats 2615172–2615216." },
+        { "code": "LOCATION_REUSED_FROM_SKELETON", "detail": "Room/building unchanged: Organic Chemistry Lab, New Building 4th floor." }
+      ]
+    },
+    {
+      "id": "pharmd-y1-organic-i-section-2b-2026-11-15",
+      "courseId": "organic-chem-i",
+      "type": "practical",
+      "title": { "en": "Organic Chemistry I — Section (Group 2B + external/no-ID students)" },
+      "day": "Sunday",
+      "date": "2026-11-15",
+      "sessions": [ { "group": 2, "subdivision": "B", "start": "15:00", "end": "17:00" } ],
+      "location": { "building": "new", "floor": 4, "room": "Organic Chemistry Lab" },
+      "shorthand": "ORGANIC-I 2B Sun 15/11",
+      "displayCode": "Organic Chemistry I — Group 2B (3–5 PM) + external & no-seat-number students",
+      "validFrom": null,
+      "validUntil": null,
+      "attachments": [ { "label": "Section materials (Drive)", "url": "https://drive.google.com/file/d/1-Z5sKjdhmudG4cTlUl0i41yTEOrREa6H/view?usp=sharing" } ],
+      "sourceReview": [
+        { "code": "ATTENDANCE_DIVISION_AUTHORITATIVE", "detail": "Strict attendance division; fixed dated session." },
+        { "code": "SEAT_RANGE_2B", "detail": "Seats 2615217–2615246 PLUS cross-cohort seat 2635001." },
+        { "code": "CROSS_COHORT_SEAT_ADVISORY", "detail": "2635001 uses a different 4-digit prefix (2635) than this cohort (2615 = PharmD Y1). Recorded as printed; likely a Clinical/horizontal-level attendee folded into this slot. Not promoted to a 2615 subdivision." },
+        { "code": "UNNUMBERED_STUDENTS_CLAUSE", "detail": "Notice also admits 'الطلاب من خارج الدفعة والطلاب بدون رقم الجلوس' (out-of-batch and unnumbered students) to this section. Cannot be seat-resolved; kept as advisory so Compare treats 2B as busy 3–5 PM on 15/11 while acknowledging extra attendees." },
+        { "code": "LOCATION_REUSED_FROM_SKELETON", "detail": "Room/building unchanged: Organic Chemistry Lab, New Building 4th floor." }
+      ]
     }
   ]
 }
