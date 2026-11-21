@@ -1,458 +1,155 @@
 {
-  "events": [
+  "programs": [
     {
-      "id": "pharmd-s5-scientific-writing-practical",
-      "courseId": "02-06-09304",
-      "type": "practical",
-      "day": "Saturday",
-      "sessions": [
-        { "group": 3, "start": "13:00", "end": "14:50" },
-        { "group": 2, "start": "15:00", "end": "16:50" },
-        { "group": 1, "start": "17:00", "end": "18:50" }
-      ],
-      "location": { "building": "new", "floor": 6, "room": null },
-      "shorthand": "PN 6 Scientific Writing and Communication skills",
-      "displayCode": "PN 6 Scientific Writing and Communication skills",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 6 Scientific Writing and Communication skills is every week for every group." }
+      "id": "pharmd",
+      "name": { "en": "PharmD", "ar": "دكتور صيدلة" },
+      "academicYears": [
+        {
+          "id": "2026-2027",
+          "name": { "en": "2026/2027", "ar": "٢٠٢٦/٢٠٢٧" },
+          "semesters": [
+            {
+              "id": "pharmd-2026-2027-semester-1",
+              "name": { "en": "Semester 1 (Year 1)", "ar": "الفصل الدراسي الأول (الفرقة الأولى)" },
+              "yearLevel": 1, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-1/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-1/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-1/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-1/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-1/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
+                { "code": "PRACTICAL_SHEET_YEAR_TYPO", "detail": "The printed practical header reads '2026/20267'; corrected to 2026/2027." },
+                { "code": "ORGANIC_I_ATTENDANCE_DIVISION_DATED", "detail": "Pharmaceutical Organic Chemistry-I (02-06-05-101) sections are governed by a NEW departmental attendance division (issued ~Nov 2026) with strict 'attend only in your slot' enforcement. Five fixed dated Sunday sessions encoded in practicals.json: 8/11 → 1A(1–3), 2A(3–5), 3A(5–7); 15/11 → 1B(1–3), 2B(3–5). Location reused from the prior weekly sheet (New Building, 4th floor, room null — no room name is printed). The standing weekly Organic slot is windowed so the dated division supersedes it without overlap: groups 1&2 skip both 8/11 and 15/11; group 3 skips only 8/11 and KEEPS its weekly 17:00-18:50 active on 15/11 because the division omits 3B that day (flagged ORGANIC_I_3B_SOURCE_GAP, not encoded as free). Anomalies flagged not normalized: 2A includes outlier seat 2615177; 2B includes cross-prefix seat 2635001 plus an open 'external/unnumbered students' clause." }
+              ]
+            },
+            {
+              "id": "pharmd-2026-2027-semester-3",
+              "name": { "en": "Semester 3 (Year 2)", "ar": "الفصل الدراسي الثالث (الفرقة الثانية)" },
+              "yearLevel": 2, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-3/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-3/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-3/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-3/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-3/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
+                { "code": "MIDTERM_EXAMS_FROM_COLLEGE_TABLE", "detail": "Seven mid-term examinations transcribed from the Semester 3 column of the college-wide PharmD mid-term table (31 Oct - 5 Nov, New Building, 30-minute slots, all groups). Physiology and Pathophysiology has no listed mid-term; final examinations are pending publication." }
+              ]
+            },
+            {
+              "id": "pharmd-2026-2027-semester-5",
+              "name": { "en": "Semester 5", "ar": "الفصل الدراسي الخامس" },
+              "yearLevel": 3, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-5/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-5/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-5/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-5/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-5/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar, which states its dates are approximate." },
+                { "code": "DRUG_DESIGN_DATED_BATCHES", "detail": "Drug Design (02-06-05305) ChemSketch cycle is encoded as four dated Wednesday practical events (2026-09-30, 10-07, 10-14, 10-21), each with six time slots tagged by group + A/B subdivision (New Building, 4th floor Simulation Labs). Quiz-1 is a dated Wednesday examination (2026-11-18, Old Building 2nd floor Pharmaceutical Chemistry Lab) with six 30-minute batch slots. These replace the previous 'referenced but not materialized' state so the Compare tool reports these groups BUSY at the printed times instead of Free." },
+                { "code": "DRUG_DESIGN_BATCH_SEATS_ADVISORY", "detail": "The source prints seat-range batches inside each subdivision (e.g. 1A 2415001-2415010 then 2415011-2415020). At group/subdivision granularity the whole sub-group is busy whenever any of its batches meets, so the dated events are tagged by subdivision only; the exact seat ranges are recorded in each event's sourceReview for a future per-student view. The 2026-10-21 12:00-13:00 3B slot also lists two non-2415 seats (2435001, 2435002) noted but not encoded as a 2415 session." },
+                { "code": "DRUG_DESIGN_WETLAB_STRUCTURE_CONFIRMED_UNANCHORED", "detail": "The re-uploaded wet lab PDF (2026-11) confirms the wet-lab structure for Drug Design (02-06-05305): Wednesday sections, 2-week cycle Week1=A/Week2=B, and the exact section→group→time→seat map (section1→G1 09-11, section3→G3 11-13, section2→G2 13-15; A seats 2415001-2415038/2415149-2415184/2415077-2415112, B seats 2415039-2415076/2415185-End/2415114-2415148). The committed placeholder pharmd-s5-drug-design-wet-lab already matches this exactly. It remains INTENTIONALLY UNMATERIALIZED (day/date null) because the PDF gives only relative Week labels with no calendar anchor for the wet-lab block, and naively anchoring Week 1 to the committed ChemSketch Wednesday 2026-09-30 would overlap the same course's ChemSketch Group-A batches at 09:00-11:00. Whether wet lab shares ChemSketch Wednesdays or follows in a later block is not in any source; flagged WETLAB_BLOCK_START_UNCONFIRMED rather than invented. Room-per-section (Old 2F pharma-chem vs New 4F organic) also unprinted (LOCATION_MULTI_UNCONFIRMED)." },
+                { "code": "DRUG_INFORMATION_TUTORIALS_MATERIALIZED", "detail": "Drug Information (02-06-09305) tutorials are now encoded as dated Sunday practical events w02–w11 in practicals.json (27/9 A, 4/10 B, 11/10 A, 18/10 B, 25/10 A, [week 7 1/11 mid-term skipped], 8/11 B, 15/11 A, 22/11 B, 29/11 A&B), Computer Hall New 0, tagged by group + A/B subdivision, with the 29/11 both-halves week carrying no subdivision (matches the PDF's '(Group A) & (Group B)'). PROVENANCE: the tutorial-content PDF supplies DATE + TOPIC + A/B alternation but NO clock times; the 09:00-10:50 / 11:00-12:50 / 13:00-14:50 bands are department-supplied and are interleaved against the Basic Pharmacology weekly bands so each numbered group's DI band differs from its BP band (e.g. G1: DI 11-12:50 vs BP 11-12:50 on DI Sundays — see DI_VS_BP_WEEKLY_BAND_OVERLAP). Weeks 12/13 Final Practical Exams (6/12 A, 13/12 B) are listed in the content PDF but are NOT in this practicals file — confirm placement in exams.json." },
+                { "code": "DI_VS_BP_WEEKLY_BAND_OVERLAP", "detail": "Cross-referencing the committed DI tutorial events with the committed Basic Pharmacology weekly shows that on each DI Sunday the tutorial band for a numbered group coincides with that group's standing BP weekly band (Group 1 is 11:00-12:50 in both on 27/9, 22/11, etc.; Group 2 and Group 3 likewise permuted), producing a cross-course overlap the engine reports. If the DI tutorial is meant to REPLACE the BP weekly on those weeks, a cancel exception or a validity window on the BP weekly is required — confirm with the department. Not silently patched; surfaced so the organizer sees the real clash." },
+                { "code": "BASIC_PHARMACY_22NOV_OVERRIDE", "detail": "Basic Pharmacology (02-06-02305, code parsed from the instructor group title 'Basic Pharmacology-02-06-02305-F_26'; -F_26 is a section/branch tag) has a dated attendance override on Sun 2026-11-22: the normal A/B alternation is suspended and BOTH halves attend at split rooms (A → Wet Lab 7F New; B → Lecture Hall 6F New). The notice printed '22/10/2026' but the department corrected the section date to 22/11/2026 (audit flag DATE_CORRECTED_FROM_ANNOUNCEMENT). The notice states NO clock time and gives NO seat/group numbers. Because the standing weekly (every-week-all-groups) ALREADY marks all Y3 groups busy 09:00–14:50 on 22/11, the override is recorded as an unfiltered all-day notice inside the semester-5 (Y3) dataset: compare.js busy math ignores all-day events (timedEventsOnDate filters !allDay), so it adds the room/attendance detail WITHOUT asserting a busy interval, WITHOUT a false busy/free, and WITHOUT colliding with the DI w10 Group-B tutorial that a borrowed-band timed block would create. The weekly's lack of A/B subdivisions (which the notice implies exist) is flagged BP_ALTERNATION_UNCONFIRMED / BP_WEEKLY_NO_SUBDIVISION. SESSION SHAPE / CI FIX: the validator requires every session to carry a group, so the notice uses three group-tagged all-day sessions (1, 2, 3) with subdivision omitted (both halves) and null start/end under allDay=true — the engine reads the all-day occurrence from the event date and uses the session rows only for filtering, so no timed interval is asserted; a single group:null session previously failed CI with 'session missing group'. Course 02-06-02305 already present in courses.json — no course append." }
+              ]
+            },
+            {
+              "id": "pharmd-2026-2027-semester-7",
+              "name": { "en": "Semester 7 (Year 4)", "ar": "الفصل الدراسي السابع (الفرقة الرابعة)" },
+              "yearLevel": 4, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-7/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-7/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-7/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-7/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-7/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all three groups; no alternating A/B weeks in this semester." },
+                { "code": "MIDTERM_EXAMS_PENDING_SEM7_COLUMN", "detail": "The Semester 7 column of the college-wide mid-term table has not been re-supplied with this batch; its stacked/merged cells are not transcribed from memory. exams.json is intentionally empty until the table (or a clean Semester 7 crop) is re-sent, at which point Y1(S1), Y4(S7) and Y5(S9) will be filled in one accurate pass. The college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            },
+            {
+              "id": "pharmd-2026-2027-semester-9",
+              "name": { "en": "Semester 9 (Year 5)", "ar": "الفصل الدراسي التاسع (الفرقة الخامسة)" },
+              "yearLevel": 5, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/pharmd/2026-2027/semester-9/courses.json", "lectures": "data/schedules/pharmd/2026-2027/semester-9/lectures.json", "practicals": "data/schedules/pharmd/2026-2027/semester-9/practicals.json", "exams": "data/schedules/pharmd/2026-2027/semester-9/exams.json", "exceptions": "data/schedules/pharmd/2026-2027/semester-9/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all four groups; no alternating A/B weeks in this semester." },
+                { "code": "HOSPITAL_PHARMACY_AND_BIOTECH_WINDOW_MOVES", "detail": "Two lecture relocations encoded as adjacent validity windows (no cancel exceptions): Hospital Pharmacy Sunday 17:00-17:55 until 2026-10-29 then Wednesday 17:00-17:55 from 2026-11-07; Pharmaceutical Biotechnology Tuesday 13:00-14:50 until 2026-10-29 then Sunday 17:00-18:50 from 2026-11-07. The intervening mid-term blackout week (31 Oct - 5 Nov) falls between the two windows, so the handoff is clean." },
+                { "code": "MIDTERM_EXAMS_PENDING_SEM9_COLUMN", "detail": "The Semester 9 column exists in the college-wide mid-term table sent earlier, but that scan stacks/merges cells (Cosmetic / Environmental / Pharmacogenomics sit in ambiguous column positions) and is not transcribed from memory. exams.json is intentionally empty until a clean crop of the Semester 9 column is re-sent; the mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "pharmd-s5-basic-pharmacology-practical",
-      "courseId": "02-06-02305",
-      "type": "practical",
-      "day": "Sunday",
-      "sessions": [
-        { "group": 1, "start": "09:00", "end": "10:50" },
-        { "group": 3, "start": "11:00", "end": "12:50" },
-        { "group": 2, "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 7, "room": null },
-      "shorthand": "PN 7 Basic Pharmacology",
-      "displayCode": "PN 7 Basic Pharmacology",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 7 Basic Pharmacology is every week for every group." },
-        { "code": "BP_ALTERNATION_UNCONFIRMED", "detail": "The 2026-11-22 attendance notice ('both group A and B will attend', split rooms A→Wet Lab 7F New / B→Lecture Hall 6F New) implies Basic Pharmacology has A/B halves that normally alternate, but this standing weekly encodes no subdivisions and is marked every-week-all-groups. The finer A/B alternation and its calendar weeks are not in any supplied source, so the weekly stands as the coarse published truth for non-22/11 Sundays. See the dated all-day notice pharmd-y3-basic-pharma-22nov-both-halves-notice." },
-        { "code": "DI_VS_BP_WEEKLY_BAND_OVERLAP", "detail": "On every Drug Information tutorial Sunday the tutorial band for a numbered group coincides with that group's standing BP weekly band (e.g. Group 1 is 11:00-12:50 in both the DI tutorial and this weekly on 27/9, 22/11, etc.), producing a cross-course overlap the engine reports. If the tutorial is meant to REPLACE the BP weekly that week, a cancel exception or a validity window on this weekly is required — confirm with the department. Not silently patched here." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w02-a-2026-09-27",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (A) - Intro & Request Form" },
-      "description": { "en": "Introduction to drug info, drug info center, and services. Drug information request form overview. Group A." },
-      "week": 2,
-      "day": "Sunday",
-      "date": "2026-09-27",
-      "sessions": [
-        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (A)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w03-b-2026-10-04",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (B) - Intro & Request Form" },
-      "description": { "en": "Introduction to drug info, drug info center, and services. Drug information request form overview. Group B." },
-      "week": 3,
-      "day": "Sunday",
-      "date": "2026-10-04",
-      "sessions": [
-        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (B)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w04-a-2026-10-11",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (A) - Structure Approach" },
-      "description": { "en": "Structure approach in answering drug information questions. Categorization of different resources based on question type. Group A." },
-      "week": 4,
-      "day": "Sunday",
-      "date": "2026-10-11",
-      "sessions": [
-        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (A)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w05-b-2026-10-18",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (B) - Structure Approach" },
-      "description": { "en": "Structure approach in answering drug information questions. Categorization of different resources based on question type. Group B." },
-      "week": 5,
-      "day": "Sunday",
-      "date": "2026-10-18",
-      "sessions": [
-        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (B)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w06-a-2026-10-25",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (A) - Tertiary Search & Cases" },
-      "description": { "en": "Drug information resources: how to search in tertiary literature with a focus on websites: Medscape, drugs.com, pdr.net. Practicing Drug Information - real cases question and answer. Group A." },
-      "week": 6,
-      "day": "Sunday",
-      "date": "2026-10-25",
-      "sessions": [
-        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (A)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w08-b-2026-11-08",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (B) - Tertiary Search, EKB & Cases" },
-      "description": { "en": "Drug information resources: how to search in tertiary literature with a focus on websites: Medscape, drugs.com, pdr.net and EKB (Gold Standard). Practicing Drug Information - real cases question and answer. Group B." },
-      "week": 8,
-      "day": "Sunday",
-      "date": "2026-11-08",
-      "sessions": [
-        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (B)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule. Week 7 is mid-term exam week and is skipped." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w09-a-2026-11-15",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (A) - Lexicomp & PubMed" },
-      "description": { "en": "Drug information resources: how to search in tertiary literature: Lexicomp. How to search in secondary and primary literature with a focus on Mesh and PubMed. Group A." },
-      "week": 9,
-      "day": "Sunday",
-      "date": "2026-11-15",
-      "sessions": [
-        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (A)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w10-b-2026-11-22",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (B) - Lexicomp & PubMed" },
-      "description": { "en": "Drug information resources: how to search in tertiary literature: Lexicomp. How to search in secondary and primary literature with a focus on Mesh and PubMed. Group B." },
-      "week": 10,
-      "day": "Sunday",
-      "date": "2026-11-22",
-      "sessions": [
-        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
-        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
-        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (B)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-information-tutorial-w11-ab-2026-11-29",
-      "courseId": "02-06-09305",
-      "type": "practical",
-      "title": { "en": "Drug Information Tutorial (A & B) - Request Form Training + PubMed" },
-      "description": { "en": "Drug information request form training on cases plus PubMed revision. Group A and Group B." },
-      "week": 11,
-      "day": "Sunday",
-      "date": "2026-11-29",
-      "sessions": [
-        { "group": 2, "start": "09:00", "end": "10:50" },
-        { "group": 1, "start": "11:00", "end": "12:50" },
-        { "group": 3, "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
-      "shorthand": "PN 0 Drug Information",
-      "displayCode": "PN 0 Drug Information (A & B)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Week 11 is listed for both Group A and Group B in the provisional Drug Information tutorials schedule." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-pharmaceutics-iii-practical",
-      "courseId": "02-06-01304",
-      "type": "practical",
-      "day": "Tuesday",
-      "sessions": [
-        { "group": 3, "start": "09:00", "end": "10:50" },
-        { "group": 1, "start": "11:00", "end": "12:50" },
-        { "group": 2, "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 3, "room": null },
-      "shorthand": "PN 3 Pharmaceutics III",
-      "displayCode": "PN 3 Pharmaceutics III",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 3 Pharmaceutics III is every week for every group." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-pharmaceutical-microbiology-practical",
-      "courseId": "02-06-04302",
-      "type": "practical",
-      "day": "Wednesday",
-      "sessions": [
-        { "group": 2, "start": "09:00", "end": "10:50" },
-        { "group": 1, "start": "11:00", "end": "12:50" },
-        { "group": 3, "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 8, "room": null },
-      "shorthand": "PN 8 Pharmaceutical Microbiology",
-      "displayCode": "PN 8 Pharmaceutical Microbiology",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 8 Pharmaceutical Microbiology is every week for every group." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-phytochemistry-i-practical",
-      "courseId": "02-06-06304",
-      "type": "practical",
-      "day": "Wednesday",
-      "rotation": { "type": "alternating-subdivisions", "sequence": ["A", "B"], "startWeek": 1, "excludeBlackouts": true },
-      "sessions": [
-        { "group": 3, "start": "09:00", "end": "10:50" },
-        { "group": 2, "start": "11:00", "end": "12:50" },
-        { "group": 1, "start": "13:00", "end": "14:50" }
-      ],
-      "location": { "building": "new", "floor": 5, "room": null },
-      "shorthand": "PN 5 Phytochemistry I",
-      "displayCode": "PN 5 Phytochemistry I",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "ALTERNATING_A_B_PATTERN", "detail": "Department input: PN 5 Phytochemistry I alternates weeks. First teaching week = A, second = B. Mid-term week is skipped and does not count in the pattern." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-design-chemsketch-2026-09-30",
-      "courseId": "02-06-05305",
-      "type": "practical",
-      "title": { "en": "Drug Design (ChemSketch)" },
-      "day": "Wednesday",
-      "date": "2026-09-30",
-      "sessions": [
-        { "group": 1, "subdivision": "A", "batch": "1A-1", "from": "2415001", "to": "2415010", "start": "09:00", "end": "10:00" },
-        { "group": 1, "subdivision": "A", "batch": "1A-2", "from": "2415011", "to": "2415020", "start": "10:00", "end": "11:00" },
-        { "group": 3, "subdivision": "A", "batch": "3A-1", "from": "2415149", "to": "2415158", "start": "11:00", "end": "12:00" },
-        { "group": 3, "subdivision": "A", "batch": "3A-2", "from": "2415159", "to": "2415166", "start": "12:00", "end": "13:00" },
-        { "group": 2, "subdivision": "A", "batch": "2A-1", "from": "2415077", "to": "2415086", "start": "13:00", "end": "14:00" },
-        { "group": 2, "subdivision": "A", "batch": "2A-2", "from": "2415087", "to": "2415095", "start": "14:00", "end": "15:00" }
-      ],
-      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
-      "shorthand": "PN 4 Drug Design (ChemSketch)",
-      "displayCode": "PN 4 Drug Design (ChemSketch)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "SOURCE_TYPO_CORRECTED", "detail": "Source image showed 2215095 for batch 2A-2. Corrected to 2415095 as an obvious digit typo." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-design-chemsketch-2026-10-07",
-      "courseId": "02-06-05305",
-      "type": "practical",
-      "title": { "en": "Drug Design (ChemSketch)" },
-      "day": "Wednesday",
-      "date": "2026-10-07",
-      "sessions": [
-        { "group": 1, "subdivision": "B", "batch": "1B-1", "from": "2415039", "to": "2415049", "start": "09:00", "end": "10:00" },
-        { "group": 1, "subdivision": "B", "batch": "1B-2", "from": "2415050", "to": "2415059", "start": "10:00", "end": "11:00" },
-        { "group": 3, "subdivision": "B", "batch": "3B-1", "from": "2415185", "to": "2415197", "start": "11:00", "end": "12:00" },
-        { "group": 3, "subdivision": "B", "batch": "3B-2", "from": "2415198", "to": "2415208", "start": "12:00", "end": "13:00" },
-        { "group": 2, "subdivision": "B", "batch": "2B-1", "from": "2415114", "to": "2415122", "start": "13:00", "end": "14:00" },
-        { "group": 2, "subdivision": "B", "batch": "2B-2", "from": "2415123", "to": "2415131", "start": "14:00", "end": "15:00" }
-      ],
-      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
-      "shorthand": "PN 4 Drug Design (ChemSketch)",
-      "displayCode": "PN 4 Drug Design (ChemSketch)",
-      "validFrom": null,
-      "validUntil": null
-    },
-    {
-      "id": "pharmd-s5-drug-design-chemsketch-2026-10-14",
-      "courseId": "02-06-05305",
-      "type": "practical",
-      "title": { "en": "Drug Design (ChemSketch)" },
-      "day": "Wednesday",
-      "date": "2026-10-14",
-      "sessions": [
-        { "group": 1, "subdivision": "A", "batch": "1A-3", "from": "2415021", "to": "2415029", "start": "09:00", "end": "10:00" },
-        { "group": 1, "subdivision": "A", "batch": "1A-4", "from": "2415030", "to": "2415038", "start": "10:00", "end": "11:00" },
-        { "group": 3, "subdivision": "A", "batch": "3A-3", "from": "2415167", "to": "2415175", "start": "11:00", "end": "12:00" },
-        { "group": 3, "subdivision": "A", "batch": "3A-4", "from": "2415176", "to": "2415184", "start": "12:00", "end": "13:00" },
-        { "group": 2, "subdivision": "A", "batch": "2A-3", "from": "2415096", "to": "2415104", "start": "13:00", "end": "14:00" },
-        { "group": 2, "subdivision": "A", "batch": "2A-4", "from": "2415105", "to": "2415112", "start": "14:00", "end": "15:00" }
-      ],
-      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
-      "shorthand": "PN 4 Drug Design (ChemSketch)",
-      "displayCode": "PN 4 Drug Design (ChemSketch)",
-      "validFrom": null,
-      "validUntil": null
-    },
-    {
-      "id": "pharmd-s5-drug-design-chemsketch-2026-10-21",
-      "courseId": "02-06-05305",
-      "type": "practical",
-      "title": { "en": "Drug Design (ChemSketch)" },
-      "day": "Wednesday",
-      "date": "2026-10-21",
-      "sessions": [
-        { "group": 1, "subdivision": "B", "batch": "1B-3", "from": "2415060", "to": "2415068", "start": "09:00", "end": "10:00" },
-        { "group": 1, "subdivision": "B", "batch": "1B-4", "from": "2415069", "to": "2415076", "start": "10:00", "end": "11:00" },
-        { "group": 3, "subdivision": "B", "batch": "3B-3", "from": "2415209", "to": "2415221", "start": "11:00", "end": "12:00" },
-        { "group": 3, "subdivision": "B", "batch": "3B-4", "from": "2415222", "to": "2415229", "students": ["2435001", "2435002"], "start": "12:00", "end": "13:00" },
-        { "group": 2, "subdivision": "B", "batch": "2B-3", "from": "2415132", "to": "2415140", "start": "13:00", "end": "14:00" },
-        { "group": 2, "subdivision": "B", "batch": "2B-4", "from": "2415141", "to": "2415148", "start": "14:00", "end": "15:00" }
-      ],
-      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
-      "shorthand": "PN 4 Drug Design (ChemSketch)",
-      "displayCode": "PN 4 Drug Design (ChemSketch)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "SOURCE_TYPO_CORRECTED", "detail": "Source image showed 2215148 for batch 2B-4. Corrected to 2415148 as an obvious digit typo." },
-        { "code": "EXTERNAL_IDS_PRESENT", "detail": "Batch 3B-4 includes IDs 2435001 and 2435002 in addition to 2415222-2415229. These IDs are outside the current PharmD assignment ranges and should be verified." }
-      ]
-    },
-    {
-      "id": "pharmd-s5-drug-design-wet-lab",
-      "courseId": "02-06-05305",
-      "type": "practical",
-      "title": { "en": "Drug Design (Wet Lab)" },
-      "day": null,
-      "date": null,
-      "rotation": { "type": "alternating-subdivisions", "sequence": ["A", "B"], "startWeek": 1, "excludeBlackouts": true },
-      "sessions": [
-        { "group": 1, "subdivision": "A", "from": "2415001", "to": "2415038", "start": "09:00", "end": "11:00" },
-        { "group": 3, "subdivision": "A", "from": "2415149", "to": "2415184", "start": "11:00", "end": "13:00" },
-        { "group": 2, "subdivision": "A", "from": "2415077", "to": "2415112", "start": "13:00", "end": "15:00" },
-        { "group": 1, "subdivision": "B", "from": "2415039", "to": "2415076", "start": "09:00", "end": "11:00" },
-        { "group": 3, "subdivision": "B", "from": "2415185", "to": null, "start": "11:00", "end": "13:00" },
-        { "group": 2, "subdivision": "B", "from": "2415114", "to": "2415148", "start": "13:00", "end": "15:00" }
-      ],
-      "location": { "building": null, "floor": null, "room": "Pharmaceutical Chemistry Lab (Old Building 2nd floor) / Organic Chemistry Lab (New Building 4th floor)" },
-      "displayCode": "Drug Design (Wet Lab)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "STRUCTURE_CONFIRMED_BY_REUPLOAD", "detail": "Re-uploaded wet lab PDF (2026-11) confirms: sections on Wednesday; 2-week cycle Week1=Group A / Week2=Group B; section→group→time→seat map section1→Group1 09:00-11:00 (2415001-2415038 A / 2415039-2415076 B), section3→Group3 11:00-13:00 (2415149-2415184 A / 2415185-End B), section2→Group2 13:00-15:00 (2415077-2415112 A / 2415114-2415148 B). This matches the sessions encoded below exactly." },
-        { "code": "DATE_UNCONFIRMED", "detail": "The PDF gives only relative Week 1 / Week 2 labels, no calendar anchor for the wet-lab block. Intentionally NOT materialized (day/date null) until the block's first calendar Wednesday is confirmed." },
-        { "code": "WETLAB_BLOCK_START_UNCONFIRMED", "detail": "Naively anchoring Week 1 to the committed ChemSketch Wednesday 2026-09-30 would place wet-lab Group A 09:00-11:00 on the same course/day/group as the committed ChemSketch 30/9 Group A batches (09:00-10:00, 10:00-11:00) → same-course overlap. Whether wet lab shares ChemSketch Wednesdays or follows in a later block is not in any source, so the placeholder stays unanchored rather than risking false busy." },
-        { "code": "LOCATION_MULTI_UNCONFIRMED", "detail": "Source states both Pharmaceutical Chemistry Lab, Old Building 2nd floor, and Organic Chemistry Lab, New Building 4th floor. Exact room allocation per section is not confirmed." }
-      ]
-    },
-    {
-      "id": "pharmd-y3-basic-pharma-22nov-both-halves-notice",
-      "courseId": "02-06-02305",
-      "type": "practical",
-      "title": {
-        "en": "Basic Pharmacology — 22/11 section: both A & B halves attend (split rooms)",
-        "ar": "الكيمياء الحيوية الأساسية - مقرر ٢٢/١١: الفرقتان أ و ب تحضران (قاعتان منفصلتان)"
-      },
-      "day": "Sunday",
-      "date": "2026-11-22",
-      "endDate": null,
-      "allDay": true,
-      "sessions": [
-        { "group": 1, "subdivision": null, "start": null, "end": null },
-        { "group": 2, "subdivision": null, "start": null, "end": null },
-        { "group": 3, "subdivision": null, "start": null, "end": null }
-      ],
-      "location": null,
-      "shorthand": null,
-      "displayCode": "Basic Pharmacology — Sun 22/11 attendance notice: both A & B halves attend; A → Wet Lab 7F New, B → Lecture Hall 6F New. (No clock time in the notice; the standing weekly already marks all Y3 groups busy 09:00–14:50 on 22/11, so this is recorded all-day to add the room split without inventing a time or colliding with the Drug Information w10 tutorial.)",
-      "validFrom": null,
-      "validUntil": null,
-      "sourceReview": [
-        { "code": "DATE_CORRECTED_FROM_ANNOUNCEMENT", "detail": "Instructor notice printed 'Tomorrow's section (22/10/2026)'; per department correction the Basic Pharmacology section is 22/11/2026 (Sunday). Encoded on 2026-11-22." },
-        { "code": "ATTENDANCE_OVERRIDE_BOTH_HALVES", "detail": "Normal A/B weekly alternation suspended this date: BOTH halves attend, at split rooms (A: Wet Lab 7F New; B: Lecture Hall 6F New)." },
-        { "code": "TIME_UNCONFIRMED_KEPT_ALL_DAY", "detail": "The notice states no clock time. The standing weekly (pharmd-s5-basic-pharmacology-practical, every-week-all-groups) already marks every Y3 group busy across 09:00–14:50 on 22/11, so a timed override would add no busy correctness and would BORROW the weekly bands — placing the B-half at the same time as the Drug Information w10 Group-B tutorial (e.g. Group 1-B 11:00–12:50 in both) and manufacturing a phantom cross-course clash. Therefore encoded allDay=true: compare.js busy math ignores all-day events (timedEventsOnDate filters !allDay), so no false busy/free, no polluted common-free-windows, no DI collision, while the room split and both-halves attendance remain visible in the all-day strip." },
-        { "code": "SESSION_GROUP_REQUIRED_BY_VALIDATOR", "detail": "CI fix: the validator asserts every session carries a group. The first draft used a single session with group:null (the all-day banner needs no per-group timing), which failed with 'session missing group'. The notice genuinely applies to every Y3 practical group's both halves, so it now carries three group-tagged sessions (1, 2, 3) with subdivision omitted (⇒ both A and B) and start/end null under allDay=true. The engine builds the all-day occurrence from the event date and uses the session rows only for group/subdivision filtering, so the null times are never read as intervals — same convention as the timed both-halves DI w11 event, minus the times, plus allDay." },
-        { "code": "BP_WEEKLY_NO_SUBDIVISION", "detail": "The standing weekly encodes Basic Pharmacology with no A/B subdivisions, yet this notice speaks of A and B halves at two rooms. The A/B structure (and which numbered groups' halves are A vs B) is not resolvable from any supplied source; the notice's room split is recorded here as metadata, not as a resolved per-subdivision timed schedule." },
-        { "code": "SEMANTICS_A_B_AS_COURSE_HALVES", "detail": "No seat ranges or practical-group numbers are printed (unlike the ChemSketch/Organic batch sheets), so 'group A and B' is read as the course-wide A/B halves applying to every Y3 practical group; the event is unfiltered within the semester-5 (Y3) dataset, so its blast radius is Y3 only." },
-        { "code": "COURSE_CODE_FROM_GROUP_TITLE", "detail": "Course id 02-06-02305 parsed from the WhatsApp group title 'Basic Pharmacology-02-06-02305-F_26'; the -F_26 suffix is treated as a section/branch tag, not part of the code. Verified present in courses.json (no course append needed)." }
+      "id": "clinical-pharmacy",
+      "name": { "en": "PharmD (Clinical Pharmacy Program)", "ar": "برنامج الصيدلة الإكلينيكية" },
+      "academicYears": [
+        {
+          "id": "2026-2027",
+          "name": { "en": "2026/2027", "ar": "٢٠٢٦/٢٠٢٧" },
+          "semesters": [
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-1",
+              "name": { "en": "Semester 1 (Year 1)", "ar": "الفصل الدراسي الأول (الفرقة الأولى)" },
+              "yearLevel": 1, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-1/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-1/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-1/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-1/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for both groups; no alternating A/B weeks in this semester." }
+              ]
+            },
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-3",
+              "name": { "en": "Semester 3 (Year 2)", "ar": "الفصل الدراسي الثالث (الفرقة الثانية)" },
+              "yearLevel": 2, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-3/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-3/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-3/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-3/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED", "detail": "No Clinical Pharmacy Semester 3 exam timetable was supplied; exams.json is empty until published. The college-wide mid-term blackout still applies." }
+              ]
+            },
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-5",
+              "name": { "en": "Semester 5 (Year 3)", "ar": "الفصل الدراسي الخامس (الفرقة الثالثة)" },
+              "yearLevel": 3, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-5/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-5/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-5/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-5/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the college-wide Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Department instruction: every lecture and practical section in this semester runs every week for both groups; there are no alternating A/B weeks. The only deviations are the two Phytochemistry-I examination Thursdays (2026-11-19 Group A, 2026-11-26 Group B), represented by dated examination events; the weekly practical's validity windows simply skip those two dates, so no cancel exceptions exist." },
+                { "code": "MICROBIOLOGY_PRACTICAL_GROUPS_SWAPPED", "detail": "The printed practical sheet lists Wednesday Pharmaceutical Microbiology as 3:00-4:50 Group 2 / 5:00-6:50 Group 1. The department switched the two groups without reprinting the schedule, so the dataset stores the corrected order (Group 1 3:00-4:50, Group 2 5:00-6:50)." },
+                { "code": "PHYTOCHEMISTRY_WINDOWED_AROUND_EXAMS", "detail": "Phytochemistry-I is a weekly Thursday practical for both groups, expressed as two validity windows that exclude the two examination Thursdays (ends 2026-11-18, resumes 2026-11-27). The mid-term blackout separately suppresses 2026-10-29 and 2026-11-05. No cancel exceptions are used, so nothing is left as a cancelled remnant." },
+                { "code": "EXAM_TIMETABLE_PARTIAL", "detail": "Only the two Phytochemistry-I examinations were supplied for this semester. Other mid-term/final examinations are pending publication; the college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            },
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-7",
+              "name": { "en": "Semester 7 (Year 4)", "ar": "الفصل الدراسي السابع (الفرقة الرابعة)" },
+              "yearLevel": 4, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-7/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-7/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-7/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-7/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for both groups; no alternating A/B weeks in this semester." },
+                { "code": "QC_PRACTICAL_MOVED_WEDNESDAY_TO_SATURDAY", "detail": "Quality Control of Pharmaceuticals is printed on Wednesday (6th floor) from start of study until 2026-11-19 and on Saturday (8th floor) from 2026-11-21 until end of study. Encoded as two adjacent validity windows, not a cancel exception, so no cancelled remnant remains." },
+                { "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED", "detail": "No Clinical Pharmacy Semester 7 exam timetable was supplied; the college-wide mid-term table covers the general PharmD ladder only and does not apply here. The college-wide mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            },
+            {
+              "id": "clinical-pharmacy-2026-2027-semester-9",
+              "name": { "en": "Semester 9 (Year 5)", "ar": "الفصل الدراسي التاسع (الفرقة الخامسة)" },
+              "yearLevel": 5, "validFrom": "2026-09-19", "validUntil": "2026-12-17", "status": "published",
+              "datasets": { "courses": "data/schedules/clinical-pharmacy/2026-2027/semester-9/courses.json", "lectures": "data/schedules/clinical-pharmacy/2026-2027/semester-9/lectures.json", "practicals": "data/schedules/clinical-pharmacy/2026-2027/semester-9/practicals.json", "exams": "data/schedules/clinical-pharmacy/2026-2027/semester-9/exams.json", "exceptions": "data/schedules/clinical-pharmacy/2026-2027/semester-9/exceptions.json" },
+              "blackouts": [ { "id": "fall-2026-midterm-week", "label": { "en": "Mid-term Exams Week", "ar": "أسبوع امتحانات منتصف الفصل" }, "from": "2026-10-31", "to": "2026-11-05", "blocksAcademicEvents": true, "blockTypes": ["lecture", "practical"], "excludedFromRotation": true } ],
+              "sourceReview": [
+                { "code": "SEMESTER_WINDOW_FROM_PROVISIONAL_CALENDAR", "detail": "Semester window taken from the Fall 2026/2027 academic calendar (approximate dates)." },
+                { "code": "ALL_SECTIONS_WEEKLY_NO_ROTATION", "detail": "Every lecture and practical section runs weekly for all four groups; no alternating A/B weeks in this semester. Practical sessions printed for group pairs (1,2) and (3,4) are expanded to per-group rows so single-group composition works." },
+                { "code": "INNOVATION_ENTREPRENEURSHIP_ONLINE", "detail": "Innovation and Entrepreneurship (00-NP 905) is a live online Saturday session with no physical room; location is null, shorthand is omitted (no building code exists), and displayCode carries the (Online) title." },
+                { "code": "EXAM_TIMETABLE_NOT_YET_PUBLISHED", "detail": "No Clinical Pharmacy Semester 9 exam timetable was supplied; the college-wide mid-term table covers the general PharmD ladder only. The mid-term blackout still suppresses lectures and practicals 2026-10-31 to 2026-11-05." }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]
