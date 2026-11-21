@@ -6,36 +6,17 @@
       "type": "practical",
       "day": "Saturday",
       "sessions": [
-        {
-          "group": 3,
-          "start": "13:00",
-          "end": "14:50"
-        },
-        {
-          "group": 2,
-          "start": "15:00",
-          "end": "16:50"
-        },
-        {
-          "group": 1,
-          "start": "17:00",
-          "end": "18:50"
-        }
+        { "group": 3, "start": "13:00", "end": "14:50" },
+        { "group": 2, "start": "15:00", "end": "16:50" },
+        { "group": 1, "start": "17:00", "end": "18:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 6,
-        "room": null
-      },
+      "location": { "building": "new", "floor": 6, "room": null },
       "shorthand": "PN 6 Scientific Writing and Communication skills",
       "displayCode": "PN 6 Scientific Writing and Communication skills",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EVERY_WEEK_ALL_GROUPS",
-          "detail": "Department input: PN 6 Scientific Writing and Communication skills is every week for every group."
-        }
+        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 6 Scientific Writing and Communication skills is every week for every group." }
       ]
     },
     {
@@ -44,474 +25,226 @@
       "type": "practical",
       "day": "Sunday",
       "sessions": [
-        {
-          "group": 1,
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 3,
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 2,
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 1, "start": "09:00", "end": "10:50" },
+        { "group": 3, "start": "11:00", "end": "12:50" },
+        { "group": 2, "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 7,
-        "room": null
-      },
+      "location": { "building": "new", "floor": 7, "room": null },
       "shorthand": "PN 7 Basic Pharmacology",
       "displayCode": "PN 7 Basic Pharmacology",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EVERY_WEEK_ALL_GROUPS",
-          "detail": "Department input: PN 7 Basic Pharmacology is every week for every group."
-        }
+        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 7 Basic Pharmacology is every week for every group." },
+        { "code": "BP_ALTERNATION_UNCONFIRMED", "detail": "The 2026-11-22 attendance notice ('both group A and B will attend', split rooms A→Wet Lab 7F New / B→Lecture Hall 6F New) implies Basic Pharmacology has A/B halves that normally alternate, but this standing weekly encodes no subdivisions and is marked every-week-all-groups. The finer A/B alternation and its calendar weeks are not in any supplied source, so the weekly stands as the coarse published truth for non-22/11 Sundays. See the dated all-day notice pharmd-y3-basic-pharma-22nov-both-halves-notice." },
+        { "code": "DI_VS_BP_WEEKLY_BAND_OVERLAP", "detail": "On every Drug Information tutorial Sunday the tutorial band for a numbered group coincides with that group's standing BP weekly band (e.g. Group 1 is 11:00-12:50 in both the DI tutorial and this weekly on 27/9, 22/11, etc.), producing a cross-course overlap the engine reports. If the tutorial is meant to REPLACE the BP weekly that week, a cancel exception or a validity window on this weekly is required — confirm with the department. Not silently patched here." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w02-a-2026-09-27",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (A) - Intro & Request Form"
-      },
-      "description": {
-        "en": "Introduction to drug info, drug info center, and services. Drug information request form overview. Group A."
-      },
+      "title": { "en": "Drug Information Tutorial (A) - Intro & Request Form" },
+      "description": { "en": "Introduction to drug info, drug info center, and services. Drug information request form overview. Group A." },
       "week": 2,
       "day": "Sunday",
       "date": "2026-09-27",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "A",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "A",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (A)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w03-b-2026-10-04",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (B) - Intro & Request Form"
-      },
-      "description": {
-        "en": "Introduction to drug info, drug info center, and services. Drug information request form overview. Group B."
-      },
+      "title": { "en": "Drug Information Tutorial (B) - Intro & Request Form" },
+      "description": { "en": "Introduction to drug info, drug info center, and services. Drug information request form overview. Group B." },
       "week": 3,
       "day": "Sunday",
       "date": "2026-10-04",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "B",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "B",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (B)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w04-a-2026-10-11",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (A) - Structure Approach"
-      },
-      "description": {
-        "en": "Structure approach in answering drug information questions. Categorization of different resources based on question type. Group A."
-      },
+      "title": { "en": "Drug Information Tutorial (A) - Structure Approach" },
+      "description": { "en": "Structure approach in answering drug information questions. Categorization of different resources based on question type. Group A." },
       "week": 4,
       "day": "Sunday",
       "date": "2026-10-11",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "A",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "A",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (A)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w05-b-2026-10-18",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (B) - Structure Approach"
-      },
-      "description": {
-        "en": "Structure approach in answering drug information questions. Categorization of different resources based on question type. Group B."
-      },
+      "title": { "en": "Drug Information Tutorial (B) - Structure Approach" },
+      "description": { "en": "Structure approach in answering drug information questions. Categorization of different resources based on question type. Group B." },
       "week": 5,
       "day": "Sunday",
       "date": "2026-10-18",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "B",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "B",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (B)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w06-a-2026-10-25",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (A) - Tertiary Search & Cases"
-      },
-      "description": {
-        "en": "Drug information resources: how to search in tertiary literature with a focus on websites: Medscape, drugs.com, pdr.net. Practicing Drug Information - real cases question and answer. Group A."
-      },
+      "title": { "en": "Drug Information Tutorial (A) - Tertiary Search & Cases" },
+      "description": { "en": "Drug information resources: how to search in tertiary literature with a focus on websites: Medscape, drugs.com, pdr.net. Practicing Drug Information - real cases question and answer. Group A." },
       "week": 6,
       "day": "Sunday",
       "date": "2026-10-25",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "A",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "A",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (A)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w08-b-2026-11-08",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (B) - Tertiary Search, EKB & Cases"
-      },
-      "description": {
-        "en": "Drug information resources: how to search in tertiary literature with a focus on websites: Medscape, drugs.com, pdr.net and EKB (Gold Standard). Practicing Drug Information - real cases question and answer. Group B."
-      },
+      "title": { "en": "Drug Information Tutorial (B) - Tertiary Search, EKB & Cases" },
+      "description": { "en": "Drug information resources: how to search in tertiary literature with a focus on websites: Medscape, drugs.com, pdr.net and EKB (Gold Standard). Practicing Drug Information - real cases question and answer. Group B." },
       "week": 8,
       "day": "Sunday",
       "date": "2026-11-08",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "B",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "B",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (B)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule. Week 7 is mid-term exam week and is skipped."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule. Week 7 is mid-term exam week and is skipped." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w09-a-2026-11-15",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (A) - Lexicomp & PubMed"
-      },
-      "description": {
-        "en": "Drug information resources: how to search in tertiary literature: Lexicomp. How to search in secondary and primary literature with a focus on Mesh and PubMed. Group A."
-      },
+      "title": { "en": "Drug Information Tutorial (A) - Lexicomp & PubMed" },
+      "description": { "en": "Drug information resources: how to search in tertiary literature: Lexicomp. How to search in secondary and primary literature with a focus on Mesh and PubMed. Group A." },
       "week": 9,
       "day": "Sunday",
       "date": "2026-11-15",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "A",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "A",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "A", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "A", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "A", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (A)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group A assignment taken from the provisional Drug Information tutorials schedule." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w10-b-2026-11-22",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (B) - Lexicomp & PubMed"
-      },
-      "description": {
-        "en": "Drug information resources: how to search in tertiary literature: Lexicomp. How to search in secondary and primary literature with a focus on Mesh and PubMed. Group B."
-      },
+      "title": { "en": "Drug Information Tutorial (B) - Lexicomp & PubMed" },
+      "description": { "en": "Drug information resources: how to search in tertiary literature: Lexicomp. How to search in secondary and primary literature with a focus on Mesh and PubMed. Group B." },
       "week": 10,
       "day": "Sunday",
       "date": "2026-11-22",
       "sessions": [
-        {
-          "group": 2,
-          "subdivision": "B",
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "subdivision": "B",
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "subdivision": "B", "start": "09:00", "end": "10:50" },
+        { "group": 1, "subdivision": "B", "start": "11:00", "end": "12:50" },
+        { "group": 3, "subdivision": "B", "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (B)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Date and Group B assignment taken from the provisional Drug Information tutorials schedule." }
       ]
     },
     {
       "id": "pharmd-s5-drug-information-tutorial-w11-ab-2026-11-29",
       "courseId": "02-06-09305",
       "type": "practical",
-      "title": {
-        "en": "Drug Information Tutorial (A & B) - Request Form Training + PubMed"
-      },
-      "description": {
-        "en": "Drug information request form training on cases plus PubMed revision. Group A and Group B."
-      },
+      "title": { "en": "Drug Information Tutorial (A & B) - Request Form Training + PubMed" },
+      "description": { "en": "Drug information request form training on cases plus PubMed revision. Group A and Group B." },
       "week": 11,
       "day": "Sunday",
       "date": "2026-11-29",
       "sessions": [
-        {
-          "group": 2,
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "start": "09:00", "end": "10:50" },
+        { "group": 1, "start": "11:00", "end": "12:50" },
+        { "group": 3, "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 0,
-        "room": "Computer Hall"
-      },
+      "location": { "building": "new", "floor": 0, "room": "Computer Hall" },
       "shorthand": "PN 0 Drug Information",
       "displayCode": "PN 0 Drug Information (A & B)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF",
-          "detail": "Week 11 is listed for both Group A and Group B in the provisional Drug Information tutorials schedule."
-        }
+        { "code": "EXPLICIT_DATE_FROM_DEPARTMENT_PDF", "detail": "Week 11 is listed for both Group A and Group B in the provisional Drug Information tutorials schedule." }
       ]
     },
     {
@@ -520,36 +253,17 @@
       "type": "practical",
       "day": "Tuesday",
       "sessions": [
-        {
-          "group": 3,
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 2,
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 3, "start": "09:00", "end": "10:50" },
+        { "group": 1, "start": "11:00", "end": "12:50" },
+        { "group": 2, "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 3,
-        "room": null
-      },
+      "location": { "building": "new", "floor": 3, "room": null },
       "shorthand": "PN 3 Pharmaceutics III",
       "displayCode": "PN 3 Pharmaceutics III",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EVERY_WEEK_ALL_GROUPS",
-          "detail": "Department input: PN 3 Pharmaceutics III is every week for every group."
-        }
+        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 3 Pharmaceutics III is every week for every group." }
       ]
     },
     {
@@ -558,36 +272,17 @@
       "type": "practical",
       "day": "Wednesday",
       "sessions": [
-        {
-          "group": 2,
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 1,
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 3,
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 2, "start": "09:00", "end": "10:50" },
+        { "group": 1, "start": "11:00", "end": "12:50" },
+        { "group": 3, "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 8,
-        "room": null
-      },
+      "location": { "building": "new", "floor": 8, "room": null },
       "shorthand": "PN 8 Pharmaceutical Microbiology",
       "displayCode": "PN 8 Pharmaceutical Microbiology",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "EVERY_WEEK_ALL_GROUPS",
-          "detail": "Department input: PN 8 Pharmaceutical Microbiology is every week for every group."
-        }
+        { "code": "EVERY_WEEK_ALL_GROUPS", "detail": "Department input: PN 8 Pharmaceutical Microbiology is every week for every group." }
       ]
     },
     {
@@ -595,199 +290,61 @@
       "courseId": "02-06-06304",
       "type": "practical",
       "day": "Wednesday",
-      "rotation": {
-        "type": "alternating-subdivisions",
-        "sequence": [
-          "A",
-          "B"
-        ],
-        "startWeek": 1,
-        "excludeBlackouts": true
-      },
+      "rotation": { "type": "alternating-subdivisions", "sequence": ["A", "B"], "startWeek": 1, "excludeBlackouts": true },
       "sessions": [
-        {
-          "group": 3,
-          "start": "09:00",
-          "end": "10:50"
-        },
-        {
-          "group": 2,
-          "start": "11:00",
-          "end": "12:50"
-        },
-        {
-          "group": 1,
-          "start": "13:00",
-          "end": "14:50"
-        }
+        { "group": 3, "start": "09:00", "end": "10:50" },
+        { "group": 2, "start": "11:00", "end": "12:50" },
+        { "group": 1, "start": "13:00", "end": "14:50" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 5,
-        "room": null
-      },
+      "location": { "building": "new", "floor": 5, "room": null },
       "shorthand": "PN 5 Phytochemistry I",
       "displayCode": "PN 5 Phytochemistry I",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "ALTERNATING_A_B_PATTERN",
-          "detail": "Department input: PN 5 Phytochemistry I alternates weeks. First teaching week = A, second = B. Mid-term week is skipped and does not count in the pattern."
-        }
+        { "code": "ALTERNATING_A_B_PATTERN", "detail": "Department input: PN 5 Phytochemistry I alternates weeks. First teaching week = A, second = B. Mid-term week is skipped and does not count in the pattern." }
       ]
     },
     {
       "id": "pharmd-s5-drug-design-chemsketch-2026-09-30",
       "courseId": "02-06-05305",
       "type": "practical",
-      "title": {
-        "en": "Drug Design (ChemSketch)"
-      },
+      "title": { "en": "Drug Design (ChemSketch)" },
       "day": "Wednesday",
       "date": "2026-09-30",
       "sessions": [
-        {
-          "group": 1,
-          "subdivision": "A",
-          "batch": "1A-1",
-          "from": "2415001",
-          "to": "2415010",
-          "start": "09:00",
-          "end": "10:00"
-        },
-        {
-          "group": 1,
-          "subdivision": "A",
-          "batch": "1A-2",
-          "from": "2415011",
-          "to": "2415020",
-          "start": "10:00",
-          "end": "11:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "batch": "3A-1",
-          "from": "2415149",
-          "to": "2415158",
-          "start": "11:00",
-          "end": "12:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "batch": "3A-2",
-          "from": "2415159",
-          "to": "2415166",
-          "start": "12:00",
-          "end": "13:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "A",
-          "batch": "2A-1",
-          "from": "2415077",
-          "to": "2415086",
-          "start": "13:00",
-          "end": "14:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "A",
-          "batch": "2A-2",
-          "from": "2415087",
-          "to": "2415095",
-          "start": "14:00",
-          "end": "15:00"
-        }
+        { "group": 1, "subdivision": "A", "batch": "1A-1", "from": "2415001", "to": "2415010", "start": "09:00", "end": "10:00" },
+        { "group": 1, "subdivision": "A", "batch": "1A-2", "from": "2415011", "to": "2415020", "start": "10:00", "end": "11:00" },
+        { "group": 3, "subdivision": "A", "batch": "3A-1", "from": "2415149", "to": "2415158", "start": "11:00", "end": "12:00" },
+        { "group": 3, "subdivision": "A", "batch": "3A-2", "from": "2415159", "to": "2415166", "start": "12:00", "end": "13:00" },
+        { "group": 2, "subdivision": "A", "batch": "2A-1", "from": "2415077", "to": "2415086", "start": "13:00", "end": "14:00" },
+        { "group": 2, "subdivision": "A", "batch": "2A-2", "from": "2415087", "to": "2415095", "start": "14:00", "end": "15:00" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 4,
-        "room": "Simulation Labs"
-      },
+      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
       "shorthand": "PN 4 Drug Design (ChemSketch)",
       "displayCode": "PN 4 Drug Design (ChemSketch)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "SOURCE_TYPO_CORRECTED",
-          "detail": "Source image showed 2215095 for batch 2A-2. Corrected to 2415095 as an obvious digit typo."
-        }
+        { "code": "SOURCE_TYPO_CORRECTED", "detail": "Source image showed 2215095 for batch 2A-2. Corrected to 2415095 as an obvious digit typo." }
       ]
     },
     {
       "id": "pharmd-s5-drug-design-chemsketch-2026-10-07",
       "courseId": "02-06-05305",
       "type": "practical",
-      "title": {
-        "en": "Drug Design (ChemSketch)"
-      },
+      "title": { "en": "Drug Design (ChemSketch)" },
       "day": "Wednesday",
       "date": "2026-10-07",
       "sessions": [
-        {
-          "group": 1,
-          "subdivision": "B",
-          "batch": "1B-1",
-          "from": "2415039",
-          "to": "2415049",
-          "start": "09:00",
-          "end": "10:00"
-        },
-        {
-          "group": 1,
-          "subdivision": "B",
-          "batch": "1B-2",
-          "from": "2415050",
-          "to": "2415059",
-          "start": "10:00",
-          "end": "11:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "batch": "3B-1",
-          "from": "2415185",
-          "to": "2415197",
-          "start": "11:00",
-          "end": "12:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "batch": "3B-2",
-          "from": "2415198",
-          "to": "2415208",
-          "start": "12:00",
-          "end": "13:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "B",
-          "batch": "2B-1",
-          "from": "2415114",
-          "to": "2415122",
-          "start": "13:00",
-          "end": "14:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "B",
-          "batch": "2B-2",
-          "from": "2415123",
-          "to": "2415131",
-          "start": "14:00",
-          "end": "15:00"
-        }
+        { "group": 1, "subdivision": "B", "batch": "1B-1", "from": "2415039", "to": "2415049", "start": "09:00", "end": "10:00" },
+        { "group": 1, "subdivision": "B", "batch": "1B-2", "from": "2415050", "to": "2415059", "start": "10:00", "end": "11:00" },
+        { "group": 3, "subdivision": "B", "batch": "3B-1", "from": "2415185", "to": "2415197", "start": "11:00", "end": "12:00" },
+        { "group": 3, "subdivision": "B", "batch": "3B-2", "from": "2415198", "to": "2415208", "start": "12:00", "end": "13:00" },
+        { "group": 2, "subdivision": "B", "batch": "2B-1", "from": "2415114", "to": "2415122", "start": "13:00", "end": "14:00" },
+        { "group": 2, "subdivision": "B", "batch": "2B-2", "from": "2415123", "to": "2415131", "start": "14:00", "end": "15:00" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 4,
-        "room": "Simulation Labs"
-      },
+      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
       "shorthand": "PN 4 Drug Design (ChemSketch)",
       "displayCode": "PN 4 Drug Design (ChemSketch)",
       "validFrom": null,
@@ -797,72 +354,18 @@
       "id": "pharmd-s5-drug-design-chemsketch-2026-10-14",
       "courseId": "02-06-05305",
       "type": "practical",
-      "title": {
-        "en": "Drug Design (ChemSketch)"
-      },
+      "title": { "en": "Drug Design (ChemSketch)" },
       "day": "Wednesday",
       "date": "2026-10-14",
       "sessions": [
-        {
-          "group": 1,
-          "subdivision": "A",
-          "batch": "1A-3",
-          "from": "2415021",
-          "to": "2415029",
-          "start": "09:00",
-          "end": "10:00"
-        },
-        {
-          "group": 1,
-          "subdivision": "A",
-          "batch": "1A-4",
-          "from": "2415030",
-          "to": "2415038",
-          "start": "10:00",
-          "end": "11:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "batch": "3A-3",
-          "from": "2415167",
-          "to": "2415175",
-          "start": "11:00",
-          "end": "12:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "batch": "3A-4",
-          "from": "2415176",
-          "to": "2415184",
-          "start": "12:00",
-          "end": "13:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "A",
-          "batch": "2A-3",
-          "from": "2415096",
-          "to": "2415104",
-          "start": "13:00",
-          "end": "14:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "A",
-          "batch": "2A-4",
-          "from": "2415105",
-          "to": "2415112",
-          "start": "14:00",
-          "end": "15:00"
-        }
+        { "group": 1, "subdivision": "A", "batch": "1A-3", "from": "2415021", "to": "2415029", "start": "09:00", "end": "10:00" },
+        { "group": 1, "subdivision": "A", "batch": "1A-4", "from": "2415030", "to": "2415038", "start": "10:00", "end": "11:00" },
+        { "group": 3, "subdivision": "A", "batch": "3A-3", "from": "2415167", "to": "2415175", "start": "11:00", "end": "12:00" },
+        { "group": 3, "subdivision": "A", "batch": "3A-4", "from": "2415176", "to": "2415184", "start": "12:00", "end": "13:00" },
+        { "group": 2, "subdivision": "A", "batch": "2A-3", "from": "2415096", "to": "2415104", "start": "13:00", "end": "14:00" },
+        { "group": 2, "subdivision": "A", "batch": "2A-4", "from": "2415105", "to": "2415112", "start": "14:00", "end": "15:00" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 4,
-        "room": "Simulation Labs"
-      },
+      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
       "shorthand": "PN 4 Drug Design (ChemSketch)",
       "displayCode": "PN 4 Drug Design (ChemSketch)",
       "validFrom": null,
@@ -872,203 +375,80 @@
       "id": "pharmd-s5-drug-design-chemsketch-2026-10-21",
       "courseId": "02-06-05305",
       "type": "practical",
-      "title": {
-        "en": "Drug Design (ChemSketch)"
-      },
+      "title": { "en": "Drug Design (ChemSketch)" },
       "day": "Wednesday",
       "date": "2026-10-21",
       "sessions": [
-        {
-          "group": 1,
-          "subdivision": "B",
-          "batch": "1B-3",
-          "from": "2415060",
-          "to": "2415068",
-          "start": "09:00",
-          "end": "10:00"
-        },
-        {
-          "group": 1,
-          "subdivision": "B",
-          "batch": "1B-4",
-          "from": "2415069",
-          "to": "2415076",
-          "start": "10:00",
-          "end": "11:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "batch": "3B-3",
-          "from": "2415209",
-          "to": "2415221",
-          "start": "11:00",
-          "end": "12:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "batch": "3B-4",
-          "from": "2415222",
-          "to": "2415229",
-          "students": [
-            "2435001",
-            "2435002"
-          ],
-          "start": "12:00",
-          "end": "13:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "B",
-          "batch": "2B-3",
-          "from": "2415132",
-          "to": "2415140",
-          "start": "13:00",
-          "end": "14:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "B",
-          "batch": "2B-4",
-          "from": "2415141",
-          "to": "2415148",
-          "start": "14:00",
-          "end": "15:00"
-        }
+        { "group": 1, "subdivision": "B", "batch": "1B-3", "from": "2415060", "to": "2415068", "start": "09:00", "end": "10:00" },
+        { "group": 1, "subdivision": "B", "batch": "1B-4", "from": "2415069", "to": "2415076", "start": "10:00", "end": "11:00" },
+        { "group": 3, "subdivision": "B", "batch": "3B-3", "from": "2415209", "to": "2415221", "start": "11:00", "end": "12:00" },
+        { "group": 3, "subdivision": "B", "batch": "3B-4", "from": "2415222", "to": "2415229", "students": ["2435001", "2435002"], "start": "12:00", "end": "13:00" },
+        { "group": 2, "subdivision": "B", "batch": "2B-3", "from": "2415132", "to": "2415140", "start": "13:00", "end": "14:00" },
+        { "group": 2, "subdivision": "B", "batch": "2B-4", "from": "2415141", "to": "2415148", "start": "14:00", "end": "15:00" }
       ],
-      "location": {
-        "building": "new",
-        "floor": 4,
-        "room": "Simulation Labs"
-      },
+      "location": { "building": "new", "floor": 4, "room": "Simulation Labs" },
       "shorthand": "PN 4 Drug Design (ChemSketch)",
       "displayCode": "PN 4 Drug Design (ChemSketch)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "SOURCE_TYPO_CORRECTED",
-          "detail": "Source image showed 2215148 for batch 2B-4. Corrected to 2415148 as an obvious digit typo."
-        },
-        {
-          "code": "EXTERNAL_IDS_PRESENT",
-          "detail": "Batch 3B-4 includes IDs 2435001 and 2435002 in addition to 2415222-2415229. These IDs are outside the current PharmD assignment ranges and should be verified."
-        }
+        { "code": "SOURCE_TYPO_CORRECTED", "detail": "Source image showed 2215148 for batch 2B-4. Corrected to 2415148 as an obvious digit typo." },
+        { "code": "EXTERNAL_IDS_PRESENT", "detail": "Batch 3B-4 includes IDs 2435001 and 2435002 in addition to 2415222-2415229. These IDs are outside the current PharmD assignment ranges and should be verified." }
       ]
     },
     {
       "id": "pharmd-s5-drug-design-wet-lab",
       "courseId": "02-06-05305",
       "type": "practical",
-      "title": {
-        "en": "Drug Design (Wet Lab)"
-      },
+      "title": { "en": "Drug Design (Wet Lab)" },
       "day": null,
       "date": null,
-      "rotation": {
-        "type": "alternating-subdivisions",
-        "sequence": [
-          "A",
-          "B"
-        ],
-        "startWeek": 1,
-        "excludeBlackouts": true
-      },
+      "rotation": { "type": "alternating-subdivisions", "sequence": ["A", "B"], "startWeek": 1, "excludeBlackouts": true },
       "sessions": [
-        {
-          "group": 1,
-          "subdivision": "A",
-          "from": "2415001",
-          "to": "2415038",
-          "start": "09:00",
-          "end": "11:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "A",
-          "from": "2415149",
-          "to": "2415184",
-          "start": "11:00",
-          "end": "13:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "A",
-          "from": "2415077",
-          "to": "2415112",
-          "start": "13:00",
-          "end": "15:00"
-        },
-        {
-          "group": 1,
-          "subdivision": "B",
-          "from": "2415039",
-          "to": "2415076",
-          "start": "09:00",
-          "end": "11:00"
-        },
-        {
-          "group": 3,
-          "subdivision": "B",
-          "from": "2415185",
-          "to": null,
-          "start": "11:00",
-          "end": "13:00"
-        },
-        {
-          "group": 2,
-          "subdivision": "B",
-          "from": "2415114",
-          "to": "2415148",
-          "start": "13:00",
-          "end": "15:00"
-        }
+        { "group": 1, "subdivision": "A", "from": "2415001", "to": "2415038", "start": "09:00", "end": "11:00" },
+        { "group": 3, "subdivision": "A", "from": "2415149", "to": "2415184", "start": "11:00", "end": "13:00" },
+        { "group": 2, "subdivision": "A", "from": "2415077", "to": "2415112", "start": "13:00", "end": "15:00" },
+        { "group": 1, "subdivision": "B", "from": "2415039", "to": "2415076", "start": "09:00", "end": "11:00" },
+        { "group": 3, "subdivision": "B", "from": "2415185", "to": null, "start": "11:00", "end": "13:00" },
+        { "group": 2, "subdivision": "B", "from": "2415114", "to": "2415148", "start": "13:00", "end": "15:00" }
       ],
-      "location": {
-        "building": null,
-        "floor": null,
-        "room": "Pharmaceutical Chemistry Lab (Old Building 2nd floor) / Organic Chemistry Lab (New Building 4th floor)"
-      },
+      "location": { "building": null, "floor": null, "room": "Pharmaceutical Chemistry Lab (Old Building 2nd floor) / Organic Chemistry Lab (New Building 4th floor)" },
       "displayCode": "Drug Design (Wet Lab)",
       "validFrom": null,
       "validUntil": null,
       "sourceReview": [
-        {
-          "code": "DATE_UNCONFIRMED",
-          "detail": "The wet lab PDF defines Week 1 = Group A and Week 2 = Group B, but does not provide concrete calendar dates. This event is intentionally not materialized until official dates are confirmed."
-        },
-        {
-          "code": "LOCATION_MULTI_UNCONFIRMED",
-          "detail": "Source states both Pharmaceutical Chemistry Lab, Old Building 2nd floor, and Organic Chemistry Lab, New Building 4th floor. Exact room allocation per section is not confirmed."
-        }
+        { "code": "STRUCTURE_CONFIRMED_BY_REUPLOAD", "detail": "Re-uploaded wet lab PDF (2026-11) confirms: sections on Wednesday; 2-week cycle Week1=Group A / Week2=Group B; section→group→time→seat map section1→Group1 09:00-11:00 (2415001-2415038 A / 2415039-2415076 B), section3→Group3 11:00-13:00 (2415149-2415184 A / 2415185-End B), section2→Group2 13:00-15:00 (2415077-2415112 A / 2415114-2415148 B). This matches the sessions encoded below exactly." },
+        { "code": "DATE_UNCONFIRMED", "detail": "The PDF gives only relative Week 1 / Week 2 labels, no calendar anchor for the wet-lab block. Intentionally NOT materialized (day/date null) until the block's first calendar Wednesday is confirmed." },
+        { "code": "WETLAB_BLOCK_START_UNCONFIRMED", "detail": "Naively anchoring Week 1 to the committed ChemSketch Wednesday 2026-09-30 would place wet-lab Group A 09:00-11:00 on the same course/day/group as the committed ChemSketch 30/9 Group A batches (09:00-10:00, 10:00-11:00) → same-course overlap. Whether wet lab shares ChemSketch Wednesdays or follows in a later block is not in any source, so the placeholder stays unanchored rather than risking false busy." },
+        { "code": "LOCATION_MULTI_UNCONFIRMED", "detail": "Source states both Pharmaceutical Chemistry Lab, Old Building 2nd floor, and Organic Chemistry Lab, New Building 4th floor. Exact room allocation per section is not confirmed." }
       ]
     },
     {
-  "id": "pharmd-y3-basic-pharma-22nov-both-halves-notice",
-  "courseId": "02-06-02305",
-  "type": "practical",
-  "title": {
-    "en": "Basic Pharmacology — 22/11 section: both A & B halves attend (split rooms)",
-    "ar": "الكيمياء الحيوية الأساسية - مقرر ٢٢/١١: الفرقتان أ و ب تحضران (قاعتان منفصلتان)"
-  },
-  "day": "Sunday",
-  "date": "2026-11-22",
-  "endDate": null,
-  "allDay": true,
-  "sessions": [ { "group": null, "subdivision": null, "start": null, "end": null } ],
-  "location": null,
-  "shorthand": null,
-  "displayCode": "Basic Pharmacology — Sun 22/11: A-half → Wet Lab, 7th floor New Building · B-half → Lecture Hall, 6th floor New Building (clock time follows the standing weekly slot — unconfirmed)",
-  "validFrom": null,
-  "validUntil": null,
-  "sourceReview": [
-    { "code": "DATE_CORRECTED_FROM_ANNOUNCEMENT", "detail": "Instructor notice printed 'Tomorrow's section (22/10/2026)'; per department correction the Basic Pharmacology section is 22/11/2026 (Sunday). Encoded on 2026-11-22." },
-    { "code": "ATTENDANCE_OVERRIDE_BOTH_HALVES", "detail": "Normal A/B weekly alternation suspended this date: BOTH halves attend, at split rooms (A: Wet Lab 7F New; B: Lecture Hall 6F New)." },
-    { "code": "TIME_UNCONFIRMED", "detail": "The notice states no clock time. Encoded as allDay=true so it is visible and records rooms/attendance WITHOUT asserting a busy interval; compare.js busy math ignores all-day events (timedEventsOnDate filters !allDay), so no false busy/free and no polluted common-free-windows. Convert to precise per-cohort TIMED blocks once the standing weekly Basic Pharmacology Sunday slot is confirmed." },
-    { "code": "SEMANTICS_A_B_AS_COURSE_HALVES", "detail": "No seat ranges or practical-group numbers are printed (unlike the ChemSketch/Organic batch sheets), so 'group A and B' is read as the course-wide A/B halves applying to every Y3 practical group; the event is unfiltered within the semester-5 (Y3) dataset, so its blast radius is Y3 only. If the department means a single numbered practical group's subs, set sessions.group/subdivision accordingly." },
-    { "code": "COURSE_CODE_FROM_GROUP_TITLE", "detail": "Course id 02-06-02305 parsed from the WhatsApp group title 'Basic Pharmacology-02-06-02305-F_26'; the -F_26 suffix is treated as a section/branch tag, not part of the code. Verify against the printed course list." }
+      "id": "pharmd-y3-basic-pharma-22nov-both-halves-notice",
+      "courseId": "02-06-02305",
+      "type": "practical",
+      "title": {
+        "en": "Basic Pharmacology — 22/11 section: both A & B halves attend (split rooms)",
+        "ar": "الكيمياء الحيوية الأساسية - مقرر ٢٢/١١: الفرقتان أ و ب تحضران (قاعتان منفصلتان)"
+      },
+      "day": "Sunday",
+      "date": "2026-11-22",
+      "endDate": null,
+      "allDay": true,
+      "sessions": [ { "group": null, "subdivision": null, "start": null, "end": null } ],
+      "location": null,
+      "shorthand": null,
+      "displayCode": "Basic Pharmacology — Sun 22/11 attendance notice: both A & B halves attend; A → Wet Lab 7F New, B → Lecture Hall 6F New. (No clock time in the notice; the standing weekly already marks all Y3 groups busy 09:00–14:50 on 22/11, so this is recorded all-day to add the room split without inventing a time or colliding with the Drug Information w10 tutorial.)",
+      "validFrom": null,
+      "validUntil": null,
+      "sourceReview": [
+        { "code": "DATE_CORRECTED_FROM_ANNOUNCEMENT", "detail": "Instructor notice printed 'Tomorrow's section (22/10/2026)'; per department correction the Basic Pharmacology section is 22/11/2026 (Sunday). Encoded on 2026-11-22." },
+        { "code": "ATTENDANCE_OVERRIDE_BOTH_HALVES", "detail": "Normal A/B weekly alternation suspended this date: BOTH halves attend, at split rooms (A: Wet Lab 7F New; B: Lecture Hall 6F New)." },
+        { "code": "TIME_UNCONFIRMED_KEPT_ALL_DAY", "detail": "The notice states no clock time. The standing weekly (pharmd-s5-basic-pharmacology-practical, every-week-all-groups) already marks every Y3 group busy across 09:00–14:50 on 22/11, so a timed override would add no busy correctness and would BORROW the weekly bands — placing the B-half at the same time as the Drug Information w10 Group-B tutorial (e.g. Group 1-B 11:00–12:50 in both) and manufacturing a phantom cross-course clash. Therefore encoded allDay=true: compare.js busy math ignores all-day events (timedEventsOnDate filters !allDay), so no false busy/free, no polluted common-free-windows, no DI collision, while the room split and both-halves attendance remain visible in the all-day strip." },
+        { "code": "BP_WEEKLY_NO_SUBDIVISION", "detail": "The standing weekly encodes Basic Pharmacology with no A/B subdivisions, yet this notice speaks of A and B halves at two rooms. The A/B structure (and which numbered groups' halves are A vs B) is not resolvable from any supplied source; the notice's room split is recorded here as metadata, not as a resolved per-subdivision timed schedule." },
+        { "code": "SEMANTICS_A_B_AS_COURSE_HALVES", "detail": "No seat ranges or practical-group numbers are printed (unlike the ChemSketch/Organic batch sheets), so 'group A and B' is read as the course-wide A/B halves applying to every Y3 practical group; the event is unfiltered within the semester-5 (Y3) dataset, so its blast radius is Y3 only." },
+        { "code": "COURSE_CODE_FROM_GROUP_TITLE", "detail": "Course id 02-06-02305 parsed from the WhatsApp group title 'Basic Pharmacology-02-06-02305-F_26'; the -F_26 suffix is treated as a section/branch tag, not part of the code. Verified present in courses.json (no course append needed)." }
+      ]
+    }
   ]
-}
-]
 }
