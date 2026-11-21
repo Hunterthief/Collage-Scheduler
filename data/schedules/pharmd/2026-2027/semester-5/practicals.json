@@ -1043,6 +1043,32 @@
           "detail": "Source states both Pharmaceutical Chemistry Lab, Old Building 2nd floor, and Organic Chemistry Lab, New Building 4th floor. Exact room allocation per section is not confirmed."
         }
       ]
-    }
+    },
+    {
+  "id": "pharmd-y3-basic-pharma-22nov-both-halves-notice",
+  "courseId": "02-06-02305",
+  "type": "practical",
+  "title": {
+    "en": "Basic Pharmacology — 22/11 section: both A & B halves attend (split rooms)",
+    "ar": "الكيمياء الحيوية الأساسية - مقرر ٢٢/١١: الفرقتان أ و ب تحضران (قاعتان منفصلتان)"
+  },
+  "day": "Sunday",
+  "date": "2026-11-22",
+  "endDate": null,
+  "allDay": true,
+  "sessions": [ { "group": null, "subdivision": null, "start": null, "end": null } ],
+  "location": null,
+  "shorthand": null,
+  "displayCode": "Basic Pharmacology — Sun 22/11: A-half → Wet Lab, 7th floor New Building · B-half → Lecture Hall, 6th floor New Building (clock time follows the standing weekly slot — unconfirmed)",
+  "validFrom": null,
+  "validUntil": null,
+  "sourceReview": [
+    { "code": "DATE_CORRECTED_FROM_ANNOUNCEMENT", "detail": "Instructor notice printed 'Tomorrow's section (22/10/2026)'; per department correction the Basic Pharmacology section is 22/11/2026 (Sunday). Encoded on 2026-11-22." },
+    { "code": "ATTENDANCE_OVERRIDE_BOTH_HALVES", "detail": "Normal A/B weekly alternation suspended this date: BOTH halves attend, at split rooms (A: Wet Lab 7F New; B: Lecture Hall 6F New)." },
+    { "code": "TIME_UNCONFIRMED", "detail": "The notice states no clock time. Encoded as allDay=true so it is visible and records rooms/attendance WITHOUT asserting a busy interval; compare.js busy math ignores all-day events (timedEventsOnDate filters !allDay), so no false busy/free and no polluted common-free-windows. Convert to precise per-cohort TIMED blocks once the standing weekly Basic Pharmacology Sunday slot is confirmed." },
+    { "code": "SEMANTICS_A_B_AS_COURSE_HALVES", "detail": "No seat ranges or practical-group numbers are printed (unlike the ChemSketch/Organic batch sheets), so 'group A and B' is read as the course-wide A/B halves applying to every Y3 practical group; the event is unfiltered within the semester-5 (Y3) dataset, so its blast radius is Y3 only. If the department means a single numbered practical group's subs, set sessions.group/subdivision accordingly." },
+    { "code": "COURSE_CODE_FROM_GROUP_TITLE", "detail": "Course id 02-06-02305 parsed from the WhatsApp group title 'Basic Pharmacology-02-06-02305-F_26'; the -F_26 suffix is treated as a section/branch tag, not part of the code. Verify against the printed course list." }
   ]
+}
+]
 }
