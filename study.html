@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light" />
     <meta
       name="description"
-      content="Study plan built from your real timetable: a blank 12-slot lecture sheet per subject, capacity-aware week planner, priorities, spaced reviews, a focus timer, an Eisenhower prioritizer with energy tagging, a capture inbox, weekly review and study streak, and one-click export to Google Calendar or task apps."
+      content="Study plan built from your real timetable: a blank 12-slot lecture sheet per subject, capacity-aware week planner, Eisenhower prioritizer with energy tagging, GTD capture inbox, Leitner reviews, weekly review, study streak, focus timer, and one-click export to Google Calendar or task apps."
     />
     <title>Study Plan · College Scheduler</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="assets/css/study-extras.css" />
   </head>
   <body class="study-body">
-    <!-- Mobile section radios: 4 tabs, no JS needed -->
     <input class="mt-input" type="radio" name="mobile-tab" id="mt-plan" checked />
     <input class="mt-input" type="radio" name="mobile-tab" id="mt-lectures" />
     <input class="mt-input" type="radio" name="mobile-tab" id="mt-focus" />
@@ -45,7 +44,6 @@
         <a href="study.html" aria-current="page">Study plan</a>
       </nav>
 
-      <!-- PLAN tab: glanceable stats + cohort -->
       <section class="s-hero rise d1" data-mtab="plan" aria-label="Plan overview">
         <div class="s-hero-title">
           <h1>Study <em>Plan</em></h1>
@@ -75,12 +73,12 @@
         <p class="hint" id="c-note">Free hours below are computed from this cohort’s real classes, so the plan never books you into a lecture.</p>
       </section>
 
-      <!-- ===== TODAY HUB (capture · frog · streak · prioritize · review) ===== -->
-      <section class="x-hub rise d2" data-mtab="plan" aria-label="Today">
+      <!-- TODAY HUB: frog · capture · streak · prioritize · review · wrap -->
+      <section class="x-hub rise d2" data-mtab="plan" id="x-hub" aria-label="Today">
         <div class="x-hub-row">
           <div class="x-frog" id="x-frog" title="Eat the frog — the one thing to do first">
             <span class="x-frog-ico" aria-hidden="true">🐸</span>
-            <span class="x-frog-txt" id="x-frog-txt">Loading your day…</span>
+            <span class="x-frog-txt muted" id="x-frog-txt">Loading your day…</span>
             <button class="x-frog-act" type="button" id="x-frog-act" hidden>Do</button>
           </div>
           <div class="x-hub-stats num" id="x-hub-stats" aria-live="polite"></div>
@@ -104,14 +102,14 @@
         </form>
 
         <div class="x-hub-acts">
-          <button class="btn sm" type="button" data-xaction="open-prioritize">⚡ Prioritize</button>
-          <button class="btn sm" type="button" data-xaction="open-review">↻ Weekly review<span class="x-nudge" id="x-review-nudge" hidden></span></button>
-          <span class="x-streak" id="x-streak" title="Consecutive days with logged study">🔥 0</span>
+          <button class="btn sm" type="button" data-action="x-open-pri">⚡ Prioritize</button>
+          <button class="btn sm" type="button" data-action="x-open-rev">↻ Weekly review<span class="x-nudge" id="x-review-nudge" hidden></span></button>
+          <button class="btn sm ghost" type="button" data-action="x-wrap" title="Take today’s unfinished planned lectures back to the pool">🌙 Wrap day</button>
+          <span class="x-streak zero" id="x-streak" title="Consecutive days with logged study">🔥 0</span>
         </div>
       </section>
 
       <div class="s-work">
-        <!-- LECTURES tab -->
         <aside class="panel s-lib rise d3" data-mtab="lectures" aria-label="Lecture library">
           <div class="panel-h">
             <h2>Lectures</h2><span class="hint" id="lib-count"></span>
@@ -158,7 +156,6 @@
           </div>
         </aside>
 
-        <!-- PLAN tab: the grid -->
         <section class="panel s-canvas rise d4" data-mtab="plan" aria-label="Plan views">
           <div class="s-tabs" role="tablist" aria-label="Study views">
             <button class="s-tab" type="button" role="tab" data-action="tab" data-v="matrix" aria-selected="true">▦ Matrix</button>
@@ -167,7 +164,7 @@
           </div>
 
           <div id="view-matrix">
-            <div class="s-viewbar"><span class="hint">12 lecture slots per subject. Tap a box to add or edit one, or “＋12” to create all twelve empty slots.</span></div>
+            <div class="s-viewbar"><span class="hint">12 lecture slots per subject. Tap a box to add or edit one, or “＋12” to create all twelve empty slots. ● = focus demand (deep/medium/light), ⭐ = high-leverage, ⚠ = behind pace.</span></div>
             <div class="s-matrix-wrap"><table class="s-matrix" id="matrix-table"></table></div>
             <div class="s-matrix-note" id="matrix-note"></div>
           </div>
@@ -181,7 +178,7 @@
                 <button class="btn sm" type="button" data-action="week-today">This week</button>
               </div>
               <span class="grow"></span>
-              <button class="btn primary sm" type="button" data-action="autoplan" title="Fill free hours with your highest-priority lectures that have a time">⚡ Auto-plan</button>
+              <button class="btn primary sm" type="button" data-action="autoplan" title="Fill free hours with your highest-priority lectures — deep work first when energy-aware planning is on">⚡ Auto-plan</button>
               <button class="btn sm danger" type="button" data-action="clear-week">Clear week</button>
             </div>
             <div class="s-week-wrap"><div class="s-week" id="week-grid"></div></div>
@@ -190,17 +187,17 @@
               <span><i class="tight"></i>Tight (&gt;80%)</span>
               <span><i class="over"></i>Overbooked</span>
               <span><i class="cls"></i>Real class / exam block</span>
+              <span>▲ = inside your peak window</span>
             </div>
           </div>
 
           <div id="view-reviews" hidden>
-            <div class="s-viewbar"><span class="hint">Spaced repetition — finishing a lecture schedules recalls at <b>+1d · +3d · +7d</b>. Clear the queue to lock it in.</span></div>
+            <div class="s-viewbar"><span class="hint">Leitner boxes — finishing a lecture starts it at <b>B1 (+1d)</b>; each recall promotes the box (+3d · +7d · +14d · +30d). “Again” drops it back to B1.</span></div>
             <div class="s-rev-wrap" id="rev-wrap"></div>
           </div>
         </section>
 
         <div class="s-rail rise d5">
-          <!-- FOCUS tab -->
           <section class="panel s-focus" data-mtab="focus" aria-label="Focus timer">
             <div class="panel-h"><h2>Focus</h2><span class="hint">Pomodoro</span></div>
             <div class="s-timer-zone">
@@ -234,7 +231,6 @@
             <div class="s-focus-log" id="focus-log">Finish a focus block and its minutes land on the lecture’s actual bar.</div>
           </section>
 
-          <!-- MORE tab -->
           <section class="panel s-export" data-mtab="more" aria-label="Share and export">
             <div class="panel-h"><h2>Share &amp; export</h2></div>
             <div class="panel-b s-export-b">
@@ -265,11 +261,15 @@
                 <select id="t-win-start"></select></div>
               <div class="tune-row"><label for="t-win-end">Study window closes</label><output></output>
                 <select id="t-win-end"></select></div>
+              <div class="tune-row"><label for="t-mix">Week ordering</label><output id="o-mix">Interleave</output>
+                <button class="btn sm" type="button" id="t-mix" data-action="x-toggle-mix">Switch</button></div>
+              <div class="tune-row"><label for="t-energy">Energy-aware auto-plan</label>
+                <span class="switch"><input type="checkbox" id="t-energy"/><i></i></span></div>
               <div class="tune-row"><label for="t-sound">Sound effects</label>
                 <span class="switch"><input type="checkbox" id="t-sound"/><i></i></span></div>
               <div class="tune-row"><label for="t-auto">Auto-start next phase</label>
                 <span class="switch"><input type="checkbox" id="t-auto"/><i></i></span></div>
-              <div class="tune-foot"><span class="hint">Window drives day capacity</span>
+              <div class="tune-foot"><span class="hint">Window drives day capacity &amp; peak</span>
                 <button class="btn sm ghost" type="button" data-action="tune-reset">Reset tuning</button></div>
             </div>
           </section>
@@ -281,7 +281,7 @@
         </div>
       </div>
 
-      <p class="s-foot rise d5" data-mtab="more">Subjects, colors, classes and exam dates are fetched live from the repository JSON · your sheet is stored only in this browser.</p>
+      <p class="s-foot rise d5" data-mtab="more">Subjects, colors, classes and exam dates are fetched live from the repository JSON · your sheet, inbox and review history are stored only in this browser.</p>
     </main>
 
     <nav class="m-tabs" aria-label="Study sections">
@@ -296,41 +296,20 @@
     <div class="s-picker-scrim" id="picker-scrim" hidden></div>
     <div class="s-picker" id="day-picker" role="dialog" aria-modal="true" aria-labelledby="picker-title" hidden></div>
 
-    <!-- ===== EXTRAS OVERLAYS (Prioritize + Weekly review) ===== -->
+    <!-- PRIORITIZE + WEEKLY REVIEW SHEETS (state lives in S.plan) -->
     <div class="x-scrim" id="x-scrim" hidden></div>
 
     <section class="x-sheet" id="x-prioritize" role="dialog" aria-modal="true" aria-labelledby="x-pri-title" hidden>
       <header class="x-sheet-h">
         <h2 id="x-pri-title">⚡ Prioritize</h2>
         <span class="grow"></span>
-        <button class="x-sheet-x" type="button" data-xaction="close" aria-label="Close">✕</button>
+        <button class="x-sheet-x" type="button" data-action="x-close" aria-label="Close">✕</button>
       </header>
-      <div class="x-sheet-b">
-        <div class="x-ctrl-row">
-          <button class="x-pill" type="button" id="x-interleave" aria-pressed="true" title="Spread subjects (interleave) vs cluster them (block)">🔀 Interleave</button>
-          <span class="x-peak-tip" id="x-peak-tip"></span>
-        </div>
-
-        <div class="x-sec">
-          <h3>📥 Inbox / next actions <span class="x-count" id="x-inbox-count">0</span></h3>
-          <div class="x-inbox" id="x-inbox"></div>
-        </div>
-
-        <div class="x-sec">
-          <h3>🎯 Focus demand per subject</h3>
-          <div class="x-energy" id="x-energy"></div>
-          <p class="hint x-energy-hint">Deep = needs your peak hours · Light = can fill a gap. Used to order the matrix below.</p>
-        </div>
-
-        <div class="x-sec">
-          <h3>🧭 Urgent × important</h3>
-          <div class="x-eisenhower" id="x-eisenhower"></div>
-        </div>
-      </div>
+      <div class="x-sheet-b" id="x-pri-body"></div>
       <footer class="x-sheet-f">
-        <button class="btn sm" type="button" data-xaction="open-plan">→ Open in plan</button>
+        <button class="btn sm" type="button" data-action="x-close-plan">→ Open in plan</button>
         <span class="grow"></span>
-        <button class="btn primary sm" type="button" data-xaction="close">Done</button>
+        <button class="btn primary sm" type="button" data-action="x-close">Done</button>
       </footer>
     </section>
 
@@ -338,38 +317,18 @@
       <header class="x-sheet-h">
         <h2 id="x-rev-title">↻ Weekly review</h2>
         <span class="grow"></span>
-        <button class="x-sheet-x" type="button" data-xaction="close" aria-label="Close">✕</button>
+        <button class="x-sheet-x" type="button" data-action="x-close" aria-label="Close">✕</button>
       </header>
-      <div class="x-sheet-b">
-        <div class="x-pace" id="x-pace"></div>
-
-        <div class="x-sec">
-          <h3>⏱ Time audit — last 7 days</h3>
-          <div class="x-audit" id="x-audit"></div>
-          <div class="x-audit-row">
-            <span class="hint" id="x-audit-total"></span>
-            <span class="grow"></span>
-            <button class="btn sm" type="button" data-xaction="log" data-n="-15">−15</button>
-            <button class="btn sm" type="button" data-xaction="log" data-n="15">+15</button>
-            <button class="btn sm" type="button" data-xaction="log" data-n="25">+25</button>
-          </div>
-        </div>
-
-        <div class="x-sec">
-          <h3>✅ Review ritual</h3>
-          <div class="x-checklist" id="x-checklist"></div>
-        </div>
-      </div>
+      <div class="x-sheet-b" id="x-rev-body"></div>
       <footer class="x-sheet-f">
         <span class="hint" id="x-last-reviewed"></span>
         <span class="grow"></span>
-        <button class="btn primary sm" type="button" data-xaction="mark-reviewed">Mark reviewed today</button>
+        <button class="btn primary sm" type="button" data-action="x-mark-reviewed">Mark reviewed today</button>
       </footer>
     </section>
 
     <div class="s-toasts" id="toasts" aria-live="polite"></div>
 
     <script type="module" src="assets/js/study-app.js"></script>
-    <script type="module" src="assets/js/study-extras.js"></script>
   </body>
 </html>
