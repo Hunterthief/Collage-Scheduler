@@ -1,8 +1,8 @@
 // Pure plan logic: filtering, sorting, auto-planning into real free hours,
 // spaced-repetition queue and the text summary.
-import { S, byId, snapshot, savePlan } from "./store.js";
-import { weekDates, capacityFor, deadlineFor, courseTitle, courseColor } from "./data.js";
-import { addDays } from "../schedule/recurrence.js";
+import { S, snapshot, savePlan } from "./store.js";
+import { weekDates, capacityFor, deadlineFor, courseTitle } from "./data.js";
+import { addD } from "./dates.js";
 
 export const PRI = { must: 0, should: 1, could: 2 };
 
@@ -36,7 +36,7 @@ export function filtered() {
 export function markDone(l) {
   l.status = "done";
   l.completedAt = S.today;
-  l.reviews = [1, 3, 7].map((o) => ({ due: addDays(S.today, o), done: null }));
+  l.reviews = [1, 3, 7].map((o) => ({ due: addD(S.today, o), done: null }));
 }
 export function unDone(l) { l.status = "todo"; l.completedAt = null; l.reviews = null; }
 
@@ -99,7 +99,7 @@ export function summaryText() {
     if (!ls.length) continue;
     lines.push(courseTitle(c.id) + " — " + ls.length + " lec · " + fmt(ls.reduce((s, l) => s + l.est, 0)) + " (" + ls.filter((l) => l.status === "done").length + " done)");
   }
-  lines.push("", "WEEK " + S.anchor + " → " + addDays(S.anchor, 6) + ":");
+  lines.push("", "WEEK " + S.anchor + " → " + addD(S.anchor, 6) + ":");
   for (const d of weekDates()) {
     const ls = S.plan.lectures.filter((l) => l.day === d).sort((a, b) => a.order - b.order);
     lines.push(d + ": " + (ls.length ? ls.map((l) => courseTitle(l.c) + " " + l.num + " (" + fmt(l.est) + ")").join(", ") : "—") + " · free " + fmt(capacityFor(d).free));
