@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
-    <meta name="description" content="Study plan built from your real timetable: a blank 12-slot lecture sheet per subject, capacity-aware week planner, priorities, spaced reviews, a focus timer, and one-click export to Google Calendar or task apps." />
+    <meta
+      name="description"
+      content="Study plan built from your real timetable: a blank 12-slot lecture sheet per subject, capacity-aware week planner, priorities, spaced reviews, a focus timer, and one-click export to Google Calendar or task apps."
+    />
     <title>Study Plan · College Scheduler</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" href="assets/favicon.svg" />
@@ -14,6 +17,12 @@
     <link rel="stylesheet" href="assets/css/study.css" />
   </head>
   <body class="study-body">
+    <input class="mt-input" type="radio" name="mobile-tab" id="mt-overview" checked />
+    <input class="mt-input" type="radio" name="mobile-tab" id="mt-lectures" />
+    <input class="mt-input" type="radio" name="mobile-tab" id="mt-plan" />
+    <input class="mt-input" type="radio" name="mobile-tab" id="mt-timer" />
+    <input class="mt-input" type="radio" name="mobile-tab" id="mt-tools" />
+
     <div class="s-bg" aria-hidden="true"></div>
 
     <header class="s-topbar">
@@ -30,13 +39,12 @@
     </header>
 
     <main class="s-shell">
-      <!-- Moved inside .s-shell so it isn't hidden behind the fixed .s-topbar -->
       <nav class="site-nav study-nav" aria-label="Sections">
         <a href="index.html">Timetable</a>
         <a href="study.html" aria-current="page">Study plan</a>
       </nav>
 
-      <section class="s-hero rise d1" aria-label="Plan overview">
+      <section class="s-hero rise d1" data-mtab="overview" aria-label="Plan overview">
         <div class="s-hero-title">
           <h1>Study <em>Plan</em></h1>
           <p id="s-hero-sub">Loading your subjects and timetable…</p>
@@ -46,9 +54,9 @@
         <div class="s-stats" id="s-stats"></div>
       </section>
 
-      <section id="s-welcome" class="rise d2" hidden aria-label="Getting started"></section>
+      <section id="s-welcome" class="rise d2" data-mtab="overview" hidden aria-label="Getting started"></section>
 
-      <section class="panel s-cohort rise d2" aria-label="Cohort">
+      <section class="panel s-cohort rise d2" data-mtab="overview" aria-label="Cohort">
         <div class="s-cohort-grid">
           <div class="field"><label for="c-program">Program</label><select id="c-program"></select></div>
           <div class="field"><label for="c-year">Academic year</label><select id="c-year"></select></div>
@@ -66,7 +74,7 @@
       </section>
 
       <div class="s-work">
-        <aside class="panel s-lib rise d3" aria-label="Lecture library">
+        <aside class="panel s-lib rise d3" data-mtab="lectures" aria-label="Lecture library">
           <div class="panel-h">
             <h2>Lectures</h2><span class="hint" id="lib-count"></span>
             <span class="grow"></span>
@@ -112,7 +120,7 @@
           </div>
         </aside>
 
-        <section class="panel s-canvas rise d4" aria-label="Plan views">
+        <section class="panel s-canvas rise d4" data-mtab="plan" aria-label="Plan views">
           <div class="s-tabs" role="tablist" aria-label="Study views">
             <button class="s-tab" type="button" role="tab" data-action="tab" data-v="matrix" aria-selected="true">▦ Matrix</button>
             <button class="s-tab" type="button" role="tab" data-action="tab" data-v="week" aria-selected="false">🗓 Week</button>
@@ -153,7 +161,7 @@
         </section>
 
         <div class="s-rail rise d5">
-          <section class="panel s-focus" aria-label="Focus timer">
+          <section class="panel s-focus" data-mtab="timer" aria-label="Focus timer">
             <div class="panel-h"><h2>Focus</h2><span class="hint">Pomodoro</span></div>
             <div class="s-timer-zone">
               <div class="s-ring">
@@ -186,7 +194,7 @@
             <div class="s-focus-log" id="focus-log">Finish a focus block and its minutes land on the lecture’s actual bar.</div>
           </section>
 
-          <section class="panel s-export" aria-label="Share and export">
+          <section class="panel s-export" data-mtab="tools" aria-label="Share and export">
             <div class="panel-h"><h2>Share &amp; export</h2></div>
             <div class="panel-b s-export-b">
               <button class="btn primary s-export-btn" type="button" data-action="export-ics">📅 Calendar (.ics)</button>
@@ -201,7 +209,7 @@
             </div>
           </section>
 
-          <section class="panel" aria-label="Live tuning">
+          <section class="panel s-tuning" data-mtab="tools" aria-label="Live tuning">
             <div class="panel-h"><h2>Tuning</h2><span class="hint">applies live</span></div>
             <div class="panel-b s-tune">
               <div class="tune-row"><label for="t-focus">Focus length</label><output id="o-focus">25 min</output>
@@ -225,15 +233,23 @@
             </div>
           </section>
 
-          <section class="panel" aria-label="Subject progress">
+          <section class="panel s-progress" data-mtab="tools" aria-label="Subject progress">
             <div class="panel-h"><h2>Progress</h2><span class="hint">done / total</span></div>
             <div class="panel-b"><div class="s-prog" id="prog-list"></div><div class="s-prog-total" id="prog-total"></div></div>
           </section>
         </div>
       </div>
 
-      <p class="s-foot rise d5">Subjects, colors, classes and exam dates are fetched live from the repository JSON · your sheet is stored only in this browser.</p>
+      <p class="s-foot rise d5" data-mtab="overview">Subjects, colors, classes and exam dates are fetched live from the repository JSON · your sheet is stored only in this browser.</p>
     </main>
+
+    <nav class="m-tabs" aria-label="Study sections">
+      <label for="mt-overview"><span class="m-ico" aria-hidden="true">🏠</span><span>Overview</span></label>
+      <label for="mt-lectures"><span class="m-ico" aria-hidden="true">📚</span><span>Lectures</span></label>
+      <label for="mt-plan"><span class="m-ico" aria-hidden="true">🗓</span><span>Plan</span></label>
+      <label for="mt-timer"><span class="m-ico" aria-hidden="true">⏱</span><span>Timer</span></label>
+      <label for="mt-tools"><span class="m-ico" aria-hidden="true">🧰</span><span>Tools</span></label>
+    </nav>
 
     <div class="s-scrim" id="scrim" hidden></div>
     <aside class="s-drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden></aside>
