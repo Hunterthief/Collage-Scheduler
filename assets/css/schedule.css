@@ -1,5 +1,3 @@
-/* Calendar & Timetable Views - Matching the "Flare" Design System */
-
 .calendar-container {
   min-height: 300px;
   min-width: 0;
@@ -278,7 +276,6 @@
   background: var(--danger, #d93025);
 }
 
-/* Agenda View */
 .agenda {
   padding: 16px;
   display: grid;
@@ -401,4 +398,12 @@
   .gc-row { grid-template-columns: 54px minmax(0, 1fr); min-width: calc(54px + var(--day-count) * 96px); }
   .gc-day-heads, .gc-allday-cells, .gc-columns { grid-template-columns: repeat(var(--day-count), minmax(96px, 1fr)); }
   .gc-time-gutter { width: 54px; }
+  
+  /* Mobile Adjustments: Edge-to-edge calendar container */
+  .calendar-container {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+  }
 }
