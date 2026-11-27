@@ -1,14 +1,14 @@
 // Bootstrap + event wiring for the Study plan page.
-import { S, byId, savePlan, snapshot, popUndo, resetSample, DEFAULT_SETTINGS, loadPlan, seedViews } from "./study/store.js";
-import { boot, defaultCohort, setCohort, cohortFromId, weekDates, courseColor, hm, winS, winE } from "./study/data.js";
-import { filtered, autoPlan, clearWeek, markDone, summaryText, reviewQueue } from "./study/planner.js";
-import { T, initTimer, toggle as tToggle, reset as tReset, skip as tSkip, setMode, start as tStart, snd, unlockAudio, paintTimer as _p } from "./study/timer.js";
+import { S, byId, savePlan, snapshot, resetSample, DEFAULT_SETTINGS, loadPlan } from "./study/store.js";
+import { boot, defaultCohort, setCohort, cohortFromId, hm, winS, winE } from "./study/data.js";
+import { autoPlan, clearWeek, markDone, summaryText } from "./study/planner.js";
+import { T, initTimer, toggle as tToggle, reset as tReset, skip as tSkip, setMode, start as tStart, snd, unlockAudio } from "./study/timer.js";
 import { bindDrag } from "./study/drag.js";
 import * as V from "./study/views.js";
-import { addDays, startOfWeek, parseDate } from "./schedule/recurrence.js";
+import { addD } from "./study/dates.js";
+import { startOfWeek } from "./schedule/recurrence.js";
 
 const $ = (s) => document.querySelector(s);
-const $$ = (s) => [...document.querySelectorAll(s)];
 
 init();
 
@@ -25,7 +25,7 @@ async function init() {
   initTimer({
     paint: V.paintTimer, dots: V.renderDots, bind: V.renderBind,
     toast: V.toast,
-    log: (delta, l) => {
+    log: (delta) => {
       V.renderAll();
       const todayTotal = S.plan.lectures.reduce((s, x) => s + (x.sessions || []).filter((s2) => s2.date === S.today).reduce((a, b) => a + b.min, 0), 0);
       $("#focus-log").innerHTML = "Logged <b class='num'>" + V.fmtMin(delta) + "</b> · today total <b class='num'>" + V.fmtMin(todayTotal) + "</b>";
@@ -149,8 +149,8 @@ async function onClick(e) {
     V.toast(n + " lectures deleted", { kind: "danger", undo: true });
   }
   else if (a === "bulk-clear") { S.ui.sel.clear(); V.renderAll(); }
-  else if (a === "week-prev") { S.anchor = addDays(S.anchor, -7); savePlan(); V.renderAll(); }
-  else if (a === "week-next") { S.anchor = addDays(S.anchor, 7); savePlan(); V.renderAll(); }
+  else if (a === "week-prev") { S.anchor = addD(S.anchor, -7); savePlan(); V.renderAll(); }
+  else if (a === "week-next") { S.anchor = addD(S.anchor, 7); savePlan(); V.renderAll(); }
   else if (a === "week-today") { S.anchor = startOfWeek(S.today, S.weekStartDay); savePlan(); V.renderAll(); }
   else if (a === "jump-exam") {
     S.ui.view = "week"; S.anchor = startOfWeek(t.dataset.date, S.weekStartDay); savePlan(); V.renderAll();
@@ -176,7 +176,7 @@ async function onClick(e) {
   }
   else if (a === "rev-snooze") {
     const l = byId(t.dataset.id); if (!l?.reviews) return;
-    snapshot("snooze"); l.reviews[+t.dataset.i].due = addDays(l.reviews[+t.dataset.i].due, 1); savePlan(); V.renderAll();
+    snapshot("snooze"); l.reviews[+t.dataset.i].due = addD(l.reviews[+t.dataset.i].due, 1); savePlan(); V.renderAll();
     V.toast("Pushed one day");
   }
   else if (a === "export") exportJSON();
