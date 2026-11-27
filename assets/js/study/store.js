@@ -1,6 +1,22 @@
-// Local study-plan state. Academic data is never stored here — only the
-// student's own plan (estimates, progress, day assignments), per cohort.
-import { startOfWeek, addDays } from "../schedule/recurrence.js";
+// Local study-plan state + the ONLY date arithmetic the study feature does.
+// Academic data is never stored here — only the student's own plan
+// (estimates, progress, day assignments), per cohort.
+import {
+  parseDate,
+  formatDate,
+  addDays,
+  startOfWeek
+} from "../schedule/recurrence.js";
+
+// The repository's addDays() takes a Date and returns a Date. Every study
+// module works in ISO strings ("2026-11-27"), so ALL study date arithmetic
+// goes through addD() below. Calling recurrence.addDays() with a string
+// throws "date.getTime is not a function" — never do it anywhere else.
+export const addD = (iso, n) => formatDate(addDays(parseDate(iso), n));
+export const weekStartOf = (iso, weekStartDay) => startOfWeek(iso, weekStartDay);
+export const wdIndex = (iso) => parseDate(iso).getUTCDay();
+export const daysBetween = (a, b) =>
+  Math.round((parseDate(b) - parseDate(a)) / 86400000);
 
 export const DEFAULT_SETTINGS = {
   focus: 25, short: 5, long: 15, cycle: 4,
@@ -9,7 +25,8 @@ export const DEFAULT_SETTINGS = {
 
 export const S = {
   manifest: null, inst: null, locations: null, institutionEvents: null,
-  options: null, locale: "en", tz: "Africa/Cairo", today: null, weekStartDay: "Saturday",
+  options: null, programsDoc: null,
+  locale: "en", tz: "Africa/Cairo", today: null, weekStartDay: "Saturday",
   cohort: null, semester: null, datasets: null, index: null, courseList: [], schedule: null,
   cache: new Map(),
   anchor: null,
@@ -36,7 +53,7 @@ export function seedViews() {
 // content is invented; titles are neutral and everything is editable.
 export function seedLectures(courses, today, weekStartDay) {
   const out = [];
-  const nextWeek = addDays(startOfWeek(today, weekStartDay), 7);
+  const nextWeek = addD(weekStartOf(today, weekStartDay), 7);
   const pri = ["must", "should", "could"];
   let assign = 0;
   courses.forEach((c, i) => {
@@ -49,12 +66,12 @@ export function seedLectures(courses, today, weekStartDay) {
         actual: 0, notes: "", sessions: [], completedAt: null, reviews: null
       };
       if (i === 0 && n === 1) {
-        l.status = "done"; l.actual = est - 10; l.completedAt = addDays(today, -3);
-        l.reviews = [1, 3, 7].map((o, k) => ({ due: addDays(l.completedAt, o), done: k === 0 ? addDays(l.completedAt, 1) : null }));
+        l.status = "done"; l.actual = est - 10; l.completedAt = addD(today, -3);
+        l.reviews = [1, 3, 7].map((o, k) => ({ due: addD(l.completedAt, o), done: k === 0 ? addD(l.completedAt, 1) : null }));
       } else if (i === 1 && n === 1) {
         l.status = "doing"; l.actual = 25;
       } else if (assign < 2 && l.status === "todo") {
-        l.day = addDays(nextWeek, assign); l.order = 1; assign++;
+        l.day = addD(nextWeek, assign); l.order = 1; assign++;
       }
       out.push(l);
     }
@@ -71,10 +88,10 @@ export function loadPlan(cohort, courses, today, weekStartDay) {
       views: Array.isArray(saved.views) && saved.views.length ? saved.views : seedViews(),
       settings: Object.assign({}, DEFAULT_SETTINGS, saved.settings || {})
     };
-    S.anchor = saved.anchor || addDays(startOfWeek(today, weekStartDay), 7);
+    S.anchor = saved.anchor || addD(weekStartOf(today, weekStartDay), 7);
   } else {
     S.plan = { lectures: seedLectures(courses, today, weekStartDay), views: seedViews(), settings: Object.assign({}, DEFAULT_SETTINGS) };
-    S.anchor = addDays(startOfWeek(today, weekStartDay), 7);
+    S.anchor = addD(weekStartOf(today, weekStartDay), 7);
     savePlan();
   }
   S.ui.sel = new Set();
