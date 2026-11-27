@@ -1,10 +1,16 @@
 // Pure plan logic: filtering, sorting, auto-planning into real free hours,
-// spaced-repetition queue, text summary, and computed clock times for export.
-import { S, snapshot, savePlan, addD } from "./store.js";
-import { weekDates, capacityFor, busyFor, deadlineFor, courseTitle, winS, winE } from "./data.js";
+// Leitner spaced repetition, Eisenhower/pareto/frog scoring, pacing, wrap-up,
+// text summary, and computed clock times for export.
+import { S, snapshot, savePlan, addD, daysBetween, openInboxCount } from "./store.js";
+import { weekDates, capacityFor, busyFor, deadlineFor, courseTitle, winS, winE, nextExamFor } from "./data.js";
 
 export const PRI = { must: 0, should: 1, could: 2 };
 export const lecTitle = (l) => l.title || `Lecture ${l.num}`;
+export const DEMAND_RANK = { deep: 0, medium: 1, light: 2 };
+
+// Leitner ladder: box n → days before the next recall.
+export const BOX_DAYS = [1, 3, 7, 14, 30];
+export const MAX_BOX = BOX_DAYS.length;
 
 export function matches(l) {
   const u = S.ui;
@@ -34,14 +40,113 @@ export function filtered() {
   return arr;
 }
 
+/* ---------- real exam proximity ---------- */
+export function examDaysFor(courseId) {
+  const ex = nextExamFor(courseId);
+  if (!ex?.date) return null;
+  const d = daysBetween(S.today, ex.date);
+  return d < 0 ? null : d;
+}
+
+/* ---------- Leitner reviews ---------- */
 export function markDone(l) {
   l.status = "done";
   l.completedAt = S.today;
-  l.reviews = [1, 3, 7].map((o) => ({ due: addD(S.today, o), done: null }));
+  l.reviews = [{ box: 1, due: addD(S.today, BOX_DAYS[0]), done: null }];
 }
 export function unDone(l) { l.status = "todo"; l.completedAt = null; l.reviews = null; }
 
-// ---- Free-gap clock times -------------------------------------------------
+export function currentStage(l) {
+  if (!l.reviews) return null;
+  const i = l.reviews.findIndex((r) => !r.done);
+  return i === -1 ? null : { i, r: l.reviews[i] };
+}
+
+// Success: close the open stage and grow the ladder (unless box 5 → mastered).
+export function revPass(l) {
+  const cur = currentStage(l);
+  if (!cur) return { mastered: true, next: null };
+  cur.r.done = S.today;
+  if (cur.r.box >= MAX_BOX) return { mastered: true, next: null };
+  const next = { box: cur.r.box + 1, due: addD(S.today, BOX_DAYS[cur.r.box]), done: null };
+  l.reviews.push(next);
+  return { mastered: false, next };
+}
+
+// Lapse: the card goes back to box 1, tomorrow.
+export function revAgain(l) {
+  l.reviews = [{ box: 1, due: addD(S.today, 1), done: null }];
+  if (S.plan.review) S.plan.review.lapses = (S.plan.review.lapses || 0) + 1;
+}
+
+export function reviewQueue() {
+  const due = [], soon = [], mastered = [];
+  for (const l of S.plan.lectures) {
+    if (!l.reviews) continue;
+    const cur = currentStage(l);
+    if (!cur) { if (l.reviews[l.reviews.length - 1]?.box >= MAX_BOX) mastered.push(l); continue; }
+    const item = { l, i: cur.i, due: cur.r.due, box: cur.r.box, over: cur.r.due < S.today };
+    (cur.r.due <= S.today ? due : soon).push(item);
+  }
+  due.sort((a, b) => a.due.localeCompare(b.due) || a.box - b.box);
+  soon.sort((a, b) => a.due.localeCompare(b.due));
+  return { due, soon, mastered };
+}
+
+/* ---------- Eisenhower / pareto / frog ---------- */
+export function urgencyOf(it) {
+  if (it.kind === "inbox") return !!it.due && daysBetween(S.today, it.due) <= 2;
+  const ed = examDaysFor(it.c);
+  if (ed != null && ed <= 7) return true;
+  if (it.day && daysBetween(S.today, it.day) <= 2 && daysBetween(S.today, it.day) >= 0) return true;
+  return false;
+}
+export function importanceOf(it) {
+  return it.kind === "inbox" ? !!it.imp : it.pri === "must" || it.pri === "should";
+}
+export function quadrantOf(it) {
+  const u = urgencyOf(it), i = importanceOf(it);
+  return u && i ? 1 : !u && i ? 2 : u && !i ? 3 : 4;
+}
+export function leverageOf(it) {
+  if (it.kind === "inbox") {
+    const dd = it.due ? daysBetween(S.today, it.due) : null;
+    return (dd != null ? 30 - Math.min(Math.max(dd, 0), 30) : 4) + (it.imp ? 26 : 4) + (it.two ? 6 : 0);
+  }
+  const ed = examDaysFor(it.c);
+  return (ed != null ? 30 - Math.min(ed, 30) : 6) + (it.pri === "must" ? 30 : it.pri === "should" ? 14 : 4) + Math.min(it.est || 0, 180) / 30;
+}
+
+// The single thing to do first — across lectures AND inbox.
+export function frogPick() {
+  const cands = [];
+  S.plan.lectures.filter((l) => l.status !== "done").forEach((l) => cands.push({ kind: "lecture", it: l }));
+  (S.plan.inbox || []).filter((t) => !t.done).forEach((t) => cands.push({ kind: "inbox", it: t }));
+  if (!cands.length) return null;
+  cands.sort((a, b) => leverageOf(b.it) - leverageOf(a.it));
+  return cands[0];
+}
+
+export function prioritizeLists() {
+  const cand = [
+    ...S.plan.lectures.filter((l) => l.status !== "done").map((l) => ({ kind: "lecture", it: l })),
+    ...(S.plan.inbox || []).filter((t) => !t.done).map((t) => ({ kind: "inbox", it: t }))
+  ];
+  const quads = { 1: [], 2: [], 3: [], 4: [] };
+  cand.forEach((c) => quads[quadrantOf(c.it)].push(c));
+  Object.values(quads).forEach((q) => q.sort((a, b) => leverageOf(b.it) - leverageOf(a.it)));
+  const starN = Math.max(quads[1].length ? 1 : 0, Math.ceil(quads[1].length * 0.2));
+  return { quads, starN };
+}
+
+/* ---------- peak window ---------- */
+export function peakEndMin() {
+  const s = winS(), e = winE();
+  return Math.round((s + (e - s) * 0.4) / 15) * 15;
+}
+export const isPeak = (startMin) => startMin != null && startMin < peakEndMin();
+
+/* ---------- Free-gap clock times -------------------------------------------------
 // Complement of the cohort's real class busy-blocks over the whole day.
 // Gaps inside the user's study window come first, then after it, then before.
 export function freeGapsFor(date) {
@@ -98,11 +203,23 @@ export function timingsFor(date) {
   return out;
 }
 
+/* ---------- interleave / block queue ---------- */
+function interleaveQueue(list) {
+  const pool = [...list]; const out = []; let last = null;
+  while (pool.length) {
+    let idx = pool.findIndex((x) => x.c !== last);
+    if (idx === -1) idx = 0;
+    const it = pool.splice(idx, 1)[0]; out.push(it); last = it.c;
+  }
+  return out;
+}
+
 export function autoPlan() {
   const days = weekDates().filter((d) => d >= S.today);
   if (!days.length) return { placed: 0, left: 0, past: true };
-  const queue = S.plan.lectures.filter((l) => !l.day && l.status !== "done" && l.est > 0)
+  let queue = S.plan.lectures.filter((l) => !l.day && l.status !== "done" && l.est > 0)
     .sort((a, b) => PRI[a.pri] - PRI[b.pri] || deadlineFor(a.c).localeCompare(deadlineFor(b.c)) || b.est - a.est);
+  if (S.plan.settings.mix === "interleave") queue = interleaveQueue(queue);
   const untimed = S.plan.lectures.filter((l) => !l.day && l.status !== "done" && !l.est).length;
   if (!queue.length) return { placed: 0, left: 0, empty: true, untimed };
   snapshot("auto-plan");
@@ -111,13 +228,21 @@ export function autoPlan() {
     rem[d] = capacityFor(d).free - S.plan.lectures.filter((l) => l.day === d && l.status !== "done").reduce((s, l) => s + l.est, 0);
   }
   let placed = 0;
+  const touched = new Set();
   for (const l of queue) {
     const d = days.find((x) => rem[x] >= l.est);
     if (d) {
       l.day = d;
-      l.order = Math.max(0, ...S.plan.lectures.filter((x) => x.day === d).map((x) => x.order)) + 1;
-      rem[d] -= l.est; placed++;
+      rem[d] -= l.est; placed++; touched.add(d);
     }
+  }
+  // Energy-aware ordering: within each touched day, deep work gets the earliest
+  // slots (timingsFor walks `order`), so it lands inside the peak window.
+  const cmp = (a, b) =>
+    (S.plan.settings.energyPlan ? DEMAND_RANK[a.demand || "medium"] - DEMAND_RANK[b.demand || "medium"] : 0) ||
+    PRI[a.pri] - PRI[b.pri] || deadlineFor(a.c).localeCompare(deadlineFor(b.c)) || a.num - b.num;
+  for (const d of touched) {
+    S.plan.lectures.filter((l) => l.day === d && l.status !== "done").sort(cmp).forEach((l, i) => { l.order = i + 1; });
   }
   savePlan();
   return { placed, left: queue.length - placed, untimed };
@@ -133,22 +258,36 @@ export function clearWeek() {
   return n;
 }
 
-export function reviewQueue() {
-  const due = [], soon = [], mastered = [];
-  for (const l of S.plan.lectures) {
-    if (!l.reviews) continue;
-    let all = true;
-    l.reviews.forEach((r, i) => {
-      if (r.done) return;
-      all = false;
-      const item = { l, i, due: r.due, over: r.due < S.today };
-      (r.due <= S.today ? due : soon).push(item);
-    });
-    if (all && l.reviews.length) mastered.push(l);
-  }
-  due.sort((a, b) => a.due.localeCompare(b.due));
-  soon.sort((a, b) => a.due.localeCompare(b.due));
-  return { due, soon, mastered };
+/* ---------- shutdown ritual: today's undone planned work goes back to the pool */
+export function wrapDay() {
+  const undone = S.plan.lectures.filter((l) => l.day === S.today && l.status !== "done");
+  const recalls = reviewQueue().due.filter((x) => x.over || x.due === S.today).length;
+  if (!undone.length) return { n: 0, recalls };
+  snapshot("wrap day");
+  undone.forEach((l) => { l.day = null; });
+  return { n: undone.length, recalls };
+}
+
+/* ---------- backward pacing per subject ---------- */
+export function paceFor(courseId) {
+  const daysTo = examDaysFor(courseId);
+  if (daysTo == null) return null;
+  const lecs = S.plan.lectures.filter((l) => l.c === courseId);
+  const total = lecs.length;
+  if (!total) return null;
+  const done = lecs.filter((l) => l.status === "done").length;
+  const remaining = total - done;
+  const start = S.semester?.validFrom;
+  const elapsed = start ? Math.max(0, daysBetween(start, S.today)) : 0;
+  const span = elapsed + daysTo;
+  const expected = span > 0 ? (total * elapsed) / span : 0;
+  const weeks = Math.max(1, Math.ceil(daysTo / 7));
+  return {
+    total, done, remaining, daysTo,
+    perWeek: Math.ceil(remaining / weeks),
+    behind: remaining > 0 && done < expected - 0.5 && daysTo <= 30,
+    ratio: expected > 0 ? done / expected : (done > 0 ? 1 : 0)
+  };
 }
 
 export function summaryText() {
@@ -157,8 +296,11 @@ export function summaryText() {
     const ls = S.plan.lectures.filter((l) => l.c === c.id);
     if (!ls.length) continue;
     const timed = ls.filter((l) => l.est > 0).length;
-    lines.push(courseTitle(c.id) + " — " + ls.length + " lec · " + fmt(ls.reduce((s, l) => s + l.est, 0)) + " (" + ls.filter((l) => l.status === "done").length + " done, " + timed + " with a time)");
+    const p = paceFor(c.id);
+    lines.push(courseTitle(c.id) + " — " + ls.length + " lec · " + fmt(ls.reduce((s, l) => s + l.est, 0)) + " (" + ls.filter((l) => l.status === "done").length + " done, " + timed + " with a time" + (p ? ", exam in " + p.daysTo + "d" + (p.behind ? " · BEHIND PACE" : "") : "") + ")");
   }
+  const inboxOpen = openInboxCount();
+  if (inboxOpen) lines.push("", "INBOX: " + inboxOpen + " captured items waiting to be clarified");
   lines.push("", "WEEK " + S.anchor + " → " + addD(S.anchor, 6) + ":");
   for (const d of weekDates()) {
     const ls = S.plan.lectures.filter((l) => l.day === d).sort((a, b) => a.order - b.order);
