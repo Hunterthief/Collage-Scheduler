@@ -19,7 +19,7 @@
   display: flex;
   gap: 4px;
   width: 100%;
-  max-width: 480px;
+  max-width: 540px; /* Increased to accommodate 3 buttons comfortably */
   margin: 0 auto 20px;
   padding: 4px;
   background: var(--surface-2);
@@ -53,6 +53,25 @@
   background: var(--surface);
   color: var(--accent);
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Mobile Fix: Prevents the 3 buttons from going off-screen by stacking icon & text */
+@media (max-width: 520px) {
+  .segmented {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+  .segment {
+    border-radius: 12px;
+    white-space: normal;
+    font-size: 0.82rem;
+    padding: 10px 6px;
+    gap: 4px;
+    flex-direction: column;
+  }
+  .segment-icon {
+    font-size: 1.2rem;
+  }
 }
 
 .lookup-form {
