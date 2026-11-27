@@ -1,313 +1,404 @@
-/* Timetable */
-.timetable {
-display: flex;
-flex-direction: column;
-gap: 12px;
+/* Calendar & Timetable Views - Matching the "Flare" Design System */
+
+.calendar-container {
+  min-height: 300px;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
-/* Day Card */
-.day {
-background: var(--surface);
-border: 1px solid var(--line);
-border-radius: var(--r-lg);
-box-shadow: var(--shadow-1);
-overflow: hidden;
-animation: rise 0.4s var(--ease) both;
+.gc-calendar {
+  border-top: 1px solid var(--line);
+  overflow: auto;
+  overscroll-behavior-x: contain;
+  background: var(--surface);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) var(--surface-2);
 }
 
-.day-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 12px 16px;
-background: var(--surface-2);
-border-bottom: 1px solid var(--line);
+.gc-calendar::-webkit-scrollbar { width: 10px; height: 10px; }
+.gc-calendar::-webkit-scrollbar-track { background: var(--surface-2); }
+.gc-calendar::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 999px; border: 2px solid var(--surface-2); }
+.gc-calendar::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+.gc-calendar::-webkit-scrollbar-corner { background: var(--surface-2); }
+
+.gc-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  min-width: calc(64px + var(--day-count) * 112px);
 }
 
-.day-header h3 {
-margin: 0;
-font-size: 1rem;
-font-weight: 700;
-color: var(--ink);
+.gc-header-row {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
 }
 
-.day-count {
-padding: 4px 10px;
-background: var(--accent-soft);
-color: var(--accent);
-border-radius: 999px;
-font-size: 0.75rem;
-font-weight: 700;
+.gc-corner {
+  border-right: 1px solid var(--line);
+  position: sticky;
+  left: 0;
+  z-index: 22;
+  background: var(--surface);
 }
 
-/* Events */
-.event {
-position: relative;
-padding: 14px 16px 14px 20px;
-border-bottom: 1px solid var(--line);
-transition: background 0.15s var(--ease);
+.gc-day-heads,
+.gc-allday-cells,
+.gc-columns {
+  display: grid;
+  grid-template-columns: repeat(var(--day-count), minmax(112px, 1fr));
 }
 
-.event:last-child {
-border-bottom: 0;
+.gc-day-head {
+  min-height: 64px;
+  padding: 10px 6px;
+  border-left: 1px solid var(--line);
+  text-align: center;
+  background: transparent;
+}
+.gc-day-head:first-child { border-left: 0; }
+
+.gc-weekday {
+  display: block;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.event:hover {
-background: var(--surface-2);
+.gc-daynum {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+  border-radius: 50%;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
 }
 
-.event::before {
-content: "";
-position: absolute;
-left: 0;
-top: 0;
-bottom: 0;
-width: 4px;
-background: var(--muted);
+.gc-day-head.today .gc-weekday { color: var(--accent); }
+.gc-day-head.today .gc-daynum {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px -4px var(--accent);
 }
 
-.event.lecture::before {
-background: var(--lecture);
+.gc-allday-row {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-2);
 }
 
-.event.practical::before {
-background: var(--practical);
+.gc-allday-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 8px 8px 0 0;
+  border-right: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  left: 0;
+  z-index: 12;
+  background: var(--surface-2);
 }
 
-.event.examination::before {
-background: var(--examination);
+.gc-allday-cell {
+  min-height: 36px;
+  padding: 4px;
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-content: flex-start;
+}
+.gc-allday-cell:first-child { border-left: 0; }
+
+.gc-allday-chip {
+  max-width: 100%;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.event.college-event::before {
-background: var(--college);
+.gc-allday-chip.type-college-event {
+  background: var(--college-bg, #f3e8fd);
+  border-color: var(--college-border, #d7aefb);
+  color: var(--college, #5e1b84);
 }
 
-.event-main {
-display: flex;
-flex-direction: column;
-gap: 6px;
-margin-bottom: 8px;
+.gc-body-row { position: relative; }
+
+.gc-time-gutter {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+  border-right: 1px solid var(--line);
+  background: var(--surface);
+  height: calc((var(--range-end) - var(--range-start)) / 60 * var(--hour-height));
 }
 
-.event-title {
-font-size: 0.95rem;
-font-weight: 600;
-color: var(--ink);
-line-height: 1.3;
+.gc-hour-label {
+  position: absolute;
+  right: 8px;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--surface);
+  padding: 0 4px;
 }
 
-.event-meta {
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-font-size: 0.8rem;
-color: var(--muted);
+.gc-columns {
+  position: relative;
+  height: calc((var(--range-end) - var(--range-start)) / 60 * var(--hour-height));
 }
 
-.event-meta .time {
-font-weight: 600;
-color: var(--ink-2);
+.gc-day-column {
+  position: relative;
+  border-left: 1px solid var(--line);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--hour-height) - 1px),
+    var(--line) calc(var(--hour-height) - 1px),
+    var(--line) var(--hour-height)
+  );
+}
+.gc-day-column:first-child { border-left: 0; }
+
+.gc-day-column.today {
+  background-color: rgba(43, 76, 255, 0.03);
 }
 
-.event-side {
-display: flex;
-flex-wrap: wrap;
-gap: 6px;
+.gc-event {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  border-left-width: 4px;
+  padding: 6px 8px;
+  color: var(--text);
+  background: var(--surface-2);
+  box-shadow: 0 2px 4px rgba(16, 24, 40, 0.06);
+  cursor: default;
+  z-index: 2;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.gc-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.12);
+  z-index: 3;
 }
 
-/* Badges */
-.badge {
-display: inline-flex;
-align-items: center;
-gap: 4px;
-padding: 4px 10px;
-border-radius: 999px;
-font-size: 0.7rem;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 0.05em;
+.gc-event .gc-event-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.badge.lecture {
-background: rgba(43, 76, 255, 0.12);
-color: var(--lecture);
+.gc-event .gc-event-time {
+  margin-top: 2px;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  color: inherit;
+  opacity: 0.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.badge.practical {
-background: rgba(15, 138, 91, 0.12);
-color: var(--practical);
+.gc-event.type-lecture {
+  background: var(--lecture-bg, #e8f0fe);
+  border-color: var(--lecture-border, #aecbfa);
+  border-left-color: var(--lecture, #1a73e8);
+  color: var(--lecture, #1a73e8);
+}
+.gc-event.type-practical {
+  background: var(--practical-bg, #e6f4ea);
+  border-color: var(--practical-border, #a8dab5);
+  border-left-color: var(--practical, #0d652d);
+  color: var(--practical, #0d652d);
+}
+.gc-event.type-examination {
+  background: var(--examination-bg, #fce8e6);
+  border-color: var(--examination-border, #f4a7a1);
+  border-left-color: var(--examination, #a50e0e);
+  color: var(--examination, #a50e0e);
+}
+.gc-event.type-college-event {
+  background: var(--college-bg, #f3e8fd);
+  border-color: var(--college-border, #d7aefb);
+  border-left-color: var(--college, #5e1b84);
+  color: var(--college, #5e1b84);
 }
 
-.badge.examination {
-background: rgba(196, 57, 43, 0.12);
-color: var(--examination);
+.gc-event.status-cancelled { opacity: 0.6; }
+.gc-event.status-cancelled .gc-event-title { text-decoration: line-through; }
+
+.gc-now-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--danger, #d93025);
+  z-index: 8;
+  pointer-events: none;
+}
+.gc-now-line::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--danger, #d93025);
 }
 
-.badge.college-event {
-background: rgba(123, 63, 242, 0.12);
-color: var(--college);
+/* Agenda View */
+.agenda {
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+  min-width: 0;
 }
 
-.badge.cancelled {
-background: rgba(180, 35, 74, 0.12);
-color: var(--err);
-text-decoration: line-through;
+.agenda-day {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+  min-width: 0;
+  box-shadow: var(--shadow);
 }
 
-.badge.unverified {
-background: rgba(154, 91, 0, 0.12);
-color: var(--warn);
+.agenda-day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
 }
 
-/* Cancelled Events */
-.event.cancelled {
-opacity: 0.6;
+.agenda-day-header h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
-.event.cancelled .event-title {
-text-decoration: line-through;
+.agenda-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex: 0 0 auto;
+  background: var(--surface);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
 }
 
-/* All Day Events */
-.event.all-day {
-background: var(--surface-2);
+.agenda-event {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+}
+.agenda-event:first-of-type { border-top: 0; }
+
+.agenda-time {
+  color: var(--text-2);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
-.event.all-day .event-title {
-color: var(--college);
-font-weight: 700;
+.agenda-main { min-width: 0; }
+
+.agenda-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
-/* Empty State */
+.agenda-meta {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  overflow-wrap: anywhere;
+}
+
+.agenda-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tag.lecture { background: var(--lecture-bg, #e8f0fe); border-color: var(--lecture-border, #aecbfa); color: var(--lecture, #1a73e8); }
+.tag.practical { background: var(--practical-bg, #e6f4ea); border-color: var(--practical-border, #a8dab5); color: var(--practical, #0d652d); }
+.tag.examination { background: var(--examination-bg, #fce8e6); border-color: var(--examination-border, #f4a7a1); color: var(--examination, #a50e0e); }
+.tag.college-event { background: var(--college-bg, #f3e8fd); border-color: var(--college-border, #d7aefb); color: var(--college, #5e1b84); }
+.tag.unverified { background: #fff3cd; border-color: #f0c36d; color: #7a4700; }
+.tag.cancelled { background: #fce8e6; border-color: #f4a7a1; color: #a50e0e; }
+
 .empty-state {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 48px 24px;
-text-align: center;
-background: var(--surface);
-border: 1px solid var(--line);
-border-radius: var(--r-lg);
-box-shadow: var(--shadow-1);
+  margin: 20px;
+  padding: 40px 20px;
+  border: 2px dashed var(--line-strong);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--muted);
+  text-align: center;
 }
 
-.empty-state svg {
-color: var(--line-2);
-margin-bottom: 16px;
+@media (max-width: 700px) {
+  .agenda { padding: 12px; }
+  .agenda-event { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .agenda-tags { justify-content: flex-start; }
+  .gc-row { grid-template-columns: 54px minmax(0, 1fr); min-width: calc(54px + var(--day-count) * 96px); }
+  .gc-day-heads, .gc-allday-cells, .gc-columns { grid-template-columns: repeat(var(--day-count), minmax(96px, 1fr)); }
+  .gc-time-gutter { width: 54px; }
 }
-
-.empty-state p {
-margin: 0;
-font-size: 0.95rem;
-color: var(--muted);
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-.timetable {
-gap: 10px;
-}
-
-.day {
-border-radius: var(--r-md);
-}
-
-.day-header {
-padding: 10px 12px;
-}
-
-.day-header h3 {
-font-size: 0.9rem;
-}
-
-.day-count {
-padding: 3px 8px;
-font-size: 0.7rem;
-}
-
-.event {
-padding: 12px 12px 12px 16px;
-}
-
-.event::before {
-width: 3px;
-}
-
-.event-main {
-gap: 4px;
-margin-bottom: 6px;
-}
-
-.event-title {
-font-size: 0.9rem;
-}
-
-.event-meta {
-gap: 6px;
-font-size: 0.75rem;
-}
-
-.event-side {
-gap: 4px;
-}
-
-.badge {
-padding: 3px 8px;
-font-size: 0.65rem;
-}
-
-.empty-state {
-padding: 32px 16px;
-}
-
-.empty-state svg {
-width: 28px;
-height: 28px;
-margin-bottom: 12px;
-}
-
-.empty-state p {
-font-size: 0.85rem;
-}
-}
-
-@media (max-width: 480px) {
-.event {
-padding: 10px 10px 10px 14px;
-}
-
-.event-title {
-font-size: 0.85rem;
-}
-
-.event-meta {
-font-size: 0.7rem;
-}
-
-.badge {
-padding: 2px 6px;
-font-size: 0.6rem;
-}
-}
-
-/* Animations */
-@keyframes rise {
-from {
-opacity: 0;
-transform: translateY(10px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
-/* Stagger day cards */
-.day:nth-child(1) { animation-delay: 0.05s; }
-.day:nth-child(2) { animation-delay: 0.1s; }
-.day:nth-child(3) { animation-delay: 0.15s; }
-.day:nth-child(4) { animation-delay: 0.2s; }
-.day:nth-child(5) { animation-delay: 0.25s; }
-.day:nth-child(6) { animation-delay: 0.3s; }
-.day:nth-child(7) { animation-delay: 0.35s; }
