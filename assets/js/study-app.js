@@ -1,10 +1,12 @@
 // Bootstrap + event wiring for the Study plan page.
-import { S, byId, savePlan, snapshot, resetSample, DEFAULT_SETTINGS, loadPlan, addD } from "./study/store.js";
+import { S, byId, savePlan, snapshot, clearPlan, addLecturesForCourse, DEFAULT_SETTINGS, loadPlan, LECTURES_PER_SUBJECT } from "./study/store.js";
 import { boot, defaultCohort, setCohort, cohortFromId, hm, winS, winE } from "./study/data.js";
 import { autoPlan, clearWeek, markDone, summaryText } from "./study/planner.js";
+import { exportICS, exportCSV, exportBackup, gcalUrl } from "./study/export.js";
 import { T, initTimer, toggle as tToggle, reset as tReset, skip as tSkip, setMode, start as tStart, snd, unlockAudio } from "./study/timer.js";
 import { bindDrag } from "./study/drag.js";
 import * as V from "./study/views.js";
+import { addD } from "./study/store.js";
 import { startOfWeek } from "./schedule/recurrence.js";
 
 const $ = (s) => document.querySelector(s);
@@ -115,24 +117,29 @@ async function onClick(e) {
     V.toast("Lecture deleted", { kind: "danger", undo: true });
   }
   else if (a === "focus-this") { T.bind = t.dataset.id; V.renderBind(); if (T.state !== "running") tStart(); V.closeDrawer(); V.toast("Timer bound & started", { kind: "success" }); }
+  else if (a === "gcal-single") {
+    const url = gcalUrl(byId(t.dataset.id));
+    if (url) { window.open(url, "_blank", "noopener"); V.toast("Google Calendar opened with this lecture pre-filled — press Save.", { kind: "success" }); }
+    else V.toast("Assign a day first, then export.", { kind: "warn" });
+  }
   else if (a === "tab") { S.ui.view = t.dataset.v; V.renderAll(); }
   else if (a === "f-subject") {
     const v = t.dataset.v;
     S.ui.subjects = v === "all" ? [] : S.ui.subjects.includes(v) ? S.ui.subjects.filter((x) => x !== v) : [...S.ui.subjects, v];
     V.renderAll();
   }
-  else if (a === "f-status") { S.ui.status = t.dataset.v; V.renderAll(); }
-  else if (a === "clear-filters") { Object.assign(S.ui, { q: "", subjects: [], status: "all", pri: "all", minEst: 0 }); V.renderAll(); }
+  else if (a === "f-status") { S.ui.status = t.dataset.v; S.ui.untimed = false; V.renderAll(); }
+  else if (a === "clear-filters") { Object.assign(S.ui, { q: "", subjects: [], status: "all", pri: "all", minEst: 0, untimed: false }); V.renderAll(); }
   else if (a === "apply-view") {
     const v = S.plan.views.find((x) => x.id === t.dataset.id); if (!v) return;
-    Object.assign(S.ui, { q: v.f.q || "", subjects: [...(v.f.subjects || [])], status: v.f.status || "all", pri: v.f.pri || "all", sort: v.f.sort || "subject", minEst: v.f.minEst || 0, view: v.f.view || S.ui.view });
+    Object.assign(S.ui, { q: v.f.q || "", subjects: [...(v.f.subjects || [])], status: v.f.status || "all", pri: v.f.pri || "all", sort: v.f.sort || "subject", minEst: v.f.minEst || 0, untimed: !!v.f.untimed, view: v.f.view || S.ui.view });
     V.renderAll(); V.toast("View: " + v.name);
   }
   else if (a === "del-view") { e.stopPropagation(); S.plan.views = S.plan.views.filter((v) => v.id !== t.dataset.id); savePlan(); V.renderAll(); }
   else if (a === "save-view") {
     const name = prompt("Name this view (filters + sort + tab):", "My view");
     if (!name) return;
-    S.plan.views.push({ id: "v" + Date.now().toString(36), name: name.slice(0, 26), f: { q: S.ui.q, subjects: [...S.ui.subjects], status: S.ui.status, pri: S.ui.pri, sort: S.ui.sort, view: S.ui.view, minEst: S.ui.minEst } });
+    S.plan.views.push({ id: "v" + Date.now().toString(36), name: name.slice(0, 26), f: { q: S.ui.q, subjects: [...S.ui.subjects], status: S.ui.status, pri: S.ui.pri, sort: S.ui.sort, view: S.ui.view, minEst: S.ui.minEst, untimed: !!S.ui.untimed } });
     savePlan(); V.renderAll(); V.toast("View saved", { kind: "success" });
   }
   else if (a === "bulk-done") {
@@ -159,9 +166,9 @@ async function onClick(e) {
   else if (a === "autoplan") {
     const r = autoPlan();
     if (r.past) { V.toast("This week is in the past — jump to next week first", { kind: "warn" }); return; }
-    if (r.empty) { V.toast("Nothing unassigned to plan"); return; }
+    if (r.empty) { V.toast(r.untimed ? r.untimed + " lectures still need a time — set lengths to auto-plan them." : "Nothing unassigned to plan", { kind: "warn" }); return; }
     S.ui.view = "week"; V.renderAll(); snd.drop();
-    V.toast(r.placed + " lectures slotted into free hours" + (r.left ? " · " + r.left + " left — not enough free time this week" : ""), { kind: r.left ? "warn" : "success", undo: true });
+    V.toast(r.placed + " lectures slotted into free hours" + (r.left ? " · " + r.left + " left — not enough free time" : "") + (r.untimed ? " · " + r.untimed + " still need a time" : ""), { kind: r.left || r.untimed ? "warn" : "success", undo: true });
   }
   else if (a === "clear-week") {
     const n = clearWeek();
@@ -171,17 +178,42 @@ async function onClick(e) {
   else if (a === "rev-done") {
     const l = byId(t.dataset.id); if (!l?.reviews) return;
     snapshot("recall"); l.reviews[+t.dataset.i].done = S.today; savePlan(); V.renderAll(); snd.done();
-    V.toast(l.reviews.every((r) => r.done) ? "Mastered: " + l.title + " 🎓" : "Recall logged", { kind: "success", undo: true });
+    V.toast(l.reviews.every((r) => r.done) ? "Mastered: " + (l.title || "Lecture " + l.num) + " 🎓" : "Recall logged", { kind: "success", undo: true });
   }
   else if (a === "rev-snooze") {
     const l = byId(t.dataset.id); if (!l?.reviews) return;
     snapshot("snooze"); l.reviews[+t.dataset.i].due = addD(l.reviews[+t.dataset.i].due, 1); savePlan(); V.renderAll();
     V.toast("Pushed one day");
   }
-  else if (a === "export") exportJSON();
+  else if (a === "setup-twelve") {
+    snapshot("create 12 slots per subject");
+    let added = 0;
+    for (const c of S.courseList) added += addLecturesForCourse(c.id, LECTURES_PER_SUBJECT);
+    savePlan(); V.renderAll(); snd.drop();
+    V.toast(added + " empty lecture slots created — name and time them at your own pace.", { kind: "success", undo: true });
+  }
+  else if (a === "add-twelve") {
+    snapshot("create 12 slots");
+    const added = addLecturesForCourse(t.dataset.c, LECTURES_PER_SUBJECT);
+    savePlan(); V.renderAll(); snd.drop();
+    V.toast(added ? added + " empty slots added for this subject." : "This subject already has all 12 slots.", { kind: added ? "success" : "warn", undo: !!added });
+  }
+  else if (a === "clear-plan") {
+    if (!S.plan.lectures.length) { V.toast("The sheet is already empty."); return; }
+    clearPlan(); V.renderAll();
+    V.toast("Sheet cleared", { kind: "danger", undo: true });
+  }
+  else if (a === "export-ics") {
+    const n = exportICS();
+    V.toast(n ? n + " events downloaded as study-plan.ics — import it in Google Calendar (Settings → Import & export) or just open it on iPhone/Mac." : "Nothing scheduled yet — assign lectures to days first.", { kind: n ? "success" : "warn" });
+  }
+  else if (a === "export-csv") {
+    const n = exportCSV();
+    V.toast(n ? n + " tasks downloaded as study-plan.csv — import it in Todoist, TickTick or any task app." : "The sheet is empty.", { kind: n ? "success" : "warn" });
+  }
+  else if (a === "export") { exportBackup(); V.toast("Backup downloaded — keep it safe or restore it on another device.", { kind: "success" }); }
   else if (a === "import") $("#import-file").click();
   else if (a === "summary") copySummary();
-  else if (a === "reset-sample") { resetSample(S.courseList, S.today, S.weekStartDay); V.renderAll(); V.toast("Starter plan regenerated from your subjects", { kind: "success", undo: true }); }
   else if (a === "t-start") tToggle();
   else if (a === "t-reset") tReset();
   else if (a === "t-skip") tSkip();
@@ -194,13 +226,6 @@ async function onClick(e) {
   }
 }
 
-function exportJSON() {
-  const blob = new Blob([JSON.stringify({ app: "college-scheduler-study", version: 1, exportedAt: new Date().toISOString(), cohort: S.cohort, lectures: S.plan.lectures, views: S.plan.views, settings: S.plan.settings }, null, 2)], { type: "application/json" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob); a.download = "study-plan.json"; a.click();
-  URL.revokeObjectURL(a.href);
-  V.toast("study-plan.json downloaded", { kind: "success" });
-}
 function onImport(e) {
   const f = e.target.files[0]; if (!f) return;
   const r = new FileReader();
@@ -215,8 +240,8 @@ function onImport(e) {
       if (p.views) S.plan.views = p.views;
       if (p.settings) S.plan.settings = Object.assign({}, DEFAULT_SETTINGS, p.settings);
       S.ui.sel.clear(); savePlan(); V.renderAll();
-      V.toast("Imported " + arr.length + " lectures", { kind: "success", undo: true });
-    } catch { V.toast("Import failed — not a study-plan export for this cohort", { kind: "danger" }); }
+      V.toast("Restored " + arr.length + " lectures", { kind: "success", undo: true });
+    } catch { V.toast("Restore failed — not a study-plan backup for this cohort", { kind: "danger" }); }
   };
   r.readAsText(f); e.target.value = "";
 }
