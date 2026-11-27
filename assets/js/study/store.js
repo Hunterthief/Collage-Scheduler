@@ -1,29 +1,19 @@
 // Local study-plan state + the ONLY date arithmetic the study feature does.
-// The sheet starts EMPTY by design: nothing is pre-filled, no times are
-// guessed. Everything the user adds is persisted per cohort in localStorage,
-// so closing the tab or reloading never loses their work.
-// Extras (GTD inbox, manual minutes, review ritual, Leitner migration) live in
-// the SAME per-cohort record so one save/load cycle owns the whole plan.
-import {
-  parseDate,
-  formatDate,
-  addDays,
-  startOfWeek
-} from "../schedule/recurrence.js";
+// Blank start by design. Everything persists per cohort under cs-study-v2:.
+// Extras (GTD inbox, manual minutes, review ritual, Leitner migration, demand)
+// live in the SAME record so one save/load cycle owns the whole plan.
+import { parseDate, formatDate, addDays, startOfWeek } from "../schedule/recurrence.js";
 
 export const addD = (iso, n) => formatDate(addDays(parseDate(iso), n));
 export const weekStartOf = (iso, weekStartDay) => startOfWeek(iso, weekStartDay);
 export const wdIndex = (iso) => parseDate(iso).getUTCDay();
-export const daysBetween = (a, b) =>
-  Math.round((parseDate(b) - parseDate(a)) / 86400000);
-
+export const daysBetween = (a, b) => Math.round((parseDate(b) - parseDate(a)) / 86400000);
 export const LECTURES_PER_SUBJECT = 12;
 
 export const DEFAULT_SETTINGS = {
   focus: 25, short: 5, long: 15, cycle: 4,
   dayStart: "09:00", dayEnd: "21:00", autoStart: false, sound: true,
-  mix: "interleave",      // week ordering: interleave (mix) | block (cluster)
-  energyPlan: true        // auto-plan puts deep-demand work in the earliest free gaps
+  mix: "interleave", energyPlan: true, icsRecalls: true
 };
 
 export const S = {
@@ -31,9 +21,7 @@ export const S = {
   options: null, programsDoc: null,
   locale: "en", tz: "Africa/Cairo", today: null, weekStartDay: "Saturday",
   cohort: null, semester: null, datasets: null, index: null, courseList: [], schedule: null,
-  cache: new Map(),
-  anchor: null,
-  plan: null,
+  cache: new Map(), anchor: null, plan: null,
   ui: { view: "matrix", q: "", subjects: [], status: "all", pri: "all", sort: "subject", minEst: 0, sel: new Set(), drawer: null },
   undo: []
 };
@@ -53,48 +41,25 @@ export function seedViews() {
   ];
 }
 
-// A blank lecture shell: no title, NO estimated time. The user names it and
-// sets its length whenever they are ready. `demand` drives energy-aware planning.
 export function blankLecture(courseId, num) {
-  return {
-    id: uid(), c: courseId, num, title: "", est: 0, pri: "should",
-    status: "todo", day: null, order: num, actual: 0, notes: "",
-    demand: "medium",
-    sessions: [], completedAt: null, reviews: null
-  };
+  return { id: uid(), c: courseId, num, title: "", est: 0, pri: "should", status: "todo", day: null, order: num, actual: 0, notes: "", demand: "medium", sessions: [], completedAt: null, reviews: null };
 }
 
-// User-initiated convenience: create the empty 1..12 slots for one subject.
-// Skips numbers that already exist, never overwrites user work.
 export function addLecturesForCourse(courseId, count = LECTURES_PER_SUBJECT) {
   const existing = new Set(S.plan.lectures.filter((l) => l.c === courseId).map((l) => l.num));
   let added = 0;
-  for (let n = 1; n <= count; n++) {
-    if (existing.has(n)) continue;
-    S.plan.lectures.push(blankLecture(courseId, n));
-    added++;
-  }
+  for (let n = 1; n <= count; n++) { if (existing.has(n)) continue; S.plan.lectures.push(blankLecture(courseId, n)); added++; }
   return added;
 }
 
-export function clearPlan() {
-  snapshot("clear sheet");
-  S.plan.lectures = [];
-  S.ui.sel = new Set();
-  savePlan();
-}
+export function clearPlan() { snapshot("clear sheet"); S.plan.lectures = []; S.ui.sel = new Set(); savePlan(); }
 
-function freshExtras() {
-  return { inbox: [], manual: {}, review: { last: null, checks: {}, lapses: 0 } };
-}
+function freshExtras() { return { inbox: [], manual: {}, review: { last: null, checks: {}, lapses: 0 } }; }
 
-// Migrate pre-Leitner plans: old reviews were [{due,done}] with implicit boxes.
 function migrateLectures(arr) {
   arr.forEach((l) => {
     if (l.demand == null) l.demand = "medium";
-    if (Array.isArray(l.reviews)) {
-      l.reviews.forEach((r, i) => { if (r.box == null) r.box = Math.min(5, i + 1); });
-    }
+    if (Array.isArray(l.reviews)) l.reviews.forEach((r, i) => { if (r.box == null) r.box = Math.min(5, i + 1); });
   });
   return arr;
 }
@@ -114,13 +79,10 @@ export function loadPlan(cohort, courses, today, weekStartDay) {
     };
     S.anchor = saved.anchor || addD(weekStartOf(today, weekStartDay), 7);
   } else {
-    // BLANK start. No seeded records, no pre-allotted minutes.
     S.plan = { lectures: [], views: seedViews(), settings: Object.assign({}, DEFAULT_SETTINGS), ...ex };
     S.anchor = addD(weekStartOf(today, weekStartDay), 7);
   }
-  S.ui.sel = new Set();
-  S.ui.drawer = null;
-  S.undo = [];
+  S.ui.sel = new Set(); S.ui.drawer = null; S.undo = [];
   savePlan();
 }
 
@@ -134,17 +96,12 @@ export function savePlan() {
   } catch { /* private mode */ }
 }
 
-export function snapshot(label) {
-  S.undo.push({ label, snap: deep(S.plan.lectures) });
-  if (S.undo.length > 25) S.undo.shift();
-}
+export function snapshot(label) { S.undo.push({ label, snap: deep(S.plan.lectures) }); if (S.undo.length > 25) S.undo.shift(); }
 export function popUndo() {
-  const u = S.undo.pop();
-  if (!u) return null;
+  const u = S.undo.pop(); if (!u) return null;
   S.plan.lectures = u.snap;
   S.ui.sel = new Set([...S.ui.sel].filter((id) => byId(id)));
-  savePlan();
-  return u.label;
+  savePlan(); return u.label;
 }
 
 /* ---------- GTD inbox ---------- */
@@ -152,19 +109,19 @@ export function openInboxItem({ text, imp = false, two = false, ctx = "", due = 
   if (!S.plan.inbox) S.plan.inbox = [];
   S.plan.inbox.unshift({ id: iid(), text: String(text).slice(0, 200), imp: !!imp, two: !!two, ctx, due, done: false, doneAt: null });
 }
+export function addManual(date, min) {
+  if (!S.plan.manual) S.plan.manual = {};
+  S.plan.manual[date] = Math.max(0, (S.plan.manual[date] || 0) + min);
+}
 export function toggleInbox(id) {
   const it = (S.plan.inbox || []).find((x) => x.id === id); if (!it) return;
-  it.done = !it.done;
-  it.doneAt = it.done ? new Date().toISOString() : null;
-  if (it.two) { // 2-minute rule: doing it NOW counts as studied time
-    const d = S.today;
-    S.plan.manual[d] = Math.max(0, (S.plan.manual[d] || 0) + (it.done ? 2 : -2));
-  }
+  it.done = !it.done; it.doneAt = it.done ? new Date().toISOString() : null;
+  if (it.two) addManual(S.today, it.done ? 2 : -2); // 2-minute rule feeds the ledger
 }
 export function deleteInbox(id) { S.plan.inbox = (S.plan.inbox || []).filter((x) => x.id !== id); }
 export const openInboxCount = () => (S.plan.inbox || []).filter((x) => !x.done).length;
 
-/* ---------- time ledger (real sessions + manual minutes) ---------- */
+/* ---------- time ledger: real sessions (timer always writes one) + manual ---------- */
 export function dayMinutes(date) {
   let m = S.plan.manual?.[date] || 0;
   for (const l of S.plan.lectures) for (const s of l.sessions || []) if (s.date === date) m += s.min;
@@ -172,27 +129,18 @@ export function dayMinutes(date) {
 }
 export function streakDays() {
   if (!S.plan) return 0;
-  let n = 0;
-  let cur = S.today;
-  if (dayMinutes(cur) <= 0) cur = addD(cur, -1); // today not yet logged doesn't break the chain
+  let n = 0, cur = S.today;
+  if (dayMinutes(cur) <= 0) cur = addD(cur, -1);
   while (dayMinutes(cur) > 0) { n++; cur = addD(cur, -1); }
   return n;
 }
 const WDS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 export function auditDays(n = 7) {
   const out = [];
-  for (let i = n - 1; i >= 0; i--) {
-    const d = addD(S.today, -i);
-    out.push({ iso: d, lbl: WDS[wdIndex(d)], min: dayMinutes(d), today: i === 0 });
-  }
+  for (let i = n - 1; i >= 0; i--) { const d = addD(S.today, -i); out.push({ iso: d, lbl: WDS[wdIndex(d)], min: dayMinutes(d), today: i === 0 }); }
   return out;
 }
-export function weekMinutes() {
-  const ws = weekStartOf(S.today, S.weekStartDay);
-  let m = 0;
-  for (let i = 0; i < 7; i++) m += dayMinutes(addD(ws, i));
-  return m;
-}
+export function weekMinutes() { const ws = weekStartOf(S.today, S.weekStartDay); let m = 0; for (let i = 0; i < 7; i++) m += dayMinutes(addD(ws, i)); return m; }
 
 /* ---------- anchoring: median timed estimate of a subject ---------- */
 export function suggestEst(courseId) {
