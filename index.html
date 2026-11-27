@@ -1,354 +1,151 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
-    <meta
-      name="description"
-      content="College timetable lookup with Google Calendar-style weekly and daily schedule views, plus a cross-group schedule comparison tool."
-    />
-    <title>College Scheduler</title>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<meta
+name="description"
+content="College timetable lookup for PharmD students. View lectures, practicals, examinations, and college-wide events."
+/>
+<title>College Schedule</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/schedule.css" />
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar">
+<div class="topbar-brand">
+<div class="logo-mark" aria-hidden="true">CS</div>
+<div class="brand-text">
+<h1 id="site-title">College Schedule</h1>
+<p id="site-subtitle">
+Faculty of Pharmacy · timetable, events, and calendar subscription
+</p>
+</div>
+</div>
+<p class="privacy-note" id="privacy-notice">
+Your student ID is only a lookup key. It is not a password. Schedules are public.
+</p>
+</header>
 
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="apple-touch-icon" href="assets/favicon.svg" />
-    <meta name="theme-color" content="#1a73e8" />
+<section class="hero">
+<h2 class="hero-title">Find your timetable</h2>
+<p class="hero-sub">
+Search by university ID, or pick your academic year and practical group.
+</p>
 
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/schedule.css" />
-    <style>
-      .field-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      @media (max-width: 980px) { .field-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-      @media (max-width: 560px) { .field-grid-4 { grid-template-columns: minmax(0, 1fr); } }
+<div class="search-console" id="lookup-card">
+<div class="console-tabs" role="group" aria-label="Lookup method">
+<button
+type="button"
+class="segment active"
+data-mode="id"
+aria-pressed="true"
+>
+Student ID
+</button>
+<button
+type="button"
+class="segment"
+data-mode="manual"
+aria-pressed="false"
+>
+Year &amp; group
+</button>
+<span class="tab-ink" aria-hidden="true"></span>
+</div>
 
-      /* ---- Section nav ---- */
-      .site-nav { display: flex; gap: 4px; margin-left: 10px; overflow-x: auto; scrollbar-width: none; }
-      .site-nav::-webkit-scrollbar { display: none; }
-      .site-nav a {
-        text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.82rem;
-        padding: 6px 12px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent;
-      }
-      .site-nav a:hover { background: var(--surface-2); color: var(--text); }
-      .site-nav a[aria-current="page"] { background: var(--accent); color: #fff; }
-      @media (max-width: 700px) { .site-nav { margin-left: 0; } }
+<div class="console-body">
+<form id="id-form" class="lookup-form">
+<label class="sr-only" for="student-id">University student ID</label>
+<div class="search-field">
+<span class="search-glyph" aria-hidden="true">
+<svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+stroke="currentColor" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round">
+<circle cx="11" cy="11" r="7"></circle>
+<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+</span>
+<input
+id="student-id"
+name="student-id"
+type="text"
+inputmode="numeric"
+autocomplete="off"
+spellcheck="false"
+placeholder="Enter your university ID, e.g. 2415001"
+required
+/>
+<button class="btn primary go" type="submit">Search</button>
+</div>
+<p class="hint">Leading zeroes are preserved. No login required.</p>
+</form>
 
-      /* ---- Compare tab ---- */
-      .cmp-intro { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 10px; padding: 10px 12px; font-size: 0.9rem; margin-bottom: 12px; }
-      .cmp-intro strong { color: var(--accent); }
-      .cmp-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
-      @media (max-width: 640px) { .cmp-modes { grid-template-columns: 1fr; } }
-      .cmp-mode-card { border: 1px solid var(--line); border-radius: 12px; padding: 12px; cursor: pointer; background: var(--surface); text-align: left; font: inherit; color: var(--text); }
-      .cmp-mode-card.active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
-      .cmp-mode-card h3 { margin: 0 0 4px; font-size: 1rem; }
-      .cmp-mode-card p { margin: 0; font-size: 0.82rem; color: var(--muted); }
-      .cmp-mode-card .emoji { font-size: 1.3rem; margin-right: 6px; }
+<form id="manual-form" class="lookup-form" hidden>
+<div class="field-grid">
+<div class="field">
+<label for="program-select">Program</label>
+<select id="program-select" required></select>
+</div>
+<div class="field">
+<label for="year-select">Academic year</label>
+<select id="year-select" required></select>
+</div>
+<div class="field">
+<label for="group-select">Practical group</label>
+<select id="group-select" required></select>
+</div>
+</div>
+<div class="form-actions">
+<button class="btn primary go" type="submit">View timetable</button>
+<p class="hint">Choose the group printed on your official schedule.</p>
+</div>
+</form>
+</div>
+</div>
 
-      .cmp-controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: flex-end; }
-      .cmp-controls .field { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
-      .cmp-controls label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
-      .cmp-controls input, .cmp-controls select { font: inherit; padding: 7px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); min-width: 0; }
-      .cmp-controls input[type="time"] { width: 110px; }
-      .cmp-controls input[type="date"] { width: 155px; }
-      .cmp-radio { display: inline-flex; gap: 12px; align-items: center; font-size: 0.85rem; padding: 7px 0; }
-      .cmp-radio label { display: inline-flex; gap: 5px; align-items: center; text-transform: none; letter-spacing: 0; color: var(--text); font-size: 0.85rem; }
-      .cmp-quick { display: flex; flex-wrap: wrap; gap: 4px; }
-      .cmp-quick button { border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 5px 8px; font: inherit; font-size: 0.78rem; cursor: pointer; color: var(--text); }
-      .cmp-quick button:hover { border-color: var(--accent); color: var(--accent); }
+<div id="status" class="status info" role="status" aria-live="polite"></div>
+</section>
 
-      .cmp-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.8rem; margin: 10px 0; color: var(--muted); }
-      .cmp-legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
-      .dot-free { background: #188038; } .dot-busy { background: #b06000; } .dot-nodata { background: #9aa0a6; }
+<section id="result" class="workspace" hidden>
+<div class="workspace-header">
+<div class="workspace-title">
+<h2 id="period-heading">Schedule</h2>
+<div class="nav-controls">
+<button type="button" class="icon-btn" id="prev-period" aria-label="Previous period">‹</button>
+<button type="button" class="btn quiet" id="today-btn">Today</button>
+<button type="button" class="icon-btn" id="next-period" aria-label="Next period">›</button>
+</div>
+</div>
+<div class="view-switch" role="group" aria-label="Calendar view">
+<button type="button" class="view-btn active" data-view="weekly">Week</button>
+<button type="button" class="view-btn" data-view="daily">Day</button>
+<button type="button" class="view-btn" data-view="upcoming">Upcoming</button>
+</div>
+</div>
 
-      .cmp-summary { font-size: 0.95rem; margin: 8px 0; line-height: 1.5; }
-      .cmp-summary .big { font-size: 1.15rem; font-weight: 700; }
-      .cmp-summary .free-n { color: #188038; } .cmp-summary .busy-n { color: #b06000; } .cmp-summary .nodata-n { color: #9aa0a6; }
+<div id="assignment-summary" class="summary-card"></div>
 
-      .cmp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; min-height: 30px; }
-      .cmp-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 6px 4px 10px; font-size: 0.82rem; background: var(--surface); }
-      .cmp-chip.ref { border-color: var(--accent); background: var(--accent-soft); }
-      .cmp-chip .cmp-chip-star { border: none; background: none; cursor: pointer; font-size: 0.95rem; color: var(--muted); padding: 0 2px; }
-      .cmp-chip.ref .cmp-chip-star { color: var(--accent); }
-      .cmp-chip .cmp-chip-x { border: none; background: none; cursor: pointer; color: var(--muted); font-size: 1rem; line-height: 1; padding: 0 3px; }
-      .cmp-chip .cmp-chip-x:hover { color: #d93025; }
+<div class="study-layout">
+<div class="study-main">
+<div id="timetable" class="timetable"></div>
+</div>
+<aside class="study-side">
+<section class="calendar-card" aria-labelledby="calendar-heading">
+<h2 id="calendar-heading">Calendar subscription</h2>
+<div id="calendar-links"></div>
+</section>
+</aside>
+</div>
+</section>
 
-      .cmp-scroll { overflow: auto; max-height: 70vh; border: 1px solid var(--line); border-radius: 10px; }
-      table.cmp-table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
-      table.cmp-table th, table.cmp-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-      table.cmp-table thead th { position: sticky; top: 0; background: var(--surface); z-index: 2; font-size: 0.74rem; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
-      table.cmp-table td.cmp-time { white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; position: sticky; left: 0; background: var(--surface); z-index: 1; }
-      table.cmp-table thead th.cmp-time { z-index: 3; }
-      .cmp-status-free { color: #188038; font-weight: 600; }
-      .cmp-status-busy { color: #b06000; font-weight: 600; }
-      .cmp-status-nodata { color: #9aa0a6; font-style: italic; }
-      .cmp-ev { display: block; padding: 2px 5px; border-radius: 5px; margin: 1px 0; border-left: 3px solid var(--line); }
-      .cmp-ev.free { color: var(--muted); border-left-color: transparent; }
-      .cmp-swok { color: #188038; font-weight: 700; } .cmp-swbad { color: #d93025; font-weight: 700; }
-      .cmp-col-ref { background: var(--accent-soft); }
-      .cmp-common { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-      .cmp-common .win { border: 1px solid #188038; color: #188038; background: #e6f4ea; border-radius: 6px; padding: 3px 9px; font-size: 0.8rem; }
-      .cmp-empty { color: var(--muted); font-size: 0.88rem; padding: 8px 0; }
-      .cmp-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; align-items: center; }
-      .cmp-toggle { display: inline-flex; gap: 6px; align-items: center; font-size: 0.85rem; }
-    </style>
-  </head>
-  <body>
-    <div class="app-shell">
-      <header class="topbar">
-        <div class="topbar-brand">
-          <img class="logo-mark" src="assets/favicon.svg" alt="" aria-hidden="true" />
-          <div class="brand-text">
-            <h1 id="site-title">College Scheduler</h1>
-            <p id="site-subtitle">
-              Faculty of Pharmacy · timetable, events, and calendar subscription
-            </p>
-          </div>
-          <nav class="site-nav" aria-label="Sections">
-            <a href="index.html" aria-current="page">Timetable</a>
-            <a href="study.html">Study plan</a>
-          </nav>
-        </div>
-
-        <p class="privacy-note" id="privacy-notice">
-          Your student ID is only a lookup key. It is not a password. Schedules are public.
-        </p>
-      </header>
-
-      <section class="lookup-panel" aria-labelledby="lookup-heading">
-        <h2 id="lookup-heading" class="sr-only">Schedule lookup</h2>
-
-        <div class="lookup-card">
-          <div class="segmented" role="group" aria-label="Lookup method">
-            <button type="button" class="segment active" data-mode="id" aria-pressed="true">
-              <span class="segment-icon" aria-hidden="true">🔍</span>
-              <span>Student ID</span>
-            </button>
-            <button type="button" class="segment" data-mode="manual" aria-pressed="false">
-              <span class="segment-icon" aria-hidden="true">📅</span>
-              <span>Year &amp; group</span>
-            </button>
-            <button type="button" class="segment" data-mode="compare" aria-pressed="false">
-              <span class="segment-icon" aria-hidden="true">⚖️</span>
-              <span>Compare groups</span>
-            </button>
-          </div>
-
-          <form id="id-form" class="lookup-form">
-            <label class="sr-only" for="student-id">University student ID</label>
-            <div class="search-field">
-              <span class="search-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="7"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </span>
-              <input
-                id="student-id"
-                name="student-id"
-                type="text"
-                inputmode="numeric"
-                autocomplete="off"
-                spellcheck="false"
-                placeholder="Enter university ID, e.g. 2415001"
-                required
-              />
-              <button class="btn primary" type="submit">Search</button>
-            </div>
-            <p class="hint">Leading zeroes are preserved. No login required.</p>
-          </form>
-
-          <form id="manual-form" class="lookup-form" hidden>
-            <div class="field-grid field-grid-4">
-              <div class="field">
-                <label for="program-select">Program</label>
-                <select id="program-select" required></select>
-              </div>
-              <div class="field">
-                <label for="year-select">Academic year</label>
-                <select id="year-select" required></select>
-              </div>
-              <div class="field">
-                <label for="level-select">Year</label>
-                <select id="level-select" required></select>
-              </div>
-              <div class="field">
-                <label for="group-select">Practical group</label>
-                <select id="group-select" required></select>
-              </div>
-            </div>
-
-            <div class="form-actions">
-              <button class="btn primary" type="submit">View timetable</button>
-              <p class="hint">
-                Pick your year (1st, 2nd, 3rd…), then the group printed on your official schedule.
-              </p>
-            </div>
-          </form>
-
-          <form id="compare-form" class="lookup-form" hidden>
-            <div class="cmp-intro">
-              <strong>Compare class groups.</strong> Two ways to use it: <em>Find a free time</em>
-              (pick a day + time and see which groups are free — for planning an event), or
-              <em>Compare groups side by side</em> (see exactly when two or more groups overlap —
-              for swapping a class). Nothing you enter here is saved or sent anywhere.
-            </div>
-
-            <div class="cmp-modes" role="group" aria-label="What do you want to do?">
-              <button type="button" class="cmp-mode-card active" data-cmode="slot" aria-pressed="true">
-                <h3><span class="emoji" aria-hidden="true">🔍</span>Find a free time</h3>
-                <p>“Is Monday 5pm free for most groups?” — get a free/busy list for one moment.</p>
-              </button>
-              <button type="button" class="cmp-mode-card" data-cmode="side" aria-pressed="false">
-                <h3><span class="emoji" aria-hidden="true">🔀</span>Compare groups side by side</h3>
-                <p>“Can I switch into 2B’s Wednesday?” — see two or more groups’ days together.</p>
-              </button>
-            </div>
-
-            <!-- Find a free time (event planners) -->
-            <div id="cmp-slot-panel">
-              <div class="cmp-controls">
-                <div class="field">
-                  <label for="cmp-date">Which day?</label>
-                  <input type="date" id="cmp-date" required />
-                </div>
-                <div class="field">
-                  <label>Or jump to a weekday</label>
-                  <span class="cmp-quick" id="cmp-quick">
-                    <button type="button" data-wd="Sunday">Sun</button>
-                    <button type="button" data-wd="Monday">Mon</button>
-                    <button type="button" data-wd="Tuesday">Tue</button>
-                    <button type="button" data-wd="Wednesday">Wed</button>
-                    <button type="button" data-wd="Thursday">Thu</button>
-                    <button type="button" data-wd="Friday">Fri</button>
-                    <button type="button" data-wd="Saturday">Sat</button>
-                  </span>
-                </div>
-                <div class="field">
-                  <label for="cmp-start">From</label>
-                  <input type="time" id="cmp-start" value="09:00" required />
-                </div>
-                <div class="field">
-                  <label for="cmp-end">To</label>
-                  <input type="time" id="cmp-end" value="10:00" required />
-                </div>
-                <div class="field">
-                  <label for="cmp-scope">Which program?</label>
-                  <select id="cmp-scope">
-                    <option value="all">Both programs</option>
-                    <option value="pharmd">PharmD (general)</option>
-                    <option value="clinical-pharmacy">Clinical Pharmacy</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label>Show as</label>
-                  <span class="cmp-radio">
-                    <label><input type="radio" name="cmp-gran" value="group" checked /> Whole group</label>
-                    <label><input type="radio" name="cmp-gran" value="subgroup" /> Sub‑group (1A, 1B…)</label>
-                  </span>
-                </div>
-                <div class="field">
-                  <label>&nbsp;</label>
-                  <button class="btn primary" type="submit">Check who’s free</button>
-                </div>
-              </div>
-              <p class="hint">Pick the <strong>exact date</strong> — the tool honors alternating A/B weeks, batch times, one‑off exams and the mid‑term break, so “Monday 9am” is answered for that specific Monday.</p>
-              <div id="cmp-slot-result"></div>
-            </div>
-
-            <!-- Compare side by side (class swapping) -->
-            <div id="cmp-side-panel" hidden>
-              <p class="hint" style="margin-bottom:8px;">Add the groups you want to compare, then <strong>★ the one you’re trying to fit around</strong> (e.g. your own). A ✓ next to a session means the ★ group is free then, so you could sit it; ✗ means they’re busy.</p>
-              <div class="cmp-controls">
-                <div class="field">
-                  <label for="cmp-p-program">Program</label>
-                  <select id="cmp-p-program"></select>
-                </div>
-                <div class="field">
-                  <label for="cmp-p-year">Academic year</label>
-                  <select id="cmp-p-year"></select>
-                </div>
-                <div class="field">
-                  <label for="cmp-p-level">Year</label>
-                  <select id="cmp-p-level"></select>
-                </div>
-                <div class="field">
-                  <label for="cmp-p-group">Group</label>
-                  <select id="cmp-p-group"></select>
-                </div>
-                <div class="field">
-                  <label for="cmp-p-sub">Sub‑group</label>
-                  <select id="cmp-p-sub">
-                    <option value="">Whole group</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label>&nbsp;</label>
-                  <div class="cmp-actions" style="margin:0;">
-                    <button class="btn quiet" type="button" id="cmp-add">＋ Add this group</button>
-                    <button class="btn quiet" type="button" id="cmp-add-all-year">Add all of this year</button>
-                    <button class="btn quiet" type="button" id="cmp-add-mine">＋ My schedule</button>
-                    <button class="btn quiet" type="button" id="cmp-clear">Clear all</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cmp-chips" id="cmp-chips" aria-label="Groups selected for comparison"></div>
-
-              <div class="cmp-controls" style="margin-top:6px;">
-                <div class="field">
-                  <label>Day to view</label>
-                  <div class="cmp-actions" style="margin:0;">
-                    <button class="icon-btn" type="button" id="cmp-prev-day" aria-label="Previous day">‹</button>
-                    <button class="btn quiet" type="button" id="cmp-today-day">Today</button>
-                    <button class="icon-btn" type="button" id="cmp-next-day" aria-label="Next day">›</button>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="cmp-side-date">Or pick a date</label>
-                  <input type="date" id="cmp-side-date" required />
-                </div>
-              </div>
-
-              <div id="cmp-side-result"></div>
-            </div>
-          </form>
-
-          <div id="status" class="status info" role="status" aria-live="polite"></div>
-        </div>
-      </section>
-
-      <section id="result" class="workspace" hidden>
-        <div class="workspace-header">
-          <div class="workspace-title">
-            <h2 id="period-heading">Schedule</h2>
-            <div class="nav-controls">
-              <button type="button" class="icon-btn" id="prev-period" aria-label="Previous period">‹</button>
-              <button type="button" class="btn quiet" id="today-btn">Today</button>
-              <button type="button" class="icon-btn" id="next-period" aria-label="Next period">›</button>
-            </div>
-          </div>
-
-          <div class="view-switch" role="group" aria-label="Calendar view">
-            <button type="button" class="view-btn active" data-view="weekly">Week</button>
-            <button type="button" class="view-btn" data-view="daily">Day</button>
-            <button type="button" class="view-btn" data-view="upcoming">List</button>
-          </div>
-        </div>
-
-        <div id="assignment-summary" class="summary-strip"></div>
-        <div id="timetable" class="calendar-container"></div>
-
-        <section class="subscription-card" aria-labelledby="subscription-heading">
-          <h2 id="subscription-heading">Google Calendar subscription</h2>
-          <div id="calendar-links"></div>
-        </section>
-      </section>
-
-      <footer class="footer">
-        Static site · schedule data is published from repository JSON files.
-      </footer>
-    </div>
-
-    <script type="module" src="assets/js/app.js"></script>
-  </body>
+<footer class="footer">
+Static site · schedule data is published from repository JSON files.
+</footer>
+</div>
+<script type="module" src="assets/js/app.js"></script>
+</body>
 </html>
