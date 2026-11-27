@@ -1,9 +1,9 @@
 // Bootstrap + event wiring for the Study plan page.
 // Week planning is explicit: ＋ on a day opens a picker, ⇄ moves a lecture,
 // × takes it off the day. No drag-and-drop anywhere.
-import { S, byId, savePlan, snapshot, clearPlan, addLecturesForCourse, DEFAULT_SETTINGS, loadPlan, LECTURES_PER_SUBJECT, addD } from "./study/store.js";
+import { S, byId, savePlan, snapshot, clearPlan, addLecturesForCourse, blankLecture, DEFAULT_SETTINGS, loadPlan, LECTURES_PER_SUBJECT, addD, uid, dayMinutes, streakDays, auditDays, suggestEst, openInboxItem, toggleInbox, deleteInbox } from "./study/store.js";
 import { boot, defaultCohort, setCohort, cohortFromId, hm, winS, winE } from "./study/data.js";
-import { autoPlan, clearWeek, markDone, summaryText, lecTitle } from "./study/planner.js";
+import { autoPlan, clearWeek, markDone, revPass, revAgain, summaryText, lecTitle, frogPick, wrapDay, examDaysFor } from "./study/planner.js";
 import { exportICS, exportCSV, exportBackup, gcalUrl } from "./study/export.js";
 import { T, initTimer, toggle as tToggle, reset as tReset, skip as tSkip, setMode, start as tStart, snd, unlockAudio } from "./study/timer.js";
 import * as V from "./study/views.js";
@@ -32,8 +32,8 @@ async function init() {
     toast: V.toast,
     log: (delta) => {
       V.renderAll();
-      const todayTotal = S.plan.lectures.reduce((s, x) => s + (x.sessions || []).filter((s2) => s2.date === S.today).reduce((a, b) => a + b.min, 0), 0);
-      $("#focus-log").innerHTML = "Logged <b class='num'>" + V.fmtMin(delta) + "</b> · today total <b class='num'>" + V.fmtMin(todayTotal) + "</b>";
+      const todayTotal = dayMinutes(S.today);
+      $("#focus-log").innerHTML = "Logged <b class='num'>" + V.fmtMin(delta) + "</b> · today total <b class='num'>" + V.fmtMin(todayTotal) + "</b> · streak <b class='num'>" + streakDays() + "d</b>";
     },
     after: () => V.renderAll()
   });
@@ -54,7 +54,9 @@ async function applyCohort(c) {
 function bindEvents() {
   document.addEventListener("click", onClick);
   document.addEventListener("input", (e) => { if (e.target.id === "picker-q") V.setPickerQuery(e.target.value); });
+  document.addEventListener("change", onInboxChange);
   $("#scrim").addEventListener("click", V.closeDrawer);
+  $("#x-scrim").addEventListener("click", () => V.closeSheet());
   $("#picker-scrim").addEventListener("click", V.closePicker);
   $("#sound-btn").addEventListener("click", () => { S.plan.settings.sound = !S.plan.settings.sound; savePlan(); V.syncSound(); if (S.plan.settings.sound) { unlockAudio(); snd.tick(); } });
   $("#q").addEventListener("input", (e) => { S.ui.q = e.target.value; V.renderAll(); });
@@ -83,22 +85,56 @@ function bindEvents() {
     if (winE() <= winS()) S.plan.settings.dayStart = String(Math.max(6, hm(S.plan.settings.dayEnd) / 60 - 2)).padStart(2, "0") + ":00";
     savePlan(); V.renderAll();
   });
+  $("#t-energy").addEventListener("change", (e) => { S.plan.settings.energyPlan = e.target.checked; savePlan(); V.renderAll(); });
   $("#t-auto").addEventListener("change", (e) => { S.plan.settings.autoStart = e.target.checked; savePlan(); });
   $("#t-sound")?.addEventListener("change", (e) => { S.plan.settings.sound = e.target.checked; savePlan(); V.syncSound(); if (e.target.checked) { unlockAudio(); snd.tick(); } });
   $("#import-file").addEventListener("change", onImport);
+  $("#x-capture-form").addEventListener("submit", onCapture);
   document.addEventListener("keydown", onKey);
+}
+
+function onCapture(e) {
+  e.preventDefault();
+  const inp = $("#x-capture");
+  const text = (inp.value || "").trim();
+  if (!text) return;
+  openInboxItem({
+    text,
+    imp: $("#x-cap-imp").getAttribute("aria-pressed") === "true",
+    two: $("#x-cap-2min").getAttribute("aria-pressed") === "true",
+    ctx: $("#x-cap-ctx").value || ""
+  });
+  savePlan();
+  inp.value = "";
+  $("#x-cap-imp").setAttribute("aria-pressed", "false");
+  $("#x-cap-2min").setAttribute("aria-pressed", "false");
+  $("#x-cap-ctx").value = "";
+  inp.closest(".x-capture")?.classList.add("flash");
+  setTimeout(() => inp.closest(".x-capture")?.classList.remove("flash"), 450);
+  V.toast("Captured — clarify it in ⚡ Prioritize", { kind: "success" });
+  V.renderAll();
+}
+
+function onInboxChange(e) {
+  const t = e.target.closest("[data-action='x-inbox-due']");
+  if (!t) return;
+  const it = (S.plan.inbox || []).find((x) => x.id === t.dataset.id);
+  if (it) { it.due = e.target.value || ""; savePlan(); V.renderAll(); }
 }
 
 function onKey(e) {
   const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
   if (e.key === "Escape") {
     if (!$("#day-picker").hidden) { V.closePicker(); return; }
+    if (V.currentSheet()) { V.closeSheet(); return; }
     if (!$("#drawer").hidden) { V.closeDrawer(); return; }
   }
   if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z" && !typing) { e.preventDefault(); V.doUndo(); return; }
-  if (typing) return;
+  if (typing || V.currentSheet() || !$("#drawer").hidden) return;
   if (e.key === "/") { e.preventDefault(); $("#q").focus(); }
   else if (e.key.toLowerCase() === "n") { e.preventDefault(); newLecture(); }
+  else if (e.key.toLowerCase() === "p") { e.preventDefault(); V.openSheet("x-prioritize"); }
+  else if (e.key.toLowerCase() === "w") { e.preventDefault(); V.openSheet("x-review"); }
   else if (e.key === " ") { e.preventDefault(); tToggle(); }
 }
 
@@ -117,7 +153,7 @@ async function onClick(e) {
   else if (a === "quick-add") V.openDrawer(null, { c: t.dataset.c, num: +t.dataset.num });
   else if (a === "close-drawer") V.closeDrawer();
   else if (a === "save-drawer") V.commitDrawer();
-  else if (a === "d-pri" || a === "d-status") t.parentElement.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === t)));
+  else if (a === "d-pri" || a === "d-status" || a === "d-demand") t.parentElement.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === t)));
   else if (a === "delete-lecture") {
     snapshot("delete lecture");
     S.plan.lectures = S.plan.lectures.filter((l) => l.id !== t.dataset.id);
@@ -167,7 +203,7 @@ async function onClick(e) {
     snapshot("bulk done");
     S.plan.lectures.forEach((l) => { if (S.ui.sel.has(l.id) && l.status !== "done") markDone(l); });
     S.ui.sel.clear(); savePlan(); V.renderAll(); snd.done();
-    V.toast("Marked done — recalls scheduled", { kind: "success", undo: true });
+    V.toast("Marked done — Leitner B1 recalls scheduled", { kind: "success", undo: true });
   }
   else if (a === "bulk-delete") {
     const n = S.ui.sel.size; snapshot("delete " + n + " lectures");
@@ -189,7 +225,8 @@ async function onClick(e) {
     if (r.past) { V.toast("This week is in the past — jump to next week first", { kind: "warn" }); return; }
     if (r.empty) { V.toast(r.untimed ? r.untimed + " lectures still need a time — set lengths to auto-plan them." : "Nothing unassigned to plan", { kind: "warn" }); return; }
     S.ui.view = "week"; V.renderAll(); snd.drop();
-    V.toast(r.placed + " lectures slotted into free hours" + (r.left ? " · " + r.left + " left — not enough free time" : "") + (r.untimed ? " · " + r.untimed + " still need a time" : ""), { kind: r.left || r.untimed ? "warn" : "success", undo: true });
+    const mode = S.plan.settings.energyPlan ? " · deep work first" : "";
+    V.toast(r.placed + " lectures slotted into free hours" + (r.left ? " · " + r.left + " left — not enough free time" : "") + (r.untimed ? " · " + r.untimed + " still need a time" : "") + mode, { kind: r.left || r.untimed ? "warn" : "success", undo: true });
   }
   else if (a === "clear-week") {
     const n = clearWeek();
@@ -198,8 +235,16 @@ async function onClick(e) {
   }
   else if (a === "rev-done") {
     const l = byId(t.dataset.id); if (!l?.reviews) return;
-    snapshot("recall"); l.reviews[+t.dataset.i].done = S.today; savePlan(); V.renderAll(); snd.done();
-    V.toast(l.reviews.every((r) => r.done) ? "Mastered: " + lecTitle(l) + " 🎓" : "Recall logged", { kind: "success", undo: true });
+    snapshot("recall");
+    const r = revPass(l);
+    savePlan(); V.renderAll(); snd.done();
+    V.toast(r.mastered ? "Mastered 🎓 " + lecTitle(l) + " — box 5 cleared" : "Recall ✓ · next B" + r.next.box + " on " + md(r.next.due), { kind: "success", undo: true });
+  }
+  else if (a === "rev-again") {
+    const l = byId(t.dataset.id); if (!l?.reviews) return;
+    snapshot("lapse"); revAgain(l);
+    savePlan(); V.renderAll();
+    V.toast("Back to B1 — tomorrow, no rush", { kind: "warn", undo: true });
   }
   else if (a === "rev-snooze") {
     const l = byId(t.dataset.id); if (!l?.reviews) return;
@@ -251,6 +296,44 @@ async function onClick(e) {
   else if (a === "tune-reset") {
     S.plan.settings = Object.assign({}, DEFAULT_SETTINGS, { sound: S.plan.settings.sound });
     savePlan(); V.renderAll(); tReset(); V.toast("Tuning reset");
+  }
+  /* ---- extras: hub + sheets ---- */
+  else if (a === "x-open-pri") V.openSheet("x-prioritize");
+  else if (a === "x-open-rev") V.openSheet("x-review");
+  else if (a === "x-close") V.closeSheet();
+  else if (a === "x-close-plan") { V.closeSheet(); S.ui.view = "matrix"; V.renderAll(); }
+  else if (a === "x-frog") {
+    const l = byId(t.dataset.id); if (!l) return;
+    T.bind = l.id; V.renderBind(); if (T.state !== "running") tStart();
+    V.toast("Frog engaged · " + lecTitle(l), { kind: "success" });
+  }
+  else if (a === "x-frog-inbox") {
+    toggleInbox(t.dataset.id); savePlan(); V.renderAll(); snd.done();
+    V.toast("Done — 2-minute rule", { kind: "success" });
+  }
+  else if (a === "x-inbox-toggle") { toggleInbox(t.dataset.id); savePlan(); V.renderAll(); }
+  else if (a === "x-inbox-del") { deleteInbox(t.dataset.id); savePlan(); V.renderAll(); }
+  else if (a === "x-inbox-promote") {
+    const it = (S.plan.inbox || []).find((x) => x.id === t.dataset.id); if (!it) return;
+    const cid = S.courseList[0]?.id; if (!cid) { V.toast("No subjects loaded", { kind: "danger" }); return; }
+    const num = Math.max(0, ...S.plan.lectures.filter((l) => l.c === cid).map((l) => l.num)) + 1;
+    snapshot("promote task");
+    const l = Object.assign(blankLecture(cid, num), { title: it.text, pri: it.imp ? "must" : "should" });
+    S.plan.lectures.push(l);
+    S.plan.inbox = S.plan.inbox.filter((x) => x.id !== it.id);
+    savePlan(); V.closeSheet(); V.renderAll();
+    V.openDrawer(l.id);
+  }
+  else if (a === "x-wrap") {
+    const r = wrapDay();
+    if (!r.n && !r.recalls) { V.toast("Today is already clear."); return; }
+    savePlan(); V.renderAll();
+    V.toast(r.n ? r.n + " of today’s lectures taken back to the pool" + (r.recalls ? " · " + r.recalls + " recalls still due" : "") : r.recalls + " recalls still due today", { kind: r.n ? "warn" : "info", undo: !!r.n });
+  }
+  else if (a === "x-toggle-mix") {
+    S.plan.settings.mix = S.plan.settings.mix === "interleave" ? "block" : "interleave";
+    savePlan(); V.renderAll();
+    V.toast("Week ordering: " + (S.plan.settings.mix === "interleave" ? "interleave (mix subjects)" : "block (cluster subjects)"));
   }
 }
 
