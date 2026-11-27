@@ -1,10 +1,9 @@
 // All rendering. Reads shared state S; academic labels/colors come from the
 // fetched datasets via data.js — no hardcoded subjects or schedules.
-import { S, byId, savePlan, snapshot, popUndo } from "./store.js";
+import { S, byId, savePlan, snapshot, popUndo, addD, wdIndex, daysBetween } from "./store.js";
 import { courseColor, courseTitle, tint, weekDates, capacityFor, nextExamFor, upcomingExams, winS, winE } from "./data.js";
 import { filtered, matches, reviewQueue, markDone, unDone, PRI } from "./planner.js";
 import { T, ringLen, modeLen, currentElapsed } from "./timer.js";
-import { addD, wdIndex, daysBetween } from "./dates.js";
 import { localize } from "../i18n.js";
 import { parseDate } from "../schedule/recurrence.js";
 
@@ -225,7 +224,7 @@ function renderWeek() {
       '<div class="meter"><i class="' + meter + '" style="width:' + Math.min(100, ratio * 100) + '%"></i></div>' +
       '<div class="free num">' + fmtMin(cap.busy) + ' in class · window ' + fmtClock(winS()) + '–' + fmtClock(winE()) + '</div></div>' +
       (shown.length ? '<div class="classes">' + shown.map((i) =>
-        '<div class="cls' + (i.type === "examination" ? " exam" : "") + '" style="--cc:' + (i.color || "#5f6f83") + '" title="' + esc(i.label) + '">' + fmtClock(i.s) + " " + esc(i.label) + '</div>').join("") +
+        '<div class="cls' + (i.type === "examination" ? " exam" : "") + '" style="--cc:' + (i.color || "#5f6368") + '" title="' + esc(i.label) + '">' + fmtClock(i.s) + " " + esc(i.label) + '</div>').join("") +
         (timed.length > 4 ? '<div class="cls more">+' + (timed.length - 4) + ' more classes</div>' : '') + '</div>' : '') +
       '<div class="day-cards" data-cards="' + d + '">' +
       (cards.length ? cards.map((l) => lecCard(l, true)).join("") : '<div class="drop-hint">' + (past ? "Past day" : "Drop lectures here<br>or hit ⚡ Auto-plan") + '</div>') +
@@ -430,7 +429,7 @@ export function commitDrawer() {
     if (m.day !== l.day && m.day) m.order = Math.max(0, ...S.plan.lectures.filter((x) => x.day === m.day && x.id !== l.id).map((x) => x.order)) + 1;
     Object.assign(l, m);
   } else {
-    m.id = "l" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+    m.id = uid();
     if (m.day) m.order = Math.max(0, ...S.plan.lectures.filter((x) => x.day === m.day).map((x) => x.order)) + 1;
     S.plan.lectures.push(m);
   }
