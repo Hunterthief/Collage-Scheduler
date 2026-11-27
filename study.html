@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
     <meta name="description" content="Study plan built from your real timetable: a blank 12-slot lecture sheet per subject, capacity-aware week planner, priorities, spaced reviews, a focus timer, and one-click export to Google Calendar or task apps." />
     <title>Study Plan · College Scheduler</title>
@@ -19,19 +19,20 @@
     <header class="s-topbar">
       <a class="s-brand" href="index.html">
         <img src="assets/favicon.svg" alt="" aria-hidden="true" />
-        <span><b>College Scheduler</b><small>Study plan</small></span>
+        <span><b>College Scheduler</b></span>
       </a>
-      <nav class="s-nav" aria-label="Sections">
-        <a href="index.html">Timetable</a>
-        <a href="study.html" aria-current="page">Study plan</a>
-      </nav>
       <div class="s-top-right">
         <span class="s-date num" id="s-today"></span>
         <button class="s-sound" id="sound-btn" aria-pressed="true" title="Toggle all sounds">
-          <span class="dot" aria-hidden="true"></span><span id="sound-lbl">Sound on</span>
+          <span class="dot" aria-hidden="true"></span><span id="sound-lbl">Sound</span>
         </button>
       </div>
     </header>
+
+    <nav class="site-nav study-nav" aria-label="Sections">
+      <a href="index.html">Timetable</a>
+      <a href="study.html" aria-current="page">Study plan</a>
+    </nav>
 
     <main class="s-shell">
       <section class="s-hero rise d1" aria-label="Plan overview">
@@ -118,7 +119,7 @@
           </div>
 
           <div id="view-matrix">
-            <div class="s-viewbar"><span class="hint">Your blank sheet: 12 lecture slots per subject. Tap ＋ to add one, or “＋12” on a row to create all twelve empty slots. Nothing is pre-filled — you name and time each lecture yourself.</span></div>
+            <div class="s-viewbar"><span class="hint">Your blank sheet: 12 lecture slots per subject. Tap ＋ to add one, or “＋12” on a row to create all twelve empty slots.</span></div>
             <div class="s-matrix-wrap"><table class="s-matrix" id="matrix-table"></table></div>
             <div class="s-matrix-note" id="matrix-note"></div>
           </div>
@@ -141,7 +142,6 @@
               <span><i class="tight"></i>Tight (&gt;80%)</span>
               <span><i class="over"></i>Overbooked</span>
               <span><i class="cls"></i>Real class / exam block</span>
-              <span>Press <b>＋</b> on a day to plan a lecture · <b>⇄</b> on a card to move it · <b>×</b> to take it off the day</span>
             </div>
           </div>
 
@@ -153,7 +153,7 @@
 
         <div class="s-rail rise d5">
           <section class="panel s-focus" aria-label="Focus timer">
-            <div class="panel-h"><h2>Focus</h2><span class="hint">Pomodoro, bound to a lecture</span></div>
+            <div class="panel-h"><h2>Focus</h2><span class="hint">Pomodoro</span></div>
             <div class="s-timer-zone">
               <div class="s-ring">
                 <svg width="196" height="196" viewBox="0 0 196 196" aria-hidden="true">
@@ -186,20 +186,17 @@
           </section>
 
           <section class="panel s-export" aria-label="Share and export">
-            <div class="panel-h"><h2>Share &amp; export</h2><span class="hint" id="export-hint"></span></div>
+            <div class="panel-h"><h2>Share &amp; export</h2></div>
             <div class="panel-b s-export-b">
-              <button class="btn primary s-export-btn" type="button" data-action="export-ics">📅 Google / Apple / Outlook Calendar</button>
-              <p class="hint">Downloads <b>study-plan.ics</b>. Google Calendar: ⚙ Settings → <b>Import &amp; export</b> → choose the file → Import. On iPhone / Mac just open the file. Timed lectures land in free gaps, never on top of a class.</p>
-              <button class="btn s-export-btn" type="button" data-action="export-csv">✅ Task apps (Todoist, TickTick…)</button>
-              <p class="hint">Downloads <b>study-plan.csv</b>. Todoist: open a project → ⋯ → Import from CSV. TickTick: Settings → Import. Priorities and due days carry over.</p>
-              <button class="btn s-export-btn" type="button" data-action="summary">📋 Copy as plain text</button>
+              <button class="btn primary s-export-btn" type="button" data-action="export-ics">📅 Calendar (.ics)</button>
+              <button class="btn s-export-btn" type="button" data-action="export-csv">✅ Task apps (.csv)</button>
+              <button class="btn s-export-btn" type="button" data-action="summary">📋 Copy plain text</button>
               <div class="s-export-row">
                 <button class="btn sm" type="button" data-action="export" title="Download a backup file">💾 Backup</button>
                 <button class="btn sm" type="button" data-action="import" title="Restore a backup file">⬆ Restore</button>
-                <button class="btn sm danger" type="button" data-action="clear-plan" title="Empty the sheet (undoable)">🗑 Clear sheet</button>
+                <button class="btn sm danger" type="button" data-action="clear-plan" title="Empty the sheet (undoable)">🗑 Clear</button>
               </div>
-              <input type="file" id="import-file" accept=".json,application/json" hidden />
-              <p class="hint">Your sheet saves automatically in this browser — reloading or closing the tab won’t lose it. A backup moves it to another device.</p>
+              <input type="file" id="import-file-study" accept=".json,application/json" hidden />
             </div>
           </section>
 
@@ -220,21 +217,19 @@
                 <select id="t-win-end"></select></div>
               <div class="tune-row"><label for="t-auto">Auto-start next phase</label>
                 <span class="switch"><input type="checkbox" id="t-auto"/><i></i></span></div>
-              <div class="tune-row"><label for="t-sound">Timer &amp; action sounds</label>
-                <span class="switch"><input type="checkbox" id="t-sound" checked/><i></i></span></div>
               <div class="tune-foot"><span class="hint">Window drives day capacity</span>
                 <button class="btn sm ghost" type="button" data-action="tune-reset">Reset tuning</button></div>
             </div>
           </section>
 
           <section class="panel" aria-label="Subject progress">
-            <div class="panel-h"><h2>Progress</h2><span class="hint">done / total per subject</span></div>
+            <div class="panel-h"><h2>Progress</h2><span class="hint">done / total</span></div>
             <div class="panel-b"><div class="s-prog" id="prog-list"></div><div class="s-prog-total" id="prog-total"></div></div>
           </section>
         </div>
       </div>
 
-      <p class="s-foot rise d5">Subjects, colors, classes and exam dates are fetched live from the repository JSON · your sheet is stored only in this browser — <b>Backup</b> to move it between devices.</p>
+      <p class="s-foot rise d5">Subjects, colors, classes and exam dates are fetched live from the repository JSON · your sheet is stored only in this browser.</p>
     </main>
 
     <div class="s-scrim" id="scrim" hidden></div>
