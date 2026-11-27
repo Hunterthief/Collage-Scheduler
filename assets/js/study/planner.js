@@ -1,8 +1,7 @@
 // Pure plan logic: filtering, sorting, auto-planning into real free hours,
 // spaced-repetition queue and the text summary.
-import { S, snapshot, savePlan } from "./store.js";
+import { S, snapshot, savePlan, addD } from "./store.js";
 import { weekDates, capacityFor, deadlineFor, courseTitle } from "./data.js";
-import { addD } from "./dates.js";
 
 export const PRI = { must: 0, should: 1, could: 2 };
 
