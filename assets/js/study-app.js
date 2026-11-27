@@ -1,15 +1,19 @@
 // Bootstrap + event wiring for the Study plan page.
-import { S, byId, savePlan, snapshot, clearPlan, addLecturesForCourse, DEFAULT_SETTINGS, loadPlan, LECTURES_PER_SUBJECT } from "./study/store.js";
+// Week planning is explicit: ＋ on a day opens a picker, ⇄ moves a lecture,
+// × takes it off the day. No drag-and-drop anywhere.
+import { S, byId, savePlan, snapshot, clearPlan, addLecturesForCourse, DEFAULT_SETTINGS, loadPlan, LECTURES_PER_SUBJECT, addD } from "./study/store.js";
 import { boot, defaultCohort, setCohort, cohortFromId, hm, winS, winE } from "./study/data.js";
-import { autoPlan, clearWeek, markDone, summaryText } from "./study/planner.js";
+import { autoPlan, clearWeek, markDone, summaryText, lecTitle } from "./study/planner.js";
 import { exportICS, exportCSV, exportBackup, gcalUrl } from "./study/export.js";
 import { T, initTimer, toggle as tToggle, reset as tReset, skip as tSkip, setMode, start as tStart, snd, unlockAudio } from "./study/timer.js";
-import { bindDrag } from "./study/drag.js";
 import * as V from "./study/views.js";
-import { addD } from "./study/store.js";
-import { startOfWeek } from "./schedule/recurrence.js";
+import { startOfWeek, parseDate } from "./schedule/recurrence.js";
 
 const $ = (s) => document.querySelector(s);
+const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MO = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const md = (s) => { const d = parseDate(s); return MO[d.getUTCMonth()] + " " + d.getUTCDate(); };
+const wd = (s) => parseDate(s).getUTCDay();
 
 init();
 
@@ -33,7 +37,6 @@ async function init() {
     },
     after: () => V.renderAll()
   });
-  bindDrag();
   bindEvents();
   document.addEventListener("pointerdown", unlockAudio, { once: true });
   document.addEventListener("visibilitychange", () => { if (!document.hidden && T.state === "running") V.paintTimer(); });
@@ -50,7 +53,9 @@ async function applyCohort(c) {
 
 function bindEvents() {
   document.addEventListener("click", onClick);
+  document.addEventListener("input", (e) => { if (e.target.id === "picker-q") V.setPickerQuery(e.target.value); });
   $("#scrim").addEventListener("click", V.closeDrawer);
+  $("#picker-scrim").addEventListener("click", V.closePicker);
   $("#sound-btn").addEventListener("click", () => { S.plan.settings.sound = !S.plan.settings.sound; savePlan(); V.syncSound(); if (S.plan.settings.sound) { unlockAudio(); snd.tick(); } });
   $("#q").addEventListener("input", (e) => { S.ui.q = e.target.value; V.renderAll(); });
   $("#pri-filter").addEventListener("change", (e) => { S.ui.pri = e.target.value; V.renderAll(); });
@@ -86,7 +91,10 @@ function bindEvents() {
 
 function onKey(e) {
   const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
-  if (e.key === "Escape" && !$("#drawer").hidden) { V.closeDrawer(); return; }
+  if (e.key === "Escape") {
+    if (!$("#day-picker").hidden) { V.closePicker(); return; }
+    if (!$("#drawer").hidden) { V.closeDrawer(); return; }
+  }
   if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z" && !typing) { e.preventDefault(); V.doUndo(); return; }
   if (typing) return;
   if (e.key === "/") { e.preventDefault(); $("#q").focus(); }
@@ -103,7 +111,7 @@ async function onClick(e) {
   const t = e.target.closest("[data-action]");
   if (!t) return;
   const a = t.dataset.action;
-  if (a === "open") { if (e.target.closest("[data-drag]") || e.target.type === "checkbox") return; V.openDrawer(t.dataset.id); }
+  if (a === "open") { if (e.target.type === "checkbox") return; V.openDrawer(t.dataset.id); }
   else if (a === "select") { e.stopPropagation(); t.checked ? S.ui.sel.add(t.dataset.id) : S.ui.sel.delete(t.dataset.id); V.renderAll(); }
   else if (a === "new") newLecture();
   else if (a === "quick-add") V.openDrawer(null, { c: t.dataset.c, num: +t.dataset.num });
@@ -122,6 +130,19 @@ async function onClick(e) {
     if (url) { window.open(url, "_blank", "noopener"); V.toast("Google Calendar opened with this lecture pre-filled — press Save.", { kind: "success" }); }
     else V.toast("Assign a day first, then export.", { kind: "warn" });
   }
+  else if (a === "add-to-day") V.openPicker("add", { day: t.dataset.day });
+  else if (a === "move-lecture") V.openPicker("move", { lectureId: t.dataset.id });
+  else if (a === "unassign-lecture") {
+    const l = byId(t.dataset.id); if (!l || !l.day) return;
+    snapshot("unassign lecture");
+    const day = l.day; l.day = null;
+    savePlan(); V.renderAll();
+    V.toast("Taken off " + WD[wd(day)] + " " + md(day) + ": " + lecTitle(l), { kind: "warn", undo: true });
+  }
+  else if (a === "picker-add") V.pickerAssign(t.dataset.id);
+  else if (a === "picker-move") V.pickerMove(t.dataset.day);
+  else if (a === "picker-unassign") V.pickerUnassign();
+  else if (a === "picker-close") V.closePicker();
   else if (a === "tab") { S.ui.view = t.dataset.v; V.renderAll(); }
   else if (a === "f-subject") {
     const v = t.dataset.v;
@@ -178,7 +199,7 @@ async function onClick(e) {
   else if (a === "rev-done") {
     const l = byId(t.dataset.id); if (!l?.reviews) return;
     snapshot("recall"); l.reviews[+t.dataset.i].done = S.today; savePlan(); V.renderAll(); snd.done();
-    V.toast(l.reviews.every((r) => r.done) ? "Mastered: " + (l.title || "Lecture " + l.num) + " 🎓" : "Recall logged", { kind: "success", undo: true });
+    V.toast(l.reviews.every((r) => r.done) ? "Mastered: " + lecTitle(l) + " 🎓" : "Recall logged", { kind: "success", undo: true });
   }
   else if (a === "rev-snooze") {
     const l = byId(t.dataset.id); if (!l?.reviews) return;
@@ -214,6 +235,13 @@ async function onClick(e) {
   else if (a === "export") { exportBackup(); V.toast("Backup downloaded — keep it safe or restore it on another device.", { kind: "success" }); }
   else if (a === "import") $("#import-file").click();
   else if (a === "summary") copySummary();
+  else if (a === "reset-sample") {
+    snapshot("reset sample");
+    S.plan.lectures = [];
+    S.plan.views = S.plan.views.length ? S.plan.views : [];
+    savePlan(); V.renderAll();
+    V.toast("Sheet emptied — start fresh whenever you're ready.", { kind: "success", undo: true });
+  }
   else if (a === "t-start") tToggle();
   else if (a === "t-reset") tReset();
   else if (a === "t-skip") tSkip();
