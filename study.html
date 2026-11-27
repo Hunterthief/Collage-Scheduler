@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light" />
-    <meta
-      name="description"
-      content="Study plan built from your real timetable: a blank 12-slot lecture sheet per subject, capacity-aware week planner, Eisenhower prioritizer with energy tagging, GTD capture inbox, Leitner reviews, weekly review, study streak, focus timer, and one-click export to Google Calendar or task apps."
-    />
+    <meta name="description" content="Study plan built from your real timetable: 12-slot lecture sheet per subject, capacity-aware week planner, Eisenhower prioritizer with energy tagging, GTD capture inbox, Leitner reviews surfaced in your calendar, weekly review, study streak, focus timer, and one-click export to Google Calendar or task apps." />
     <title>Study Plan · College Scheduler</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" href="assets/favicon.svg" />
@@ -26,31 +23,18 @@
     <div class="s-bg" aria-hidden="true"></div>
 
     <header class="s-topbar">
-      <a class="s-brand" href="index.html">
-        <img src="assets/favicon.svg" alt="" aria-hidden="true" />
-        <span><b>College Scheduler</b></span>
-      </a>
+      <a class="s-brand" href="index.html"><img src="assets/favicon.svg" alt="" aria-hidden="true" /><span><b>College Scheduler</b></span></a>
       <div class="s-top-right">
         <span class="s-date num" id="s-today"></span>
-        <button class="s-sound" id="sound-btn" aria-pressed="true" title="Toggle all sounds">
-          <span class="dot" aria-hidden="true"></span><span id="sound-lbl">Sound</span>
-        </button>
+        <button class="s-sound" id="sound-btn" aria-pressed="true" title="Toggle all sounds"><span class="dot" aria-hidden="true"></span><span id="sound-lbl">Sound</span></button>
       </div>
     </header>
 
     <main class="s-shell">
-      <nav class="site-nav study-nav" aria-label="Sections">
-        <a href="index.html">Timetable</a>
-        <a href="study.html" aria-current="page">Study plan</a>
-      </nav>
+      <nav class="site-nav study-nav" aria-label="Sections"><a href="index.html">Timetable</a><a href="study.html" aria-current="page">Study plan</a></nav>
 
       <section class="s-hero rise d1" data-mtab="plan" aria-label="Plan overview">
-        <div class="s-hero-title">
-          <h1>Study <em>Plan</em></h1>
-          <p id="s-hero-sub">Loading your subjects and timetable…</p>
-          <div class="s-rule" aria-hidden="true"></div>
-          <div class="s-exam-chips" id="s-exam-chips"></div>
-        </div>
+        <div class="s-hero-title"><h1>Study <em>Plan</em></h1><p id="s-hero-sub">Loading your subjects and timetable…</p><div class="s-rule" aria-hidden="true"></div><div class="s-exam-chips" id="s-exam-chips"></div></div>
         <div class="s-stats" id="s-stats"></div>
       </section>
 
@@ -62,45 +46,24 @@
           <div class="field"><label for="c-year">Academic year</label><select id="c-year"></select></div>
           <div class="field"><label for="c-level">Year</label><select id="c-level"></select></div>
           <div class="field"><label for="c-group">Group</label><select id="c-group"></select></div>
-          <div class="field s-id-field">
-            <label for="c-id">…or your student ID</label>
-            <div class="s-id-row">
-              <input id="c-id" type="text" inputmode="numeric" autocomplete="off" placeholder="2415001" />
-              <button class="btn quiet" type="button" id="c-id-go">Use ID</button>
-            </div>
-          </div>
+          <div class="field s-id-field"><label for="c-id">…or your student ID</label><div class="s-id-row"><input id="c-id" type="text" inputmode="numeric" autocomplete="off" placeholder="2415001" /><button class="btn quiet" type="button" id="c-id-go">Use ID</button></div></div>
         </div>
         <p class="hint" id="c-note">Free hours below are computed from this cohort’s real classes, so the plan never books you into a lecture.</p>
       </section>
 
-      <!-- TODAY HUB: frog · capture · streak · prioritize · review · wrap -->
       <section class="x-hub rise d2" data-mtab="plan" id="x-hub" aria-label="Today">
         <div class="x-hub-row">
-          <div class="x-frog" id="x-frog" title="Eat the frog — the one thing to do first">
-            <span class="x-frog-ico" aria-hidden="true">🐸</span>
-            <span class="x-frog-txt muted" id="x-frog-txt">Loading your day…</span>
-            <button class="x-frog-act" type="button" id="x-frog-act" hidden>Do</button>
-          </div>
+          <div class="x-frog" id="x-frog" title="Eat the frog — the one thing to do first"><span class="x-frog-ico" aria-hidden="true">🐸</span><span class="x-frog-txt muted" id="x-frog-txt">Loading your day…</span><button class="x-frog-act" type="button" id="x-frog-act" hidden>Do</button></div>
           <div class="x-hub-stats num" id="x-hub-stats" aria-live="polite"></div>
         </div>
-
         <form class="x-capture" id="x-capture-form" autocomplete="off">
           <span class="x-cap-ico" aria-hidden="true">📥</span>
           <input id="x-capture" type="text" placeholder="Capture a task, reading, errand… (Enter to add)" aria-label="Capture a task" />
           <button type="button" class="x-cap-flag" id="x-cap-imp" aria-pressed="false" title="Important (not just urgent)">★</button>
           <button type="button" class="x-cap-flag" id="x-cap-2min" aria-pressed="false" title="Under 2 minutes — do it now">2m</button>
-          <select id="x-cap-ctx" aria-label="Context">
-            <option value="">Context</option>
-            <option value="@reading">@reading</option>
-            <option value="@lab">@lab</option>
-            <option value="@computer">@computer</option>
-            <option value="@email">@email</option>
-            <option value="@calls">@calls</option>
-            <option value="@errands">@errands</option>
-          </select>
+          <select id="x-cap-ctx" aria-label="Context"><option value="">Context</option><option value="@reading">@reading</option><option value="@lab">@lab</option><option value="@computer">@computer</option><option value="@email">@email</option><option value="@calls">@calls</option><option value="@errands">@errands</option></select>
           <button class="btn primary sm" type="submit">Add</button>
         </form>
-
         <div class="x-hub-acts">
           <button class="btn sm" type="button" data-action="x-open-pri">⚡ Prioritize</button>
           <button class="btn sm" type="button" data-action="x-open-rev">↻ Weekly review<span class="x-nudge" id="x-review-nudge" hidden></span></button>
@@ -111,48 +74,21 @@
 
       <div class="s-work">
         <aside class="panel s-lib rise d3" data-mtab="lectures" aria-label="Lecture library">
-          <div class="panel-h">
-            <h2>Lectures</h2><span class="hint" id="lib-count"></span>
-            <span class="grow"></span>
-            <button class="btn primary sm" type="button" data-action="new">＋ New</button>
-          </div>
+          <div class="panel-h"><h2>Lectures</h2><span class="hint" id="lib-count"></span><span class="grow"></span><button class="btn primary sm" type="button" data-action="new">＋ New</button></div>
           <div class="s-lib-tools">
-            <div class="s-search">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
-              <input id="q" type="text" placeholder="Search lectures or subjects…" aria-label="Search lectures" />
-              <kbd>/</kbd>
-            </div>
+            <div class="s-search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg><input id="q" type="text" placeholder="Search lectures or subjects…" aria-label="Search lectures" /><kbd>/</kbd></div>
             <div class="s-chips" id="subject-chips" role="group" aria-label="Filter by subject"></div>
-            <div class="seg" id="status-seg" role="group" aria-label="Filter by status">
-              <button type="button" data-action="f-status" data-v="all" aria-pressed="true">All</button>
-              <button type="button" data-action="f-status" data-v="todo" aria-pressed="false">To do</button>
-              <button type="button" data-action="f-status" data-v="doing" aria-pressed="false">Doing</button>
-              <button type="button" data-action="f-status" data-v="done" aria-pressed="false">Done</button>
-            </div>
+            <div class="seg" id="status-seg" role="group" aria-label="Filter by status"><button type="button" data-action="f-status" data-v="all" aria-pressed="true">All</button><button type="button" data-action="f-status" data-v="todo" aria-pressed="false">To do</button><button type="button" data-action="f-status" data-v="doing" aria-pressed="false">Doing</button><button type="button" data-action="f-status" data-v="done" aria-pressed="false">Done</button></div>
             <div class="s-row2">
-              <select id="pri-filter" aria-label="Filter by priority">
-                <option value="all">Any priority</option><option value="must">Must</option>
-                <option value="should">Should</option><option value="could">Could</option>
-              </select>
-              <select id="sort-sel" aria-label="Sort lectures">
-                <option value="subject">Sort · Subject</option>
-                <option value="priority">Sort · Priority</option>
-                <option value="deadline">Sort · Exam soonest</option>
-                <option value="estimate">Sort · Longest first</option>
-                <option value="num">Sort · Lecture №</option>
-              </select>
+              <select id="pri-filter" aria-label="Filter by priority"><option value="all">Any priority</option><option value="must">Must</option><option value="should">Should</option><option value="could">Could</option></select>
+              <select id="sort-sel" aria-label="Sort lectures"><option value="subject">Sort · Subject</option><option value="priority">Sort · Priority</option><option value="deadline">Sort · Exam soonest</option><option value="estimate">Sort · Longest first</option><option value="num">Sort · Lecture №</option></select>
             </div>
             <div class="s-views" id="views-row" aria-label="Saved views"></div>
           </div>
           <div class="s-lib-list" id="lib-list" aria-label="Lecture list"></div>
           <div class="s-bulk" id="bulk-bar" hidden></div>
           <div class="s-lib-foot">
-            <button class="btn sm" type="button" data-action="export">⬇ Export</button>
-            <button class="btn sm" type="button" data-action="import">⬆ Import</button>
-            <button class="btn sm" type="button" data-action="summary">📋 Summary</button>
-            <span class="grow"></span>
-            <button class="btn sm ghost" type="button" data-action="reset-sample" title="Regenerate the starter plan from your subjects">Reset</button>
-            <input type="file" id="import-file" accept=".json,application/json" hidden />
+            <button class="btn sm" type="button" data-action="export">⬇ Export</button><button class="btn sm" type="button" data-action="import">⬆ Import</button><button class="btn sm" type="button" data-action="summary">📋 Summary</button><span class="grow"></span><button class="btn sm ghost" type="button" data-action="reset-sample" title="Regenerate the starter plan from your subjects">Reset</button><input type="file" id="import-file" accept=".json,application/json" hidden />
           </div>
         </aside>
 
@@ -162,37 +98,21 @@
             <button class="s-tab" type="button" role="tab" data-action="tab" data-v="week" aria-selected="false">🗓 Week</button>
             <button class="s-tab" type="button" role="tab" data-action="tab" data-v="reviews" aria-selected="false">↻ Reviews <span class="s-badge zero" id="rev-badge">0</span></button>
           </div>
-
           <div id="view-matrix">
             <div class="s-viewbar"><span class="hint">12 lecture slots per subject. Tap a box to add or edit one, or “＋12” to create all twelve empty slots. ● = focus demand (deep/medium/light), ⭐ = high-leverage, ⚠ = behind pace.</span></div>
             <div class="s-matrix-wrap"><table class="s-matrix" id="matrix-table"></table></div>
             <div class="s-matrix-note" id="matrix-note"></div>
           </div>
-
           <div id="view-week" hidden>
             <div class="s-viewbar">
-              <div class="s-weeknav">
-                <button class="icon-btn" type="button" data-action="week-prev" aria-label="Previous week">‹</button>
-                <span class="lbl num" id="week-lbl"></span>
-                <button class="icon-btn" type="button" data-action="week-next" aria-label="Next week">›</button>
-                <button class="btn sm" type="button" data-action="week-today">This week</button>
-              </div>
-              <span class="grow"></span>
-              <button class="btn primary sm" type="button" data-action="autoplan" title="Fill free hours with your highest-priority lectures — deep work first when energy-aware planning is on">⚡ Auto-plan</button>
-              <button class="btn sm danger" type="button" data-action="clear-week">Clear week</button>
+              <div class="s-weeknav"><button class="icon-btn" type="button" data-action="week-prev" aria-label="Previous week">‹</button><span class="lbl num" id="week-lbl"></span><button class="icon-btn" type="button" data-action="week-next" aria-label="Next week">›</button><button class="btn sm" type="button" data-action="week-today">This week</button></div>
+              <span class="grow"></span><button class="btn primary sm" type="button" data-action="autoplan" title="Fill free hours with your highest-priority lectures — deep work first when energy-aware planning is on">⚡ Auto-plan</button><button class="btn sm danger" type="button" data-action="clear-week">Clear week</button>
             </div>
             <div class="s-week-wrap"><div class="s-week" id="week-grid"></div></div>
-            <div class="s-week-legend">
-              <span><i class="ok"></i>Planned fits free time</span>
-              <span><i class="tight"></i>Tight (&gt;80%)</span>
-              <span><i class="over"></i>Overbooked</span>
-              <span><i class="cls"></i>Real class / exam block</span>
-              <span>▲ = inside your peak window</span>
-            </div>
+            <div class="s-week-legend"><span><i class="ok"></i>Planned fits free time</span><span><i class="tight"></i>Tight (&gt;80%)</span><span><i class="over"></i>Overbooked</span><span><i class="cls"></i>Real class / exam block</span><span>▲ = inside your peak window</span></div>
           </div>
-
           <div id="view-reviews" hidden>
-            <div class="s-viewbar"><span class="hint">Leitner boxes — finishing a lecture starts it at <b>B1 (+1d)</b>; each recall promotes the box (+3d · +7d · +14d · +30d). “Again” drops it back to B1.</span></div>
+            <div class="s-viewbar"><span class="hint">Leitner boxes — finishing a lecture starts it at <b>B1 (+1d)</b>; each recall promotes the box (+3d · +7d · +14d · +30d). “Again” drops it back to B1. Due recalls also land in your .ics export.</span></div>
             <div class="s-rev-wrap" id="rev-wrap"></div>
           </div>
         </section>
@@ -202,31 +122,13 @@
             <div class="panel-h"><h2>Focus</h2><span class="hint">Pomodoro</span></div>
             <div class="s-timer-zone">
               <div class="s-ring">
-                <svg width="196" height="196" viewBox="0 0 196 196" aria-hidden="true">
-                  <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="var(--accent)"/><stop offset=".55" stop-color="#0b8043"/><stop offset="1" stop-color="#f9ab00"/>
-                  </linearGradient></defs>
-                  <circle class="bg" cx="98" cy="98" r="86" fill="none" stroke-width="11"/>
-                  <circle class="fg" id="ring-fg" cx="98" cy="98" r="86" fill="none" stroke-width="11" stroke-dasharray="540.35" stroke-dashoffset="0"/>
-                </svg>
-                <div class="s-ring-center">
-                  <span class="mode" id="timer-mode">Focus</span>
-                  <span class="time num" id="timer-time">25:00</span>
-                  <span class="bound" id="timer-bound">—</span>
-                </div>
+                <svg width="196" height="196" viewBox="0 0 196 196" aria-hidden="true"><defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset=".55" stop-color="#0b8043"/><stop offset="1" stop-color="#f9ab00"/></linearGradient></defs><circle class="bg" cx="98" cy="98" r="86" fill="none" stroke-width="11"/><circle class="fg" id="ring-fg" cx="98" cy="98" r="86" fill="none" stroke-width="11" stroke-dasharray="540.35" stroke-dashoffset="0"/></svg>
+                <div class="s-ring-center"><span class="mode" id="timer-mode">Focus</span><span class="time num" id="timer-time">25:00</span><span class="bound" id="timer-bound">—</span></div>
               </div>
-              <div class="seg s-mode-seg" role="group" aria-label="Timer mode">
-                <button type="button" data-action="t-mode" data-v="focus" aria-pressed="true">Focus</button>
-                <button type="button" data-action="t-mode" data-v="short" aria-pressed="false">Break</button>
-                <button type="button" data-action="t-mode" data-v="long" aria-pressed="false">Long</button>
-              </div>
+              <div class="seg s-mode-seg" role="group" aria-label="Timer mode"><button type="button" data-action="t-mode" data-v="focus" aria-pressed="true">Focus</button><button type="button" data-action="t-mode" data-v="short" aria-pressed="false">Break</button><button type="button" data-action="t-mode" data-v="long" aria-pressed="false">Long</button></div>
               <div class="s-dots" id="cycle-dots" aria-label="Pomodoro cycle"></div>
             </div>
-            <div class="s-timer-btns">
-              <button class="btn primary" type="button" id="timer-start" data-action="t-start">▶ Start</button>
-              <button class="btn icon" type="button" data-action="t-reset" title="Reset timer" aria-label="Reset timer">↺</button>
-              <button class="btn icon" type="button" data-action="t-skip" title="Skip phase" aria-label="Skip phase">⏭</button>
-            </div>
+            <div class="s-timer-btns"><button class="btn primary" type="button" id="timer-start" data-action="t-start">▶ Start</button><button class="btn icon" type="button" data-action="t-reset" title="Reset timer" aria-label="Reset timer">↺</button><button class="btn icon" type="button" data-action="t-skip" title="Skip phase" aria-label="Skip phase">⏭</button></div>
             <div class="s-bind"><label for="bind-sel">Studying now</label><select id="bind-sel"></select></div>
             <div class="s-focus-log" id="focus-log">Finish a focus block and its minutes land on the lecture’s actual bar.</div>
           </section>
@@ -237,11 +139,7 @@
               <button class="btn primary s-export-btn" type="button" data-action="export-ics">📅 Calendar (.ics)</button>
               <button class="btn s-export-btn" type="button" data-action="export-csv">✅ Task apps (.csv)</button>
               <button class="btn s-export-btn" type="button" data-action="summary">📋 Copy plain text</button>
-              <div class="s-export-row">
-                <button class="btn sm" type="button" data-action="export" title="Download a backup file">💾 Backup</button>
-                <button class="btn sm" type="button" data-action="import" title="Restore a backup file">⬆ Restore</button>
-                <button class="btn sm danger" type="button" data-action="clear-plan" title="Empty the sheet (undoable)">🗑 Clear</button>
-              </div>
+              <div class="s-export-row"><button class="btn sm" type="button" data-action="export" title="Download a backup file">💾 Backup</button><button class="btn sm" type="button" data-action="import" title="Restore a backup file">⬆ Restore</button><button class="btn sm danger" type="button" data-action="clear-plan" title="Empty the sheet (undoable)">🗑 Clear</button></div>
               <input type="file" id="import-file-study" accept=".json,application/json" hidden />
             </div>
           </section>
@@ -249,28 +147,18 @@
           <section class="panel s-tuning" data-mtab="more" aria-label="Live tuning">
             <div class="panel-h"><h2>Tuning</h2><span class="hint">applies live</span></div>
             <div class="panel-b s-tune">
-              <div class="tune-row"><label for="t-focus">Focus length</label><output id="o-focus">25 min</output>
-                <input type="range" id="t-focus" min="10" max="60" step="5" value="25"/></div>
-              <div class="tune-row"><label for="t-short">Short break</label><output id="o-short">5 min</output>
-                <input type="range" id="t-short" min="3" max="15" step="1" value="5"/></div>
-              <div class="tune-row"><label for="t-long">Long break</label><output id="o-long">15 min</output>
-                <input type="range" id="t-long" min="10" max="30" step="5" value="15"/></div>
-              <div class="tune-row"><label>Long break every</label>
-                <span class="stepper"><button type="button" data-action="cycle-dec" aria-label="Fewer sessions">−</button><b id="cycle-val">4</b><button type="button" data-action="cycle-inc" aria-label="More sessions">＋</button></span></div>
-              <div class="tune-row"><label for="t-win-start">Study window opens</label><output id="o-win" class="num">12h/day</output>
-                <select id="t-win-start"></select></div>
-              <div class="tune-row"><label for="t-win-end">Study window closes</label><output></output>
-                <select id="t-win-end"></select></div>
-              <div class="tune-row"><label for="t-mix">Week ordering</label><output id="o-mix">Interleave</output>
-                <button class="btn sm" type="button" id="t-mix" data-action="x-toggle-mix">Switch</button></div>
-              <div class="tune-row"><label for="t-energy">Energy-aware auto-plan</label>
-                <span class="switch"><input type="checkbox" id="t-energy"/><i></i></span></div>
-              <div class="tune-row"><label for="t-sound">Sound effects</label>
-                <span class="switch"><input type="checkbox" id="t-sound"/><i></i></span></div>
-              <div class="tune-row"><label for="t-auto">Auto-start next phase</label>
-                <span class="switch"><input type="checkbox" id="t-auto"/><i></i></span></div>
-              <div class="tune-foot"><span class="hint">Window drives day capacity &amp; peak</span>
-                <button class="btn sm ghost" type="button" data-action="tune-reset">Reset tuning</button></div>
+              <div class="tune-row"><label for="t-focus">Focus length</label><output id="o-focus">25 min</output><input type="range" id="t-focus" min="10" max="60" step="5" value="25"/></div>
+              <div class="tune-row"><label for="t-short">Short break</label><output id="o-short">5 min</output><input type="range" id="t-short" min="3" max="15" step="1" value="5"/></div>
+              <div class="tune-row"><label for="t-long">Long break</label><output id="o-long">15 min</output><input type="range" id="t-long" min="10" max="30" step="5" value="15"/></div>
+              <div class="tune-row"><label>Long break every</label><span class="stepper"><button type="button" data-action="cycle-dec" aria-label="Fewer sessions">−</button><b id="cycle-val">4</b><button type="button" data-action="cycle-inc" aria-label="More sessions">＋</button></span></div>
+              <div class="tune-row"><label for="t-win-start">Study window opens</label><output id="o-win" class="num">12h/day</output><select id="t-win-start"></select></div>
+              <div class="tune-row"><label for="t-win-end">Study window closes</label><output></output><select id="t-win-end"></select></div>
+              <div class="tune-row"><label for="t-mix">Week ordering</label><output id="o-mix">Interleave</output><button class="btn sm" type="button" id="t-mix" data-action="x-toggle-mix">Switch</button></div>
+              <div class="tune-row"><label for="t-energy">Energy-aware auto-plan</label><span class="switch"><input type="checkbox" id="t-energy"/><i></i></span></div>
+              <div class="tune-row"><label for="t-ics-recalls">Put recalls in .ics</label><span class="switch"><input type="checkbox" id="t-ics-recalls"/><i></i></span></div>
+              <div class="tune-row"><label for="t-sound">Sound effects</label><span class="switch"><input type="checkbox" id="t-sound"/><i></i></span></div>
+              <div class="tune-row"><label for="t-auto">Auto-start next phase</label><span class="switch"><input type="checkbox" id="t-auto"/><i></i></span></div>
+              <div class="tune-foot"><span class="hint">Window drives day capacity &amp; peak</span><button class="btn sm ghost" type="button" data-action="tune-reset">Reset tuning</button></div>
             </div>
           </section>
 
@@ -296,39 +184,19 @@
     <div class="s-picker-scrim" id="picker-scrim" hidden></div>
     <div class="s-picker" id="day-picker" role="dialog" aria-modal="true" aria-labelledby="picker-title" hidden></div>
 
-    <!-- PRIORITIZE + WEEKLY REVIEW SHEETS (state lives in S.plan) -->
     <div class="x-scrim" id="x-scrim" hidden></div>
-
     <section class="x-sheet" id="x-prioritize" role="dialog" aria-modal="true" aria-labelledby="x-pri-title" hidden>
-      <header class="x-sheet-h">
-        <h2 id="x-pri-title">⚡ Prioritize</h2>
-        <span class="grow"></span>
-        <button class="x-sheet-x" type="button" data-action="x-close" aria-label="Close">✕</button>
-      </header>
+      <header class="x-sheet-h"><h2 id="x-pri-title">⚡ Prioritize</h2><span class="grow"></span><button class="x-sheet-x" type="button" data-action="x-close" aria-label="Close">✕</button></header>
       <div class="x-sheet-b" id="x-pri-body"></div>
-      <footer class="x-sheet-f">
-        <button class="btn sm" type="button" data-action="x-close-plan">→ Open in plan</button>
-        <span class="grow"></span>
-        <button class="btn primary sm" type="button" data-action="x-close">Done</button>
-      </footer>
+      <footer class="x-sheet-f"><button class="btn sm" type="button" data-action="x-close-plan">→ Open in plan</button><span class="grow"></span><button class="btn primary sm" type="button" data-action="x-close">Done</button></footer>
     </section>
-
     <section class="x-sheet" id="x-review" role="dialog" aria-modal="true" aria-labelledby="x-rev-title" hidden>
-      <header class="x-sheet-h">
-        <h2 id="x-rev-title">↻ Weekly review</h2>
-        <span class="grow"></span>
-        <button class="x-sheet-x" type="button" data-action="x-close" aria-label="Close">✕</button>
-      </header>
+      <header class="x-sheet-h"><h2 id="x-rev-title">↻ Weekly review</h2><span class="grow"></span><button class="x-sheet-x" type="button" data-action="x-close" aria-label="Close">✕</button></header>
       <div class="x-sheet-b" id="x-rev-body"></div>
-      <footer class="x-sheet-f">
-        <span class="hint" id="x-last-reviewed"></span>
-        <span class="grow"></span>
-        <button class="btn primary sm" type="button" data-action="x-mark-reviewed">Mark reviewed today</button>
-      </footer>
+      <footer class="x-sheet-f"><span class="hint" id="x-last-reviewed"></span><span class="grow"></span><button class="btn primary sm" type="button" data-action="x-mark-reviewed">Mark reviewed today</button></footer>
     </section>
 
     <div class="s-toasts" id="toasts" aria-live="polite"></div>
-
     <script type="module" src="assets/js/study-app.js"></script>
   </body>
 </html>
