@@ -1,9 +1,9 @@
 // Bootstrap + event wiring for the Study plan page.
 // Week planning is explicit: ＋ on a day opens a picker, ⇄ moves a lecture,
 // × takes it off the day. No drag-and-drop anywhere.
-import { S, byId, savePlan, snapshot, clearPlan, addLecturesForCourse, blankLecture, DEFAULT_SETTINGS, loadPlan, LECTURES_PER_SUBJECT, addD, uid, dayMinutes, streakDays, auditDays, suggestEst, openInboxItem, toggleInbox, deleteInbox } from "./study/store.js";
+import { S, byId, savePlan, snapshot, clearPlan, addLecturesForCourse, blankLecture, DEFAULT_SETTINGS, loadPlan, LECTURES_PER_SUBJECT, addD, dayMinutes, streakDays, openInboxItem, toggleInbox, deleteInbox } from "./study/store.js";
 import { boot, defaultCohort, setCohort, cohortFromId, hm, winS, winE } from "./study/data.js";
-import { autoPlan, clearWeek, markDone, revPass, revAgain, summaryText, lecTitle, frogPick, wrapDay, examDaysFor } from "./study/planner.js";
+import { autoPlan, clearWeek, markDone, revPass, revAgain, summaryText, lecTitle, frogPick, wrapDay } from "./study/planner.js";
 import { exportICS, exportCSV, exportBackup, gcalUrl } from "./study/export.js";
 import { T, initTimer, toggle as tToggle, reset as tReset, skip as tSkip, setMode, start as tStart, snd, unlockAudio } from "./study/timer.js";
 import * as V from "./study/views.js";
@@ -54,7 +54,7 @@ async function applyCohort(c) {
 function bindEvents() {
   document.addEventListener("click", onClick);
   document.addEventListener("input", (e) => { if (e.target.id === "picker-q") V.setPickerQuery(e.target.value); });
-  document.addEventListener("change", onInboxChange);
+  document.addEventListener("change", onChange);
   $("#scrim").addEventListener("click", V.closeDrawer);
   $("#x-scrim").addEventListener("click", () => V.closeSheet());
   $("#picker-scrim").addEventListener("click", V.closePicker);
@@ -115,11 +115,19 @@ function onCapture(e) {
   V.renderAll();
 }
 
-function onInboxChange(e) {
-  const t = e.target.closest("[data-action='x-inbox-due']");
+// One change listener for every non-button form control in the extras:
+// inbox due-dates AND the weekly-review ritual checkboxes (the latter live
+// inside <label>, so change — not click — is the safe single-fire path).
+function onChange(e) {
+  const t = e.target.closest("[data-action]");
   if (!t) return;
-  const it = (S.plan.inbox || []).find((x) => x.id === t.dataset.id);
-  if (it) { it.due = e.target.value || ""; savePlan(); V.renderAll(); }
+  const a = t.dataset.action;
+  if (a === "x-inbox-due") {
+    const it = (S.plan.inbox || []).find((x) => x.id === t.dataset.id);
+    if (it) { it.due = e.target.value || ""; savePlan(); V.renderAll(); }
+  } else if (a === "x-check") {
+    V.checkRitual(t.dataset.k);
+  }
 }
 
 function onKey(e) {
@@ -335,6 +343,7 @@ async function onClick(e) {
     savePlan(); V.renderAll();
     V.toast("Week ordering: " + (S.plan.settings.mix === "interleave" ? "interleave (mix subjects)" : "block (cluster subjects)"));
   }
+  else if (a === "x-mark-reviewed") V.markReviewed();
 }
 
 function onImport(e) {
