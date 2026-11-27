@@ -465,59 +465,7 @@ select {
   }
 }
 
-/* Narrow phones: the search control becomes a two-row card so the
-   input and the Search button each get the full width. */
-@media (max-width: 480px) {
-  .lookup-card {
-    padding: 12px;
-    border-radius: 12px;
-  }
-
-  .search-field {
-    flex-wrap: wrap;
-    border-radius: 16px;
-    padding: 8px;
-    gap: 6px;
-  }
-
-  .search-icon {
-    margin-left: 6px;
-  }
-
-  .search-field input {
-    flex: 1 1 auto;
-    height: 40px;
-  }
-
-  .search-field .btn {
-    flex: 1 1 100%;
-    height: 42px;
-    border-radius: 12px;
-  }
-
-  .segment {
-    padding: 7px 12px;
-  }
-
-  .subscription-card {
-    margin: 12px;
-    padding: 12px;
-  }
-
-  .feed-actions .btn {
-    flex: 1 1 100%;
-  }
-
-  .workspace-header {
-    padding: 12px;
-  }
-
-  .summary-strip {
-    padding: 10px 12px;
-  }
-}
-/* In assets/css/components.css */
-
+/* Tablet / small desktop: switch to underline tabs with icons */
 @media (max-width: 640px) {
   .segmented {
     display: flex;
@@ -551,5 +499,58 @@ select {
   
   .segment .segment-icon {
     font-size: 1.1rem;
+  }
+}
+
+/* Narrow phones: the search control becomes a two-row card so the
+   input and the Search button each get the full width. */
+@media (max-width: 480px) {
+  .lookup-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .search-field {
+    flex-wrap: wrap;
+    border-radius: 16px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .search-icon {
+    margin-left: 6px;
+  }
+
+  .search-field input {
+    flex: 1 1 auto;
+    height: 40px;
+  }
+
+  .search-field .btn {
+    flex: 1 1 100%;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .segment {
+    padding: 12px 6px;
+    font-size: 0.82rem;
+  }
+
+  .subscription-card {
+    margin: 12px;
+    padding: 12px;
+  }
+
+  .feed-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .workspace-header {
+    padding: 12px;
+  }
+
+  .summary-strip {
+    padding: 10px 12px;
   }
 }
