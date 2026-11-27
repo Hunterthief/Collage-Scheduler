@@ -1,5 +1,6 @@
 // All rendering. The sheet opens BLANK: empty states teach the workflow and
 // every tool is handed to the user. Subject rows carry 12 lecture slots.
+// Week planning is explicit (＋ on a day, ⇄ / × on a card) — no drag required.
 import { S, byId, savePlan, snapshot, popUndo, addD, wdIndex, daysBetween, LECTURES_PER_SUBJECT } from "./store.js";
 import { courseColor, courseTitle, tint, weekDates, capacityFor, nextExamFor, upcomingExams, winS, winE } from "./data.js";
 import { filtered, matches, reviewQueue, markDone, unDone, PRI, lecTitle, timingsFor, fmt, hhmm } from "./planner.js";
@@ -18,6 +19,7 @@ export const fmtMin = fmt;
 const fmtClock = (m) => { let h = Math.floor(m / 60); const r = m % 60; const ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12; return h + ":" + String(r).padStart(2, "0") + " " + ap; };
 const cstyle = (id) => { const c = courseColor(id); return "--cc:" + c + ";--ct:" + tint(c, "1a") + ";--cb:" + tint(c, "66") + ";--cbg:" + tint(c, "12") + ";--fc:" + c + ";"; };
 
+/* ---------- toasts + undo ---------- */
 export function toast(msg, opts = {}) {
   const t = document.createElement("div");
   t.className = "toast " + (opts.kind || "");
@@ -34,11 +36,13 @@ export function doUndo() {
   renderAll(); toast("Undone: " + label, { kind: "success" });
 }
 
+/* ---------- master render ---------- */
 export function renderAll() {
   if (!S.plan) return;
   renderWashes(); renderWelcome(); renderHero(); renderChips(); renderViews(); renderLibrary(); renderBulk();
   renderTabs(); renderCanvas(); renderProgress(); renderBind(); renderTune(); renderWeekBar();
   renderCohort(); renderExportHint(); syncSound(); paintTimer(); renderDots();
+  if (picker) renderPickerList();
 }
 function renderWashes() {
   const cs = S.courseList.map((c) => courseColor(c.id));
@@ -59,7 +63,7 @@ function renderWelcome() {
     '<ol class="s-welcome-steps">' +
     '<li><b>1.</b> Tap <b>＋</b> on a subject row (or “New lecture”) to add a lecture.</li>' +
     '<li><b>2.</b> Name it, and set how long it takes <i>when you know</i> — blank is fine.</li>' +
-    '<li><b>3.</b> Drag it onto a day. Free hours come from your real timetable.</li>' +
+    '<li><b>3.</b> Plan it: press <b>📅</b> on the lecture, or <b>＋</b> on a day in the Week view, and pick a day. Free hours come from your real timetable.</li>' +
     '<li><b>4.</b> When you’re happy, export to Google Calendar or a task app.</li>' +
     '</ol>' +
     '<div class="s-welcome-actions">' +
@@ -123,14 +127,18 @@ function lecCard(l, inWeek, tm) {
   const t = tm ? tm.get(l.id) : null;
   if (inWeek) {
     return '<div class="wcard' + (l.status === "done" ? " done" : "") + (dim ? " dim" : "") + '" style="' + cstyle(l.c) + '" data-action="open" data-id="' + l.id + '">' +
-      '<div class="t"><span class="grip" data-drag="' + l.id + '" title="Drag to another day">⠿</span><span class="tt">' + esc(lecTitle(l)) + '</span></div>' +
+      '<div class="t"><span class="tt">' + esc(lecTitle(l)) + '</span>' +
+      '<span class="wcard-acts">' +
+      '<button type="button" class="wcard-act" data-action="move-lecture" data-id="' + l.id + '" title="Move to another day" aria-label="Move to another day">⇄</button>' +
+      '<button type="button" class="wcard-act danger" data-action="unassign-lecture" data-id="' + l.id + '" title="Take off this day" aria-label="Take off this day">×</button>' +
+      '</span></div>' +
       '<div class="m"><span class="st-dot st-' + l.status + '"></span>' +
       (t ? '<span class="num">' + fmtClock(t.s) + '–' + fmtClock(t.e) + '</span>' : '<span class="unset">no time yet</span>') +
       '<span class="pri ' + l.pri + '">' + l.pri + '</span><span style="color:var(--cc)">' + esc(courseTitle(l.c)) + ' ' + l.num + '</span></div></div>';
   }
   return '<div class="lec-card' + (S.ui.sel.has(l.id) ? " sel" : "") + (l.status === "done" ? " done" : "") + (dim ? " dim" : "") + '" style="' + cstyle(l.c) + '" data-action="open" data-id="' + l.id + '">' +
-    '<span class="grip" data-drag="' + l.id + '" title="Drag onto a day in the Week view">⠿</span>' +
     '<input type="checkbox" data-action="select" data-id="' + l.id + '" ' + (S.ui.sel.has(l.id) ? "checked" : "") + ' aria-label="Select lecture"/>' +
+    '<button type="button" class="lec-plan" data-action="move-lecture" data-id="' + l.id + '" title="Plan this lecture on a day" aria-label="Plan this lecture on a day">📅</button>' +
     '<div class="lec-main"><div class="lec-top"><span class="lec-sub">' + esc(courseTitle(l.c)) + '</span><span class="lec-num num">Lec ' + l.num + '</span>' +
     (l.day ? '<span class="day-tag num">' + WD[wdIndex(l.day)] + " " + md(l.day) + '</span>' : '') + '</div>' +
     '<div class="lec-title">' + esc(lecTitle(l)) + '</div>' +
@@ -247,18 +255,21 @@ function renderWeek() {
     const banners = cap.items.filter((i) => i.allDay);
     const shown = timed.slice(0, 4);
     const past = d < S.today, today = d === S.today;
-    return '<div class="day' + (today ? " today" : "") + (past ? " past" : "") + '" data-drop="' + d + '" data-day="' + d + '">' +
+    return '<div class="day' + (today ? " today" : "") + (past ? " past" : "") + '" data-day="' + d + '">' +
       '<div class="day-h"><div class="r1"><span class="wd">' + WD[wdIndex(d)] + '</span><span class="dt num">' + md(d) + '</span>' +
-      (today ? '<span class="tag todaytag">TODAY</span>' : past ? '<span class="tag pasttag">PAST</span>' : '') + '</div>' +
+      (today ? '<span class="tag todaytag">TODAY</span>' : past ? '<span class="tag pasttag">PAST</span>' : '') +
       banners.map((b) => '<div class="examline">📌 ' + esc(b.label) + '</div>').join("") + '</div>' +
+      '<button type="button" class="day-add" data-action="add-to-day" data-day="' + d + '" title="Plan a lecture on this day" aria-label="Plan a lecture on ' + WD[wdIndex(d)] + ' ' + md(d) + '">＋</button></div>' +
       '<div class="cap"><div class="nums"><span>Planned <b class="num">' + fmtMin(planned) + '</b></span><span>Free <b class="num">' + fmtMin(cap.free) + '</b></span></div>' +
       '<div class="meter"><i class="' + meter + '" style="width:' + Math.min(100, ratio * 100) + '%"></i></div>' +
       '<div class="free num">' + fmtMin(cap.busy) + ' in class · window ' + fmtClock(winS()) + '–' + fmtClock(winE()) + '</div></div>' +
       (shown.length ? '<div class="classes">' + shown.map((i) =>
         '<div class="cls' + (i.type === "examination" ? " exam" : "") + '" style="--cc:' + (i.color || "#5f6f83") + '" title="' + esc(i.label) + '">' + fmtClock(i.s) + " " + esc(i.label) + '</div>').join("") +
         (timed.length > 4 ? '<div class="cls more">+' + (timed.length - 4) + ' more classes</div>' : '') + '</div>' : '') +
-      '<div class="day-cards" data-cards="' + d + '">' +
-      (cards.length ? cards.map((l) => lecCard(l, true, tm)).join("") : '<div class="drop-hint">' + (past ? "Past day" : "Drop lectures here<br>or hit ⚡ Auto-plan") + '</div>') +
+      '<div class="day-cards">' +
+      (cards.length ? cards.map((l) => lecCard(l, true, tm)).join("") :
+        '<div class="day-empty"><span>' + (past ? "Past day — nothing was planned." : "Nothing planned yet.") + '</span>' +
+        (past ? '' : '<button type="button" class="btn sm" data-action="add-to-day" data-day="' + d + '">＋ Add a lecture</button>') + '</div>') +
       '</div></div>';
   }).join("");
 }
@@ -304,6 +315,7 @@ function renderExportHint() {
   el.textContent = n ? n + " lectures · " + sched + " on a day · " + timed + " with a clock time" : "empty sheet";
 }
 
+/* ---------- focus / tuning ---------- */
 export function renderBind() {
   const sel = $("#bind-sel");
   const opts = S.plan.lectures.filter((l) => l.status !== "done").sort((a, b) => PRI[a.pri] - PRI[b.pri] || a.num - b.num);
@@ -356,6 +368,7 @@ export function syncSound() {
   $("#t-sound").checked = on;
 }
 
+/* ---------- cohort selects ---------- */
 export function renderCohort() {
   const c = S.cohort; if (!c) return;
   const programs = S.options.programs;
@@ -396,6 +409,111 @@ export function setCohortSelects(c) {
   $("#c-group").value = groupValue(c);
 }
 
+/* ---------- day / move picker (explicit, no drag) ---------- */
+let picker = null; // { mode:'add'|'move', day, lectureId, q }
+
+export function openPicker(mode, opts = {}) {
+  picker = { mode, day: opts.day || null, lectureId: opts.lectureId || null, q: "" };
+  renderPicker();
+}
+export function closePicker() {
+  picker = null;
+  const scrim = $("#picker-scrim"), box = $("#day-picker");
+  if (scrim) scrim.hidden = true;
+  if (box) { box.hidden = true; box.innerHTML = ""; }
+}
+export function setPickerQuery(q) {
+  if (!picker) return;
+  picker.q = q;
+  renderPickerList();
+}
+function renderPicker() {
+  const scrim = $("#picker-scrim"), box = $("#day-picker");
+  if (!scrim || !box) return;
+  if (!picker) { scrim.hidden = true; box.hidden = true; box.innerHTML = ""; return; }
+  scrim.hidden = false; box.hidden = false;
+  const isAdd = picker.mode === "add";
+  const l = picker.lectureId ? byId(picker.lectureId) : null;
+  if (!isAdd && !l) { closePicker(); return; }
+  const title = isAdd
+    ? "Plan a lecture · " + WD[wdIndex(picker.day)] + " " + md(picker.day)
+    : "Move · " + lecTitle(l);
+  box.innerHTML =
+    '<div class="picker-h"><h2 id="picker-title">' + esc(title) + '</h2>' +
+    '<button type="button" class="x" data-action="picker-close" aria-label="Close">✕</button></div>' +
+    (isAdd ? '<div class="picker-search"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>' +
+      '<input id="picker-q" type="text" placeholder="Search lectures…" aria-label="Search lectures" /></div>' : '') +
+    '<div class="picker-list" id="picker-list"></div>' +
+    '<div class="picker-foot">' + (isAdd
+      ? "Tap a lecture to put it on this day. It keeps its own length; the day’s free hours update instantly."
+      : "Tap a day to move this lecture there, or take it off the week entirely.") + '</div>';
+  renderPickerList();
+  const q = $("#picker-q");
+  if (q) setTimeout(() => q.focus(), 60);
+}
+function renderPickerList() {
+  const list = $("#picker-list");
+  if (!list || !picker) return;
+  const q = (picker.q || "").toLowerCase();
+  const match = (x) => !q || lecTitle(x).toLowerCase().includes(q) || courseTitle(x.c).toLowerCase().includes(q);
+  if (picker.mode === "add") {
+    const undone = S.plan.lectures.filter((x) => x.status !== "done");
+    const un = undone.filter((x) => !x.day && match(x));
+    const other = undone.filter((x) => x.day && x.day !== picker.day && match(x));
+    const on = undone.filter((x) => x.day === picker.day && match(x));
+    const row = (x, tag) => '<button type="button" class="picker-row" style="' + cstyle(x.c) + '" data-action="picker-add" data-id="' + x.id + '">' +
+      '<span class="dot"></span><span class="txt"><b>' + esc(lecTitle(x)) + '</b><span>' + esc(courseTitle(x.c)) + " · Lec " + x.num + " · " + (x.est ? fmtMin(x.est) : "no time yet") + (tag ? " · " + tag : "") + '</span></span><span class="go">＋</span></button>';
+    let html = "";
+    if (un.length) html += '<div class="picker-sec">Not planned yet</div>' + un.map((x) => row(x, "")).join("");
+    if (other.length) html += '<div class="picker-sec">On another day (will move)</div>' + other.map((x) => row(x, WD[wdIndex(x.day)] + " " + md(x.day))).join("");
+    if (on.length) html += '<div class="picker-sec">Already on this day</div>' + on.map((x) => '<div class="picker-row current" style="' + cstyle(x.c) + '"><span class="dot"></span><span class="txt"><b>' + esc(lecTitle(x)) + '</b><span>' + esc(courseTitle(x.c)) + " · Lec " + x.num + '</span></span><span class="go">✓</span></div>').join("");
+    if (!html) html = '<div class="picker-empty">No lectures match.<br>Create one first (＋ New in the library) or clear the search.</div>';
+    list.innerHTML = html;
+    return;
+  }
+  const l = byId(picker.lectureId);
+  if (!l) { closePicker(); return; }
+  let html = weekDates().map((d) => {
+    const planned = S.plan.lectures.filter((x) => x.day === d && x.status !== "done");
+    const mins = planned.reduce((s, x) => s + x.est, 0);
+    const cap = capacityFor(d);
+    const cur = l.day === d;
+    return '<button type="button" class="picker-row' + (cur ? " current" : "") + '" data-action="picker-move" data-day="' + d + '">' +
+      '<span class="dot" style="background:var(--accent)"></span><span class="txt"><b>' + WD[wdIndex(d)] + " " + md(d) + (cur ? " · current" : "") + '</b><span>' + planned.length + " planned · " + fmtMin(mins) + " of " + fmtMin(cap.free) + " free</span></span><span class="go">' + (cur ? "✓" : "→") + '</span></button>';
+  }).join("");
+  if (l.day) html += '<button type="button" class="picker-row danger" data-action="picker-unassign"><span class="dot" style="background:#d93025"></span><span class="txt"><b>Take off the week</b><span>Keeps the lecture in your library, unplanned</span></span><span class="go">×</span></button>';
+  list.innerHTML = html;
+}
+function placeOnDay(l, day, label) {
+  snapshot(label);
+  l.day = day;
+  l.order = Math.max(0, ...S.plan.lectures.filter((x) => x.day === day && x.id !== l.id).map((x) => x.order)) + 1;
+  savePlan(); renderAll();
+}
+export function pickerAssign(id) {
+  if (!picker || picker.mode !== "add") return;
+  const l = byId(id); if (!l) return;
+  const day = picker.day;
+  placeOnDay(l, day, "plan lecture");
+  toast("Planned on " + WD[wdIndex(day)] + " " + md(day) + ": " + lecTitle(l), { kind: "success", undo: true });
+}
+export function pickerMove(day) {
+  if (!picker || picker.mode !== "move") return;
+  const l = byId(picker.lectureId); if (!l) return;
+  placeOnDay(l, day, "move lecture");
+  toast("Moved to " + WD[wdIndex(day)] + " " + md(day) + ": " + lecTitle(l), { kind: "success", undo: true });
+  closePicker();
+}
+export function pickerUnassign() {
+  if (!picker || picker.mode !== "move") return;
+  const l = byId(picker.lectureId); if (!l) return;
+  snapshot("unassign lecture");
+  l.day = null;
+  savePlan(); renderAll(); closePicker();
+  toast("Taken off the week: " + lecTitle(l), { kind: "warn", undo: true });
+}
+
+/* ---------- drawer ---------- */
 let lastFocus = null;
 export function openDrawer(id, create) {
   S.ui.drawer = { id: id || null, create: create || null };
