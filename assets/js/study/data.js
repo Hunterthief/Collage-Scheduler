@@ -9,8 +9,7 @@ import { composeSchedule, selectActiveSemester } from "../schedule/engine.js";
 import { todayInTimeZone, startOfWeek, occursOnDay } from "../schedule/recurrence.js";
 import { timeToMinutes } from "../schedule/sorting.js";
 import { buildEventIndex, eventLabel, eventColor } from "../schedule/labels.js";
-import { S, cohortKey } from "./store.js";
-import { addD } from "./dates.js";
+import { S, cohortKey, addD } from "./store.js";
 
 export const loader = new DataLoader();
 const FALLBACK_HUES = ["#1a73e8", "#0b8043", "#8e24aa", "#e37400", "#d93025", "#009688", "#795548", "#c2185b"];
