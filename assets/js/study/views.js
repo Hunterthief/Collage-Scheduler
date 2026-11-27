@@ -1,23 +1,22 @@
 // All rendering. Reads shared state S; academic labels/colors come from the
 // fetched datasets via data.js — no hardcoded subjects or schedules.
-import { S, byId, savePlan, snapshot, popUndo, seedViews, DEFAULT_SETTINGS } from "./store.js";
-import { courseById, courseColor, courseTitle, tint, weekDates, capacityFor, nextExamFor, upcomingExams, deadlineFor, winS, winE, hm } from "./data.js";
+import { S, byId, savePlan, snapshot, popUndo } from "./store.js";
+import { courseColor, courseTitle, tint, weekDates, capacityFor, nextExamFor, upcomingExams, winS, winE } from "./data.js";
 import { filtered, matches, reviewQueue, markDone, unDone, PRI } from "./planner.js";
 import { T, ringLen, modeLen, currentElapsed } from "./timer.js";
+import { addD, wdIndex, daysBetween } from "./dates.js";
 import { localize } from "../i18n.js";
-import { parseDate, addDays, weekdayName, occursOnDay } from "../schedule/recurrence.js";
-import { timeToMinutes } from "../schedule/sorting.js";
+import { parseDate } from "../schedule/recurrence.js";
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 export const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
-const MO = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const WDL = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const MO = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const WDL = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 export const md = (s) => { const d = parseDate(s); return MO[d.getUTCMonth()] + " " + d.getUTCDate(); };
 export const fmtMin = (m) => { m = Math.round(m); const h = Math.floor(m / 60), r = m % 60; return h ? (r ? h + "h " + r + "m" : h + "h") : r + "m"; };
 const fmtClock = (m) => { let h = Math.floor(m / 60); const r = m % 60; const ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12; return h + ":" + String(r).padStart(2, "0") + " " + ap; };
-const daysBetween = (a, b) => Math.round((parseDate(b) - parseDate(a)) / 86400000);
 const cstyle = (id) => { const c = courseColor(id); return "--cc:" + c + ";--ct:" + tint(c, "1a") + ";--cb:" + tint(c, "66") + ";--cbg:" + tint(c, "12") + ";--fc:" + c + ";"; };
 
 /* ---------- toasts + undo ---------- */
@@ -110,7 +109,7 @@ function lecCard(l, inWeek) {
     '<span class="grip" data-drag="' + l.id + '" title="Drag onto a day in the Week view">⠿</span>' +
     '<input type="checkbox" data-action="select" data-id="' + l.id + '" ' + (S.ui.sel.has(l.id) ? "checked" : "") + ' aria-label="Select lecture"/>' +
     '<div class="lec-main"><div class="lec-top"><span class="lec-sub">' + esc(courseTitle(l.c)) + '</span><span class="lec-num num">Lec ' + l.num + '</span>' +
-    (l.day ? '<span class="day-tag num">' + WD[parseDate(l.day).getUTCDay()] + " " + md(l.day) + '</span>' : '') + '</div>' +
+    (l.day ? '<span class="day-tag num">' + WD[wdIndex(l.day)] + " " + md(l.day) + '</span>' : '') + '</div>' +
     '<div class="lec-title">' + esc(l.title) + '</div>' +
     '<div class="lec-meta"><span class="st-dot st-' + l.status + '"></span><span class="num">' + fmtMin(l.est) + '</span><span class="pri ' + l.pri + '">' + l.pri + '</span>' +
     (l.actual ? '<span class="num" title="Logged focus time">⏱ ' + fmtMin(l.actual) + '</span>' : '') + '</div></div></div>';
@@ -137,7 +136,7 @@ function renderBulk() {
     '<button type="button" class="btn sm" data-action="bulk-done">✓ Done</button>' +
     '<select id="bulk-pri" aria-label="Set priority"><option value="">Priority…</option><option value="must">Must</option><option value="should">Should</option><option value="could">Could</option></select>' +
     '<select id="bulk-day" aria-label="Assign day"><option value="">Assign day…</option><option value="none">Unassign</option>' +
-    weekDates().map((d) => '<option value="' + d + '">' + WD[parseDate(d).getUTCDay()] + " " + md(d) + '</option>').join("") + '</select>' +
+    weekDates().map((d) => '<option value="' + d + '">' + WD[wdIndex(d)] + " " + md(d) + '</option>').join("") + '</select>' +
     '<button type="button" class="btn sm danger" data-action="bulk-delete">Delete</button>' +
     '<button type="button" class="btn sm ghost" data-action="bulk-clear">×</button>';
   $("#bulk-pri").addEventListener("change", (e) => {
@@ -205,7 +204,7 @@ function renderMatrix() {
   $("#matrix-note").innerHTML = '<span><b class="num">' + S.plan.lectures.length + '</b> lectures</span><span><b class="num">' + fmtMin(S.plan.lectures.reduce((s, l) => s + l.est, 0)) + '</b> total</span><span><b class="num">' + fmtMin(remain) + '</b> remaining</span><span style="margin-left:auto">! = must-do before its exam</span>';
 }
 
-function renderWeekBar() { $("#week-lbl").textContent = md(S.anchor) + " – " + md(addDays(S.anchor, 6)); }
+function renderWeekBar() { $("#week-lbl").textContent = md(S.anchor) + " – " + md(addD(S.anchor, 6)); }
 function renderWeek() {
   renderWeekBar();
   $("#week-grid").innerHTML = weekDates().map((d) => {
@@ -219,7 +218,7 @@ function renderWeek() {
     const shown = timed.slice(0, 4);
     const past = d < S.today, today = d === S.today;
     return '<div class="day' + (today ? " today" : "") + (past ? " past" : "") + '" data-drop="' + d + '" data-day="' + d + '">' +
-      '<div class="day-h"><div class="r1"><span class="wd">' + WD[parseDate(d).getUTCDay()] + '</span><span class="dt num">' + md(d) + '</span>' +
+      '<div class="day-h"><div class="r1"><span class="wd">' + WD[wdIndex(d)] + '</span><span class="dt num">' + md(d) + '</span>' +
       (today ? '<span class="tag todaytag">TODAY</span>' : past ? '<span class="tag pasttag">PAST</span>' : '') + '</div>' +
       banners.map((b) => '<div class="examline">📌 ' + esc(b.label) + '</div>').join("") + '</div>' +
       '<div class="cap"><div class="nums"><span>Planned <b class="num">' + fmtMin(planned) + '</b></span><span>Free <b class="num">' + fmtMin(cap.free) + '</b></span></div>' +
@@ -373,7 +372,7 @@ export function openDrawer(id, create) {
   d.style.setProperty("--cc", courseColor(cid));
   d.style.setProperty("--ct", tint(courseColor(cid), "14"));
   const dayOpts = '<option value="">Unassigned</option>' + weekDates().map((x) =>
-    '<option value="' + x + '"' + (model.day === x ? " selected" : "") + '>' + WDL[parseDate(x).getUTCDay()] + " · " + md(x) + '</option>').join("");
+    '<option value="' + x + '"' + (model.day === x ? " selected" : "") + '>' + WDL[wdIndex(x)] + " · " + md(x) + '</option>').join("");
   const revHtml = model.reviews ? '<div class="field"><label>Recall schedule</label><div class="rev-timeline">' +
     model.reviews.map((r, i) => '<span class="rev-pill ' + (r.done ? "done" : r.due <= S.today ? "due" : "") + '">' + (i + 1) + "· " + md(r.due) + (r.done ? " ✓" : r.due <= S.today ? " due" : "") + '</span>').join("") + '</div></div>' : "";
   const sessHtml = model.sessions?.length ? '<div class="field"><label>Focus sessions</label><div class="sess-log">' +
