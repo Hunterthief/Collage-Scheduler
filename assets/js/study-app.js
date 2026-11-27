@@ -84,7 +84,7 @@ function bindEvents() {
     savePlan(); V.renderAll();
   });
   $("#t-auto").addEventListener("change", (e) => { S.plan.settings.autoStart = e.target.checked; savePlan(); });
-  $("#t-sound").addEventListener("change", (e) => { S.plan.settings.sound = e.target.checked; savePlan(); V.syncSound(); if (e.target.checked) { unlockAudio(); snd.tick(); } });
+  $("#t-sound")?.addEventListener("change", (e) => { S.plan.settings.sound = e.target.checked; savePlan(); V.syncSound(); if (e.target.checked) { unlockAudio(); snd.tick(); } });
   $("#import-file").addEventListener("change", onImport);
   document.addEventListener("keydown", onKey);
 }
