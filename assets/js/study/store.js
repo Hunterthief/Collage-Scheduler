@@ -1,6 +1,7 @@
 // Local study-plan state + the ONLY date arithmetic the study feature does.
-// Academic data is never stored here — only the student's own plan
-// (estimates, progress, day assignments), per cohort.
+// The sheet starts EMPTY by design: nothing is pre-filled, no times are
+// guessed. Everything the user adds is persisted per cohort in localStorage,
+// so closing the tab or reloading never loses their work.
 import {
   parseDate,
   formatDate,
@@ -8,15 +9,13 @@ import {
   startOfWeek
 } from "../schedule/recurrence.js";
 
-// The repository's addDays() takes a Date and returns a Date. Every study
-// module works in ISO strings ("2026-11-27"), so ALL study date arithmetic
-// goes through addD() below. Calling recurrence.addDays() with a string
-// throws "date.getTime is not a function" — never do it anywhere else.
 export const addD = (iso, n) => formatDate(addDays(parseDate(iso), n));
 export const weekStartOf = (iso, weekStartDay) => startOfWeek(iso, weekStartDay);
 export const wdIndex = (iso) => parseDate(iso).getUTCDay();
 export const daysBetween = (a, b) =>
   Math.round((parseDate(b) - parseDate(a)) / 86400000);
+
+export const LECTURES_PER_SUBJECT = 12;
 
 export const DEFAULT_SETTINGS = {
   focus: 25, short: 5, long: 15, cycle: 4,
@@ -39,44 +38,44 @@ export const uid = () => "l" + Date.now().toString(36) + Math.random().toString(
 export const deep = (o) => JSON.parse(JSON.stringify(o));
 export const byId = (id) => S.plan.lectures.find((l) => l.id === id);
 export const cohortKey = (c) => [c.programId, c.academicYearId, c.yearLevel ?? "", c.practicalGroup ?? "", c.subdivision ?? ""].join("|");
-const planKey = (c) => "cs-study-v1:" + cohortKey(c);
+const planKey = (c) => "cs-study-v2:" + cohortKey(c);
 
 export function seedViews() {
   return [
     { id: "v-all", name: "All lectures", f: { q: "", subjects: [], status: "all", pri: "all", sort: "subject", view: "matrix", minEst: 0 } },
     { id: "v-crunch", name: "🔥 Exam crunch", f: { q: "", subjects: [], status: "undone", pri: "must", sort: "deadline", view: "week", minEst: 0 } },
-    { id: "v-heavy", name: "🏋 Heavy lifts", f: { q: "", subjects: [], status: "all", pri: "all", sort: "estimate", view: "matrix", minEst: 120 } }
+    { id: "v-untimed", name: "⏳ Needs a time", f: { q: "", subjects: [], status: "undone", pri: "all", sort: "subject", view: "matrix", minEst: 0, untimed: true } }
   ];
 }
 
-// Starter plan generated from the fetched course catalogue — no academic
-// content is invented; titles are neutral and everything is editable.
-export function seedLectures(courses, today, weekStartDay) {
-  const out = [];
-  const nextWeek = addD(weekStartOf(today, weekStartDay), 7);
-  const pri = ["must", "should", "could"];
-  let assign = 0;
-  courses.forEach((c, i) => {
-    const count = 3 + (i % 2);
-    for (let n = 1; n <= count; n++) {
-      const est = 80 + ((i * 2 + n) % 5) * 15;
-      const l = {
-        id: uid(), c: c.id, num: n, title: "Lecture " + n + " — listen + revise",
-        est, pri: pri[(i + n) % 3], status: "todo", day: null, order: n,
-        actual: 0, notes: "", sessions: [], completedAt: null, reviews: null
-      };
-      if (i === 0 && n === 1) {
-        l.status = "done"; l.actual = est - 10; l.completedAt = addD(today, -3);
-        l.reviews = [1, 3, 7].map((o, k) => ({ due: addD(l.completedAt, o), done: k === 0 ? addD(l.completedAt, 1) : null }));
-      } else if (i === 1 && n === 1) {
-        l.status = "doing"; l.actual = 25;
-      } else if (assign < 2 && l.status === "todo") {
-        l.day = addD(nextWeek, assign); l.order = 1; assign++;
-      }
-      out.push(l);
-    }
-  });
-  return out;
+// A blank lecture shell: no title, NO estimated time. The user names it and
+// sets its length whenever they are ready.
+export function blankLecture(courseId, num) {
+  return {
+    id: uid(), c: courseId, num, title: "", est: 0, pri: "should",
+    status: "todo", day: null, order: num, actual: 0, notes: "",
+    sessions: [], completedAt: null, reviews: null
+  };
+}
+
+// User-initiated convenience: create the empty 1..12 slots for one subject.
+// Skips numbers that already exist, never overwrites user work.
+export function addLecturesForCourse(courseId, count = LECTURES_PER_SUBJECT) {
+  const existing = new Set(S.plan.lectures.filter((l) => l.c === courseId).map((l) => l.num));
+  let added = 0;
+  for (let n = 1; n <= count; n++) {
+    if (existing.has(n)) continue;
+    S.plan.lectures.push(blankLecture(courseId, n));
+    added++;
+  }
+  return added;
+}
+
+export function clearPlan() {
+  snapshot("clear sheet");
+  S.plan.lectures = [];
+  S.ui.sel = new Set();
+  savePlan();
 }
 
 export function loadPlan(cohort, courses, today, weekStartDay) {
@@ -90,13 +89,14 @@ export function loadPlan(cohort, courses, today, weekStartDay) {
     };
     S.anchor = saved.anchor || addD(weekStartOf(today, weekStartDay), 7);
   } else {
-    S.plan = { lectures: seedLectures(courses, today, weekStartDay), views: seedViews(), settings: Object.assign({}, DEFAULT_SETTINGS) };
+    // BLANK start. No seeded records, no pre-allotted minutes.
+    S.plan = { lectures: [], views: seedViews(), settings: Object.assign({}, DEFAULT_SETTINGS) };
     S.anchor = addD(weekStartOf(today, weekStartDay), 7);
-    savePlan();
   }
   S.ui.sel = new Set();
   S.ui.drawer = null;
   S.undo = [];
+  savePlan();
 }
 
 export function savePlan() {
@@ -106,14 +106,6 @@ export function savePlan() {
       lectures: S.plan.lectures, views: S.plan.views, settings: S.plan.settings, anchor: S.anchor
     }));
   } catch { /* private mode */ }
-}
-
-export function resetSample(courses, today, weekStartDay) {
-  snapshot("reset sample");
-  S.plan.lectures = seedLectures(courses, today, weekStartDay);
-  S.plan.views = seedViews();
-  S.ui.sel = new Set();
-  savePlan();
 }
 
 export function snapshot(label) {
