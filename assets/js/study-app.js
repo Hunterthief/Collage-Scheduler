@@ -1,11 +1,10 @@
 // Bootstrap + event wiring for the Study plan page.
-import { S, byId, savePlan, snapshot, resetSample, DEFAULT_SETTINGS, loadPlan } from "./study/store.js";
+import { S, byId, savePlan, snapshot, resetSample, DEFAULT_SETTINGS, loadPlan, addD } from "./study/store.js";
 import { boot, defaultCohort, setCohort, cohortFromId, hm, winS, winE } from "./study/data.js";
 import { autoPlan, clearWeek, markDone, summaryText } from "./study/planner.js";
 import { T, initTimer, toggle as tToggle, reset as tReset, skip as tSkip, setMode, start as tStart, snd, unlockAudio } from "./study/timer.js";
 import { bindDrag } from "./study/drag.js";
 import * as V from "./study/views.js";
-import { addD } from "./study/dates.js";
 import { startOfWeek } from "./schedule/recurrence.js";
 
 const $ = (s) => document.querySelector(s);
