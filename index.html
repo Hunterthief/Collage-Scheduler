@@ -191,4 +191,164 @@
               (pick a day + time and see which groups are free — for planning an event), or
               <em>Compare groups side by side</em> (see exactly when two or more groups overlap —
               for swapping a class). Nothing you enter here is saved or sent anywhere.
-            
+            </div>
+
+            <div class="cmp-modes" role="group" aria-label="What do you want to do?">
+              <button type="button" class="cmp-mode-card active" data-cmode="slot" aria-pressed="true">
+                <h3><span class="emoji" aria-hidden="true">🔍</span>Find a free time</h3>
+                <p>“Is Monday 5pm free for most groups?” — get a free/busy list for one moment.</p>
+              </button>
+              <button type="button" class="cmp-mode-card" data-cmode="side" aria-pressed="false">
+                <h3><span class="emoji" aria-hidden="true">🔀</span>Compare groups side by side</h3>
+                <p>“Can I switch into 2B’s Wednesday?” — see two or more groups’ days together.</p>
+              </button>
+            </div>
+
+            <!-- Find a free time (event planners) -->
+            <div id="cmp-slot-panel">
+              <div class="cmp-controls">
+                <div class="field">
+                  <label for="cmp-date">Which day?</label>
+                  <input type="date" id="cmp-date" required />
+                </div>
+                <div class="field">
+                  <label>Or jump to a weekday</label>
+                  <span class="cmp-quick" id="cmp-quick">
+                    <button type="button" data-wd="Sunday">Sun</button>
+                    <button type="button" data-wd="Monday">Mon</button>
+                    <button type="button" data-wd="Tuesday">Tue</button>
+                    <button type="button" data-wd="Wednesday">Wed</button>
+                    <button type="button" data-wd="Thursday">Thu</button>
+                    <button type="button" data-wd="Friday">Fri</button>
+                    <button type="button" data-wd="Saturday">Sat</button>
+                  </span>
+                </div>
+                <div class="field">
+                  <label for="cmp-start">From</label>
+                  <input type="time" id="cmp-start" value="09:00" required />
+                </div>
+                <div class="field">
+                  <label for="cmp-end">To</label>
+                  <input type="time" id="cmp-end" value="10:00" required />
+                </div>
+                <div class="field">
+                  <label for="cmp-scope">Which program?</label>
+                  <select id="cmp-scope">
+                    <option value="all">Both programs</option>
+                    <option value="pharmd">PharmD (general)</option>
+                    <option value="clinical-pharmacy">Clinical Pharmacy</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Show as</label>
+                  <span class="cmp-radio">
+                    <label><input type="radio" name="cmp-gran" value="group" checked /> Whole group</label>
+                    <label><input type="radio" name="cmp-gran" value="subgroup" /> Sub‑group (1A, 1B…)</label>
+                  </span>
+                </div>
+                <div class="field">
+                  <label>&nbsp;</label>
+                  <button class="btn primary" type="submit">Check who’s free</button>
+                </div>
+              </div>
+              <p class="hint">Pick the <strong>exact date</strong> — the tool honors alternating A/B weeks, batch times, one‑off exams and the mid‑term break, so “Monday 9am” is answered for that specific Monday.</p>
+              <div id="cmp-slot-result"></div>
+            </div>
+
+            <!-- Compare side by side (class swapping) -->
+            <div id="cmp-side-panel" hidden>
+              <p class="hint" style="margin-bottom:8px;">Add the groups you want to compare, then <strong>★ the one you’re trying to fit around</strong> (e.g. your own). A ✓ next to a session means the ★ group is free then, so you could sit it; ✗ means they’re busy.</p>
+              <div class="cmp-controls">
+                <div class="field">
+                  <label for="cmp-p-program">Program</label>
+                  <select id="cmp-p-program"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-year">Academic year</label>
+                  <select id="cmp-p-year"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-level">Year</label>
+                  <select id="cmp-p-level"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-group">Group</label>
+                  <select id="cmp-p-group"></select>
+                </div>
+                <div class="field">
+                  <label for="cmp-p-sub">Sub‑group</label>
+                  <select id="cmp-p-sub">
+                    <option value="">Whole group</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>&nbsp;</label>
+                  <div class="cmp-actions" style="margin:0;">
+                    <button class="btn quiet" type="button" id="cmp-add">＋ Add this group</button>
+                    <button class="btn quiet" type="button" id="cmp-add-all-year">Add all of this year</button>
+                    <button class="btn quiet" type="button" id="cmp-add-mine">＋ My schedule</button>
+                    <button class="btn quiet" type="button" id="cmp-clear">Clear all</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cmp-chips" id="cmp-chips" aria-label="Groups selected for comparison"></div>
+
+              <div class="cmp-controls" style="margin-top:6px;">
+                <div class="field">
+                  <label>Day to view</label>
+                  <div class="cmp-actions" style="margin:0;">
+                    <button class="icon-btn" type="button" id="cmp-prev-day" aria-label="Previous day">‹</button>
+                    <button class="btn quiet" type="button" id="cmp-today-day">Today</button>
+                    <button class="icon-btn" type="button" id="cmp-next-day" aria-label="Next day">›</button>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="cmp-side-date">Or pick a date</label>
+                  <input type="date" id="cmp-side-date" required />
+                </div>
+              </div>
+
+              <div id="cmp-side-result"></div>
+            </div>
+          </form>
+
+          <div id="status" class="status info" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="result" class="workspace" hidden>
+        <div class="workspace-header">
+          <div class="workspace-title">
+            <h2 id="period-heading">Schedule</h2>
+            <div class="nav-controls">
+              <button type="button" class="icon-btn" id="prev-period" aria-label="Previous period">‹</button>
+              <button type="button" class="btn quiet" id="today-btn">Today</button>
+              <button type="button" class="icon-btn" id="next-period" aria-label="Next period">›</button>
+            </div>
+          </div>
+
+          <div class="view-switch" role="group" aria-label="Calendar view">
+            <button type="button" class="view-btn active" data-view="weekly">Week</button>
+            <button type="button" class="view-btn" data-view="daily">Day</button>
+            <button type="button" class="view-btn" data-view="upcoming">List</button>
+          </div>
+        </div>
+
+        <div id="assignment-summary" class="summary-strip"></div>
+        <div id="timetable" class="calendar-container"></div>
+
+        <section class="subscription-card" aria-labelledby="subscription-heading">
+          <h2 id="subscription-heading">Google Calendar subscription</h2>
+          <div id="calendar-links"></div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        Static site · schedule data is published from repository JSON files.
+      </footer>
+    </div>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>
