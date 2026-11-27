@@ -6,10 +6,11 @@ import { buildLookupOptions } from "../data/options.js";
 import { resolveStudentId } from "../student/resolver.js";
 import { findProgram, findAcademicYear } from "../data/programs.js";
 import { composeSchedule, selectActiveSemester } from "../schedule/engine.js";
-import { todayInTimeZone, startOfWeek, addDays, occursOnDay } from "../schedule/recurrence.js";
+import { todayInTimeZone, startOfWeek, occursOnDay } from "../schedule/recurrence.js";
 import { timeToMinutes } from "../schedule/sorting.js";
 import { buildEventIndex, eventLabel, eventColor } from "../schedule/labels.js";
 import { S, cohortKey } from "./store.js";
+import { addD } from "./dates.js";
 
 export const loader = new DataLoader();
 const FALLBACK_HUES = ["#1a73e8", "#0b8043", "#8e24aa", "#e37400", "#d93025", "#009688", "#795548", "#c2185b"];
@@ -72,8 +73,10 @@ export async function setCohort(c) {
       timezone: S.tz, settings: S.inst.settings, locations: S.inst.locations, semester,
       courses: datasets.courses, lectures: datasets.lectures, practicals: datasets.practicals,
       exams: datasets.exams, exceptions: datasets.exceptions, institutionEvents: S.inst.events,
-      context: { programId: c.programId, academicYearId: c.academicYearId, yearLevel: c.yearLevel,
-        practicalGroup: c.practicalGroup, subdivision: c.subdivision, semesterId: semester.id, today: S.today },
+      context: {
+        programId: c.programId, academicYearId: c.academicYearId, yearLevel: c.yearLevel,
+        practicalGroup: c.practicalGroup, subdivision: c.subdivision, semesterId: semester.id, today: S.today
+      },
       locale: S.locale
     });
   }
@@ -84,8 +87,10 @@ export async function setCohort(c) {
 
 export async function cohortFromId(raw) {
   const a = resolveStudentId(raw, S.options.assignmentDocs);
-  return { programId: a.programId, academicYearId: a.academicYearId, yearLevel: a.yearLevel ?? null,
-    practicalGroup: a.practicalGroup, subdivision: a.subdivision ?? null };
+  return {
+    programId: a.programId, academicYearId: a.academicYearId, yearLevel: a.yearLevel ?? null,
+    practicalGroup: a.practicalGroup, subdivision: a.subdivision ?? null
+  };
 }
 
 export const courseById = (id) => S.courseList.find((c) => c.id === id) || null;
@@ -101,7 +106,7 @@ export const courseTitle = (id) => {
 };
 export const tint = (hex, a) => hex + a;
 
-export const weekDates = () => Array.from({ length: 7 }, (_, i) => addDays(S.anchor, i));
+export const weekDates = () => Array.from({ length: 7 }, (_, i) => addD(S.anchor, i));
 export const weekStartOf = (d) => startOfWeek(d, S.weekStartDay);
 
 export function hm(s) { const [h, m] = s.split(":").map(Number); return h * 60 + m; }
