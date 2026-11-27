@@ -98,8 +98,16 @@
             </div>
             <div class="s-views" id="views-row" aria-label="Saved views"></div>
           </div>
-          <div class="s-lib-list" id="lib-list" data-drop="unassign" aria-label="Lecture list — drop here to unassign"></div>
+          <div class="s-lib-list" id="lib-list" aria-label="Lecture list"></div>
           <div class="s-bulk" id="bulk-bar" hidden></div>
+          <div class="s-lib-foot">
+            <button class="btn sm" type="button" data-action="export">⬇ Export</button>
+            <button class="btn sm" type="button" data-action="import">⬆ Import</button>
+            <button class="btn sm" type="button" data-action="summary">📋 Summary</button>
+            <span class="grow"></span>
+            <button class="btn sm ghost" type="button" data-action="reset-sample" title="Regenerate the starter plan from your subjects">Reset</button>
+            <input type="file" id="import-file" accept=".json,application/json" hidden />
+          </div>
         </aside>
 
         <section class="panel s-canvas rise d4" aria-label="Plan views">
@@ -133,7 +141,7 @@
               <span><i class="tight"></i>Tight (&gt;80%)</span>
               <span><i class="over"></i>Overbooked</span>
               <span><i class="cls"></i>Real class / exam block</span>
-              <span>Drag cards between days · drop on the library to unassign · clock times avoid your classes</span>
+              <span>Press <b>＋</b> on a day to plan a lecture · <b>⇄</b> on a card to move it · <b>×</b> to take it off the day</span>
             </div>
           </div>
 
@@ -231,6 +239,8 @@
 
     <div class="s-scrim" id="scrim" hidden></div>
     <aside class="s-drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden></aside>
+    <div class="s-picker-scrim" id="picker-scrim" hidden></div>
+    <div class="s-picker" id="day-picker" role="dialog" aria-modal="true" aria-labelledby="picker-title" hidden></div>
     <div class="s-toasts" id="toasts" aria-live="polite"></div>
 
     <script type="module" src="assets/js/study-app.js"></script>
