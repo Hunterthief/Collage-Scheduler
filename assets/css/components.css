@@ -516,3 +516,40 @@ select {
     padding: 10px 12px;
   }
 }
+/* In assets/css/components.css */
+
+@media (max-width: 640px) {
+  .segmented {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid var(--line);
+  }
+  
+  .segment {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 0.9rem;
+    border-radius: 0;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .segment.active {
+    background: transparent;
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+  }
+  
+  .segment .segment-icon {
+    font-size: 1.1rem;
+  }
+}
